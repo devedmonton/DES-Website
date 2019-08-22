@@ -1,12 +1,12 @@
 <template>
     <div class="container">
         <page-section bg="grey-100">
-            <h1>Dev Edmonton Society</h1>
-            <h3
+            <h1 class="text-5xl">Dev Edmonton Society</h1>
+            <h3 class="text-2xl"
                 >Fostering a stronger software development community in
                 Edmonton.</h3
             >
-            <p
+            <p class="measure"
                 >Corporate-grade mimetic cable paranoia pyrolitic synthetic
                 trace Chinese consciousness. Fiberglass Chinese feral Tokyo
                 vatgrown futon street futon vatgrown Harajuku prototype
@@ -20,7 +20,7 @@
                 </figure>
             </div>
             <div>
-                <h2>Communities & Tech Groups</h2>
+                <h2 class="text-4xl">Communities & Tech Groups</h2>
                 <button-link>View all</button-link>
             </div>
         </page-section>
@@ -31,21 +31,21 @@
                 </figure>
             </div>
             <div>
-                <h2>Developer Resources</h2>
+                <h2 class="text-4xl">Developer Resources</h2>
                 <button-link>View all</button-link>
             </div>
         </page-section>
         <page-section>
-            <h2>Community Engagement</h2>
+            <h2 class="text-4xl">Community Engagement</h2>
         </page-section>
         <page-section bg="grey-200">
-            <h2>Upcoming Events</h2>
+            <h2 class="text-4xl">Upcoming Events</h2>
             <div> </div>
-            <h2>Meetups this Week</h2>
+            <h2 class="text-4xl">Meetups this Week</h2>
         </page-section>
         <page-section>
-            <h2>Voices From the Ground</h2>
-            <h3>Special Thanks to our Community Partners</h3>
+            <h2 class="text-4xl">Voices From the Ground</h2>
+            <h3 class="text-2xl">Special Thanks to our Community Partners</h3>
         </page-section>
     </div>
 </template>
