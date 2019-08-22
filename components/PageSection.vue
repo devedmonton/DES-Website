@@ -1,5 +1,5 @@
 <template>
-    <section :class="sectionClass">
+    <section class="px-4" :class="[bg ? 'py-16' : 'my-16', sectionClass]">
         <slot></slot>
     </section>
 </template>
