@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <page-section bg="dim">
+        <page-section bg="grey-100">
             <h1>Dev Edmonton Society</h1>
             <h3
                 >Fostering a stronger software development community in
@@ -24,7 +24,7 @@
                 <button-link>View all</button-link>
             </div>
         </page-section>
-        <page-section bg="dim">
+        <page-section bg="grey-100">
             <div>
                 <figure>
                     <img src="https://placem.at/things" alt="" />
@@ -38,7 +38,7 @@
         <page-section>
             <h2>Community Engagement</h2>
         </page-section>
-        <page-section bg="dark">
+        <page-section bg="grey-200">
             <h2>Upcoming Events</h2>
             <div> </div>
             <h2>Meetups this Week</h2>
@@ -77,14 +77,8 @@ export default {
 
 .title {
     display: block;
-    font-family: 'Quicksand',
- 'Source Sans Pro',
- -apple-system,
-        BlinkMacSystemFont,
- 'Segoe UI',
- Roboto,
- 'Helvetica Neue',
- Arial,
+    font-family: 'Quicksand', 'Source Sans Pro', -apple-system,
+        BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
         sans-serif;
     font-size: 100px;
     font-weight: 300;

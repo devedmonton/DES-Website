@@ -15,18 +15,7 @@ export default {
 
     computed: {
         sectionClass() {
-            let classList
-
-            switch (this.bg) {
-                case 'dim':
-                    classList = 'bg-gray-100'
-                    break
-
-                default:
-                    break
-            }
-
-            return classList
+            return `bg-${this.bg}`
         },
     },
 }
