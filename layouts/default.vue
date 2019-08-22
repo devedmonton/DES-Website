@@ -1,8 +1,22 @@
 <template>
     <div>
+        <the-menu />
         <nuxt />
+        <the-footer />
     </div>
 </template>
+
+<script>
+import TheFooter from '~/components/TheFooter'
+import TheMenu from '~/components/TheMenu'
+
+export default {
+    components: {
+        TheFooter,
+        TheMenu,
+    },
+}
+</script>
 
 <style>
 html {

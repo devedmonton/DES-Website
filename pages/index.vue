@@ -1,39 +1,63 @@
 <template>
     <div class="container">
-        <div>
-            <logo />
-            <h1 class="title">
-                devedmonton
-            </h1>
-            <h2 class="subtitle">
-                My bedazzling Nuxt.js project
-            </h2>
-            <div class="links">
-                <a
-                    href="https://nuxtjs.org/"
-                    target="_blank"
-                    class="button--green"
-                >
-                    Documentation
-                </a>
-                <a
-                    href="https://github.com/nuxt/nuxt.js"
-                    target="_blank"
-                    class="button--grey"
-                >
-                    GitHub
-                </a>
+        <page-section bg="dim">
+            <h1>Dev Edmonton Society</h1>
+            <h3
+                >Fostering a stronger software development community in
+                Edmonton.</h3
+            >
+            <p
+                >Corporate-grade mimetic cable paranoia pyrolitic synthetic
+                trace Chinese consciousness. Fiberglass Chinese feral Tokyo
+                vatgrown futon street futon vatgrown Harajuku prototype
+                microprocessor quicksilver jockey agency.</p
+            >
+        </page-section>
+        <page-section>
+            <div>
+                <figure>
+                    <img src="https://placem.at/things" alt="" />
+                </figure>
             </div>
-        </div>
+            <div>
+                <h2>Communities & Tech Groups</h2>
+                <button-link>View all</button-link>
+            </div>
+        </page-section>
+        <page-section bg="dim">
+            <div>
+                <figure>
+                    <img src="https://placem.at/things" alt="" />
+                </figure>
+            </div>
+            <div>
+                <h2>Developer Resources</h2>
+                <button-link>View all</button-link>
+            </div>
+        </page-section>
+        <page-section>
+            <h2>Community Engagement</h2>
+        </page-section>
+        <page-section bg="dark">
+            <h2>Upcoming Events</h2>
+            <div> </div>
+            <h2>Meetups this Week</h2>
+        </page-section>
+        <page-section>
+            <h2>Voices From the Ground</h2>
+            <h3>Special Thanks to our Community Partners</h3>
+        </page-section>
     </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import ButtonLink from '~/components/ButtonLink.vue'
+import PageSection from '~/components/PageSection.vue'
 
 export default {
     components: {
-        Logo,
+        ButtonLink,
+        PageSection,
     },
 }
 </script>
@@ -46,17 +70,21 @@ export default {
 */
 .container {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
     min-height: 100vh;
     margin: 0 auto;
-    text-align: center;
 }
 
 .title {
     display: block;
-    font-family: 'Quicksand', 'Source Sans Pro', -apple-system,
-        BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    font-family: 'Quicksand',
+ 'Source Sans Pro',
+ -apple-system,
+        BlinkMacSystemFont,
+ 'Segoe UI',
+ Roboto,
+ 'Helvetica Neue',
+ Arial,
         sans-serif;
     font-size: 100px;
     font-weight: 300;
