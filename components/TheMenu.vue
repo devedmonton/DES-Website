@@ -12,7 +12,7 @@
                     d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"
                 />
             </svg>
-            <span class="font-semibold text-xl tracking-tight">Logo</span>
+            <span class="font-semibold text-xl tracking-tight">DES</span>
         </div>
         <div class="block lg:hidden">
             <button
@@ -30,36 +30,36 @@
         </div>
         <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
             <div class="text-sm lg:flex-grow">
-                <a
-                    href="#responsive-header"
+                <nuxt-link
+                    to="/community/"
                     class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
                 >
                     Community
-                </a>
-                <a
-                    href="#responsive-header"
+                </nuxt-link>
+                <nuxt-link
+                    to="/resources/"
                     class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
                 >
                     Resources
-                </a>
-                <a
-                    href="#responsive-header"
+                </nuxt-link>
+                <nuxt-link
+                    to="/events/"
                     class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
                 >
                     Events
-                </a>
-                <a
-                    href="#responsive-header"
+                </nuxt-link>
+                <nuxt-link
+                    to="/blog/"
                     class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
                 >
                     Blog
-                </a>
-                <a
-                    href="#responsive-header"
+                </nuxt-link>
+                <nuxt-link
+                    to="/about/"
                     class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
                 >
                     About
-                </a>
+                </nuxt-link>
             </div>
         </div>
     </nav>
