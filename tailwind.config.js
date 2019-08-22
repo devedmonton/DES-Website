@@ -27,7 +27,7 @@ module.exports = {
             black: '#000',
             white: '#fff',
 
-            gray: hueScale(opencolor.gray),
+            grey: hueScale(opencolor.gray),
             red: hueScale(opencolor.red),
             pink: hueScale(opencolor.pink),
             grape: hueScale(opencolor.grape),
