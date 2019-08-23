@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="">
         <page-section bg="grey-100">
             <h1 class="text-5xl">Dev Edmonton Society</h1>
             <h3 class="text-2xl"
@@ -63,18 +63,6 @@ export default {
 </script>
 
 <style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-  @apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0 auto;
-}
-
 .title {
     display: block;
     font-family: 'Quicksand', 'Source Sans Pro', -apple-system,

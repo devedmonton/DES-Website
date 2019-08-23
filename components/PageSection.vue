@@ -1,6 +1,8 @@
 <template>
     <section class="px-4" :class="[bg ? 'py-16' : 'my-16', sectionClass]">
-        <slot></slot>
+        <div class="container mx-auto px-4">
+            <slot />
+        </div>
     </section>
 </template>
 
