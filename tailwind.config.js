@@ -41,6 +41,12 @@ module.exports = {
             yellow: hueScale(opencolor.yellow),
             orange: hueScale(opencolor.orange),
         },
+
+        extend: {
+            maxWidth: {
+                30: '30%',
+            },
+        },
     },
     variants: {},
     plugins: [],
