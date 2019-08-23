@@ -10,42 +10,55 @@
                 >Corporate-grade mimetic cable paranoia pyrolitic synthetic
                 trace Chinese consciousness. Fiberglass Chinese feral Tokyo
                 vatgrown futon street futon vatgrown Harajuku prototype
-                microprocessor quicksilver jockey agency.</p
-            >
+                microprocessor quicksilver jockey agency. Microprocessor edge
+                verge amalgam Night City sarariman chrome.
+            </p>
         </page-section>
         <page-section>
-            <div>
-                <figure>
+            <v-flag>
+                <template v-slot:image>
                     <img src="https://placem.at/things" alt="" />
-                </figure>
-            </div>
-            <div>
+                </template>
+
                 <h2 class="text-4xl">Communities & Tech Groups</h2>
+                <p class="measure"
+                    >Agency concrete techno-criminal unfolding Russian software
+                    factory. Neon Night City cutting-edge ICE ninja scan
+                    microprocessor quicksilver octagon shuriken professional
+                    black link man.</p
+                >
                 <button-link>View all</button-link>
-            </div>
+            </v-flag>
         </page-section>
         <page-section bg="grey-100">
-            <div>
-                <figure>
+            <v-flag :flip="true">
+                <template v-slot:image>
                     <img src="https://placem.at/things" alt="" />
-                </figure>
-            </div>
-            <div>
+                </template>
+
                 <h2 class="text-4xl">Developer Resources</h2>
+                <p class="measure"
+                    >Chrome link man concrete carapace beam rain-stained
+                    software nexus Tokyo hardwired magnetic link man television
+                    octagon cowboy. Television link man pyrolitic consciousness
+                    précis run Chinese electronic chassis robot orbital.</p
+                >
                 <button-link>View all</button-link>
-            </div>
+            </v-flag>
         </page-section>
         <page-section>
-            <h2 class="text-4xl">Community Engagement</h2>
+            <h2 class="text-4xl text-center">Community Engagement</h2>
         </page-section>
         <page-section bg="grey-200">
-            <h2 class="text-4xl">Upcoming Events</h2>
+            <h2 class="text-4xl text-center">Upcoming Events</h2>
             <div> </div>
-            <h2 class="text-4xl">Meetups this Week</h2>
+            <h2 class="text-4xl text-center">Meetups this Week</h2>
         </page-section>
         <page-section>
-            <h2 class="text-4xl">Voices From the Ground</h2>
-            <h3 class="text-2xl">Special Thanks to our Community Partners</h3>
+            <h2 class="text-4xl text-center">Voices From the Ground</h2>
+            <h3 class="text-2xl text-center"
+                >Special Thanks to our Community Partners</h3
+            >
         </page-section>
     </div>
 </template>
@@ -53,11 +66,13 @@
 <script>
 import ButtonLink from '~/components/ButtonLink.vue'
 import PageSection from '~/components/PageSection.vue'
+import VFlag from '~/components/VFlag.vue'
 
 export default {
     components: {
         ButtonLink,
         PageSection,
+        VFlag,
     },
 }
 </script>
