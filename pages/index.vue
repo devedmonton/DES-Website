@@ -1,6 +1,6 @@
 <template>
     <div class="">
-        <page-section bg="grey-100">
+        <page-section bg="dim">
             <h1 class="text-5xl">Dev Edmonton Society</h1>
             <h3 class="text-2xl"
                 >Fostering a stronger software development community in
@@ -30,7 +30,7 @@
                 <button-link>View all</button-link>
             </v-flag>
         </page-section>
-        <page-section bg="grey-100">
+        <page-section bg="dim">
             <v-flag :flip="true">
                 <template v-slot:image>
                     <img src="https://placem.at/things" alt="" />
@@ -49,7 +49,7 @@
         <page-section>
             <h2 class="text-4xl text-center">Community Engagement</h2>
         </page-section>
-        <page-section bg="grey-200">
+        <page-section bg="dark">
             <h2 class="text-4xl text-center">Upcoming Events</h2>
             <div> </div>
             <h2 class="text-4xl text-center">Meetups this Week</h2>

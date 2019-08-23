@@ -1,5 +1,12 @@
 <template>
-    <section class="px-4" :class="[bg ? 'py-16' : 'my-16', sectionClass]">
+    <section
+        class="px-4"
+        :class="[
+            bg ? 'py-16' : 'my-16',
+            dimBg ? 'bg-grey-100' : null,
+            darkBg ? 'bg-grey-200' : null,
+        ]"
+    >
         <div class="container mx-auto px-4">
             <slot />
         </div>
@@ -16,8 +23,12 @@ export default {
     },
 
     computed: {
-        sectionClass() {
-            return `bg-${this.bg}`
+        dimBg() {
+            return this.bg === 'dim'
+        },
+
+        darkBg() {
+            return this.bg === 'dark'
         },
     },
 }
