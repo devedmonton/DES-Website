@@ -83,12 +83,14 @@
 <script>
 import ButtonLink from '~/components/ButtonLink.vue'
 import PageSection from '~/components/PageSection.vue'
+import VCard from '~/components/VCard.vue'
 import VFlag from '~/components/VFlag.vue'
 
 export default {
     components: {
         ButtonLink,
         PageSection,
+        VCard,
         VFlag,
     },
 }
