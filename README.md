@@ -1,6 +1,6 @@
 # devedmonton
 
-> My bedazzling Nuxt.js project
+> Fostering a stronger software development community in Edmonton.
 
 ## Build Setup
 

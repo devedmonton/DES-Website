@@ -4,7 +4,7 @@ export default {
      ** Headers of the page
      */
     head: {
-        title: process.env.npm_package_name || '',
+        title: 'Dev Edmonton Society',
         meta: [
             { charset: 'utf-8' },
             {
@@ -41,7 +41,7 @@ export default {
     /*
      ** Nuxt.js modules
      */
-    modules: ['@nuxtjs/pwa'],
+    modules: [['@nuxtjs/pwa', { meta: { mobileApp: false } }]],
     /*
      ** Build configuration
      */
