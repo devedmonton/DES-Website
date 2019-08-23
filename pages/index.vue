@@ -51,7 +51,24 @@
         </page-section>
         <page-section bg="dark">
             <h2 class="text-4xl text-center">Upcoming Events</h2>
-            <div> </div>
+            <div>
+                <v-card>
+                    <template v-slot:image>
+                        <img
+                            class="w-full"
+                            src="https://placem.at/things?w=320&h=170"
+                            alt=""
+                        />
+                    </template>
+
+                    <h4 class="font-bold text-xl mb-2">Event title</h4>
+                    <p class="text-gray-700 text-base">
+                        Pixel Ninsei polycarbon fieldstrip grid pyrolitic
+                        software misinformation intrusion cryptic Russian
+                        cyberspace Yakuza bedslab polysaccharide.
+                    </p>
+                </v-card>
+            </div>
             <h2 class="text-4xl text-center">Meetups this Week</h2>
         </page-section>
         <page-section>
