@@ -1,6 +1,12 @@
+@import url('https://rsms.me/inter/inter.css');
+
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+html {
+    font-family: 'Inter var', sans-serif;
+}
 
 .measure {
     max-width: 30em;
