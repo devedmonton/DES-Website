@@ -1,12 +1,36 @@
 .<template>
-    <nuxt-link
-        class="button inline-block align-middle text-center text-green-600 uppercase select-none border font-normal whitespace-no-wrap py-2 px-8 text-base leading-normal no-underline bg-white hover:bg-green-600 hover:text-white"
+    <component
+        :is="href ? 'nuxt-link' : 'button'"
         :to="href"
+        class="
+            button
+            inline-block
+            px-8
+            py-2
+            align-middle
+            text-base
+            text-center
+            uppercase
+            font-normal
+            whitespace-no-wrap
+            leading-normal
+            select-none
+            border
+            no-underline
+        "
+        :class="[
+            appearance === 'default'
+                ? 'text-green-600 bg-white border-grey-400 hover:bg-green-600 hover:text-white'
+                : null,
+            appearance === 'inverted'
+                ? 'text-white bg-green-600 border-green-600 hover:bg-green-800 hover:border-green-800'
+                : null,
+        ]"
     >
         <div>
-            <slot></slot>
+            <slot />
         </div>
-    </nuxt-link>
+    </component>
 </template>
 
 <script>
@@ -16,6 +40,10 @@ export default {
             type: String,
             default: '#0',
         },
+        appearance: {
+            type: String,
+            default: 'default',
+        },
     },
 }
 </script>
@@ -24,7 +52,6 @@ export default {
 .button {
     letter-spacing: -0.03em;
     font-variation-settings: 'wght' 700, 'slnt' calc(-1 * 0);
-    border-color: theme('colors.grey.400');
     border-bottom-color: theme('colors.green.600');
 }
 
