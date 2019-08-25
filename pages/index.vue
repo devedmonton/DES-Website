@@ -1,18 +1,34 @@
 <template>
     <div class="">
         <page-section bg="dim">
-            <h1 class="text-5xl">Dev Edmonton Society</h1>
-            <h3 class="text-2xl"
-                >Fostering a stronger software development community in
-                Edmonton.</h3
-            >
-            <p class="mt-8 measure"
-                >Corporate-grade mimetic cable paranoia pyrolitic synthetic
-                trace Chinese consciousness. Fiberglass Chinese feral Tokyo
-                vatgrown futon street futon vatgrown Harajuku prototype
-                microprocessor quicksilver jockey agency. Microprocessor edge
-                verge amalgam Night City sarariman chrome.
-            </p>
+            <div class="flex flex-col md:flex-row">
+                <div class="flex-1 px-2 md:pr-0 md:pr-8">
+                    <h1 class="text-5xl">Dev Edmonton Society</h1>
+                    <h3 class="text-2xl"
+                        >Fostering a stronger software development community in
+                        Edmonton.</h3
+                    >
+                    <p class="mt-8 measure"
+                        >Corporate-grade mimetic cable paranoia pyrolitic
+                        synthetic trace Chinese consciousness. Fiberglass
+                        Chinese feral Tokyo vatgrown futon street futon vatgrown
+                        Harajuku prototype microprocessor quicksilver jockey
+                        agency. Microprocessor edge verge amalgam Night City
+                        sarariman chrome.
+                    </p>
+                </div>
+                <div class="slack relative md:max-w-30 md:order-2">
+                    <div
+                        class="slack-bg absolute top-0 right-0 bottom-0 left-0 bg-grey-900 opacity-75"
+                    ></div>
+                    <div class="slack-content relative p-4 text-white">
+                        <h3 class="text-2xl">Join our community on Slack</h3>
+                        <button-link appearance="inverted" class="mt-4"
+                            >Join</button-link
+                        >
+                    </div>
+                </div>
+            </div>
         </page-section>
         <page-section>
             <v-flag>

@@ -3,8 +3,8 @@
         class="px-4"
         :class="[
             bg ? 'py-16' : 'my-16',
-            dimBg ? 'bg-grey-100' : null,
-            darkBg ? 'bg-grey-200' : null,
+            dimBg ? 'bg-grey-000' : null,
+            darkBg ? 'bg-grey-100' : null,
         ]"
     >
         <div class="container mx-auto px-4">

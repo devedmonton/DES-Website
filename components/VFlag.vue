@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col md:flex-row dt mw6 center pt0 pb5 pv5-m pv6-ns">
+    <div class="flex flex-col md:flex-row">
         <figure class="md:max-w-30" :class="[flipImage ? 'md:order-2' : null]">
             <slot name="image" />
         </figure>
