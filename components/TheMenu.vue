@@ -1,25 +1,14 @@
 <template>
-    <nav class="bg-teal-500">
+    <nav class="bg-brand-primary">
         <div
-            class="container flex items-center justify-between flex-wrap mx-auto px-4 py-8"
+            class="container text-white flex items-center justify-between flex-wrap mx-auto px-8 py-6"
         >
             <div class="flex items-center flex-shrink-0 text-white mr-6">
-                <svg
-                    class="fill-current h-8 w-8 mr-2"
-                    width="54"
-                    height="54"
-                    viewBox="0 0 54 54"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"
-                    />
-                </svg>
-                <span class="font-semibold text-xl tracking-tight">DES</span>
+                <img class="h-16 sm:h-24" src="~/assets/logos/DevEdmonton-Logo-Light.svg"/>
             </div>
-            <div class="block lg:hidden">
+            <div class="block hidden">
                 <button
-                    class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"
+                    class="flex items-center px-3 py-2 border rounded hover:text-brand-light hover:border-brand-light"
                 >
                     <svg
                         class="fill-current h-3 w-3"
@@ -31,37 +20,13 @@
                     </svg>
                 </button>
             </div>
-            <div class="w-full block lg:flex lg:items-center lg:w-auto">
-                <div class="text-sm lg:flex-grow">
+            <div class="block">
+                <div class="text-md">
                     <nuxt-link
-                        to="/community/"
-                        class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+                        to="/"
+                        class="block mt-4 text-white hover:text-brand-light mr-4"
                     >
-                        Community
-                    </nuxt-link>
-                    <nuxt-link
-                        to="/resources/"
-                        class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
-                    >
-                        Resources
-                    </nuxt-link>
-                    <nuxt-link
-                        to="/events/"
-                        class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
-                    >
-                        Events
-                    </nuxt-link>
-                    <nuxt-link
-                        to="/blog/"
-                        class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
-                    >
-                        Blog
-                    </nuxt-link>
-                    <nuxt-link
-                        to="/about/"
-                        class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
-                    >
-                        About
+                        Home
                     </nuxt-link>
                 </div>
             </div>
