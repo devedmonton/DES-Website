@@ -1,7 +1,7 @@
 <template>
     <nav class="bg-brand-primary">
         <div
-            class="container text-white flex items-center justify-between flex-wrap mx-auto px-4 py-8"
+            class="container text-white flex items-center justify-between flex-wrap mx-auto px-8 py-6"
         >
             <div class="flex items-center flex-shrink-0 text-white mr-6">
                 <img class="h-16 sm:h-24" src="~/assets/logos/DevEdmonton-Logo-Light.svg"/>
