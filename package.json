@@ -9,54 +9,23 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "lint": "prettier-eslint '**/*.{js,vue}' --list-different --ignore '{dist,.nuxt}/**'",
-    "lint:styles": "stylelint '**/*.{css,vue}' --ip '{.nuxt,dist}/**'",
     "test": "ava"
   },
   "dependencies": {
-    "@nuxtjs/google-analytics": "2.2.0",
-    "@nuxtjs/pwa": "3.0.0-beta.16",
-    "nuxt": "2.8.1",
+    "@nuxtjs/google-analytics": "^2.4.0",
+    "@nuxtjs/pwa": "^3.1.2",
+    "nuxt": "^2.14.6",
     "open-color": "^1.7.0"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "1.1.x",
-    "@vue/test-utils": "1.0.0-beta.29",
-    "@zazen/eslint-config": "1.0.x",
-    "@zazen/stylelint-config": "1.0.x",
-    "ava": "2.3.x",
-    "browser-env": "3.2.x",
-    "eslint": "6.2.x",
-    "eslint-plugin-vue": "5.2.x",
-    "husky": "3.0.x",
-    "lint-staged": "9.2.x",
-    "require-extension-hooks": "0.3.x",
-    "require-extension-hooks-babel": "1.0.x",
-    "require-extension-hooks-vue": "3.0.x",
-    "stylelint": "10.1.x"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,vue}": [
-      "prettier-eslint --write",
-      "git add"
-    ],
-    "*.{css,vue}": [
-      "stylelint --fix",
-      "git add"
-    ]
-  },
-  "prettier": {
-    "arrowParens": "always",
-    "htmlWhitespaceSensitivity": "strict",
-    "proseWrap": "never",
-    "semi": false,
-    "singleQuote": true,
-    "tabWidth": 4,
-    "trailingComma": "all"
+    "@nuxtjs/tailwindcss": "3.1.0",
+    "@vue/test-utils": "^1.1.0",
+    "ava": "^3.13.0",
+    "browser-env": "^3.3.0",
+    "eslint": "^7.11.0",
+    "eslint-plugin-vue": "^7.0.1",
+    "require-extension-hooks": "^0.3.3",
+    "require-extension-hooks-babel": "^1.0.0",
+    "require-extension-hooks-vue": "^3.0.0"
   }
 }
