@@ -1,4 +1,4 @@
-.<template>
+<template>
     <component
         :is="href ? 'nuxt-link' : 'button'"
         :to="href"
@@ -20,10 +20,10 @@
         "
         :class="[
             appearance === 'default'
-                ? 'text-green-600 bg-white border-grey-400 hover:bg-green-600 hover:text-white'
+                ? 'text-brand-secondary bg-white border-brand-secondary hover:bg-brand-secondary hover:text-white'
                 : null,
             appearance === 'inverted'
-                ? 'text-white bg-green-600 border-green-600 hover:bg-green-800 hover:border-green-800'
+                ? 'text-white bg-brand-secondary border-brand-secondary hover:bg-brand-secondary-dark hover:border-brand-secondary-dark'
                 : null,
         ]"
     >
@@ -52,11 +52,11 @@ export default {
 .button {
     letter-spacing: -0.03em;
     font-variation-settings: 'wght' 700, 'slnt' calc(-1 * 0);
-    border-bottom-color: theme('colors.green.600');
+    border-bottom-color: theme('colors.brand-secondary');
 }
 
 .button:hover,
 .button:focus {
-    border-color: theme('colors.green.600');
+    border-color: theme('colors.brand-secondary');
 }
 </style>

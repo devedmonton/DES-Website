@@ -28,8 +28,10 @@ module.exports = {
             white: '#fff',
 
             'brand-primary': '#265DAD',
+            'brand-primary-dark': '#215097',
             'brand-light': '#ABAAC3',
             'brand-secondary': '#7751A9',
+            'brand-secondary-dark': '#61428A',
             'brand-accent': '#DDB22E',
             'brand-black': '#171717',
             'brand-grey': '#CED3DC',
