@@ -27,6 +27,13 @@ module.exports = {
             black: '#000',
             white: '#fff',
 
+            'brand-primary': '#265DAD',
+            'brand-light': '#ABAAC3',
+            'brand-secondary': '#7751A9',
+            'brand-accent': '#DDB22E',
+            'brand-black': '#171717',
+            'brand-grey': '#CED3DC',
+
             grey: hueScale(opencolor.gray),
             red: hueScale(opencolor.red),
             pink: hueScale(opencolor.pink),

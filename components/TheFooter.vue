@@ -1,6 +1,6 @@
 .<template>
-    <footer class="bg-grey-700">
-        <div class="container mx-auto px-4 py-8">
+    <footer class="bg-brand-grey">
+        <div class="container flex justify-around mx-auto px-4 py-8">
             <a
                 class="link white-60 bg-transparent hover-white inline-flex items-center ma2 tc br2 pa2"
                 href="https://facebook.com"
