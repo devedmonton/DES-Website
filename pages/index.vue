@@ -1,9 +1,9 @@
 <template>
     <div class="">
         <page-section bg="dim">
-            <div class="flex flex-col md:flex-row">
+            <div class="flex flex-col md:flex-row justify-center items-center">
                 <div class="flex-1 px-2 md:pr-0 md:pr-8">
-                    <h1 class="text-5xl">Dev Edmonton Society</h1>
+                    <h1 class="text-4xl">Dev Edmonton Society</h1>
                     <h3 class="text-2xl"
                         >Fostering a stronger software development community in
                         Edmonton.</h3
@@ -17,15 +17,19 @@
                         sarariman chrome.
                     </p>
                 </div>
-                <div class="slack relative md:max-w-30 md:order-2">
-                    <div
-                        class="slack-bg absolute top-0 right-0 bottom-0 left-0 bg-grey-900 opacity-75"
-                    ></div>
-                    <div class="slack-content relative p-4 text-white">
-                        <h3 class="text-2xl">Join our community on Slack</h3>
-                        <button-link appearance="inverted" class="mt-4"
-                            >Join</button-link
+                <div class="slack relative md:max-w-30 order-2 mt-4">
+                    <div class="slack-content relative p-4 text-center">
+                        <p class="text-xl">Join our community on Slack</p>
+                        <img src="~assets/logos/Slack_RGB.svg" />
+                        <a
+                            href="https://devedmonton-invite.herokuapp.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
+                            <v-button appearance="inverted"
+                                >Join</v-button
+                            >
+                        </a>
                     </div>
                 </div>
             </div>
@@ -103,6 +107,7 @@ import ButtonLink from '~/components/ButtonLink.vue'
 import PageSection from '~/components/PageSection.vue'
 import VCard from '~/components/VCard.vue'
 import VFlag from '~/components/VFlag.vue'
+import VButton from '~/components/VButton.vue'
 
 export default {
     components: {
@@ -110,6 +115,7 @@ export default {
         PageSection,
         VCard,
         VFlag,
+        VButton,
     },
 }
 </script>

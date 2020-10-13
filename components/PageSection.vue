@@ -2,7 +2,7 @@
     <section
         class="px-4"
         :class="[
-            bg ? 'py-16' : 'my-16',
+            bg ? 'py-8' : 'my-8',
             dimBg ? 'bg-grey-000' : null,
             darkBg ? 'bg-grey-100' : null,
         ]"
