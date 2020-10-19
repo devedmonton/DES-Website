@@ -34,6 +34,79 @@
                 </div>
             </div>
         </page-section>
+        <page-section bg="dark">
+            <h2 class="text-4xl text-center">What We Do</h2>
+            <div class="flex items-start justify-center mt-4 -mx-4">
+                <div class="mx-4">
+                    <v-card>
+                        <template v-slot:image>
+                            <img
+                                class="w-full"
+                                src="https://placem.at/things?w=320&h=170"
+                                alt=""
+                            />
+                        </template>
+
+                        <h4 class="font-bold text-xl mb-2">Support Meetups & Events</h4>
+                        <p class="text-grey-700 text-base">
+                            If you're a technology meetup or event organizers, we've
+                            got your back!
+                        </p>
+                        <p class="text-grey-700 text-base">
+                            From online streaming tools, equipment and training,
+                            to event support, organizer training, and venues we're
+                            here to help developers run awesome events about the
+                            tools they love; without having to start from scratch
+                            on their own.
+                        </p>
+                    </v-card>
+                </div>
+                <div class="mx-4">
+                    <v-card>
+                        <template v-slot:image>
+                            <img
+                                class="w-full"
+                                src="https://placem.at/things?w=320&h=170"
+                                alt=""
+                            />
+                        </template>
+
+                        <h4 class="font-bold text-xl mb-2">Connect Community</h4>
+                        <p class="text-grey-700 text-base">
+                            Technology changes faster everyday, and a great
+                            technology community needs to stay connected if we
+                            want to keep us.
+                        </p>
+                        <p class="text-grey-700 text-base">
+                            Through our active Slack, mailing list, events,
+                            and online outreach we provide many ways for the
+                            Edmonton technology community to come together.
+                        </p>
+                    </v-card>
+                </div>
+                <div class="mx-4">
+                    <v-card>
+                        <template v-slot:image>
+                            <img
+                                class="w-full"
+                                src="https://placem.at/things?w=320&h=170"
+                                alt=""
+                            />
+                        </template>
+
+                        <h4 class="font-bold text-xl mb-2">Provide A Platform</h4>
+                        <p class="text-grey-700 text-base">
+                            Beyond just connecting meetup and event orgranizers
+                            with great online and in-person venues and resources
+                            we provide access to a variety of supports to help
+                            local technologists build the community they want to
+                            see, wherever that may be. Share your ideas on our Slack!
+                        </p>
+                    </v-card>
+                </div>
+            </div>
+            <h2 class="mt-16 text-4xl text-center">Meetups this Week</h2>
+        </page-section>
         <page-section>
             <v-flag>
                 <template v-slot:image>
