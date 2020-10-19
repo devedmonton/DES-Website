@@ -9,12 +9,12 @@
                         Edmonton.</h3
                     >
                     <p class="mt-8 measure"
-                        >Corporate-grade mimetic cable paranoia pyrolitic
-                        synthetic trace Chinese consciousness. Fiberglass
-                        Chinese feral Tokyo vatgrown futon street futon vatgrown
-                        Harajuku prototype microprocessor quicksilver jockey
-                        agency. Microprocessor edge verge amalgam Night City
-                        sarariman chrome.
+                        >We are made up of people who believe that an impactful,
+                        diverse, and collaborative developer community enriches
+                        us all. We realize this vision by sharing knowledge and
+                        ideas, understanding the community and its needs,
+                        promoting events and initiatives, and supporting
+                        technology meetups and organizations.
                     </p>
                 </div>
                 <div class="slack relative md:max-w-30 order-2 mt-4">
