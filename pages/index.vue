@@ -105,9 +105,74 @@
                     </v-card>
                 </div>
             </div>
-            <h2 class="mt-16 text-4xl text-center">Meetups this Week</h2>
         </page-section>
         <page-section>
+            <h2 class="text-4xl text-center">Get Involved</h2>
+            <div class="flex items-start justify-center mt-4 -mx-4">
+                <div class="mx-4">
+                    <v-card>
+                        <template v-slot:image>
+                            <img
+                                class="w-full"
+                                src="https://placem.at/things?w=320&h=170"
+                                alt=""
+                            />
+                        </template>
+
+                        <h4 class="font-bold text-xl mb-2">As A Developer</h4>
+                        <p class="text-grey-700 text-base">
+                            There so many ways to get involved in the Edmonton developer community!
+                        </p>
+                        <p class="text-grey-700 text-base">
+                            <a href="https://devedmonton-invite.herokuapp.com/">Get started by joining our Slack</a> and make sure to say hello in our <code>#introductions</code> channel where one of our friendly community members will help you find your way.
+                        </p>
+                        <p class="text-grey-700 text-base">
+                            From there, <a href="https://youtube.com/devedmonton">subscribe to the Dev Edmonton YouTube channel</a> to be part of our regular livestreams, and see recordings of past events. We also host regular online mixers and hackathons. <a href="https://devedmonton-invite.herokuapp.com/">Join out Slack for the latest news</a>.
+                        </p>
+                    </v-card>
+                </div>
+                <div class="mx-4">
+                    <v-card>
+                        <template v-slot:image>
+                            <img
+                                class="w-full"
+                                src="https://placem.at/things?w=320&h=170"
+                                alt=""
+                            />
+                        </template>
+
+                        <h4 class="font-bold text-xl mb-2">As An Event Organizers</h4>
+                        <p class="text-grey-700 text-base">
+                            If you're like us you're probably a developer keen to start a meetup or organize and event for your favourite language or technologies. We've been there, and want to help!
+                        </p>
+                        <p class="text-grey-700 text-base">
+                            Whether it's sharing best practices, streaming and recording resources, fundraising, or just lending a friendly ear we want to share the lessons we've learned and let you focus on running successful and engaging events!
+                        </p>
+                    </v-card>
+                </div>
+                <div class="mx-4">
+                    <v-card>
+                        <template v-slot:image>
+                            <img
+                                class="w-full"
+                                src="https://placem.at/things?w=320&h=170"
+                                alt=""
+                            />
+                        </template>
+
+                        <h4 class="font-bold text-xl mb-2">As A Business</h4>
+                        <p class="text-grey-700 text-base">
+                            Whether you're a growing startup or an established player the Dev Edmonton Society can help your understand the tools and technologies shaping your business.
+                        </p>
+                        <p class="text-grey-700 text-base">
+                            Supporting and growning the Edmonton tech community takes many shapes, from simple financial donations to direct engagemenent by providing speakers, venues, resources and donations of employee time. We want to help your business grow and find a community of technologists passionate about the tools you need to succeed!
+                        </p>
+                    </v-card>
+                </div>
+            </div>
+        </page-section>
+        <page-section>
+            <h2 class="mt-16 text-4xl text-center">Meetups this Week</h2>
             <v-flag>
                 <template v-slot:image>
                     <img src="https://placem.at/things" alt="" />
@@ -138,9 +203,6 @@
                 >
                 <button-link class="mt-4">View all</button-link>
             </v-flag>
-        </page-section>
-        <page-section>
-            <h2 class="text-4xl text-center">Community Engagement</h2>
         </page-section>
         <page-section bg="dark">
             <h2 class="text-4xl text-center">Upcoming Events</h2>
