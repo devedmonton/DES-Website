@@ -36,6 +36,8 @@ export default {
     buildModules: [
         // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
         '@nuxtjs/tailwindcss',
+        // Doc: https://google-analytics.nuxtjs.org
+        '@nuxtjs/google-analytics',
     ],
     /*
      ** Nuxt.js modules
@@ -49,5 +51,8 @@ export default {
          ** You can extend webpack config here
          */
         extend(config, ctx) {},
+    },
+    googleAnalytics: {
+      id: 'UA-180778341-1'
     },
 }
