@@ -129,6 +129,15 @@
                         <p class="text-grey-700 text-base">
                             From there, <a href="https://youtube.com/devedmonton">subscribe to the Dev Edmonton YouTube channel</a> to be part of our regular livestreams, and see recordings of past events. We also host regular online mixers and hackathons. <a href="https://devedmonton-invite.herokuapp.com/">Join out Slack for the latest news</a>.
                         </p>
+                        <a
+                            href="https://devedmonton-invite.herokuapp.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <v-button appearance="inverted"
+                                >Join Slack</v-button
+                            >
+                        </a>
                     </v-card>
                 </div>
                 <div class="mx-4">
@@ -148,6 +157,15 @@
                         <p class="text-grey-700 text-base">
                             Whether it's sharing best practices, streaming and recording resources, fundraising, or just lending a friendly ear we want to share the lessons we've learned and let you focus on running successful and engaging events!
                         </p>
+                        <a
+                            href="mailto:organizer-support@devedmonton.com?subject=I'm%20interested%20in%20help%20organizing%20an%20Edmonton%20technology%20event"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <v-button appearance="inverted"
+                                >Organize An Event</v-button
+                            >
+                        </a>
                     </v-card>
                 </div>
                 <div class="mx-4">
@@ -167,6 +185,15 @@
                         <p class="text-grey-700 text-base">
                             Supporting and growning the Edmonton tech community takes many shapes, from simple financial donations to direct engagemenent by providing speakers, venues, resources and donations of employee time. We want to help your business grow and find a community of technologists passionate about the tools you need to succeed!
                         </p>
+                        <a
+                            href="mailto:community-support@devedmonton.com?subject=Supporting%20Dev%20Edmonton%20Society"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <v-button appearance="inverted"
+                                >Support Local Tech</v-button
+                            >
+                        </a>
                     </v-card>
                 </div>
             </div>
