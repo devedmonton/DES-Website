@@ -30,7 +30,13 @@
           <div class="mt-10 -mx-4 relative lg:mt-0">
             <div class="slack-content relative p-4 text-center">
               <p class="text-xl text-brand-secondary">
+                <a
+                href="https://devedmonton-invite.herokuapp.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Join our community on Slack
+              </a>
               </p>
               <img class="max-w-md m-auto" src="~assets/logos/Slack_RGB.svg" />
               <a
