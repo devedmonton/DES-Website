@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-24">
+  <div class="pt-24" id="about">
     <div class="py-8 bg-white overflow-hidden">
       <div
         class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-screen-xl"
@@ -47,7 +47,6 @@
     </div>
 
     <div
-      id="about"
       class="relative bg-grey-000 pt-24 -mt-8 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8"
     >
       <div class="absolute inset-0">
