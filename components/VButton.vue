@@ -1,39 +1,42 @@
 <template>
+  <span class="inline-flex rounded-md shadow-sm">
     <button
-        class="button inline-block px-8 py-2 align-middle text-base text-center uppercase font-normal whitespace-no-wrap leading-normal select-none border no-underline"
-        :class="[
-            appearance === 'default'
-                ? 'text-brand-secondary bg-white border-brand-secondary hover:bg-brand-secondary hover:text-white'
-                : null,
-            appearance === 'inverted'
-                ? 'text-white bg-brand-secondary border-brand-secondary hover:bg-brand-secondary-dark hover:border-brand-secondary-dark'
-                : null,
-        ]"
+      type="button"
+      class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-brand-secondary hover:bg-brand-primary focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150"
+      :class="[
+      appearance === 'default'
+        ? 'text-brand-secondary bg-white hover:bg-brand-secondary hover:text-white'
+        : null,
+      appearance === 'inverted'
+        ? 'text-white bg-brand-secondary hover:bg-brand-primary'
+        : null,
+    ]"
     >
-        <slot />
+      <slot />
     </button>
+  </span>
 </template>
 
 <script>
 export default {
-    props: {
-        appearance: {
-            type: String,
-            default: 'default',
-        },
+  props: {
+    appearance: {
+      type: String,
+      default: "default",
     },
-}
+  },
+};
 </script>
 
 <style>
 .button {
-    letter-spacing: -0.03em;
-    font-variation-settings: 'wght' 700, 'slnt' calc(-1 * 0);
-    border-bottom-color: theme('colors.brand-secondary');
+  letter-spacing: -0.03em;
+  font-variation-settings: "wght" 700, "slnt" calc(-1 * 0);
+  border-bottom-color: theme("colors.brand-secondary");
 }
 
 .button:hover,
 .button:focus {
-    border-color: theme('colors.brand-secondary');
+  border-color: theme("colors.brand-secondary");
 }
 </style>
