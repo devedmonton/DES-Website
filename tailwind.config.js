@@ -1,10 +1,10 @@
 const opencolor = require('open-color')
 
 function hueScale(hue = []) {
-    return hue.reduce((acc, val, idx) => {
-        let key = `${idx}00`
-        return { ...acc, [key]: val }
-    }, {})
+  return hue.reduce((acc, val, idx) => {
+    let key = `${idx}00`
+    return { ...acc, [key]: val }
+  }, {})
 }
 
 /*
@@ -14,49 +14,51 @@ function hueScale(hue = []) {
  ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
  */
 module.exports = {
-    theme: {
-        screens: {
-            sm: '640px',
-            md: '768px',
-            lg: '1024px',
-            xl: '1280px',
-        },
-        colors: {
-            transparent: 'transparent',
+  theme: {
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+    }, 
 
-            black: '#000',
-            white: '#fff',
+    extend: {
+      colors: {
+        transparent: 'transparent',
 
-            'brand-primary': '#265DAD',
-            'brand-primary-dark': '#215097',
-            'brand-light': '#ABAAC3',
-            'brand-secondary': '#7751A9',
-            'brand-secondary-dark': '#61428A',
-            'brand-accent': '#DDB22E',
-            'brand-black': '#171717',
-            'brand-grey': '#CED3DC',
+        black: '#000',
+        white: '#fff',
 
-            grey: hueScale(opencolor.gray),
-            red: hueScale(opencolor.red),
-            pink: hueScale(opencolor.pink),
-            grape: hueScale(opencolor.grape),
-            violet: hueScale(opencolor.violet),
-            indigo: hueScale(opencolor.indigo),
-            blue: hueScale(opencolor.blue),
-            cyan: hueScale(opencolor.cyan),
-            teal: hueScale(opencolor.teal),
-            green: hueScale(opencolor.green),
-            lime: hueScale(opencolor.lime),
-            yellow: hueScale(opencolor.yellow),
-            orange: hueScale(opencolor.orange),
-        },
+        'brand-primary': '#265DAD',
+        'brand-primary-dark': '#215097',
+        'brand-light': '#ABAAC3',
+        'brand-secondary': '#7751A9',
+        'brand-secondary-dark': '#61428A',
+        'brand-accent': '#DDB22E',
+        'brand-black': '#171717',
+        'brand-grey': '#CED3DC',
 
-        extend: {
-            maxWidth: {
-                30: '30%',
-            },
-        },
+        grey: hueScale(opencolor.gray),
+        red: hueScale(opencolor.red),
+        pink: hueScale(opencolor.pink),
+        grape: hueScale(opencolor.grape),
+        violet: hueScale(opencolor.violet),
+        indigo: hueScale(opencolor.indigo),
+        blue: hueScale(opencolor.blue),
+        cyan: hueScale(opencolor.cyan),
+        teal: hueScale(opencolor.teal),
+        green: hueScale(opencolor.green),
+        lime: hueScale(opencolor.lime),
+        yellow: hueScale(opencolor.yellow),
+        orange: hueScale(opencolor.orange),
+      },
+      maxWidth: {
+        30: '30%',
+      },
     },
-    variants: {},
-    plugins: [],
+  },
+  variants: {},
+  plugins: [
+    require('@tailwindcss/ui'),
+  ],
 }

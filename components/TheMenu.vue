@@ -1,35 +1,148 @@
 <template>
-    <nav class="bg-brand-primary">
-        <div
-            class="container text-white flex items-center justify-between flex-wrap mx-auto px-8 py-6"
-        >
-            <div class="flex items-center flex-shrink-0 text-white mr-6">
-                <img class="h-16 sm:h-24" src="~/assets/logos/DevEdmonton-Logo-Light.svg"/>
-            </div>
-            <div class="block hidden">
-                <button
-                    class="flex items-center px-3 py-2 border rounded hover:text-brand-light hover:border-brand-light"
-                >
-                    <svg
-                        class="fill-current h-3 w-3"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <title>Menu</title>
-                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                    </svg>
-                </button>
-            </div>
-            <div class="block">
-                <div class="text-md">
-                    <nuxt-link
-                        to="/"
-                        class="block mt-4 text-white hover:text-brand-light mr-4"
-                    >
-                        Home
-                    </nuxt-link>
-                </div>
-            </div>
+  <!--
+  Tailwind UI components require Tailwind CSS v1.8 and the @tailwindcss/ui plugin.
+  Read the documentation to get started: https://tailwindui.com/documentation
+-->
+  <nav class="bg-brand-primary">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+      <div class="flex items-center justify-between h-24">
+        <div class="flex-shrink-0">
+          <img
+            class="block h-16 w-auto"
+            src="~/assets/logos/DevEdmonton-Logo-Light.svg"
+            alt="Workflow logo"
+          />
         </div>
-    </nav>
+        <div class="hidden sm:block sm:ml-6">
+          <div class="flex">
+            <a
+              href="#about"
+              class="px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
+              >About</a
+            >
+            <a
+              href="#get-involved"
+              class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
+              >Get Involved</a
+            >
+            <a
+              href="#meetups"
+              class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
+              >Meetups</a
+            >
+            <a
+              href="#resources"
+              class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
+              >Resources</a
+            >
+            <a
+              href="#events"
+              class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
+              >Events</a
+            >
+          </div>
+        </div>
+
+        <div class="-mr-2 flex sm:hidden">
+          <!-- Mobile menu button -->
+          <button
+            id="mobile-btn"
+            @click="toggleMenu"
+            class="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-brand-primary-dark focus:outline-none focus:bg-brand-primary-dark transition duration-150 ease-in-out"
+            aria-label="Main menu"
+            aria-expanded="false"
+          >
+            <!-- Icon when menu is closed. -->
+            <!--
+            Heroicon name: menu
+
+            Menu open: "hidden", Menu closed: "block"
+          -->
+            <svg
+              class="block h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+            <!-- Icon when menu is open. -->
+            <!--
+            Heroicon name: x
+
+            Menu open: "block", Menu closed: "hidden"
+          -->
+            <svg
+              class="hidden h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--
+    Mobile menu, toggle classes based on menu state.
+
+    Menu open: "block", Menu closed: "hidden"
+  -->
+    <div id="mobile-menu" class="hidden sm:hidden">
+      <div class="px-2 pt-2 pb-3">
+        <a
+          href="#about"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
+          >About</a
+        >
+        <a
+          href="#get-involved"
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
+          >Get Involved</a
+        >
+        <a
+          href="#meetups"
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
+          >Meetups</a
+        >
+        <a
+          href="#resources"
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
+          >Resources</a
+        >
+        <a
+          href="#events"
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
+          >Events</a
+        >
+      </div>
+    </div>
+  </nav>
 </template>
+
+<script>
+export default {
+  methods: {
+    toggleMenu: function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('block');
+        
+    }
+  }
+};
+</script>
