@@ -3,8 +3,8 @@
   Tailwind UI components require Tailwind CSS v1.8 and the @tailwindcss/ui plugin.
   Read the documentation to get started: https://tailwindui.com/documentation
 -->
-  <nav class="bg-brand-primary">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+  <nav class="bg-brand-primary fixed w-full z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 top-0">
       <div class="flex items-center justify-between h-24">
         <div class="flex-shrink-0">
           <img
@@ -105,28 +105,33 @@
     <div id="mobile-menu" class="hidden sm:hidden">
       <div class="px-2 pt-2 pb-3">
         <a
+          @click="toggleMenu"
           href="#about"
-          class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
+          class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
           >About</a
         >
         <a
+          @click="toggleMenu"
           href="#get-involved"
-          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
           >Get Involved</a
         >
         <a
+          @click="toggleMenu"
           href="#meetups"
-          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
           >Meetups</a
         >
         <a
+          @click="toggleMenu"
           href="#resources"
-          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
           >Resources</a
         >
         <a
+          @click="toggleMenu"
           href="#events"
-          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
           >Events</a
         >
       </div>
@@ -137,12 +142,11 @@
 <script>
 export default {
   methods: {
-    toggleMenu: function() {
-      const mobileMenu = document.getElementById('mobile-menu');
-      mobileMenu.classList.toggle('hidden');
-      mobileMenu.classList.toggle('block');
-        
-    }
-  }
+    toggleMenu: function () {
+      const mobileMenu = document.getElementById("mobile-menu");
+      mobileMenu.classList.toggle("hidden");
+      mobileMenu.classList.toggle("block");
+    },
+  },
 };
 </script>
