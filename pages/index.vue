@@ -31,14 +31,14 @@
             <div class="slack-content relative p-4 text-center">
               <p class="text-xl text-brand-secondary">
                 <a
-                href="/slack"
+                href="https://devedmonton-invite.herokuapp.com/"
               >
                 Join our community on Slack
               </a>
               </p>
               <img class="max-w-md m-auto" src="~assets/logos/Slack_RGB.svg" />
               <a
-                href="/slack"
+                href="https://devedmonton-invite.herokuapp.com/"
               >
                 <v-button appearance="inverted">Join Slack</v-button>
               </a>
@@ -197,7 +197,7 @@
                   <p class="mt-3 text-base leading-6 text-gray-500">
                     <a
                       class="text-brand-primary"
-                      href="/slack"
+                      href="https://devedmonton-invite.herokuapp.com/"
                       >Get started by joining our Slack</a
                     >
                     and make sure to say hello in our
@@ -207,7 +207,7 @@
                 </div>
                 <div class="flex justify-center mt-4">
                   <a
-                    href="/slack"
+                    href="https://devedmonton-invite.herokuapp.com/"
                   >
                     <v-Button appearance="inverted">Join Slack</v-Button>
                   </a>
