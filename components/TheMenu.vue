@@ -132,7 +132,7 @@
           @click="toggleMenu"
           href="/contact"
           class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
-          >contact</a
+          >Contact</a
         >
       </div>
     </div>
