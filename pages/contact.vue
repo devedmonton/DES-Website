@@ -22,6 +22,7 @@
               <div class="mt-1 rounded-md shadow-sm">
                 <input
                   id="first_name"
+                  name="first_name"
                   class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                 />
               </div>
@@ -37,6 +38,7 @@
               <div class="mt-1 rounded-md shadow-sm">
                 <input
                   id="last_name"
+                  name="last_name"
                   class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                 />
               </div>
@@ -52,6 +54,7 @@
               <div class="mt-1 rounded-md shadow-sm">
                 <input
                   id="email"
+                  name="email"
                   type="email"
                   class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                 />
@@ -68,6 +71,7 @@
               <div class="mt-1 rounded-md shadow-sm">
                 <textarea
                   id="message"
+                  name="message"
                   rows="6"
                   class="form-textarea block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                 ></textarea>
