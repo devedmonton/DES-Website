@@ -49,6 +49,7 @@
     </div>
 
     <div
+      id="what-we-do"
       class="relative bg-grey-000 pt-24 -mt-8 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8"
     >
       <div class="absolute inset-0">

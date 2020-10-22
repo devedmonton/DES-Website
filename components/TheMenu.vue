@@ -16,24 +16,14 @@
         <div class="hidden sm:block sm:ml-6">
           <div class="flex">
             <a
+              href="/#what-we-do"
+              class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
+              >What We Do</a
+            >
+            <a
               href="/#get-involved"
               class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
               >Get Involved</a
-            >
-            <a
-              href="/#meetups"
-              class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
-              >Meetups</a
-            >
-            <a
-              href="/#resources"
-              class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
-              >Resources</a
-            >
-            <a
-              href="/#events"
-              class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
-              >Events</a
             >
             <a
               href="/contact"
@@ -106,27 +96,15 @@
       <div class="px-2 pt-2 pb-3">
         <a
           @click="toggleMenu"
+          href="/#what-we-do"
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
+          >What We Do</a
+        >
+        <a
+          @click="toggleMenu"
           href="/#get-involved"
           class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
           >Get Involved</a
-        >
-        <a
-          @click="toggleMenu"
-          href="/#meetups"
-          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
-          >Meetups</a
-        >
-        <a
-          @click="toggleMenu"
-          href="/#resources"
-          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
-          >Resources</a
-        >
-        <a
-          @click="toggleMenu"
-          href="/#events"
-          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
-          >Events</a
         >
         <a
           @click="toggleMenu"
