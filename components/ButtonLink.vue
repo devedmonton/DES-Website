@@ -20,10 +20,10 @@
         "
         :class="[
             appearance === 'default'
-                ? 'text-brand-secondary bg-white border-brand-secondary hover:bg-brand-secondary hover:text-white'
+                ? 'text-brand-primary bg-white border-brand-primary hover:bg-brand-primary hover:text-white'
                 : null,
             appearance === 'inverted'
-                ? 'text-white bg-brand-secondary border-brand-secondary hover:bg-brand-secondary-dark hover:border-brand-secondary-dark'
+                ? 'text-white bg-brand-primary border-brand-primary hover:bg-brand-primary-dark hover:border-brand-primary-dark'
                 : null,
         ]"
     >
@@ -52,11 +52,11 @@ export default {
 .button {
     letter-spacing: -0.03em;
     font-variation-settings: 'wght' 700, 'slnt' calc(-1 * 0);
-    border-bottom-color: theme('colors.brand-secondary');
+    border-bottom-color: theme('colors.brand-primary');
 }
 
 .button:hover,
 .button:focus {
-    border-color: theme('colors.brand-secondary');
+    border-color: theme('colors.brand-primary');
 }
 </style>
