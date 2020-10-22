@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-24" id="about">
+  <div id="about">
     <div class="py-8 bg-white overflow-hidden">
       <div
         class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-screen-xl"
@@ -31,18 +31,14 @@
             <div class="slack-content relative p-4 text-center">
               <p class="text-xl text-brand-secondary">
                 <a
-                href="https://devedmonton-invite.herokuapp.com/"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/slack"
               >
                 Join our community on Slack
               </a>
               </p>
               <img class="max-w-md m-auto" src="~assets/logos/Slack_RGB.svg" />
               <a
-                href="https://devedmonton-invite.herokuapp.com/"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/slack"
               >
                 <v-button appearance="inverted">Join Slack</v-button>
               </a>
@@ -200,7 +196,7 @@
                   <p class="mt-3 text-base leading-6 text-gray-500">
                     <a
                       class="text-brand-primary"
-                      href="https://devedmonton-invite.herokuapp.com/"
+                      href="/slack"
                       >Get started by joining our Slack</a
                     >
                     and make sure to say hello in our
@@ -210,9 +206,7 @@
                 </div>
                 <div class="flex justify-center mt-4">
                   <a
-                    href="https://devedmonton-invite.herokuapp.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="/slack"
                   >
                     <v-Button appearance="inverted">Join Slack</v-Button>
                   </a>
