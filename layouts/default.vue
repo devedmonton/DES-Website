@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div class="flex flex-col justify-between min-h-screen">
         <the-menu />
-        <nuxt />
+        <nuxt class="mb-auto pt-24 pb-4"/>
         <the-footer />
     </div>
 </template>

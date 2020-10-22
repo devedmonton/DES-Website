@@ -1,6 +1,6 @@
 .<template>
     <footer class="bg-brand-grey">
-        <div class="container flex justify-around mx-auto px-4 py-8">
+        <div class="container flex justify-around mx-auto p-4">
             <a
                 class="link white-60 bg-transparent hover-white inline-flex items-center ma2 tc br2 pa2"
                 href="https://facebook.com/devedmontonsociety"
