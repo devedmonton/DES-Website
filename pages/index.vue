@@ -1,475 +1,467 @@
 <template>
-  <div id="about">
-    <div class="py-8 bg-white overflow-hidden">
-      <div
-        class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-screen-xl"
-      >
+  <div>
+    <banner 
+      message="We're recruiting for the 2021-24 board! Find out more!"
+      shortMsg="We're recuiting for our board"
+      link="/contact"
+      buttonText="Contact Us"
+    />
+    <div id="about">
+      <div class="py-8 bg-white overflow-hidden">
         <div
-          class="relative mx-12 lg:my-12 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center"
+          class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-screen-xl"
         >
-          <div class="relative">
-            <h3
-              class="text-3xl leading-8 font-extrabold text-gray-900 tracking-tight sm:text-3xl sm:leading-9"
-            >
-              Dev Edmonton Society
-            </h3>
-            <h4
-              class="text-lg leading-8 font-bold text-gray-900 tracking-tight sm:text-lg sm:leading-9"
-            >
-              Fostering a stronger software development community in Edmonton.
-            </h4>
-            <p class="mt-3 text-lg leading-7 text-gray-500">
-              We are made up of people who believe that an impactful, diverse,
-              and collaborative developer community enriches us all. We realize
-              this vision by sharing knowledge and ideas, understanding the
-              community and its needs, promoting events and initiatives, and
-              supporting technology meetups and organizations.
-            </p>
-          </div>
-
-          <div class="mt-10 -mx-4 relative lg:mt-0">
-            <div class="slack-content relative p-4 text-center">
-              <p class="text-xl text-brand-secondary">
-                <a
-                href="/slack"
+          <div
+            class="relative mx-12 lg:my-12 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center"
+          >
+            <div class="relative">
+              <h3
+                class="text-3xl leading-8 font-extrabold text-gray-900 tracking-tight sm:text-3xl sm:leading-9"
               >
-                Join our community on Slack
-              </a>
+                Dev Edmonton Society
+              </h3>
+              <h4
+                class="text-lg leading-8 font-bold text-gray-900 tracking-tight sm:text-lg sm:leading-9"
+              >
+                Fostering a stronger software development community in Edmonton.
+              </h4>
+              <p class="mt-3 text-lg leading-7 text-gray-500">
+                We are made up of people who believe that an impactful, diverse,
+                and collaborative developer community enriches us all. We
+                realize this vision by sharing knowledge and ideas,
+                understanding the community and its needs, promoting events and
+                initiatives, and supporting technology meetups and
+                organizations.
               </p>
-              <img class="max-w-md m-auto" src="~assets/logos/Slack_RGB.svg" />
-              <a
-                href="/slack"
-              >
-                <v-button appearance="inverted">Join Slack</v-button>
-              </a>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div
-      class="relative bg-grey-000 pt-24 -mt-8 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8"
-    >
-      <div class="absolute inset-0">
-        <div class="h-1/3 sm:h-2/3"></div>
-      </div>
-      <div class="relative max-w-7xl mx-auto">
-        <div class="text-center">
-          <h2
-            class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10"
-          >
-            What we do
-          </h2>
-        </div>
-        <div
-          class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none"
-        >
-          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-            <div class="flex-shrink-0">
-              <img
-                class="h-48 w-full object-cover"
-                src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
-                alt=""
-              />
-            </div>
-            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-              <div class="flex-1">
-                <div class="block">
-                  <h3
-                    class="mt-2 text-xl leading-7 font-semibold text-gray-900"
-                  >
-                    Support Meetups & Events
-                  </h3>
-                  <p class="mt-3 text-base leading-6 text-gray-500">
-                    If you're a technology meetup or event organizers, we've got
-                    your back!
-                  </p>
-                  <p class="mt-3 text-base leading-6 text-gray-500">
-                    From online streaming tools, equipment and training, to
-                    event support, organizer training, and venues we're here to
-                    help developers run awesome events about the tools they
-                    love; without having to start from scratch on their own.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-            <div class="flex-shrink-0">
-              <img
-                class="h-48 w-full object-cover"
-                src="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
-                alt=""
-              />
-            </div>
-            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-              <div class="flex-1">
-                <div class="block">
-                  <h3
-                    class="mt-2 text-xl leading-7 font-semibold text-gray-900"
-                  >
-                    Connect Community
-                  </h3>
-                  <p class="mt-3 text-base leading-6 text-gray-500">
-                    Technology changes faster everyday, and a great technology
-                    community needs to stay connected if we want to keep us.
-                  </p>
-                  <p class="mt-3 text-base leading-6 text-gray-500">
-                    Through our active Slack, mailing list, events, and online
-                    outreach we provide many ways for the Edmonton technology
-                    community to come together.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-            <div class="flex-shrink-0">
-              <img
-                class="h-48 w-full object-cover"
-                src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
-                alt=""
-              />
-            </div>
-            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-              <div class="flex-1">
-                <div class="block">
-                  <h3
-                    class="mt-2 text-xl leading-7 font-semibold text-gray-900"
-                  >
-                    Provide A Platform
-                  </h3>
-                  <p class="mt-3 text-base leading-6 text-gray-500">
-                    Beyond just connecting meetup and event orgranizers with
-                    great online and in-person venues and resources we provide
-                    access to a variety of supports to help local technologists
-                    build the community they want to see, wherever that may be.
-                    Share your ideas on our Slack!
-                  </p>
-                </div>
+            <div class="mt-10 -mx-4 relative lg:mt-0">
+              <div class="slack-content relative p-4 text-center">
+                <p class="text-xl text-brand-secondary">
+                  <a href="/slack"> Join our community on Slack </a>
+                </p>
+                <img
+                  class="max-w-md m-auto"
+                  src="~assets/logos/Slack_RGB.svg"
+                />
+                <a href="/slack">
+                  <v-button appearance="inverted">Join Slack</v-button>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div
-      id="get-involved"
-      class="relative bg-white pt-24 -mt-8 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8"
-    >
-      <div class="absolute inset-0">
-        <div class="h-1/3 sm:h-2/3"></div>
-      </div>
-      <div class="relative max-w-7xl mx-auto">
-        <div class="text-center">
-          <h2
-            class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10"
-          >
-            Get Involved
-          </h2>
+      <div
+        class="relative bg-grey-000 pt-24 -mt-8 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8"
+      >
+        <div class="absolute inset-0">
+          <div class="h-1/3 sm:h-2/3"></div>
         </div>
-        <div
-          class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none"
-        >
-          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-            <div class="flex-shrink-0">
-              <img
-                class="h-48 w-full object-cover"
-                src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
-                alt=""
-              />
+        <div class="relative max-w-7xl mx-auto">
+          <div class="text-center">
+            <h2
+              class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10"
+            >
+              What we do
+            </h2>
+          </div>
+          <div
+            class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none"
+          >
+            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+              <div class="flex-shrink-0">
+                <img
+                  class="h-48 w-full object-cover"
+                  src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+                  alt=""
+                />
+              </div>
+              <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                <div class="flex-1">
+                  <div class="block">
+                    <h3
+                      class="mt-2 text-xl leading-7 font-semibold text-gray-900"
+                    >
+                      Support Meetups & Events
+                    </h3>
+                    <p class="mt-3 text-base leading-6 text-gray-500">
+                      If you're a technology meetup or event organizers, we've
+                      got your back!
+                    </p>
+                    <p class="mt-3 text-base leading-6 text-gray-500">
+                      From online streaming tools, equipment and training, to
+                      event support, organizer training, and venues we're here
+                      to help developers run awesome events about the tools they
+                      love; without having to start from scratch on their own.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-              <div class="flex-1 flex flex-col">
-                <div class="block flex-grow">
-                  <h3
-                    class="mt-2 text-xl leading-7 font-semibold text-gray-900"
-                  >
-                    As A Developer
-                  </h3>
-                  <p class="mt-3 text-base leading-6 text-gray-500">
-                    There so many ways to get involved in the Edmonton developer
-                    community!
-                  </p>
-                  <p class="mt-3 text-base leading-6 text-gray-500">
+            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+              <div class="flex-shrink-0">
+                <img
+                  class="h-48 w-full object-cover"
+                  src="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+                  alt=""
+                />
+              </div>
+              <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                <div class="flex-1">
+                  <div class="block">
+                    <h3
+                      class="mt-2 text-xl leading-7 font-semibold text-gray-900"
+                    >
+                      Connect Community
+                    </h3>
+                    <p class="mt-3 text-base leading-6 text-gray-500">
+                      Technology changes faster everyday, and a great technology
+                      community needs to stay connected if we want to keep us.
+                    </p>
+                    <p class="mt-3 text-base leading-6 text-gray-500">
+                      Through our active Slack, mailing list, events, and online
+                      outreach we provide many ways for the Edmonton technology
+                      community to come together.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+              <div class="flex-shrink-0">
+                <img
+                  class="h-48 w-full object-cover"
+                  src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+                  alt=""
+                />
+              </div>
+              <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                <div class="flex-1">
+                  <div class="block">
+                    <h3
+                      class="mt-2 text-xl leading-7 font-semibold text-gray-900"
+                    >
+                      Provide A Platform
+                    </h3>
+                    <p class="mt-3 text-base leading-6 text-gray-500">
+                      Beyond just connecting meetup and event orgranizers with
+                      great online and in-person venues and resources we provide
+                      access to a variety of supports to help local
+                      technologists build the community they want to see,
+                      wherever that may be. Share your ideas on our Slack!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="get-involved"
+        class="relative bg-white pt-24 -mt-8 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8"
+      >
+        <div class="absolute inset-0">
+          <div class="h-1/3 sm:h-2/3"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto">
+          <div class="text-center">
+            <h2
+              class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10"
+            >
+              Get Involved
+            </h2>
+          </div>
+          <div
+            class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none"
+          >
+            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+              <div class="flex-shrink-0">
+                <img
+                  class="h-48 w-full object-cover"
+                  src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+                  alt=""
+                />
+              </div>
+              <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                <div class="flex-1 flex flex-col">
+                  <div class="block flex-grow">
+                    <h3
+                      class="mt-2 text-xl leading-7 font-semibold text-gray-900"
+                    >
+                      As A Developer
+                    </h3>
+                    <p class="mt-3 text-base leading-6 text-gray-500">
+                      There so many ways to get involved in the Edmonton
+                      developer community!
+                    </p>
+                    <p class="mt-3 text-base leading-6 text-gray-500">
+                      <a class="text-brand-primary" href="/slack"
+                        >Get started by joining our Slack</a
+                      >
+                      and make sure to say hello in our
+                      <code>#introductions</code> channel where one of our
+                      friendly community members will help you find your way.
+                    </p>
+                  </div>
+                  <div class="flex justify-center mt-4">
+                    <a href="/slack">
+                      <v-Button appearance="inverted">Join Slack</v-Button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+              <div class="flex-shrink-0">
+                <img
+                  class="h-48 w-full object-cover"
+                  src="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+                  alt=""
+                />
+              </div>
+              <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                <div class="flex-1 flex flex-col">
+                  <div class="block flex-grow">
+                    <h3
+                      class="mt-2 text-xl leading-7 font-semibold text-gray-900"
+                    >
+                      As An Event Organizer
+                    </h3>
+                    <p class="mt-3 text-base leading-6 text-gray-500">
+                      If you're like us you're probably a developer keen to
+                      start a meetup or organize and event for your favourite
+                      language or technologies. We've been there, and want to
+                      help!
+                    </p>
+                    <p class="mt-3 text-base leading-6 text-gray-500">
+                      Whether it's sharing best practices, streaming and
+                      recording resources, fundraising, or just lending a
+                      friendly ear we want to share the lessons we've learned
+                      and let you focus on running successful and engaging
+                      events!
+                    </p>
+                  </div>
+                  <div class="flex justify-center mt-4">
                     <a
-                      class="text-brand-primary"
-                      href="/slack"
-                      >Get started by joining our Slack</a
+                      class="m-auto"
+                      href="mailto:organizer-support@devedmonton.com?subject=I'm%20interested%20in%20help%20organizing%20an%20Edmonton%20technology%20event"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                    and make sure to say hello in our
-                    <code>#introductions</code> channel where one of our
-                    friendly community members will help you find your way.
-                  </p>
-                </div>
-                <div class="flex justify-center mt-4">
-                  <a
-                    href="/slack"
-                  >
-                    <v-Button appearance="inverted">Join Slack</v-Button>
-                  </a>
+                      <v-Button appearance="inverted"
+                        >Organize An Event</v-Button
+                      >
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-            <div class="flex-shrink-0">
-              <img
-                class="h-48 w-full object-cover"
-                src="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
-                alt=""
-              />
-            </div>
-            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-              <div class="flex-1 flex flex-col">
-                <div class="block flex-grow">
-                  <h3
-                    class="mt-2 text-xl leading-7 font-semibold text-gray-900"
-                  >
-                    As An Event Organizer
-                  </h3>
-                  <p class="mt-3 text-base leading-6 text-gray-500">
-                    If you're like us you're probably a developer keen to start
-                    a meetup or organize and event for your favourite language
-                    or technologies. We've been there, and want to help!
-                  </p>
-                  <p class="mt-3 text-base leading-6 text-gray-500">
-                    Whether it's sharing best practices, streaming and recording
-                    resources, fundraising, or just lending a friendly ear we
-                    want to share the lessons we've learned and let you focus on
-                    running successful and engaging events!
-                  </p>
-                </div>
-                <div class="flex justify-center mt-4">
-                  <a
-                    class="m-auto"
-                    href="mailto:organizer-support@devedmonton.com?subject=I'm%20interested%20in%20help%20organizing%20an%20Edmonton%20technology%20event"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <v-Button appearance="inverted">Organize An Event</v-Button>
-                  </a>
-                </div>
+            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+              <div class="flex-shrink-0">
+                <img
+                  class="h-48 w-full object-cover"
+                  src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+                  alt=""
+                />
               </div>
-            </div>
-          </div>
-          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-            <div class="flex-shrink-0">
-              <img
-                class="h-48 w-full object-cover"
-                src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
-                alt=""
-              />
-            </div>
-            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-              <div class="flex-1 flex flex-col">
-                <div class="block flex-grow">
-                  <h3
-                    class="mt-2 text-xl leading-7 font-semibold text-gray-900"
-                  >
-                    As A Business
-                  </h3>
-                  <p class="mt-3 text-base leading-6 text-gray-500">
-                    Whether you're a growing startup or an established player
-                    the Dev Edmonton Society can help your understand the tools
-                    and technologies shaping your business.
-                  </p>
-                  <p class="mt-3 text-base leading-6 text-gray-500">
-                    Supporting and growning the Edmonton tech community takes
-                    many shapes, from simple financial donations to direct
-                    engagemenent by providing speakers, venues, resources and
-                    donations of employee time. We want to help your business
-                    grow and find a community of technologists passionate about
-                    the tools you need to succeed!
-                  </p>
-                </div>
-                <div class="flex justify-center mt-4">
-                  <a
-                    href="mailto:community-support@devedmonton.com?subject=Supporting%20Dev%20Edmonton%20Society"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <v-Button appearance="inverted"
-                      >Support Local Tech</v-Button
+              <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                <div class="flex-1 flex flex-col">
+                  <div class="block flex-grow">
+                    <h3
+                      class="mt-2 text-xl leading-7 font-semibold text-gray-900"
                     >
-                  </a>
+                      As A Business
+                    </h3>
+                    <p class="mt-3 text-base leading-6 text-gray-500">
+                      Whether you're a growing startup or an established player
+                      the Dev Edmonton Society can help your understand the
+                      tools and technologies shaping your business.
+                    </p>
+                    <p class="mt-3 text-base leading-6 text-gray-500">
+                      Supporting and growning the Edmonton tech community takes
+                      many shapes, from simple financial donations to direct
+                      engagemenent by providing speakers, venues, resources and
+                      donations of employee time. We want to help your business
+                      grow and find a community of technologists passionate
+                      about the tools you need to succeed!
+                    </p>
+                  </div>
+                  <div class="flex justify-center mt-4">
+                    <a
+                      href="mailto:community-support@devedmonton.com?subject=Supporting%20Dev%20Edmonton%20Society"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <v-Button appearance="inverted"
+                        >Support Local Tech</v-Button
+                      >
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <page-section bg="dim" id="meetups" class="pt-24 pb-16">
-      <h2 class="text-4xl text-center">Meetups this Week</h2>
-      <v-flag>
-        <template v-slot:image>
-          <img src="https://placem.at/things" alt="" />
-        </template>
+      <page-section bg="dim" id="meetups" class="pt-24 pb-16">
+        <h2 class="text-4xl text-center">Meetups this Week</h2>
+        <v-flag>
+          <template v-slot:image>
+            <img src="https://placem.at/things" alt="" />
+          </template>
 
-        <h2 class="text-4xl">Communities & Tech Groups</h2>
-        <p class="mt-4 measure">
-          Agency concrete techno-criminal unfolding Russian software factory.
-          Neon Night City cutting-edge ICE ninja scan microprocessor quicksilver
-          octagon shuriken professional black link man.
-        </p>
-        <button-link class="mt-4">View all</button-link>
-      </v-flag>
-    </page-section>
+          <h2 class="text-4xl">Communities & Tech Groups</h2>
+          <p class="mt-4 measure">
+            Agency concrete techno-criminal unfolding Russian software factory.
+            Neon Night City cutting-edge ICE ninja scan microprocessor
+            quicksilver octagon shuriken professional black link man.
+          </p>
+          <button-link class="mt-4">View all</button-link>
+        </v-flag>
+      </page-section>
 
-    <page-section id="resources" class="pt-24 pb-16">
-      <h2 class="text-4xl text-center">Developer Resources</h2>
-      <v-flag :flip="true">
-        <template v-slot:image>
-          <img src="https://placem.at/things" alt="" />
-        </template>
-        <p class="mt-4 measure">
-          Chrome link man concrete carapace beam rain-stained software nexus
-          Tokyo hardwired magnetic link man television octagon cowboy.
-          Television link man pyrolitic consciousness précis run Chinese
-          electronic chassis robot orbital.
-        </p>
-        <button-link class="mt-4">View all</button-link>
-      </v-flag>
-    </page-section>
+      <page-section id="resources" class="pt-24 pb-16">
+        <h2 class="text-4xl text-center">Developer Resources</h2>
+        <v-flag :flip="true">
+          <template v-slot:image>
+            <img src="https://placem.at/things" alt="" />
+          </template>
+          <p class="mt-4 measure">
+            Chrome link man concrete carapace beam rain-stained software nexus
+            Tokyo hardwired magnetic link man television octagon cowboy.
+            Television link man pyrolitic consciousness précis run Chinese
+            electronic chassis robot orbital.
+          </p>
+          <button-link class="mt-4">View all</button-link>
+        </v-flag>
+      </page-section>
 
-    <div
-      id="events"
-      class="relative bg-grey-000 pt-24 -mt-8 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8"
-    >
-      <div class="absolute inset-0">
-        <div class="h-1/3 sm:h-2/3"></div>
-      </div>
-      <div class="relative max-w-7xl mx-auto">
-        <div class="text-center">
-          <h2
-            class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10"
+      <div
+        id="events"
+        class="relative bg-grey-000 pt-24 -mt-8 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8"
+      >
+        <div class="absolute inset-0">
+          <div class="h-1/3 sm:h-2/3"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto">
+          <div class="text-center">
+            <h2
+              class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10"
+            >
+              Upcoming Events
+            </h2>
+          </div>
+          <div
+            class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none"
           >
-            Upcoming Events
-          </h2>
-        </div>
-        <div
-          class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none"
-        >
-          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-            <div class="flex-shrink-0">
-              <img
-                class="h-48 w-full object-cover"
-                src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
-                alt=""
-              />
-            </div>
-            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-              <div class="flex-1">
-                <div class="block">
-                  <h3
-                    class="mt-2 text-xl leading-7 font-semibold text-gray-900"
-                  >
-                    Event 1
-                  </h3>
-                  <p class="mt-3 text-base leading-6 text-gray-500">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Sequi mollitia dolores beatae aliquid ea voluptate maxime
-                    placeat, delectus consequatur iusto?
-                  </p>
-                  <p class="mt-3 text-base leading-6 text-gray-500">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Minus, recusandae.
-                  </p>
+            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+              <div class="flex-shrink-0">
+                <img
+                  class="h-48 w-full object-cover"
+                  src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+                  alt=""
+                />
+              </div>
+              <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                <div class="flex-1">
+                  <div class="block">
+                    <h3
+                      class="mt-2 text-xl leading-7 font-semibold text-gray-900"
+                    >
+                      Event 1
+                    </h3>
+                    <p class="mt-3 text-base leading-6 text-gray-500">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Sequi mollitia dolores beatae aliquid ea voluptate maxime
+                      placeat, delectus consequatur iusto?
+                    </p>
+                    <p class="mt-3 text-base leading-6 text-gray-500">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Minus, recusandae.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-            <div class="flex-shrink-0">
-              <img
-                class="h-48 w-full object-cover"
-                src="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
-                alt=""
-              />
-            </div>
-            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-              <div class="flex-1">
-                <div class="block">
-                  <h3
-                    class="mt-2 text-xl leading-7 font-semibold text-gray-900"
-                  >
-                    Event 2
-                  </h3>
-                  <p class="mt-3 text-base leading-6 text-gray-500">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Sequi mollitia dolores beatae aliquid ea voluptate maxime
-                    placeat, delectus consequatur iusto?
-                  </p>
-                  <p class="mt-3 text-base leading-6 text-gray-500">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Minus, recusandae.
-                  </p>
+            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+              <div class="flex-shrink-0">
+                <img
+                  class="h-48 w-full object-cover"
+                  src="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+                  alt=""
+                />
+              </div>
+              <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                <div class="flex-1">
+                  <div class="block">
+                    <h3
+                      class="mt-2 text-xl leading-7 font-semibold text-gray-900"
+                    >
+                      Event 2
+                    </h3>
+                    <p class="mt-3 text-base leading-6 text-gray-500">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Sequi mollitia dolores beatae aliquid ea voluptate maxime
+                      placeat, delectus consequatur iusto?
+                    </p>
+                    <p class="mt-3 text-base leading-6 text-gray-500">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Minus, recusandae.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-            <div class="flex-shrink-0">
-              <img
-                class="h-48 w-full object-cover"
-                src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
-                alt=""
-              />
-            </div>
-            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-              <div class="flex-1">
-                <div class="block">
-                  <h3
-                    class="mt-2 text-xl leading-7 font-semibold text-gray-900"
-                  >
-                    Event 3
-                  </h3>
-                  <p class="mt-3 text-base leading-6 text-gray-500">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Sequi mollitia dolores beatae aliquid ea voluptate maxime
-                    placeat, delectus consequatur iusto?
-                  </p>
-                  <p class="mt-3 text-base leading-6 text-gray-500">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Minus, recusandae.
-                  </p>
+            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+              <div class="flex-shrink-0">
+                <img
+                  class="h-48 w-full object-cover"
+                  src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+                  alt=""
+                />
+              </div>
+              <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                <div class="flex-1">
+                  <div class="block">
+                    <h3
+                      class="mt-2 text-xl leading-7 font-semibold text-gray-900"
+                    >
+                      Event 3
+                    </h3>
+                    <p class="mt-3 text-base leading-6 text-gray-500">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Sequi mollitia dolores beatae aliquid ea voluptate maxime
+                      placeat, delectus consequatur iusto?
+                    </p>
+                    <p class="mt-3 text-base leading-6 text-gray-500">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Minus, recusandae.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <page-section>
-      <h2 class="text-4xl text-center">Voices From the Ground</h2>
-      <h3 class="mt-16 text-2xl text-center">
-        Special Thanks to our Community Partners
-      </h3>
-    </page-section>
+      <page-section>
+        <h2 class="text-4xl text-center">Voices From the Ground</h2>
+        <h3 class="mt-16 text-2xl text-center">
+          Special Thanks to our Community Partners
+        </h3>
+      </page-section>
+    </div>
   </div>
 </template>
 
 <script>
-import ButtonLink from "~/components/ButtonLink.vue";
-import PageSection from "~/components/PageSection.vue";
-import VCard from "~/components/VCard.vue";
-import VFlag from "~/components/VFlag.vue";
-import VButton from "~/components/VButton.vue";
-
-export default {
-  components: {
-    ButtonLink,
-    PageSection,
-    VCard,
-    VFlag,
-    VButton,
-  },
-};
+export default {};
 </script>
 
 <style>
