@@ -9,7 +9,7 @@
     <div id="about">
       <div class="py-8 bg-white overflow-hidden">
         <div
-          class="relative mx-12 pb-8 lg:my-12 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center"
+          class="relative mx-8 sm:mx-12 pb-8 lg:my-4 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center"
         >
           <div class="relative">
             <h3
@@ -54,7 +54,7 @@
 
     <div
       id="what-we-do"
-      class="relative bg-grey-000 pt-16 -mt-8 pb-20 px-4 sm:px-6 lg:pt-20 lg:pb-28 lg:px-8"
+      class="relative bg-grey-000 pt-16 -mt-8 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8"
     >
       <div class="absolute inset-0">
         <div class="h-1/3 sm:h-2/3"></div>
@@ -162,7 +162,7 @@
 
     <div
       id="get-involved"
-      class="relative bg-white pt-16 -mt-8 pb-4 px-4 sm:px-6 lg:pt-20 lg:pb-12 lg:px-8"
+      class="relative bg-white pt-16 -mt-8 pb-4 px-4 sm:px-6 lg:pt-24 lg:pb-12 lg:px-8"
     >
       <div class="absolute inset-0">
         <div class="h-1/3 sm:h-2/3"></div>
