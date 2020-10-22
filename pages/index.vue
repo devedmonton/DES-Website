@@ -37,7 +37,7 @@
 
             <div class="mt-10 -mx-4 relative lg:mt-0">
               <div class="slack-content relative p-4 text-center">
-                <p class="text-xl text-brand-secondary">
+                <p class="text-xl text-brand-primary">
                   <a href="/slack"> Join our community on Slack </a>
                 </p>
                 <img
@@ -461,7 +461,23 @@
 </template>
 
 <script>
-export default {};
+import Banner from "~/components/Banner.vue";
+import ButtonLink from "~/components/ButtonLink.vue";
+import PageSection from "~/components/PageSection.vue";
+import VCard from "~/components/VCard.vue";
+import VFlag from "~/components/VFlag.vue";
+import VButton from "~/components/VButton.vue";
+
+export default {
+  components: {
+    Banner,
+    ButtonLink,
+    PageSection,
+    VCard,
+    VFlag,
+    VButton,
+  },
+};
 </script>
 
 <style>
