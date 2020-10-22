@@ -16,11 +16,6 @@
         <div class="hidden sm:block sm:ml-6">
           <div class="flex">
             <a
-              href="/#about"
-              class="px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
-              >About</a
-            >
-            <a
               href="/#get-involved"
               class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
               >Get Involved</a
@@ -39,6 +34,11 @@
               href="/#events"
               class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
               >Events</a
+            >
+            <a
+              href="/contact"
+              class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
+              >Contact</a
             >
           </div>
         </div>
@@ -106,12 +106,6 @@
       <div class="px-2 pt-2 pb-3">
         <a
           @click="toggleMenu"
-          href="/#about"
-          class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
-          >About</a
-        >
-        <a
-          @click="toggleMenu"
           href="/#get-involved"
           class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
           >Get Involved</a
@@ -133,6 +127,12 @@
           href="/#events"
           class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
           >Events</a
+        >
+        <a
+          @click="toggleMenu"
+          href="/contact"
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
+          >contact</a
         >
       </div>
     </div>
