@@ -7,11 +7,13 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 top-0">
       <div class="flex items-center justify-between h-24">
         <div class="flex-shrink-0">
-          <img
-            class="block h-16 w-auto"
-            src="~/assets/logos/DevEdmonton-Logo-Light.svg"
-            alt="Workflow logo"
-          />
+          <a href="/">
+            <img
+              class="block h-16 w-auto"
+              src="~/assets/logos/DevEdmonton-Logo-Light.svg"
+              alt="Workflow logo"
+            />
+          </a>
         </div>
         <div class="hidden sm:block sm:ml-6">
           <div class="flex">
