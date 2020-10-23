@@ -29,7 +29,7 @@
 
         <div class="mt-10 -mx-4 relative lg:mt-0">
           <div class="slack-content relative p-4 text-center">
-            <p class="text-xl text-brand-secondary">
+            <p class="text-xl text-brand-primary">
               <a href="https://devedmonton-invite.herokuapp.com/">
                 Join our community on Slack
               </a>
