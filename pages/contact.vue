@@ -4,6 +4,7 @@
     <div class="max-w-3xl mx-auto py-4 sm:py-8">
       <!-- Content goes here -->
       <form name="contact" method="POST" netlify>
+        <input type="hidden" name="form-name" value="contact">
         <div>
           <div>
             <h3 class="text-lg leading-6 font-medium text-gray-900">
