@@ -33,6 +33,7 @@
           >
             <div class="rounded-md shadow-sm">
               <a
+                @click="hideBanner"
                 :href="link"
                 class="flex items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-brand-black bg-white hover:text-brand-primary focus:outline-none focus:shadow-outline transition ease-in-out duration-150"
               >
@@ -42,7 +43,7 @@
           </div>
           <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-2">
             <button
-              @click=hideBanner
+              @click="hideBanner"
               type="button"
               class="-mr-1 flex p-2 rounded-md hover:bg-brand-primary-dark focus:outline-none focus:bg-brand-primary-dark transition ease-in-out duration-150"
               aria-label="Dismiss"
