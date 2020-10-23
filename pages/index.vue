@@ -1,13 +1,9 @@
 <template>
   <div>
-    <banner
-      message="We're recruiting for the 2021-24 board! Find out more!"
-      shortMsg="We're recuiting for our board"
-      link="/contact"
-      buttonText="Contact Us"
-    />
-
-    <div id="about" class="py-8 bg-white overflow-hidden max-w-7xl mx-auto sm:px-4">
+    <div
+      id="about"
+      class="py-8 bg-white overflow-hidden max-w-7xl mx-auto sm:px-4"
+    >
       <div
         class="relative mx-8 sm:mx-12 pb-8 lg:my-4 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center"
       >
@@ -320,6 +316,7 @@ export default {
     VFlag,
     VButton,
   },
+  
 };
 </script>
 

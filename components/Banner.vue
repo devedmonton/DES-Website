@@ -80,9 +80,10 @@ export default {
   },
   methods: {
     hideBanner () {
-      document.getElementById('banner').classList.add("hidden")
+      document.getElementById('banner').classList.add("hidden");
+      window.sessionStorage.setItem(this.$attrs.name, "false");
     }
-  }
+  },
 };
 </script>
 
