@@ -3,9 +3,9 @@
     <h1 class="text-2xl font-bold py-4">Code of Conduct</h1>
     <ol>
       <li>
-        <h1 class="text-xl font-bold py-2 border-b border-lightgrey">
+        <h2 class="text-xl font-bold py-2 border-b border-lightgrey">
           1. Purpose
-        </h1>
+        </h2>
         <p class="py-2">
           Dev Edmonton Society's mission is to build an impactful, diverse, and
           collaborative developer community. As such, we are committed to
@@ -33,9 +33,9 @@
         </p>
       </li>
       <li>
-        <h1 class="text-xl font-bold py-2 border-b border-lightgrey">
+        <h2 class="text-xl font-bold py-2 border-b border-lightgrey">
           2. Open Culture Citizenship
-        </h1>
+        </h2>
         <p class="py-2">
           A supplemental goal of this Code of Conduct is to increase open
           culture citizenship by encouraging participants to recognize and
@@ -54,9 +54,9 @@
         </p>
       </li>
       <li>
-        <h1 class="text-xl font-bold py-2 border-b border-lightgrey">
+        <h2 class="text-xl font-bold py-2 border-b border-lightgrey">
           3. Expected Behavior
-        </h1>
+        </h2>
         <p class="py-2">
           The following behaviors are expected and requested of all community
           members:
@@ -91,9 +91,9 @@
         </ul>
       </li>
       <li>
-        <h1 class="text-xl font-bold py-2 border-b border-lightgrey">
+        <h2 class="text-xl font-bold py-2 border-b border-lightgrey">
           4. Unacceptable Behavior
-        </h1>
+        </h2>
         <p>
           The following behaviors are considered harassment and are unacceptable
           within our community:
@@ -147,9 +147,9 @@
         </ul>
       </li>
       <li>
-        <h1 class="text-xl font-bold py-2 border-b border-lightgrey">
+        <h2 class="text-xl font-bold py-2 border-b border-lightgrey">
           5. Consequences of Unacceptable Behavior
-        </h1>
+        </h2>
         <p class="py-2">
           Unacceptable behavior from any community member, including sponsors
           and those with decision-making authority, will not be tolerated.
@@ -176,9 +176,9 @@
         </p>
       </li>
       <li>
-        <h1 class="text-xl font-bold py-2 border-b border-lightgrey">
+        <h2 class="text-xl font-bold py-2 border-b border-lightgrey">
           6. Reporting Guidelines
-        </h1>
+        </h2>
         <p class="py-2">
           If you are subject to or witness unacceptable behavior, or have any
           other concerns, please notify a community organizer as soon as
@@ -195,9 +195,7 @@
         <p class="py-2">
           <a
             class="text-brand-primary"
-            href="https://devedmonton.com/coc_reporting.html"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/coc_reporting"
           >
             Reporting Guidelines</a
           >
@@ -211,9 +209,9 @@
         </p>
       </li>
       <li>
-        <h1 class="text-xl font-bold py-2 border-b border-lightgrey">
+        <h2 class="text-xl font-bold py-2 border-b border-lightgrey">
           7. Scope
-        </h1>
+        </h2>
         <p class="py-2">
           We expect all community participants (people, paid or otherwise;
           sponsors; and other guests) to abide by this Code of Conduct in all
@@ -230,9 +228,9 @@
         </p>
       </li>
       <li>
-        <h1 class="text-xl font-bold py-2 border-b border-lightgrey">
+        <h2 class="text-xl font-bold py-2 border-b border-lightgrey">
           8. Weapons Policy
-        </h1>
+        </h2>
         <p class="py-2">
           No weapons are allowed at Dev Edmonton Society events or events of the
           groups it's supports, including but not limited to explosives
@@ -248,9 +246,9 @@
         </p>
       </li>
       <li>
-        <h1 class="text-xl font-bold py-2 border-b border-lightgrey">
+        <h2 class="text-xl font-bold py-2 border-b border-lightgrey">
           9. Contact info
-        </h1>
+        </h2>
         <p class="py-2">
           <a class="text-brand-primary" href="mailto:conduct@devedmonton.com">
             conduct@devedmonton.com</a
@@ -258,9 +256,9 @@
         </p>
       </li>
       <li>
-        <h1 class="text-xl font-bold py-2 border-b border-lightgrey">
+        <h2 class="text-xl font-bold py-2 border-b border-lightgrey">
           10. License and Attribution
-        </h1>
+        </h2>
         <div class="py-2">
           <p class="py-2">
             This Code of Conduct is distributed under a
