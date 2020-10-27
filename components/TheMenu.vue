@@ -18,20 +18,13 @@
         <div class="hidden sm:block sm:ml-6">
           <div class="flex">
             <a
-              href="/#what-we-do"
+              v-for="link in desktopLinks"
+              :key="link.name"
+              :href="link.href"
               class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
-              >What We Do</a
             >
-            <a
-              href="/#get-involved"
-              class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
-              >Get Involved</a
-            >
-            <a
-              href="/contact"
-              class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
-              >Contact</a
-            >
+              {{ link.name }}
+            </a>
           </div>
         </div>
 
@@ -97,23 +90,14 @@
     <div id="mobile-menu" class="hidden sm:hidden">
       <div class="px-2 pt-2 pb-3">
         <a
+          v-for="link in mobileLinks"
+          :key="link.name"
           @click="toggleMenu"
-          href="/#what-we-do"
+          :href="link.href"
           class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
-          >What We Do</a
         >
-        <a
-          @click="toggleMenu"
-          href="/#get-involved"
-          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
-          >Get Involved</a
-        >
-        <a
-          @click="toggleMenu"
-          href="/contact"
-          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
-          >Contact</a
-        >
+          {{ link.name }}
+        </a>
       </div>
     </div>
   </nav>
@@ -126,6 +110,38 @@ export default {
       const mobileMenu = document.getElementById("mobile-menu");
       mobileMenu.classList.toggle("hidden");
       mobileMenu.classList.toggle("block");
+    },
+  },
+  data: function () {
+    return {
+      menuLinks: [
+        {
+          name: "What We Do",
+          href: "/#what-we-do",
+          isDesktop: true,
+          isMobile: true,
+        },
+        {
+          name: "Get Involved",
+          href: "/#get-involved",
+          isDesktop: true,
+          isMobile: true,
+        },
+        {
+          name: "Contact",
+          href: "/contact",
+          isDesktop: true,
+          isMobile: true,
+        },
+      ],
+    };
+  },
+  computed: {
+    mobileLinks: function () {
+      return this.menuLinks.filter((link) => link.isMobile);
+    },
+    desktopLinks: function () {
+      return this.menuLinks.filter((link) => link.isDesktop);
     },
   },
 };
