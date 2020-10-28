@@ -8,8 +8,8 @@
       name="BoardBanner"
       message="We're recruiting for the 2021-24 board! Find out more!"
       shortMsg="We're recuiting for our board"
-      link="/contact"
-      buttonText="Contact Us"
+      link="/board_recruiting"
+      buttonText="Learn More & Apply"
     />
   </div>
 </template>
