@@ -33,7 +33,6 @@
           >
             <div class="rounded-md shadow-sm">
               <a
-                @click="hideBanner"
                 :href="link"
                 class="flex items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-brand-black bg-white hover:text-brand-primary focus:outline-none focus:shadow-outline transition ease-in-out duration-150"
               >
