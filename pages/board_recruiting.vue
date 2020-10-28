@@ -4,8 +4,12 @@
     <ol>
       <li>
            <p class="py-2">
-                    <a href="https://docs.google.com/forms/d/1eet8HpysTgCMO_ZzOBp4QfV99uNpW6xmdYXZDkAExoc/prefill">Apply Now</a>
                     </p>
+            <div class="flex justify-center mt-4">
+              <a href="https://docs.google.com/forms/d/1eet8HpysTgCMO_ZzOBp4QfV99uNpW6xmdYXZDkAExoc/prefill">
+                <v-Button appearance="inverted">Apply Now</v-Button>
+              </a>
+            </div>
         <h2 class="text-xl font-bold py-2 border-b border-lightgrey">
           Board Compostion
         </h2>
@@ -116,17 +120,24 @@
             If you are interested in joining the board please let us know by filling out this form, and don't forget to stop by the dev edmonton slack channel and say hi!
 
         </p>
-                <p class="py-2">
-                    <a href="https://docs.google.com/forms/d/1eet8HpysTgCMO_ZzOBp4QfV99uNpW6xmdYXZDkAExoc/prefill">Apply Now</a>
-                    </p>
-
+        <div class="flex justify-center mt-4">
+          <a href="https://docs.google.com/forms/d/1eet8HpysTgCMO_ZzOBp4QfV99uNpW6xmdYXZDkAExoc/prefill">
+            <v-Button appearance="inverted">Apply Now</v-Button>
+          </a>
+        </div>
       </li>
     </ol>
   </div>
 </template>
 
 <script>
-export default {};
+import VButton from "~/components/VButton.vue";
+
+export default {
+  components: {
+    VButton,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
