@@ -28,6 +28,11 @@
               >Get Involved</a
             >
             <a
+              href="/board_recruiting"
+              class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
+              >Board</a
+            >
+            <a
               href="/contact"
               class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
               >Contact</a
@@ -107,6 +112,12 @@
           href="/#get-involved"
           class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
           >Get Involved</a
+        >
+        <a
+          @click="toggleMenu"
+          href="/board_recruiting"
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
+          >Board</a
         >
         <a
           @click="toggleMenu"
