@@ -18,7 +18,7 @@
         <div class="hidden sm:block sm:ml-6">
           <div class="flex">
             <a
-              v-for="link in desktopLinks"
+              v-for="link in menuLinks"
               :key="link.name"
               :href="link.href"
               class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
@@ -90,7 +90,7 @@
     <div id="mobile-menu" class="hidden sm:hidden">
       <div class="px-2 pt-2 pb-3">
         <a
-          v-for="link in mobileLinks"
+          v-for="link in menuLinks"
           :key="link.name"
           @click="toggleMenu"
           :href="link.href"
@@ -118,31 +118,22 @@ export default {
         {
           name: "What We Do",
           href: "/#what-we-do",
-          isDesktop: true,
-          isMobile: true,
         },
         {
           name: "Get Involved",
           href: "/#get-involved",
-          isDesktop: true,
-          isMobile: true,
+        },
+        {
+          name: "Board",
+          href: "/board_recruiting",
         },
         {
           name: "Contact",
           href: "/contact",
-          isDesktop: true,
-          isMobile: true,
         },
       ],
     };
   },
-  computed: {
-    mobileLinks: function () {
-      return this.menuLinks.filter((link) => link.isMobile);
-    },
-    desktopLinks: function () {
-      return this.menuLinks.filter((link) => link.isDesktop);
-    },
-  },
+  computed: {},
 };
 </script>
