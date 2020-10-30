@@ -55,7 +55,7 @@
           <h2
             class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10"
           >
-            What we do
+            What We Do
           </h2>
         </div>
         <div
