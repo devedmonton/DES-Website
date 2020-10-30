@@ -18,25 +18,13 @@
         <div class="hidden sm:block sm:ml-6">
           <div class="flex">
             <a
-              href="/#what-we-do"
+              v-for="link in menuLinks"
+              :key="link.name"
+              :href="link.href"
               class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
-              >What We Do</a
             >
-            <a
-              href="/#get-involved"
-              class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
-              >Get Involved</a
-            >
-            <a
-              href="/board_recruiting"
-              class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
-              >Board</a
-            >
-            <a
-              href="/contact"
-              class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
-              >Contact</a
-            >
+              {{ link.name }}
+            </a>
           </div>
         </div>
 
@@ -102,29 +90,14 @@
     <div id="mobile-menu" class="hidden sm:hidden">
       <div class="px-2 pt-2 pb-3">
         <a
+          v-for="link in menuLinks"
+          :key="link.name"
           @click="toggleMenu"
-          href="/#what-we-do"
+          :href="link.href"
           class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
-          >What We Do</a
         >
-        <a
-          @click="toggleMenu"
-          href="/#get-involved"
-          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
-          >Get Involved</a
-        >
-        <a
-          @click="toggleMenu"
-          href="/board_recruiting"
-          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
-          >Board</a
-        >
-        <a
-          @click="toggleMenu"
-          href="/contact"
-          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
-          >Contact</a
-        >
+          {{ link.name }}
+        </a>
       </div>
     </div>
   </nav>
@@ -139,5 +112,28 @@ export default {
       mobileMenu.classList.toggle("block");
     },
   },
+  data: function () {
+    return {
+      menuLinks: [
+        {
+          name: "What We Do",
+          href: "/#what-we-do",
+        },
+        {
+          name: "Get Involved",
+          href: "/#get-involved",
+        },
+        {
+          name: "Board",
+          href: "/board_recruiting",
+        },
+        {
+          name: "Contact",
+          href: "/contact",
+        },
+      ],
+    };
+  },
+  computed: {},
 };
 </script>
