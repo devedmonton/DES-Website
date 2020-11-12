@@ -3,7 +3,7 @@
         <h1 class="text-2xl font-bold py-4">Board Recruiting</h1>
         <div class="flex justify-center mt-4">
             <a
-                href="https://docs.google.com/forms/d/1eet8HpysTgCMO_ZzOBp4QfV99uNpW6xmdYXZDkAExoc/prefill"
+                href="https://meet.google.com/linkredirect?authuser=1&dest=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLSdDInY8Qr0IYbZtLwE1pApZPSihh3J-mteO0DsjabH6PUAgQA%2Fviewform%3Fusp%3Dsf_link"
             >
                 <v-Button appearance="inverted">Apply Now</v-Button>
             </a>
@@ -157,7 +157,7 @@
                 </p>
                 <div class="flex justify-center mt-4">
                     <a
-                        href="https://docs.google.com/forms/d/1eet8HpysTgCMO_ZzOBp4QfV99uNpW6xmdYXZDkAExoc/prefill"
+                        href="https://meet.google.com/linkredirect?authuser=1&dest=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLSdDInY8Qr0IYbZtLwE1pApZPSihh3J-mteO0DsjabH6PUAgQA%2Fviewform%3Fusp%3Dsf_link"
                     >
                         <v-Button appearance="inverted">Apply Now</v-Button>
                     </a>
