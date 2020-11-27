@@ -96,7 +96,7 @@
                         <li>3 Year commitment</li>
                     </ul>
                 </div>
-                <h3>President</h3>
+                <h3 class="text-lg font-bold py-1 border-b border-lightgrey">President</h3>
                 <div class="py-2">
                     <ul class="list-disc">
                         <li>Member of the Board</li>
@@ -116,7 +116,7 @@
                         <li>Steer the strategic and organizational planning</li>
                     </ul>
                 </div>
-                <h3>Secretary</h3>
+                <h3 class="text-lg font-bold py-1 border-b border-lightgrey">Secretary</h3>
                 <div class="py-2">
                     <ul class="list-disc">
                         <li>Member of the board</li>
@@ -132,7 +132,7 @@
                         </li>
                     </ul>
                 </div>
-                <h3>Treasurer</h3>
+                <h3 class="text-lg font-bold py-1 border-b border-lightgrey">Treasurer</h3>
                 <div class="py-2">
                     <ul class="list-disc">
                         <li>Member of the board</li>
@@ -143,6 +143,15 @@
                             Yearly financial statement submitted to the board
                             for approval
                         </li>
+                    </ul>
+                </div>
+                <h3 class="text-lg font-bold py-1 border-b border-lightgrey">Community Director</h3>
+                <div class="py-2">
+                    <ul class="list-disc">
+                        <li>Member of the board</li>
+                        <li>Coordinates community and student outreach activities</li>
+                        <li>Manages DES social media accounts</li>
+                        <li>Provides marketing copy and resources for DES community to share</li>
                     </ul>
                 </div>
             </li>
