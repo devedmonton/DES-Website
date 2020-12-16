@@ -51,7 +51,7 @@
                     Key Compentencies
                 </h2>
                 <p class="py-2">
-                    DES is looking to build a board that as a collective body
+                    DES is looking to build a board that, as a collective body,
                     excercises essential competencies. We have identified the
                     following compentencies that the board needs to possess.
                 </p>
