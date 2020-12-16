@@ -15,9 +15,9 @@
                 </h2>
                 <p class="py-2">
                     The Dev Edmonton Board consists of 7 members filling three
-                    year terms. Every year at the annual meeting elctions will
-                    be held for any open positions. Dev Edmonton Society is
-                    desires to build a board with a diversity of perspectives
+                    year terms. Every year at the annual meeting elections will
+                    be held for any open positions. Dev Edmonton Society
+                    desires to build a board with diverse perspectives
                     that reflect our community.
                 </p>
                 <div class="py-2">
