@@ -166,7 +166,7 @@
                 </p>
                 <div class="flex justify-center mt-4">
                     <a
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSdDInY8Qr0IYbZtLwE1pApZPSihh3J-mteO0DsjabH6PUAgQA/viewform"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSclnp_-xoIeedDxn4I8w23a8NQVlQOriEVjTBFDmt5DB_DXeg/viewform?usp=sf_link"
                     >
                         <v-Button appearance="inverted">Apply Now</v-Button>
                     </a>
