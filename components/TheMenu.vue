@@ -128,6 +128,10 @@ export default {
           href: "/board_recruiting",
         },
         {
+          name: "Become a Member test",
+          href: "/become_a_member",
+        },
+        {
           name: "Code of Conduct",
           href: "/code_of_conduct/"
         },
