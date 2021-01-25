@@ -125,7 +125,7 @@ export default {
         },
         {
           name: "Board",
-          href: "/board_recruiting",
+          href: "/board",
         },
         {
           name: "Code of Conduct",

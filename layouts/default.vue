@@ -4,12 +4,12 @@
     <nuxt class="mb-auto pt-24 pb-4" />
     <the-footer />
     <banner
-      v-if="showBoardBanner"
-      name="BoardBanner"
-      message="We're recruiting for the 2021-24 board! Find out more!"
-      shortMsg="We're recuiting for our board"
-      link="/board_recruiting"
-      buttonText="Learn More & Apply"
+      v-if="showBanner"
+      :name="bannerName"
+      message=""
+      shortMsg=""
+      link=""
+      buttonText="Click Here"
     />
   </div>
 </template>
@@ -27,12 +27,14 @@ export default {
   },
   data: function () {
     return {
-      showBoardBanner: null,
+      showBanner: false,
+      bannerName: "announcement-banner",
     };
   },
   mounted: function () {
-    this.showBoardBanner =
-      window.sessionStorage.getItem("BoardBanner") !== "false";
+    // uncomment to show banner on load
+    // this.showBanner =
+    //   window.sessionStorage.getItem(this.bannerName) !== "false";
   },
 };
 </script>
