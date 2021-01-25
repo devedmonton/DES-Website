@@ -1,13 +1,11 @@
 <template>
     <div class="max-w-7xl mx-auto spx-6 px-6 lg:px-8">
         <h1 class="text-2xl font-bold py-4">Board Recruiting</h1>
-        <div class="flex justify-center">
-            <p>
-                There are currently no open board positions. Open positions will
-                be posted here in the months preceding the society’s Annual
-                General Meeting.
-            </p>
-        </div>
+        <p>
+            There are currently no open board positions. Open positions will be
+            posted here in the months preceding the society’s Annual General
+            Meeting.
+        </p>
         <ol>
             <li>
                 <h2 class="text-xl font-bold py-2 border-b border-lightgrey">
