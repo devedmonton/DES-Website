@@ -48,7 +48,7 @@
                     <li>Mandy Meindersma</li>
                     <li>Mark Bennett</li>
                 </ul>
-                <p class="pt-2">The positions to be filled by each new board will be confirmed at a later date.</p>
+                <p class="pt-2">The positions to be filled by each new board member will be confirmed at a later date.</p>
             </li>
         </ol>
     </div>
