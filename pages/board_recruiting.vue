@@ -1,13 +1,11 @@
 <template>
     <div class="max-w-7xl mx-auto spx-6 px-6 lg:px-8">
         <h1 class="text-2xl font-bold py-4">Board Recruiting</h1>
-        <div class="flex justify-center mt-4">
-            <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSclnp_-xoIeedDxn4I8w23a8NQVlQOriEVjTBFDmt5DB_DXeg/viewform?usp=sf_link"
-            >
-                <v-Button appearance="inverted">Apply Now</v-Button>
-            </a>
-        </div>
+        <p>
+            There are currently no open board positions. Open positions will be
+            posted here in the months preceding the society’s Annual General
+            Meeting.
+        </p>
         <ol>
             <li>
                 <h2 class="text-xl font-bold py-2 border-b border-lightgrey">
@@ -16,9 +14,9 @@
                 <p class="py-2">
                     The Dev Edmonton Board consists of 7 members filling three
                     year terms. Every year at the annual meeting elections will
-                    be held for any open positions. Dev Edmonton Society
-                    desires to build a board with diverse perspectives
-                    that reflect our community.
+                    be held for any open positions. Dev Edmonton Society desires
+                    to build a board with diverse perspectives that reflect our
+                    community.
                 </p>
                 <div class="py-2">
                     <span><strong>Roles</strong></span>
@@ -51,7 +49,7 @@
                     Key Compentencies
                 </h2>
                 <p class="py-2">
-                    DES is looking to build a board that, as a collective body,
+                    DES looks to build a board that, as a collective body,
                     excercises essential competencies. We have identified the
                     following compentencies that the board needs to possess.
                 </p>
@@ -96,7 +94,9 @@
                         <li>3 Year commitment</li>
                     </ul>
                 </div>
-                <h3 class="text-lg font-bold py-1 border-b border-lightgrey">President</h3>
+                <h3 class="text-lg font-bold py-1 border-b border-lightgrey">
+                    President
+                </h3>
                 <div class="py-2">
                     <ul class="list-disc">
                         <li>Member of the Board</li>
@@ -116,7 +116,9 @@
                         <li>Steer the strategic and organizational planning</li>
                     </ul>
                 </div>
-                <h3 class="text-lg font-bold py-1 border-b border-lightgrey">Secretary</h3>
+                <h3 class="text-lg font-bold py-1 border-b border-lightgrey">
+                    Secretary
+                </h3>
                 <div class="py-2">
                     <ul class="list-disc">
                         <li>Member of the board</li>
@@ -132,7 +134,9 @@
                         </li>
                     </ul>
                 </div>
-                <h3 class="text-lg font-bold py-1 border-b border-lightgrey">Treasurer</h3>
+                <h3 class="text-lg font-bold py-1 border-b border-lightgrey">
+                    Treasurer
+                </h3>
                 <div class="py-2">
                     <ul class="list-disc">
                         <li>Member of the board</li>
@@ -145,45 +149,28 @@
                         </li>
                     </ul>
                 </div>
-                <h3 class="text-lg font-bold py-1 border-b border-lightgrey">Community Director</h3>
+                <h3 class="text-lg font-bold py-1 border-b border-lightgrey">
+                    Community Director
+                </h3>
                 <div class="py-2">
                     <ul class="list-disc">
                         <li>Member of the board</li>
-                        <li>Coordinates community and student outreach activities</li>
+                        <li>
+                            Coordinates community and student outreach
+                            activities
+                        </li>
                         <li>Manages DES social media accounts</li>
-                        <li>Provides marketing copy and resources for DES community to share</li>
+                        <li>
+                            Provides marketing copy and resources for DES
+                            community to share
+                        </li>
                     </ul>
-                </div>
-            </li>
-            <li>
-                <h2 class="text-xl font-bold py-2 border-b border-lightgrey">
-                    Apply Today!
-                </h2>
-                <p class="py-2">
-                    If you are interested in joining the board please let us
-                    know by filling out this form, and don't forget to stop by
-                    the dev edmonton slack channel and say hi!
-                </p>
-                <div class="flex justify-center mt-4">
-                    <a
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSclnp_-xoIeedDxn4I8w23a8NQVlQOriEVjTBFDmt5DB_DXeg/viewform?usp=sf_link"
-                    >
-                        <v-Button appearance="inverted">Apply Now</v-Button>
-                    </a>
                 </div>
             </li>
         </ol>
     </div>
 </template>
 
-<script>
-import VButton from "~/components/VButton.vue";
-
-export default {
-    components: {
-        VButton,
-    },
-};
-</script>
+<script></script>
 
 <style lang="scss" scoped></style>
