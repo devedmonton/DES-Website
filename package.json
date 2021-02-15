@@ -8,7 +8,7 @@
     "dev": "nuxt",
     "build": "npm run test && nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
+    "generate": "npm run test && nuxt generate",
     "test": "npm run lint-check",
     "lint-check": "eslint '{components,layouts,pages}/**/*.vue'"
   },
