@@ -46,6 +46,7 @@
                     </div>
                 </div>
             </div>
+            <SignupForm />
         </div>
 
         <div
@@ -375,11 +376,13 @@
 </template>
 
 <script>
-import VButton from "~/components/VButton.vue";
+import VButton from "../components/VButton.vue";
+import SignupForm from "../components/SignupForm";
 
 export default {
     components: {
         VButton,
+        SignupForm,
     },
 };
 </script>
