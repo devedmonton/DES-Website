@@ -2,29 +2,34 @@
   "name": "devedmonton",
   "version": "1.0.0",
   "description": "Fostering a stronger software development community in Edmonton.",
-  "author": "Jeff",
+  "author": "Dev Edmonton Society",
   "private": true,
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "test": "ava"
+    "test": "echo 'No Testing Available Yet' && exit 1",
+    "lintCheck": "eslint '{components,layouts,pages}/**/*.vue'"
   },
   "dependencies": {
     "@nuxtjs/pwa": "^3.1.2",
     "@tailwindcss/ui": "^0.6.2",
     "nuxt": "^2.14.6",
-    "open-color": "^1.7.0"
+    "open-color": "^1.8.0"
   },
   "devDependencies": {
     "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/tailwindcss": "3.1.0",
     "@vue/test-utils": "^1.1.0",
-    "ava": "^3.13.0",
+    "babel-eslint": "^10.1.0",
     "browser-env": "^3.3.0",
-    "eslint": "^7.11.0",
-    "eslint-plugin-vue": "^7.0.1",
+    "eslint": "^7.20.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.6.0",
+    "prettier": "^2.2.1",
     "require-extension-hooks": "^0.3.3",
     "require-extension-hooks-babel": "^1.0.0",
     "require-extension-hooks-vue": "^3.0.0"

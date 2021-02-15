@@ -36,7 +36,8 @@
                     Current Board
                 </h2>
                 <p class="py-2">
-                    A new board was elected at the society’s AGM on January 23<sup>rd</sup>
+                    A new board was elected at the society’s AGM on January
+                    23<sup>rd</sup>
                     2021. The following members were elected to the board.
                 </p>
                 <ul class="list-disc">
@@ -48,7 +49,10 @@
                     <li>Mandy Meindersma</li>
                     <li>Mark Bennett</li>
                 </ul>
-                <p class="pt-2">The positions to be filled by each new board member will be confirmed at a later date.</p>
+                <p class="pt-2">
+                    The positions to be filled by each new board member will be
+                    confirmed at a later date.
+                </p>
             </li>
         </ol>
     </div>

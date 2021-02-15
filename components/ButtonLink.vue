@@ -2,22 +2,7 @@
     <component
         :is="href ? 'nuxt-link' : 'button'"
         :to="href"
-        class="
-            button
-            inline-block
-            px-8
-            py-2
-            align-middle
-            text-base
-            text-center
-            uppercase
-            font-normal
-            whitespace-no-wrap
-            leading-normal
-            select-none
-            border
-            no-underline
-        "
+        class="button inline-block px-8 py-2 align-middle text-base text-center uppercase font-normal whitespace-no-wrap leading-normal select-none border no-underline"
         :class="[
             appearance === 'default'
                 ? 'text-brand-primary bg-white border-brand-primary hover:bg-brand-primary hover:text-white'
@@ -38,25 +23,25 @@ export default {
     props: {
         href: {
             type: String,
-            default: '#0',
+            default: "#0",
         },
         appearance: {
             type: String,
-            default: 'default',
+            default: "default",
         },
     },
-}
+};
 </script>
 
 <style>
 .button {
     letter-spacing: -0.03em;
-    font-variation-settings: 'wght' 700, 'slnt' calc(-1 * 0);
-    border-bottom-color: theme('colors.brand-primary');
+    font-variation-settings: "wght" 700, "slnt" calc(-1 * 0);
+    border-bottom-color: theme("colors.brand-primary");
 }
 
 .button:hover,
 .button:focus {
-    border-color: theme('colors.brand-primary');
+    border-color: theme("colors.brand-primary");
 }
 </style>
