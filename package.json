@@ -6,11 +6,11 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
+    "build": "npm run test && nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "test": "echo 'No Testing Available Yet' && exit 1",
-    "lintCheck": "eslint '{components,layouts,pages}/**/*.vue'"
+    "test": "npm run lint-check",
+    "lint-check": "eslint '{components,layouts,pages}/**/*.vue'"
   },
   "dependencies": {
     "@nuxtjs/pwa": "^3.1.2",
