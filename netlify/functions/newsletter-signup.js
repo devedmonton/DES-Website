@@ -1,9 +1,9 @@
 const mailchimp = require("@mailchimp/mailchimp_marketing");
-// eslint-disable-next-line no-unused-vars
-exports.handler = async function (event, context) {
+const apiKey = process.env.MAILCHIMP_API_KEY;
+const listID = process.env.MAILCHIMP_LIST_ID;
+
+exports.handler = async function (event) {
     try {
-        const apiKey = process.env.MAILCHIMP_API_KEY;
-        const listID = process.env.MAILCHIMP_LIST_ID;
         mailchimp.setConfig({
             apiKey,
             server: "us1",
