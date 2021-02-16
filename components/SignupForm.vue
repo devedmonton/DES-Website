@@ -61,7 +61,7 @@ export default {
             const self = this;
             self.signUpError = null;
             self.signUpSuccess = null;
-            fetch("/.netlify/functions/test", {
+            fetch("/.netlify/functions/newsletterSignup", {
                 method: "POST",
                 body: JSON.stringify({ email: this.signUpEmail }),
             })
