@@ -1,13 +1,12 @@
 const mailchimp = require("@mailchimp/mailchimp_marketing");
-const apiKey = process.env.MAILCHIMP_API_KEY;
-const listID = process.env.MAILCHIMP_LIST_ID;
 
-mailchimp.setConfig({
-    apiKey,
-    server: "us1",
-});
-
-exports.handler = async function (event) {
+exports.handler = async function (event, context) {
+    const apiKey = process.env.MAILCHIMP_API_KEY;
+    const listID = process.env.MAILCHIMP_LIST_ID;
+    mailchimp.setConfig({
+        apiKey,
+        server: "us1",
+    });
     const email = JSON.parse(event.body).email;
     try {
         const res = await mailchimp.lists.addListMember(listID, {
