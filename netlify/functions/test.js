@@ -1,7 +1,7 @@
-exports.handler = async function (event, context) {
-    console.log("Functions test");
+exports.handler = async function (event) {
+    const email = JSON.parse(event.body).email;
     return {
         statusCode: 200,
-        body: JSON.stringify({ message: "hi there" }),
+        body: JSON.stringify({ message: `Signed Up ${email}` }),
     };
 };

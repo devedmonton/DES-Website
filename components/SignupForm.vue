@@ -17,13 +17,10 @@
                     </p>
                 </div>
                 <div class="mt-8 sm:w-full sm:max-w-md">
-                    <form class="sm:flex" name="newsletter" netlify>
-                        <input type="hidden" name="form-name" value="contact" />
-                        <label for="emailAddress" class="sr-only"
-                            >Email address</label
-                        >
+                    <div class="sm:flex" name="newsletter-signup">
                         <input
                             id="emailAddress"
+                            v-model="signUpEmail"
                             name="emailAddress"
                             type="email"
                             autocomplete="email"
@@ -32,12 +29,15 @@
                             placeholder="Enter your email"
                         />
                         <button
-                            type="submit"
                             class="mt-3 w-full flex items-center justify-center px-5 py-3 border border-transparent shadow text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white sm:mt-0 sm:ml-3 sm:w-auto sm:flex-shrink-0"
+                            @click="emailSignUp"
                         >
                             Sign Up
                         </button>
-                    </form>
+                    </div>
+                    <div v-if="signUpSuccess" class="pt-4">
+                        <span class="text-white">{{ signUpSuccess }}</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -48,8 +48,28 @@
 export default {
     data: function () {
         return {
-            email: "",
+            signUpEmail: "",
+            signUpSuccess: null,
+            signUpError: null,
         };
+    },
+    methods: {
+        emailSignUp: async function () {
+            const self = this;
+            fetch("/.netlify/functions/test", {
+                method: "POST",
+                body: JSON.stringify({ email: this.signUpEmail }),
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log(data);
+                    self.signUpSuccess = data.message;
+                    setTimeout(() => {
+                        self.signUpSuccess = null;
+                    }, 3000);
+                })
+                .catch((err) => console.error(err));
+        },
     },
 };
 </script>
