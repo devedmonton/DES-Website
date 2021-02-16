@@ -10,7 +10,7 @@
                     >
                         Keep up to date with DES?
                     </h2>
-                    <p class="mt-3 max-w-3xl text-lg leading-6 text-indigo-200">
+                    <p class="mt-3 max-w-3xl text-lg leading-6 text-blue-100">
                         Enter your email below to sign up to our mailing list
                         and get information on DES news and events in your
                         inbox.
@@ -35,9 +35,12 @@
                             Sign Up
                         </button>
                     </div>
-                    <div v-if="signUpSuccess" class="pt-4">
-                        <span class="text-white">{{ signUpSuccess }}</span>
-                    </div>
+                </div>
+                <div v-if="signUpSuccess" class="pt-4 text-lg text-blue-100">
+                    <span>{{ signUpSuccess }}</span>
+                </div>
+                <div v-if="signUpError" class="pt-4 text-lg text-blue-100">
+                    <span>{{ signUpError }}</span>
                 </div>
             </div>
         </div>
@@ -56,17 +59,22 @@ export default {
     methods: {
         emailSignUp: async function () {
             const self = this;
+            self.signUpError = null;
+            self.signUpSuccess = null;
             fetch("/.netlify/functions/test", {
                 method: "POST",
                 body: JSON.stringify({ email: this.signUpEmail }),
             })
                 .then((res) => res.json())
                 .then((data) => {
-                    console.log(data);
-                    self.signUpSuccess = data.message;
-                    setTimeout(() => {
-                        self.signUpSuccess = null;
-                    }, 3000);
+                    if (data.title === "Member Exists")
+                        self.signUpError = "Your email is already on our list.";
+                    else if (data.status === 400)
+                        self.signUpError =
+                            "Whoops! Looks like we couldn't add your email. Please try again or use our contact form.";
+                    else if (data.signUpEmail)
+                        self.signUpSuccess = `We have sent an email to ${data.signUpEmail} with a link to confirm your subscription.`;
+                    self.signUpEmail = "";
                 })
                 .catch((err) => console.error(err));
         },
