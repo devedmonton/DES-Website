@@ -17,7 +17,11 @@
                     </p>
                 </div>
                 <div class="mt-8 sm:w-full sm:max-w-md">
-                    <div class="sm:flex" name="newsletter-signup">
+                    <form
+                        class="sm:flex"
+                        name="newsletter-signup"
+                        @submit.prevent="emailSignUp"
+                    >
                         <input
                             id="emailAddress"
                             v-model="signUpEmail"
@@ -30,11 +34,11 @@
                         />
                         <button
                             class="mt-3 w-full flex items-center justify-center px-5 py-3 border border-transparent shadow text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white sm:mt-0 sm:ml-3 sm:w-auto sm:flex-shrink-0"
-                            @click="emailSignUp"
+                            type="submit"
                         >
                             Sign Up
                         </button>
-                    </div>
+                    </form>
                 </div>
                 <div v-if="signUpSuccess" class="pt-4 text-lg text-blue-100">
                     <span>{{ signUpSuccess }}</span>
