@@ -10,10 +10,10 @@
                     />
                 </div>
                 <div class="w-100 w-60-ns pl3-ns">
-                    <h1 class="f3 fw1 baskerville mt0 lh-title"
-                        >Tech Giant Invests Huge Money to Build a Computer Out
-                        of Science Fiction</h1
-                    >
+                    <h1 class="f3 fw1 baskerville mt0 lh-title">
+                        Tech Giant Invests Huge Money to Build a Computer Out of
+                        Science Fiction
+                    </h1>
                     <p class="f6 f5-l lh-copy">
                         The tech giant says it is ready to begin planning a
                         quantum computer, a powerful cpu machine that relies on
@@ -27,5 +27,5 @@
 </template>
 
 <script>
-export default {}
+export default {};
 </script>

@@ -1,4 +1,4 @@
-.<template>
+<template>
     <footer class="bg-brand-grey">
         <div class="container flex justify-around mx-auto p-4">
             <a
@@ -90,5 +90,5 @@
 </template>
 
 <script>
-export default {}
+export default {};
 </script>

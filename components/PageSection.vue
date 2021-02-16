@@ -24,12 +24,12 @@ export default {
 
     computed: {
         dimBg() {
-            return this.bg === 'dim'
+            return this.bg === "dim";
         },
 
         darkBg() {
-            return this.bg === 'dark'
+            return this.bg === "dark";
         },
     },
-}
+};
 </script>

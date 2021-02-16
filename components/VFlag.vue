@@ -23,8 +23,8 @@ export default {
 
     computed: {
         flipImage() {
-            return this.flip
+            return this.flip;
         },
     },
-}
+};
 </script>
