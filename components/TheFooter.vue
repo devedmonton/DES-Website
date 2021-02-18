@@ -1,90 +1,142 @@
 <template>
-    <footer class="bg-brand-grey">
-        <div class="container flex justify-around mx-auto p-4">
-            <a
-                class="link white-60 bg-transparent hover-white inline-flex items-center ma2 tc br2 pa2"
-                href="https://facebook.com/devedmontonsociety"
-                title="Dev Edmonton Society Facebook"
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <footer class="bg-grey-000">
+        <div
+            class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8"
+        >
+            <nav
+                class="-mx-5 -my-2 flex flex-wrap justify-center"
+                aria-label="Footer"
             >
-                <svg
-                    class="inline-block w-6 h-6"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 16 16"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    stroke-linejoin="round"
-                    stroke-miterlimit="1.414"
-                >
-                    <path
-                        d="M15.117 0H.883C.395 0 0 .395 0 .883v14.234c0 .488.395.883.883.883h7.663V9.804H6.46V7.39h2.086V5.607c0-2.066 1.262-3.19 3.106-3.19.883 0 1.642.064 1.863.094v2.16h-1.28c-1 0-1.195.476-1.195 1.176v1.54h2.39l-.31 2.416h-2.08V16h4.077c.488 0 .883-.395.883-.883V.883C16 .395 15.605 0 15.117 0"
-                        fill-rule="nonzero"
-                    />
-                </svg>
-            </a>
-            <a
-                class="link white-60 bg-transparent hover-white inline-flex items-center ma2 tc br2 pa2"
-                href="https://github.com/devedmonton"
-                title="Dev Edmonton Society GitHub"
-            >
-                <svg
-                    class="inline-block w-6 h-6"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 16 16"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    stroke-linejoin="round"
-                    stroke-miterlimit="1.414"
-                >
-                    <path
-                        d="M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.083-.202-.358-1.015.077-2.117 0 0 .672-.215 2.2.82.638-.178 1.323-.266 2.003-.27.68.004 1.364.092 2.003.27 1.527-1.035 2.198-.82 2.198-.82.437 1.102.163 1.915.08 2.117.513.56.823 1.274.823 2.147 0 3.073-1.87 3.75-3.653 3.947.287.246.543.735.543 1.48 0 1.07-.01 1.933-.01 2.195 0 .215.144.463.55.385C13.71 14.53 16 11.534 16 8c0-4.418-3.582-8-8-8"
-                    />
-                </svg>
-            </a>
+                <div class="px-5 py-2">
+                    <NuxtLink
+                        to="/board"
+                        class="text-base text-gray-500 hover:text-gray-900"
+                    >
+                        Board
+                    </NuxtLink>
+                </div>
 
-            <a
-                class="link white-60 bg-transparent hover-white inline-flex items-center ma2 tc br2 pa2"
-                href="https://youtube.com/devedmonton"
-                title="Dev Edmonton Society YouTube"
-            >
-                <svg
-                    class="inline-block w-6 h-6"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 16 16"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    stroke-linejoin="round"
-                    stroke-miterlimit="1.414"
-                >
-                    <path
-                        d="M0 7.345c0-1.294.16-2.59.16-2.59s.156-1.1.636-1.587c.608-.637 1.408-.617 1.764-.684C3.84 2.36 8 2.324 8 2.324s3.362.004 5.6.166c.314.038.996.04 1.604.678.48.486.636 1.588.636 1.588S16 6.05 16 7.346v1.258c0 1.296-.16 2.59-.16 2.59s-.156 1.102-.636 1.588c-.608.638-1.29.64-1.604.678-2.238.162-5.6.166-5.6.166s-4.16-.037-5.44-.16c-.356-.067-1.156-.047-1.764-.684-.48-.487-.636-1.587-.636-1.587S0 9.9 0 8.605v-1.26zm6.348 2.73V5.58l4.323 2.255-4.32 2.24h-.002z"
-                    />
-                </svg>
-            </a>
+                <div class="px-5 py-2">
+                    <a
+                        href="https://docs.google.com/document/d/1i6oXabir-628csa2bQacHpc17Kmhec9EfkyHij9yQGM/edit#heading=h.sns5qzyi4gru"
+                        class="text-base text-gray-500 hover:text-gray-900"
+                    >
+                        Bylaws
+                    </a>
+                </div>
 
-            <a
-                class="link white-60 bg-transparent hover-white inline-flex items-center ma2 tc br2 pa2"
-                href="https://twitter.com/devedmonton"
-                title="Dev Edmonton Society Twitter"
-            >
-                <svg
-                    class="inline-block w-6 h-6"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 16 16"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    stroke-linejoin="round"
-                    stroke-miterlimit="1.414"
+                <div class="px-5 py-2">
+                    <NuxtLink
+                        to="/code_of_conduct"
+                        class="text-base text-gray-500 hover:text-gray-900"
+                    >
+                        Code of Conduct
+                    </NuxtLink>
+                </div>
+
+                <div class="px-5 py-2">
+                    <NuxtLink
+                        to="/sponsors"
+                        class="text-base text-gray-500 hover:text-gray-900"
+                    >
+                        Sponsors
+                    </NuxtLink>
+                </div>
+
+                <div class="px-5 py-2">
+                    <NuxtLink
+                        to="/contact"
+                        class="text-base text-gray-500 hover:text-gray-900"
+                    >
+                        Contact
+                    </NuxtLink>
+                </div>
+            </nav>
+            <div class="mt-8 flex justify-center space-x-6">
+                <a
+                    href="https://facebook.com/devedmontonsociety"
+                    title="Dev Edmonton Society Facebook"
+                    class="text-gray-400 hover:text-gray-500"
                 >
-                    <path
-                        d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.375-1.337.648-2.085.795-.598-.638-1.45-1.036-2.396-1.036-1.812 0-3.282 1.468-3.282 3.28 0 .258.03.51.085.75C5.152 5.39 2.733 4.084 1.114 2.1.83 2.583.67 3.147.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.416-.02-.617-.058.418 1.304 1.63 2.253 3.067 2.28-1.124.88-2.54 1.404-4.077 1.404-.265 0-.526-.015-.783-.045 1.453.93 3.178 1.474 5.032 1.474 6.038 0 9.34-5 9.34-9.338 0-.143-.004-.284-.01-.425.64-.463 1.198-1.04 1.638-1.7z"
-                        fill-rule="nonzero"
-                    />
-                </svg>
-            </a>
+                    <span class="sr-only">Facebook</span>
+                    <svg
+                        class="h-6 w-6"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                            clip-rule="evenodd"
+                        />
+                    </svg>
+                </a>
+
+                <a
+                    href="https://twitter.com/devedmonton"
+                    title="Dev Edmonton Society Twitter"
+                    class="text-gray-400 hover:text-gray-500"
+                >
+                    <span class="sr-only">Twitter</span>
+                    <svg
+                        class="h-6 w-6"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+                        />
+                    </svg>
+                </a>
+
+                <a
+                    href="https://github.com/devedmonton"
+                    title="Dev Edmonton Society GitHub"
+                    class="text-gray-400 hover:text-gray-500"
+                >
+                    <span class="sr-only">GitHub</span>
+                    <svg
+                        class="h-6 w-6"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                            clip-rule="evenodd"
+                        />
+                    </svg>
+                </a>
+
+                <a
+                    href="https://youtube.com/devedmonton"
+                    title="Dev Edmonton Society YouTube"
+                    class="text-gray-400 hover:text-gray-500"
+                >
+                    <span class="sr-only">YouTube</span>
+                    <svg
+                        class="inline-block w-6 h-6"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 16 16"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="1.414"
+                    >
+                        <path
+                            d="M0 7.345c0-1.294.16-2.59.16-2.59s.156-1.1.636-1.587c.608-.637 1.408-.617 1.764-.684C3.84 2.36 8 2.324 8 2.324s3.362.004 5.6.166c.314.038.996.04 1.604.678.48.486.636 1.588.636 1.588S16 6.05 16 7.346v1.258c0 1.296-.16 2.59-.16 2.59s-.156 1.102-.636 1.588c-.608.638-1.29.64-1.604.678-2.238.162-5.6.166-5.6.166s-4.16-.037-5.44-.16c-.356-.067-1.156-.047-1.764-.684-.48-.487-.636-1.587-.636-1.587S0 9.9 0 8.605v-1.26zm6.348 2.73V5.58l4.323 2.255-4.32 2.24h-.002z"
+                        />
+                    </svg>
+                </a>
+            </div>
+            <p class="mt-8 text-center text-base text-gray-400">
+                Dev Edmonton Society
+            </p>
         </div>
     </footer>
 </template>
