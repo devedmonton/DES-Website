@@ -37,7 +37,7 @@
                             </a>
                         </p>
                         <img
-                            class="max-w-md m-auto"
+                            class="w-64 m-auto"
                             src="~assets/logos/Slack_RGB.svg"
                         />
                         <a href="https://devedmonton-invite.herokuapp.com/">
