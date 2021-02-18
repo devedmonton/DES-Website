@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5f9bdcfb-7b48-46e8-a58d-dfd2b32d8ccc/deploy-status)](https://app.netlify.com/sites/dev-edmonton/deploys)
+
 # devedmonton.com
 
 New home for the devedmonton.com website
@@ -6,14 +8,14 @@ New home for the devedmonton.com website
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ npm install
 
 # serve with hot reload at localhost:3000
 $ npm run dev
 
-# build for production and launch server
+# build production bundle and launch server
 $ npm run build
 $ npm run start
 
