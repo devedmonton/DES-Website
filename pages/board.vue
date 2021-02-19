@@ -104,7 +104,7 @@ export default {
                     id: 2,
                     name: "Ian Phillipchuck",
                     title: "Vice-President",
-                    imageLink: "~/assets/boardPictures/IanPhillipchuck.jpg",
+                    imageLink: require("~/assets/boardPictures/ianPhillipchuck.jpg"),
                     description:
                         "Ian Phillipchuk is a Team Lead and Senior Developer at Punchcard Systems. Professionally, he does Software Consulting, Mobile and Web Development, as well as managing software teams and client projects. At Dev Edmonton, he wants to grow the society to do more to help all the Devs in Edmonton, from providing resources for Meetups and Conferences for veteran developers, and helping new devs find their way and their first opportunities. Personally, he's probably getting fragged in Destiny 2 PVP for the bajillionth time, or building Lego with his kids.",
                 },
@@ -119,7 +119,7 @@ export default {
                     id: 4,
                     name: "Mandy Meindersma",
                     title: "Secretary",
-                    imageLink: "~/assets/boardPictures/mandy Meindersma.jpg",
+                    imageLink: require("~/assets/boardPictures/mandyMeindersma.jpg"),
                     description:
                         "Mandy Meindersma is a Backend Developer at Dotdash. She loves web development, teaching kidlets about computing science and hardware (making robots, light up costumes and IoT type of things). She has loved getting more involved with DES through YEGWIT (Edmonton Women In Tech), CODEVID-19 (COVID-19 Hackathon) and now being able to help with organization and memberships! Outside of tech she absolutely loves acro yoga, her cat Goose, and writing letters.",
                 },
@@ -134,7 +134,7 @@ export default {
                     id: 6,
                     name: "Alyssa Diehl",
                     title: "Member at large",
-                    imageLink: "~/assets/boardPictures/alyssaDiehl.jpg",
+                    imageLink: require("~/assets/boardPictures/alyssaDiehl.jpg"),
                     description:
                         "Alyssa has been working in the field of Career Development, Recruitment & HR for +7 years. She is interested in the tech & innovation industry here in Alberta and seeing a diverse labour market & workforce. Her passion lies in assisting job seekers find their future career path and loves to connect with job seekers from any field and experience level.  Alyssa is always available to give assistance on market insights, resume review or LinkedIn tips! ",
                 },

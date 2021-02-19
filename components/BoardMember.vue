@@ -5,7 +5,7 @@
         <div class="h-0 aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
             <img
                 class="object-cover shadow-lg rounded-lg"
-                :src="imageLink"
+                :src="`${imageLink}`"
                 alt=""
             />
         </div>
