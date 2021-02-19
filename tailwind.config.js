@@ -58,5 +58,5 @@ module.exports = {
         },
     },
     variants: {},
-    plugins: [require("@tailwindcss/ui")],
+    plugins: [require("@tailwindcss/ui", "@tailwindcss/aspect-ratio")],
 };
