@@ -281,7 +281,7 @@
                                     >
                                         If you're like us you're probably a
                                         developer keen to start a meetup or
-                                        organize and event for your favourite
+                                        organize an event for your favourite
                                         language or technologies. We've been
                                         there, and want to help!
                                     </p>
