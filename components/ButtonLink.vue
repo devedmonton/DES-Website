@@ -23,7 +23,7 @@ export default {
     props: {
         href: {
             type: String,
-            default: "#",
+            default: "#0",
         },
         appearance: {
             type: String,

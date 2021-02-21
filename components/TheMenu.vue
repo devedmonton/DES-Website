@@ -1,8 +1,4 @@
 <template>
-    <!--
-  Tailwind UI components require Tailwind CSS v1.8 and the @tailwindcss/ui plugin.
-  Read the documentation to get started: https://tailwindui.com/documentation
--->
     <nav class="bg-brand-primary fixed w-full z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 top-0">
             <div class="flex items-center justify-between h-24">
@@ -27,7 +23,6 @@
                         </a>
                     </div>
                 </div>
-
                 <div class="-mr-2 flex sm:hidden">
                     <!-- Mobile menu button -->
                     <button
@@ -37,12 +32,7 @@
                         aria-expanded="false"
                         @click="toggleMenu"
                     >
-                        <!-- Icon when menu is closed. -->
-                        <!--
-            Heroicon name: menu
-
-            Menu open: "hidden", Menu closed: "block"
-          -->
+                        <!-- Menu open: "hidden", Menu closed: "block" -->
                         <svg
                             class="block h-6 w-6"
                             xmlns="http://www.w3.org/2000/svg"
@@ -57,12 +47,7 @@
                                 d="M4 6h16M4 12h16M4 18h16"
                             />
                         </svg>
-                        <!-- Icon when menu is open. -->
-                        <!--
-            Heroicon name: x
-
-            Menu open: "block", Menu closed: "hidden"
-          -->
+                        <!-- Menu open: "block", Menu closed: "hidden" -->
                         <svg
                             class="hidden h-6 w-6"
                             xmlns="http://www.w3.org/2000/svg"
@@ -81,12 +66,7 @@
                 </div>
             </div>
         </div>
-
-        <!--
-    Mobile menu, toggle classes based on menu state.
-
-    Menu open: "block", Menu closed: "hidden"
-  -->
+        <!-- Menu open: "block", Menu closed: "hidden" -->
         <div id="mobile-menu" class="hidden sm:hidden">
             <div class="px-2 pt-2 pb-3">
                 <a
