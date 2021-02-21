@@ -60,12 +60,10 @@
                 </h2>
             </div>
             <div class="bg-white">
-                <div
-                    class="mx-auto py-10 px-4 max-w-7xl sm:px-4 lg:px-6 lg:py-8"
-                >
+                <div class="mx-auto py-2 px-4 max-w-7xl lg:px-6 lg:py-8">
                     <div class="space-y-4">
                         <ul
-                            class="space-y-12 lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:gap-y-12 lg:space-y-0"
+                            class="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:gap-y-12 lg:space-y-0"
                         >
                             <BoardMember
                                 v-for="member in members"
@@ -97,6 +95,7 @@ export default {
                     id: 1,
                     name: "Mark Bennet",
                     title: "President",
+                    imageLink: require("~/assets/boardPictures/markBennet.jpg"),
                     description:
                         "When starting with Ruby on Rails in 2009, Mark joined an amazing meetup in Sydney, Australia. Once home, he saw the value of a meetup community to developers, and founded YEGrb, Edmonton’s Ruby Meetup. Over the years he has helped with Exchange.js, BarCamp, and others. These experiences led him to establish DES in 2016, so developers could have a place where they could succeed and grow together. Mark is passionate about the developer community, and its role in Edmonton. His hope is to see more developers succeeding in bigger challenges in the future. When not busy with DES he’s herding bits with Burmis Studio, chasing after his kids, or out for a run. Say hi on Slack or Twitter!",
                 },
@@ -112,6 +111,7 @@ export default {
                     id: 3,
                     name: "Lauren Briske",
                     title: "Treasurer",
+                    imageLink: require("~/assets/boardPictures/alyssaDiehl.jpg"),
                     description:
                         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem error praesentium repudiandae labore dolores veritatis deleniti laudantium eos, nemo debitis, odit voluptates rerum sapiente quidem? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem error praesentium repudiandae labore dolores veritatis deleniti laudantium eos, nemo debitis, odit voluptates rerum sapiente quidem?",
                 },
@@ -127,6 +127,7 @@ export default {
                     id: 5,
                     name: "Abram Hindle",
                     title: "Member at large",
+                    imageLink: require("~/assets/boardPictures/abramHindle.jpg"),
                     description:
                         "Abram Hindle is an associate professor of Computing Science at the University of Alberta. His research focuses on problems relating to mining software repositories, improving software engineering-oriented information retrieval with contextual information, the impact of software maintenance on software energy consumption, and how software engineering informs computer music. He likes applying machine learning in music, art, and science. Sadly Abram has no taste in music and produces reprehensible sounding noise using his software development abilities. Abram received a PhD in computer science from the University of Waterloo, and Masters and Bachelors in Computer Science from the University of Victoria. Contact him at abram.hindle@ualberta.ca",
                 },
@@ -142,6 +143,7 @@ export default {
                     id: 7,
                     name: "Celia Nicholls",
                     title: "Member at large",
+                    imageLink: require("~/assets/boardPictures/alyssaDiehl.jpg"),
                     description:
                         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem error praesentium repudiandae labore dolores veritatis deleniti laudantium eos, nemo debitis, odit voluptates rerum sapiente quidem? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem error praesentium repudiandae labore dolores veritatis deleniti laudantium eos, nemo debitis, odit voluptates rerum sapiente quidem?",
                 },
