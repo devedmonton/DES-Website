@@ -51,7 +51,6 @@
                                 ><i>@{{ slackAccount }}</i></span
                             >
                         </div>
-
                     </div>
                     <div class="text-medium">
                         <p class="text-gray-500" v-html="description">
