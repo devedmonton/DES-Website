@@ -2,7 +2,6 @@
     <div
         class="max-w-7xl mx-auto sm:px-6 lg:px-8 flex flex-1 flex-col justify-center items-center"
     >
-        <!-- Content goes here -->
         <h1 class="text-6xl text-brand-primary font-bold py-2">Uh Oh!</h1>
         <p class="text-2xl">404 Error - Page not found</p>
         <h2 class="text-3xl text-brand-primary">
