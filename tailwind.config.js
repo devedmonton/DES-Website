@@ -58,5 +58,6 @@ module.exports = {
         },
     },
     variants: {},
+    // Remove aspect-ratio once it's got more browser support and is rolled into Tailwind proper
     plugins: [require("@tailwindcss/ui", "@tailwindcss/aspect-ratio")],
 };

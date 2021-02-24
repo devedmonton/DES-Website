@@ -16,8 +16,7 @@
     "@nuxtjs/pwa": "^3.1.2",
     "@tailwindcss/ui": "^0.6.2",
     "nuxt": "^2.14.6",
-    "open-color": "^1.8.0",
-    "ruby": "^0.6.1"
+    "open-color": "^1.8.0"
   },
   "devDependencies": {
     "@nuxtjs/google-analytics": "^2.4.0",
