@@ -16,6 +16,7 @@
                         <p class="text-indigo-600">{{ title }}</p>
                         <div v-if="twitterHandle" class="flex pb-1">
                             <span class="sr-only">Twitter</span>
+                            <!-- using v-bind directive shorthand to construct twitter link -->
                             <a :href="'http://twitter.com/' + twitterHandle">
                                 <svg
                                     class="inline w-5 h-5"
