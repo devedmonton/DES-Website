@@ -136,7 +136,7 @@ export default {
                     title: "Member at large",
                     imageLink: require("~/assets/boardPictures/alyssaDiehl.jpg"),
                     description:
-                        "Alyssa has been working in the field of Career Development, Recruitment & HR for +7 years. She is interested in the tech & innovation industry here in Alberta and seeing a diverse labour market & workforce.<br /><br /> Her passion lies in assisting job seekers find their future career path and loves to connect with job seekers from any field and experience level.<br /><br />  Alyssa is always available to give assistance on market insights, resume review or LinkedIn tips! <br /><a class='text-indigo-600' href='https://manpowerab.com/development/'>Manpower</a>",
+                        "Alyssa has been working in the field of Career Development, Recruitment & HR for +7 years. She manages employment programs for <a class='text-indigo-600' href='https://manpowerab.com/development/'>Manpower’s Workforce Development</a> department. She is interested in the tech & innovation industry here in Alberta and seeing a diverse labour market & workforce.<br /><br /> Her passion lies in assisting job seekers find their future career path and loves to connect with job seekers from any field and experience level.<br /><br />  Alyssa is always available to give assistance on market insights, resume review or LinkedIn tips!",
                     twitterHandle: "Lyss_diehl",
                     linkedInAccount: "https://ca.linkedin.com/in/alyssajdiehl",
                     slackAccount: "Alyssa Diehl",
