@@ -116,7 +116,8 @@ export default {
                     description:
                         "Mandy Meindersma is a Backend Developer at <a class='text-indigo-600' href='https://dotdash.com/'>Dotdash</a>. She loves web development, teaching kidlets about computing science and hardware (making robots, light up costumes and IoT type of things).<br /><br /> She has loved getting more involved with DES through YEGWIT (Edmonton Women In Tech), CODEVID-19 (COVID-19 Hackathon) and now being able to help with organization and memberships!<br /><br /> Outside of tech she absolutely loves acro yoga, her cat Goose, and writing letters.",
                     twitterHandle: "",
-                    linkedInAccount: "",
+                    linkedInAccount:
+                        "https://www.linkedin.com/in/mandy-meindersma/",
                     slackAccount: "Mandy Meindersma",
                 },
                 {
