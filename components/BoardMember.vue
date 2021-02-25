@@ -3,7 +3,7 @@
         <div class="md:grid md:grid-cols-3 lg:gap-8 sm:pb-2">
             <div>
                 <img
-                    class="object-cover shadow-lg rounded-lg md:h-60"
+                    class="w-full object-cover shadow-lg rounded-lg md:h-60"
                     :src="`${imageLink}`"
                     alt=""
                 />
