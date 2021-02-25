@@ -1,5 +1,5 @@
 <template>
-    <li>
+    <li class="py-4 md:py-0">
         <div class="md:grid md:grid-cols-3 lg:gap-8 sm:pb-2">
             <div>
                 <img
