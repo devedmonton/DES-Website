@@ -24,7 +24,7 @@
                         <li>President</li>
                         <li>Secretary</li>
                         <li>Treasurer</li>
-                        <li>Member at large</li>
+                        <li>Member At Large</li>
                     </ul>
                 </div>
             </li>

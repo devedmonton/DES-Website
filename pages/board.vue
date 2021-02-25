@@ -20,11 +20,11 @@
                         >
                         prior to the AGM.
                     </p>
-                    <p>
+                    <p class="py-2">
                         Dev Edmonton Society desires to build a board with
                         diverse perspectives that reflect our community.
                     </p>
-                    <p>
+                    <p class="py-2">
                         A new board was elected at the society’s AGM on January
                         23<sup>rd</sup>
                         2021. The following members were elected to the board.
@@ -123,7 +123,7 @@ export default {
                 {
                     id: 5,
                     name: "Abram Hindle",
-                    title: "Member at large",
+                    title: "Member At Large",
                     imageLink: require("~/assets/boardPictures/abramHindle.jpg"),
                     description:
                         "Abram Hindle is an associate professor of Computing Science at the University of Alberta. His research focuses on problems relating to mining software repositories, improving software engineering-oriented information retrieval with contextual information, the impact of software maintenance on software energy consumption, and how software engineering informs computer music.<br /><br /> He likes applying machine learning in music, art, and science. Sadly Abram has no taste in music and produces reprehensible sounding noise using his software development abilities.<br /><br /> Abram received a PhD in computer science from the University of Waterloo, and Masters and Bachelors in Computer Science from the University of Victoria. Contact him at abram.hindle@ualberta.ca <br /><a class='text-indigo-600' href='https://softwareprocess.es'>softwareprocess.es</a>",
@@ -134,7 +134,7 @@ export default {
                 {
                     id: 6,
                     name: "Alyssa Diehl",
-                    title: "Member at large",
+                    title: "Member At Large",
                     imageLink: require("~/assets/boardPictures/alyssaDiehl.jpg"),
                     description:
                         "Alyssa has been working in the field of Career Development, Recruitment & HR for +7 years. She manages employment programs for <a class='text-indigo-600' href='https://manpowerab.com/development/'>Manpower’s Workforce Development</a> department. She is interested in the tech & innovation industry here in Alberta and seeing a diverse labour market & workforce.<br /><br /> Her passion lies in assisting job seekers find their future career path and loves to connect with job seekers from any field and experience level.<br /><br />  Alyssa is always available to give assistance on market insights, resume review or LinkedIn tips!",
@@ -145,7 +145,7 @@ export default {
                 {
                     id: 7,
                     name: "Celia Nicholls",
-                    title: "Member at large",
+                    title: "Member At Large",
                     imageLink: require("~/assets/boardPictures/celiaNicholls.jpg"),
                     description:
                         "Celia is in her final semester of Web Design and Development in the Digital Media and IT program at NAIT (although she sometimes feels as though she should have gone into pest control, she spends so much time debugging).<br /><br /> Her strengths include UX/UI and responsive design, front-end development and content creation. She is passionate about helping to increase student engagement with Dev Edmonton as a way to pay forward all the mentorship and help she’s received from devs in the community.<br /><br /> In her free time, she enjoys writing and drawing comics and dabbling in esoteric crafts like needlepoint and macramé.",
