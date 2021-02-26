@@ -24,3 +24,6 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+# Resources
+Icons sourced from [Iconify](https://iconify.design/icon-sets/mdi/)
