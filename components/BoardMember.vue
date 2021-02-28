@@ -1,15 +1,15 @@
 <template>
     <li class="py-4 md:py-0">
         <div class="md:grid md:grid-cols-3 lg:gap-8 sm:pb-2">
-            <div>
+            <div class="md:col-span-3 lg:col-span-1">
                 <img
-                    class="w-full object-cover shadow-lg rounded-lg md:h-60"
+                    class="w-full max-w-sm object-cover object-top shadow-lg rounded-lg md:h-80 lg:h-60"
                     :src="`${imageLink}`"
                     alt=""
                 />
             </div>
 
-            <div class="md:col-span-2">
+            <div class="md:col-span-3 lg:col-span-2">
                 <div class="space-y-1">
                     <div class="text-lg font-medium">
                         <h3>{{ name }}</h3>
