@@ -58,7 +58,6 @@ export default {
         /*
          ** You can extend webpack config here
          */
-        extend(config, ctx) {},
     },
     googleAnalytics: {
         id: "UA-180778341-1",
