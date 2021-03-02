@@ -483,6 +483,7 @@
                             operations.
                         </span>
                     </MeetupCard>
+                    <!-- Cog svg icon provided by FontAwesome https://fontawesome.com/license/free -->
                 </div>
             </div>
         </div>
