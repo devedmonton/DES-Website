@@ -2,7 +2,7 @@
     <div
         class="relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500"
     >
-        <div>
+        <div class="flex items-center">
             <img
                 :class="`w-12 h-12 rounded-md inline-flex p-1 ${
                     logoBg ? logoBg : null
@@ -10,20 +10,50 @@
                 :src="logo"
                 :alt="`${name}-logo`"
             />
+            <h3 class="ml-6 text-xl font-medium pr-8">{{ name }}</h3>
         </div>
-        <div class="mt-4">
-            <h3 class="text-lg font-medium">
+        <div class="mt-2">
+            <div class="text-grey-700">
                 <a v-if="linkTo" :href="linkTo" class="focus:outline-none">
                     <!-- Extend touch target to entire panel -->
-                    <span class="absolute inset-0" aria-hidden="true"></span>
-                    {{ name }} - {{ slack }}
+                    <div v-if="linkTo" class="flex items-center">
+                        <span
+                            class="absolute inset-0"
+                            aria-hidden="true"
+                        ></span>
+                        <svg
+                            class="w-5 h-5 mr-2"
+                            fill="#868e96"
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                            preserveAspectRatio="xMidYMid meet"
+                        >
+                            <path
+                                d="M6 15a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2h2v2m1 0a2 2 0 0 1 2-2a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2a2 2 0 0 1-2-2v-5m2-8a2 2 0 0 1-2-2a2 2 0 0 1 2-2a2 2 0 0 1 2 2v2H9m0 1a2 2 0 0 1 2 2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2a2 2 0 0 1 2-2h5m8 2a2 2 0 0 1 2-2a2 2 0 0 1 2 2a2 2 0 0 1-2 2h-2v-2m-1 0a2 2 0 0 1-2 2a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2a2 2 0 0 1 2 2v5m-2 8a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2v-2h2m0-1a2 2 0 0 1-2-2a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2a2 2 0 0 1-2 2h-5z"
+                            />
+                        </svg>
+                        {{ slack }} on slack
+                    </div>
                 </a>
-                <p v-else>{{ name }} - {{ slack }}</p>
-            </h3>
+                <div v-else>
+                    <p class="flex items-center">
+                        <svg
+                            class="w-5 h-5 mr-2"
+                            fill="#868e96"
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                            preserveAspectRatio="xMidYMid meet"
+                        >
+                            <path
+                                d="M6 15a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2h2v2m1 0a2 2 0 0 1 2-2a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2a2 2 0 0 1-2-2v-5m2-8a2 2 0 0 1-2-2a2 2 0 0 1 2-2a2 2 0 0 1 2 2v2H9m0 1a2 2 0 0 1 2 2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2a2 2 0 0 1 2-2h5m8 2a2 2 0 0 1 2-2a2 2 0 0 1 2 2a2 2 0 0 1-2 2h-2v-2m-1 0a2 2 0 0 1-2 2a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2a2 2 0 0 1 2 2v5m-2 8a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2v-2h2m0-1a2 2 0 0 1-2-2a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2a2 2 0 0 1-2 2h-5z"
+                            />
+                        </svg>
+                        {{ slack }} on slack
+                    </p>
+                </div>
+            </div>
             <p class="mt-2 text-sm text-gray-500">
-                Doloribus dolores nostrum quia qui natus officia quod et
-                dolorem. Sit repellendus qui ut at blanditiis et quo et
-                molestiae.
+                <slot></slot>
             </p>
         </div>
         <span
