@@ -73,11 +73,10 @@
                             >
                         </div>
                     </div>
-                    <div class="text-medium">
-                        <p class="text-gray-500" v-html="description">
-                            {{ description }}
-                        </p>
-                    </div>
+                    <div
+                        class="text-medium text-gray-500"
+                        v-html="description"
+                    />
                 </div>
             </div>
         </div>
