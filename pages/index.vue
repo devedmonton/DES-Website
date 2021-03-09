@@ -50,7 +50,7 @@
 
         <div
             id="what-we-do"
-            class="relative bg-grey-000 pt-16 -mt-8 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8"
+            class="relative bg-grey-000 pt-8 -mt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8"
         >
             <div class="absolute inset-0">
                 <div class="h-1/3 sm:h-2/3"></div>
@@ -188,7 +188,7 @@
 
         <div
             id="get-involved"
-            class="relative bg-white pt-16 -mt-8 pb-4 px-4 sm:px-6 lg:pt-24 lg:pb-12 lg:px-8"
+            class="relative bg-white pt-8 -mt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8"
         >
             <div class="absolute inset-0">
                 <div class="h-1/3 sm:h-2/3"></div>
@@ -371,6 +371,122 @@
                 </div>
             </div>
         </div>
+
+        <div
+            id="meetups"
+            class="relative bg-grey-000 pt-8 -mt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8"
+        >
+            <div class="absolute inset-0">
+                <div class="h-1/3 sm:h-2/3"></div>
+            </div>
+            <div class="relative max-w-7xl mx-auto">
+                <div class="text-center">
+                    <h2
+                        class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10"
+                    >
+                        Meetups We Support
+                    </h2>
+                </div>
+                <div
+                    class="mt-8 rounded-lg bg-gray-200 overflow-hidden shadow divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px"
+                >
+                    <MeetupCard
+                        :name="meetups.ruby.name"
+                        :logo="meetups.ruby.logo"
+                        :link-to="meetups.ruby.linkTo"
+                        :slack="meetups.ruby.slack"
+                    >
+                        <span>
+                            YEGRB is Edmonton’s local Ruby Meetup. Ruby is a
+                            dynamic, open source programming language with a
+                            focus on simplicity and productivity. It has an
+                            elegant syntax that is natural to read and easy to
+                            write.
+                        </span>
+                    </MeetupCard>
+                    <MeetupCard
+                        :name="meetups.javascript.name"
+                        :logo="meetups.javascript.logo"
+                        :link-to="meetups.javascript.linkTo"
+                        :slack="meetups.javascript.slack"
+                    >
+                        <span>
+                            Exchange.js is an open community of local developers
+                            and designers, who meet monthly to discuss a wide
+                            range of topics within the JavaScript ecosystem.
+                        </span>
+                    </MeetupCard>
+                    <MeetupCard
+                        :name="meetups.mobileDev.name"
+                        :logo="meetups.mobileDev.logo"
+                        :link-to="meetups.mobileDev.linkTo"
+                        :slack="meetups.mobileDev.slack"
+                        logo-bg="bg-blue-100"
+                    >
+                        <span>
+                            Edmonton Mobile Developers is a community of
+                            programmers, designers, and hackers interested in
+                            mobile development. We discuss a broad range of
+                            topics and technologies relevant to the mobile
+                            ecosystem while sharing knowledge and experience.
+                        </span>
+                    </MeetupCard>
+                    <MeetupCard
+                        :name="meetups.edmontonPy.name"
+                        :logo="meetups.edmontonPy.logo"
+                        :link-to="meetups.edmontonPy.linkTo"
+                        :slack="meetups.edmontonPy.slack"
+                    >
+                        <span>
+                            We hope to foster a strong, supportive, and
+                            proficient Python community in the Edmonton area.
+                            Everyone interested in any aspect of Python
+                            development is welcome to join.
+                        </span>
+                    </MeetupCard>
+                    <MeetupCard
+                        :name="meetups.go.name"
+                        :logo="meetups.go.logo"
+                        :link-to="meetups.go.linkTo"
+                        :slack="meetups.go.slack"
+                    >
+                        <span>
+                            Go is an open source programming language that
+                            enables the production of simple, efficient, and
+                            reliable software at scale. Edmonton Go is a meetup
+                            to collaborate, discuss, and learn Go.
+                        </span>
+                    </MeetupCard>
+                    <MeetupCard
+                        :name="meetups.dotNet.name"
+                        :logo="meetups.dotNet.logo"
+                        :link-to="meetups.dotNet.linkTo"
+                        :slack="meetups.dotNet.slack"
+                    >
+                        <span>
+                            The Edmonton .NET User Group is a non-profit
+                            organization which empowers the IT Professionals and
+                            Developers using the Microsoft .NET Framework.
+                        </span>
+                    </MeetupCard>
+                    <MeetupCard
+                        :name="meetups.devOps.name"
+                        :logo="meetups.devOps.logo"
+                        :link-to="meetups.devOps.linkTo"
+                        :slack="meetups.devOps.slack"
+                        logo-bg="bg-blue-100"
+                    >
+                        <span>
+                            DevOps YEG is a platform for DevOps enthusiasts and
+                            professionals to share best practises and knowledge
+                            around managing modern software development
+                            operations.
+                        </span>
+                    </MeetupCard>
+                    <!-- Cog svg icon provided by FontAwesome https://fontawesome.com/license/free -->
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -380,6 +496,56 @@ import VButton from "~/components/VButton.vue";
 export default {
     components: {
         VButton,
+    },
+    data: () => {
+        return {
+            meetups: {
+                ruby: {
+                    name: "YEGrb",
+                    logo: require("../assets/logos/ruby-240px.png"),
+                    linkTo: "https://yegrb.com/",
+                    slack: "#meetup-ruby",
+                },
+                javascript: {
+                    name: "Exchange.js",
+                    logo: require("../assets/logos/JavaScript-logo-240px.png"),
+                    linkTo: "https://exchangejs.com/",
+                    slack: "#meetup-javascript",
+                },
+                mobileDev: {
+                    name: "Mobile Dev Meetup",
+                    logo: require("../assets/logos/mobile-dev.svg"),
+                    linkTo:
+                        "https://www.meetup.com/startupedmonton/events/knjqbsyccfbgc/",
+                    slack: "#meetup-mobile-dev",
+                },
+                edmontonPy: {
+                    name: "Edmonton.Py",
+                    logo: require("../assets/logos/python-logo.svg"),
+                    linkTo: "http://edmontonpy.com/",
+                    slack: "#meetup-edmontonpy",
+                },
+                go: {
+                    name: "Go Meetup",
+                    logo: require("../assets/logos/Go-Logo_Blue.svg"),
+                    linkTo: "https://edmontongo.org/",
+                    slack: "#meetup-go",
+                },
+                dotNet: {
+                    name: "Edmonton .NET User Group",
+                    logo: require("../assets/logos/dotNet_logo.png"),
+                    linkTo: "http://edmug.net/",
+                    slack: "#meetup-dotnet-edmug",
+                },
+                devOps: {
+                    name: "Meetup Dev Ops",
+                    logo: require("../assets/logos/cogs-solid.svg"),
+                    linkTo:
+                        "https://www.meetup.com/startupedmonton/events/pxlrmqyzdbxb/",
+                    slack: "#meetup-devops",
+                },
+            },
+        };
     },
 };
 </script>

@@ -11,7 +11,7 @@
                         />
                     </a>
                 </div>
-                <div class="hidden sm:block sm:ml-6">
+                <div class="hidden md:block md:ml-6">
                     <div class="flex">
                         <a
                             v-for="link in menuLinks"
@@ -23,7 +23,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="-mr-2 flex sm:hidden">
+                <div class="-mr-2 flex md:hidden">
                     <!-- Mobile menu button -->
                     <button
                         id="mobile-btn"
@@ -67,7 +67,7 @@
             </div>
         </div>
         <!-- Menu open: "block", Menu closed: "hidden" -->
-        <div id="mobile-menu" class="hidden sm:hidden">
+        <div id="mobile-menu" class="hidden md:hidden">
             <div class="px-2 pt-2 pb-3">
                 <a
                     v-for="link in menuLinks"
@@ -95,6 +95,10 @@ export default {
                 {
                     name: "Get Involved",
                     href: "/#get-involved",
+                },
+                {
+                    name: "Meetups",
+                    href: "/#meetups",
                 },
                 {
                     name: "Board",
