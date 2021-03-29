@@ -6,6 +6,16 @@
   "commit": false,
   "contributors": [
     {
+      "login": "JoshMacSween",
+      "name": "Josh MacSween",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37757951?v=4",
+      "profile": "https://joshmacsween.netlify.app/",
+      "contributions": [
+        "code",
+        "design",
+      ]
+    },
+    {
       "login": "dboydgit",
       "name": "Derryk Boyd",
       "avatar_url": "https://avatars.githubusercontent.com/u/24216368?v=4",
