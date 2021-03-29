@@ -46,6 +46,18 @@
         "design",
         "doc"
       ]
+    },
+    {
+      "login": "MarkBennett",
+      "name": "Mark Bennett",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61872?v=4",
+      "profile": "http://burmis.ca",
+      "contributions": [
+        "code",
+        "design",
+        "review",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
