@@ -40,7 +40,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://joshmacsween.netlify.app/"><img src="https://avatars.githubusercontent.com/u/37757951?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Josh MacSween</b></sub></a><br /><a href="https://github.com/devedmonton/devedmonton.com/commits?author=JoshMacSween" title="Code">💻</a> <a href="#design-JoshMacSween" title="Design">🎨</a></td>
+    <td align="center"><a href="https://joshmacsween.netlify.app/"><img src="https://avatars.githubusercontent.com/u/37757951?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Josh MacSween</b></sub></a><br /><a href="https://github.com/devedmonton/devedmonton.com/commits?author=JoshMacSween" title="Code">💻</a> <a href="#design-JoshMacSween" title="Design">🎨</a> <a href="#ideas-JoshMacSween" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
