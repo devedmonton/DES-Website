@@ -6,16 +6,6 @@
   "commit": false,
   "contributors": [
     {
-      "login": "JoshMacSween",
-      "name": "Josh MacSween",
-      "avatar_url": "https://avatars.githubusercontent.com/u/37757951?v=4",
-      "profile": "https://joshmacsween.netlify.app/",
-      "contributions": [
-        "code",
-        "design"
-      ]
-    },
-    {
       "login": "dboydgit",
       "name": "Derryk Boyd",
       "avatar_url": "https://avatars.githubusercontent.com/u/24216368?v=4",
@@ -25,15 +15,6 @@
         "code",
         "review",
         "ideas"
-      ]
-    },
-    {
-      "login": "SteveReiter",
-      "name": "SteveReiter",
-      "avatar_url": "https://avatars.githubusercontent.com/u/8506743?v=4",
-      "profile": "https://github.com/SteveReiter",
-      "contributions": [
-        "doc"
       ]
     },
     {
@@ -48,6 +29,16 @@
       ]
     },
     {
+      "login": "JoshMacSween",
+      "name": "Josh MacSween",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37757951?v=4",
+      "profile": "https://joshmacsween.netlify.app/",
+      "contributions": [
+        "code",
+        "design"
+      ]
+    },
+    {
       "login": "MarkBennett",
       "name": "Mark Bennett",
       "avatar_url": "https://avatars.githubusercontent.com/u/61872?v=4",
@@ -56,6 +47,15 @@
         "code",
         "design",
         "review",
+        "doc"
+      ]
+    },
+    {
+      "login": "SteveReiter",
+      "name": "SteveReiter",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8506743?v=4",
+      "profile": "https://github.com/SteveReiter",
+      "contributions": [
         "doc"
       ]
     }
