@@ -58,6 +58,17 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "MandyMeindersma",
+      "name": "Mandy Meindersma",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17459171?v=4",
+      "profile": "http://mandymeindersma.com/",
+      "contributions": [
+        "code",
+        "design",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
