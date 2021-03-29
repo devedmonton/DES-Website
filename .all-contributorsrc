@@ -35,6 +35,17 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Estyn",
+      "name": "Estyn Edwards",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1813396?v=4",
+      "profile": "http://www.estynedwards.com",
+      "contributions": [
+        "code",
+        "design",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
