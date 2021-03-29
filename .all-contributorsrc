@@ -13,6 +13,17 @@
       "contributions": [
         "code",
         "design",
+      ]
+    },
+    {
+      "login": "dboydgit",
+      "name": "Derryk Boyd",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24216368?v=4",
+      "profile": "https://github.com/dboydgit",
+      "contributions": [
+        "design",
+        "code",
+        "review",
         "ideas"
       ]
     }

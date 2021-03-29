@@ -41,6 +41,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://joshmacsween.netlify.app/"><img src="https://avatars.githubusercontent.com/u/37757951?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Josh MacSween</b></sub></a><br /><a href="https://github.com/devedmonton/devedmonton.com/commits?author=JoshMacSween" title="Code">💻</a> <a href="#design-JoshMacSween" title="Design">🎨</a> <a href="#ideas-JoshMacSween" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/dboydgit"><img src="https://avatars.githubusercontent.com/u/24216368?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Derryk Boyd</b></sub></a><br /><a href="#design-dboydgit" title="Design">🎨</a> <a href="https://github.com/devedmonton/devedmonton.com/commits?author=dboydgit" title="Code">💻</a> <a href="https://github.com/devedmonton/devedmonton.com/pulls?q=is%3Apr+reviewed-by%3Adboydgit" title="Reviewed Pull Requests">👀</a> <a href="#ideas-dboydgit" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
