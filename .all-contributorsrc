@@ -1,0 +1,25 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "JoshMacSween",
+      "name": "Josh MacSween",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37757951?v=4",
+      "profile": "https://joshmacsween.netlify.app/",
+      "contributions": [
+        "code",
+        "design"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "devedmonton.com",
+  "projectOwner": "devedmonton",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
