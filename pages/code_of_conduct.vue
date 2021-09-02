@@ -202,9 +202,10 @@
                         href="https://www.djangoproject.com/conduct/reporting/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        >Django</a
                     >
-                     and
+                        Django
+                    </a>
+                    and
                     <a
                         class="text-brand-primary"
                         href="https://otter.technology/"
@@ -214,7 +215,9 @@
                     >. Thanks!
                 </p>
                 <p class="py-2">
-                    If you are subject to or witness unacceptable behavior please notify the code of conduct committee by filling out the form below.
+                    If you are subject to or witness unacceptable behavior
+                    please notify the code of conduct committee by filling out
+                    the form below.
                 </p>
                 <button
                     type="submit"
@@ -223,13 +226,13 @@
                     Report a code of conduct violation
                 </button>
                 <p class="py-2">
-                If you have any questions please email
-                <a
-                    class="text-brand-primary"
-                    href="mailto:board@devedmonton.com"
+                    If you have any questions please email
+                    <a
+                        class="text-brand-primary"
+                        href="mailto:board@devedmonton.com"
                     >
-                    board@devedmonton.com</a
-                    >
+                        board@devedmonton.com</a
+                    >.
                 </p>
                 <p class="py-2">
                     We have a
@@ -238,12 +241,23 @@
                         href="https://docs.google.com/document/d/1mIXjGSY1P_R_KQ9z7fcbU_2_-yj2v99ir0op3Abx3SU/edit?usp=sharing"
                         target="_blank"
                         rel="noopener noreferrer"
-                        >working document</a
                     >
-                     that outlines what the Code of Committee does, what happens when you file a report and possible reprocussions once a report is submitted.
+                        working document
+                    </a>
+                    that outlines what the Code of Committee does, what happens
+                    when you file a report and possible reprocussions once a
+                    report is submitted.
                 </p>
                 <p class="py-2">
-                    <strong>All reports will be kept confidential to the board and the code of conduct committee. If you believe anyone is in physical danger, please notify appropriate law enforcement first.</strong> If you are unsure what law enforcement agency is appropriate, please include this in your report and we will attempt to notify them.
+                    <strong>
+                        All reports will be kept confidential to the board and
+                        the code of conduct committee. If you believe anyone is
+                        in physical danger, please notify appropriate law
+                        enforcement first.
+                    </strong>
+                    If you are unsure what law enforcement agency is
+                    appropriate, please include this in your report and we will
+                    attempt to notify them.
                 </p>
             </li>
             <li>
