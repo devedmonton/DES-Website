@@ -492,10 +492,11 @@
                         logo-bg="bg-blue-100"
                     >
                         <span>
-                            The Edmonton R User Group (YEGRUG) is an R-enthusiast
-                            group hosting events on data wrangling to visualization
-                            and web development with R. Learn R, hone your skills,
-                            network, all skill levels are welcome.
+                            The Edmonton R User Group (YEGRUG) is an
+                            R-enthusiast group hosting events on data wrangling
+                            to visualization and web development with R. Learn
+                            R, hone your skills, network, all skill levels are
+                            welcome.
                         </span>
                     </MeetupCard>
                 </div>
