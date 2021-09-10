@@ -196,6 +196,42 @@
                     6. Reporting Guidelines
                 </h2>
                 <p class="py-2">
+                    If you are subject to or witness unacceptable behavior
+                    please notify the code of conduct committee by filling out
+                    the form below.
+                </p>
+                <form action="https://forms.gle/NR56fRQUVzdbf1v3A">
+                    <button
+                        type="submit"
+                        class="inline-flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out my-5"
+                    >
+                        Report a code of conduct violation
+                    </button>
+                </form>
+                <p class="py-2">
+                    We have a
+                    <a
+                        class="text-brand-primary"
+                        href="https://docs.google.com/document/d/1mIXjGSY1P_R_KQ9z7fcbU_2_-yj2v99ir0op3Abx3SU/edit?usp=sharing"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        working document
+                    </a>
+                    that outlines what the Code of Committee does, what happens
+                    when you file a report and possible reprocussions once a
+                    report is submitted. If you have any questions please email
+                    <a
+                        class="text-brand-primary"
+                        href="mailto:board@devedmonton.com"
+                    >
+                        board@devedmonton.com</a
+                    >. All reports will be kept confidential to the board and
+                    the code of conduct committee.
+                    <strong>
+                        If you believe anyone is in physical danger, please
+                        notify appropriate law enforcement first.
+                    </strong>
                     Largely taken from
                     <a
                         class="text-brand-primary"
@@ -213,53 +249,6 @@
                         rel="noopener noreferrer"
                         >Otter Tech</a
                     >. Thanks!
-                </p>
-                <p class="py-2">
-                    If you are subject to or witness unacceptable behavior
-                    please notify the code of conduct committee by filling out
-                    the form below.
-                </p>
-                <form action="https://forms.gle/NR56fRQUVzdbf1v3A">
-                    <button
-                        type="submit"
-                        class="inline-flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out my-5"
-                    >
-                        Report a code of conduct violation
-                    </button>
-                </form>
-                <p class="py-2">
-                    If you have any questions please email
-                    <a
-                        class="text-brand-primary"
-                        href="mailto:board@devedmonton.com"
-                    >
-                        board@devedmonton.com</a
-                    >.
-                </p>
-                <p class="py-2">
-                    We have a
-                    <a
-                        class="text-brand-primary"
-                        href="https://docs.google.com/document/d/1mIXjGSY1P_R_KQ9z7fcbU_2_-yj2v99ir0op3Abx3SU/edit?usp=sharing"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        working document
-                    </a>
-                    that outlines what the Code of Committee does, what happens
-                    when you file a report and possible reprocussions once a
-                    report is submitted.
-                </p>
-                <p class="py-2">
-                    <strong>
-                        All reports will be kept confidential to the board and
-                        the code of conduct committee. If you believe anyone is
-                        in physical danger, please notify appropriate law
-                        enforcement first.
-                    </strong>
-                    If you are unsure what law enforcement agency is
-                    appropriate, please include this in your report and we will
-                    attempt to notify them.
                 </p>
             </li>
             <li>
