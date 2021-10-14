@@ -24,7 +24,7 @@
                     >.
                 </p>
                 <p class="py-2">
-                    This code of conduct outlines our expectations for all those
+                    This Code of Conduct outlines our expectations for all those
                     who participate in our community, as well as the
                     consequences for unacceptable behavior.
                 </p>
@@ -82,7 +82,7 @@
                     <li class="py-1">
                         Be mindful of your surroundings and of your fellow
                         participants. Alert community leaders if you notice a
-                        dangerous situation, someone in distress, or violations
+                        dangerous situation, someone in distress, or incidents
                         of this Code of Conduct, even if they seem
                         inconsequential.
                     </li>
@@ -171,12 +171,12 @@
                 <p class="py-2">
                     In an effort to build a more collaborative and inclusive
                     community, we always endevour to resolve disputes and
-                    conduct violations through education, dialog, and respectful
+                    conduct incidents through education, dialog, and respectful
                     communication. People who demonstrate a sincere effort to
                     change behaviour will be given a reasonable opportunity to
                     do so, and having done so to participate in the community,
-                    but continued violations will not be tolerated and may
-                    result in further actions at the discretion of the community
+                    but continued incidents will not be tolerated and may result
+                    in further actions at the discretion of the community
                     organizers.
                 </p>
                 <p class="py-2">
@@ -197,7 +197,7 @@
                 </h2>
                 <p class="py-2">
                     If you are subject to or witness unacceptable behavior
-                    please notify the code of conduct committee by filling out
+                    please notify the Code of Conduct Committee by filling out
                     the form below.
                 </p>
                 <form action="https://forms.gle/NR56fRQUVzdbf1v3A">
@@ -205,7 +205,7 @@
                         type="submit"
                         class="inline-flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out my-5"
                     >
-                        Report a code of conduct violation
+                        Report a Code of Conduct incident
                     </button>
                 </form>
                 <p class="py-2">
@@ -218,16 +218,17 @@
                     >
                         working document
                     </a>
-                    that outlines what the Code of Committee does, what happens
-                    when you file a report and possible reprocussions once a
-                    report is submitted. If you have any questions please email
+                    that outlines what the Code of Conduct Committee does, what
+                    happens when you file a report and possible reprocussions
+                    once a report is submitted. If you have any questions please
+                    email
                     <a
                         class="text-brand-primary"
-                        href="mailto:board@devedmonton.com"
+                        href="mailto:code-of-conduct-committee@devedmonton.com"
                     >
-                        board@devedmonton.com</a
+                        code-of-conduct-committee@devedmonton.com</a
                     >. All reports will be kept confidential to the board and
-                    the code of conduct committee.
+                    the Code of Conduct Committee.
                     <strong>
                         If you believe anyone is in physical danger, please
                         notify appropriate law enforcement first.
@@ -266,7 +267,7 @@
                     offline.
                 </p>
                 <p class="py-2">
-                    This code of conduct and its related procedures also applies
+                    This Code of Conduct and its related procedures also applies
                     to unacceptable behavior occurring outside the scope of
                     community activities when such behavior has the potential to
                     adversely affect the safety and well-being of community
