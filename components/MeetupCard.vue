@@ -15,8 +15,8 @@
         <div class="mt-2">
             <div class="text-grey-700">
                 <a v-if="linkTo" :href="linkTo" class="focus:outline-none">
-                    <!-- Extend touch target to entire panel -->
-                    <div v-if="linkTo" class="flex items-center">
+                    <!-- Extend touch target to entire panel and slack logo if slack exsists-->
+                    <div v-if="linkTo && slack" class="flex items-center">
                         <span
                             class="absolute inset-0"
                             aria-hidden="true"
@@ -33,6 +33,13 @@
                             />
                         </svg>
                         {{ slack }} on slack
+                    </div>
+                    <!-- Extend touch target to entire panel -->
+                    <div v-else class="flex items-center">
+                        <span
+                            class="absolute inset-0"
+                            aria-hidden="true"
+                        ></span>
                     </div>
                 </a>
                 <div v-else>
