@@ -300,9 +300,9 @@
                 <p class="py-2">
                     <a
                         class="text-brand-primary"
-                        href="mailto:conduct@devedmonton.com"
+                        href="mailto:code-of-conduct-committee@devedmonton.com"
                     >
-                        conduct@devedmonton.com</a
+                        code-of-conduct-committee@devedmonton.com</a
                     >
                 </p>
             </li>
