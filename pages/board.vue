@@ -82,7 +82,8 @@ export default {
                     description:
                         "Ian Phillipchuk is a Team Lead and Senior Developer at <a class='text-indigo-600' href='https://punchcard.io/'>Punchcard</a>. Professionally, he does Software Consulting, Mobile and Web Development, as well as managing software teams and client projects.<br /><br /> At Dev Edmonton, he wants to grow the society to do more to help all the Devs in Edmonton, from providing resources for Meetups and Conferences for veteran developers, and helping new devs find their way and their first opportunities.<br /><br />Personally, he's probably getting fragged in Destiny 2 PVP for the bajillionth time, or building Lego with his kids.",
                     twitterHandle: "Protagorist",
-                    linkedInAccount: "https://www.linkedin.com/in/ian-phillipchuk-69a7009a/",
+                    linkedInAccount:
+                        "https://www.linkedin.com/in/ian-phillipchuk-69a7009a/",
                     slackAccount: "Ian Phillipchuck",
                 },
                 {
