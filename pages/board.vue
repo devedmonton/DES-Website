@@ -87,7 +87,7 @@ export default {
                 },
                 {
                     id: 2,
-                    name: "Ian Phillipchuck",
+                    name: "Ian Phillipchuk",
                     title: "Vice-President",
                     imageLink: require("~/assets/boardPictures/ianPhillipchuck.jpg"),
                     description:
