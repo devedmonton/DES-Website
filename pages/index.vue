@@ -499,6 +499,22 @@
                             welcome.
                         </span>
                     </MeetupCard>
+                    <MeetupCard
+                        :name="meetups.yegwit.name"
+                        :logo="meetups.yegwit.logo"
+                        :link-to="meetups.yegwit.linkTo"
+                        logo-bg="bg-blue-100"
+                    >
+                        <span>
+                            YEGWIT aims to build a strong and safe group for
+                            women, diverse genders, and allies in tech with the
+                            goal of fostering engagement and opportunity,
+                            providing mentorship, and creating community. We are
+                            establishing a group that allows individuals to
+                            share ideas, concerns, thoughts and actions, to
+                            create an equitable environment within the industry.
+                        </span>
+                    </MeetupCard>
                 </div>
             </div>
         </div>
@@ -564,6 +580,12 @@ export default {
                     logo: require("../assets/logos/r-logo.svg"),
                     linkTo:
                         "https://www.meetup.com/edmonton-r-user-group-yegrug",
+                    slack: "#meetup-r",
+                },
+                yegwit: {
+                    name: "Edmonton Women In Tech",
+                    logo: require("../assets/logos/yegwit.png"),
+                    linkTo: "https://yegwit.com/",
                     slack: "#meetup-r",
                 },
             },
