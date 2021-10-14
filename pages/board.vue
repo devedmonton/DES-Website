@@ -76,28 +76,17 @@ export default {
             members: [
                 {
                     id: 1,
-                    name: "Mark Bennett",
+                    name: "Ian Phillipchuck",
                     title: "President",
-                    imageLink: require("~/assets/boardPictures/markBennet.jpg"),
-                    description:
-                        "When starting with Ruby on Rails in 2009, Mark joined an amazing meetup in Sydney, Australia. Once home, he saw the value of a meetup community to developers, and founded YEGrb, Edmonton’s Ruby Meetup. Over the years he has helped with Exchange.js, BarCamp, and others. These experiences led him to establish DES in 2016, so developers could have a place where they could succeed and grow together. <br /><br />Mark is passionate about the developer community, and its role in Edmonton. His hope is to see more developers succeeding in bigger challenges in the future.<br /><br /> When not busy with DES he’s herding bits with <a class='text-indigo-600' href='https://burmis.ca/'>Burmis Studio</a>, chasing after his kids, or out for a run. Say hi on Slack or Twitter!",
-                    twitterHandle: "MarkBennett",
-                    linkedInAccount: "",
-                    slackAccount: "Mark",
-                },
-                {
-                    id: 2,
-                    name: "Ian Phillipchuk",
-                    title: "Vice-President",
                     imageLink: require("~/assets/boardPictures/ianPhillipchuck.jpg"),
                     description:
                         "Ian Phillipchuk is a Team Lead and Senior Developer at <a class='text-indigo-600' href='https://punchcard.io/'>Punchcard</a>. Professionally, he does Software Consulting, Mobile and Web Development, as well as managing software teams and client projects.<br /><br /> At Dev Edmonton, he wants to grow the society to do more to help all the Devs in Edmonton, from providing resources for Meetups and Conferences for veteran developers, and helping new devs find their way and their first opportunities.<br /><br />Personally, he's probably getting fragged in Destiny 2 PVP for the bajillionth time, or building Lego with his kids.",
                     twitterHandle: "Protagorist",
-                    linkedInAccount: "",
+                    linkedInAccount: "https://www.linkedin.com/in/ian-phillipchuk-69a7009a/",
                     slackAccount: "Ian Phillipchuck",
                 },
                 {
-                    id: 3,
+                    id: 2,
                     name: "Lauren Briske",
                     title: "Treasurer",
                     imageLink: require("~/assets/boardPictures/laurenBriske.jpg"),
@@ -109,7 +98,7 @@ export default {
                     slackAccount: "laurenbriske",
                 },
                 {
-                    id: 4,
+                    id: 3,
                     name: "Mandy Meindersma",
                     title: "Secretary",
                     imageLink: require("~/assets/boardPictures/mandyMeindersma.jpg"),
@@ -121,7 +110,7 @@ export default {
                     slackAccount: "Mandy Meindersma",
                 },
                 {
-                    id: 5,
+                    id: 4,
                     name: "Abram Hindle",
                     title: "Member At Large",
                     imageLink: require("~/assets/boardPictures/abramHindle.jpg"),
@@ -132,7 +121,7 @@ export default {
                     slackAccount: "Abram",
                 },
                 {
-                    id: 6,
+                    id: 5,
                     name: "Alyssa Diehl",
                     title: "Member At Large",
                     imageLink: require("~/assets/boardPictures/alyssaDiehl.jpg"),
@@ -143,7 +132,7 @@ export default {
                     slackAccount: "Alyssa Diehl",
                 },
                 {
-                    id: 7,
+                    id: 6,
                     name: "Celia Nicholls",
                     title: "Member At Large",
                     imageLink: require("~/assets/boardPictures/celiaNicholls.jpg"),
