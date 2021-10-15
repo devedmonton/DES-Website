@@ -70,6 +70,15 @@
         "design",
         "doc"
       ]
+    },
+    {
+      "login": "blerg-rush",
+      "name": "Kelsey Gabriel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47253497?v=4",
+      "profile": "https://github.com/blerg-rush",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
