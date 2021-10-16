@@ -89,7 +89,7 @@ export default {
         logoBg: { type: String, default: "" },
         name: { type: String, required: true },
         linkTo: { type: String, required: true },
-        slack: { type: String, required: true },
+        slack: { type: String, default: null },
     },
 };
 </script>
