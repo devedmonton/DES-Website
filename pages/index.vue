@@ -299,7 +299,7 @@
                                 <div class="flex justify-center mt-4">
                                     <a
                                         class="m-auto"
-                                        href="mailto:organizer-support@devedmonton.com?subject=I'm%20interested%20in%20help%20organizing%20an%20Edmonton%20technology%20event"
+                                        href="mailto:board@devedmonton.com?subject=I'm%20interested%20in%20help%20organizing%20an%20Edmonton%20technology%20event"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
@@ -356,7 +356,7 @@
                                 </div>
                                 <div class="flex justify-center mt-4">
                                     <a
-                                        href="mailto:community-support@devedmonton.com?subject=Supporting%20Dev%20Edmonton%20Society"
+                                        href="mailto:board@devedmonton.com?subject=Supporting%20Dev%20Edmonton%20Society"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
