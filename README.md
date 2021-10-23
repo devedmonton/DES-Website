@@ -12,6 +12,9 @@ New home for the devedmonton.com website
 ## Build Setup
 
 ```bash
+# switch to project node version
+$ nvm use
+
 # install dependencies
 $ npm install
 
