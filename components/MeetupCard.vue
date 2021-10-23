@@ -14,13 +14,14 @@
         </div>
         <div class="mt-2">
             <div class="text-grey-700">
-                <component :is="linkTo?'a':'div'" :href="linkTo || ''" class="focus:outline-none">
+                <component
+                    :is="linkTo ? 'a' : 'div'"
+                    :href="linkTo || ''"
+                    class="focus:outline-none"
+                >
                     <!-- Extend touch target to entire panel -->
                     <div class="flex items-center">
-                        <div
-                            class="absolute inset-0"
-                            aria-hidden="true"
-                        ></div>
+                        <div class="absolute inset-0" aria-hidden="true"></div>
                         <div v-if="slack" class="flex items-center">
                             <svg
                                 class="w-5 h-5 mr-2"
