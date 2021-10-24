@@ -518,6 +518,40 @@
                 </div>
             </div>
         </div>
+        <div
+            id="community-events"
+            class="relative bg-grey-000 pt-8 -mt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8"
+        >
+            <div class="absolute inset-0">
+                <div class="h-1/3 sm:h-2/3"></div>
+            </div>
+            <div class="relative max-w-7xl mx-auto">
+                <div class="text-center">
+                    <h2
+                        class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10"
+                    >
+                        Community Events
+                    </h2>
+                </div>
+                <div
+                    class="mt-8 rounded-lg bg-gray-200 overflow-hidden shadow divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px"
+                >
+                    <MeetupCard
+                        :name="events.coffee.name"
+                        :logo="events.coffee.logo"
+                        :slack="events.coffee.slack"
+                    >
+                        <span>
+                            YEGRB is Edmonton’s local Ruby Meetup. Ruby is a
+                            dynamic, open source programming language with a
+                            focus on simplicity and productivity. It has an
+                            elegant syntax that is natural to read and easy to
+                            write.
+                        </span>
+                    </MeetupCard>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -530,6 +564,13 @@ export default {
     },
     data: () => {
         return {
+            events: {
+                coffee: {
+                    name: "Random Coffees",
+                    logo: require("../assets/logos/coffee-192px.png"),
+                    slack: "#random_coffees",
+                },
+            },
             meetups: {
                 ruby: {
                     name: "YEGrb",

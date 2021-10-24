@@ -68,7 +68,7 @@ export default {
         logo: { type: String, required: true },
         logoBg: { type: String, default: "" },
         name: { type: String, required: true },
-        linkTo: { type: String, required: true },
+        linkTo: { type: String, default: "" },
         slack: { type: String, default: null },
     },
 };
