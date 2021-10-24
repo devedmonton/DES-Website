@@ -18,7 +18,7 @@
                 <div class="flex-shrink-0">
                     <img
                         class="h-48 w-full object-cover"
-                        src="~/assets/404/magnifying-glass.jpg"
+                        src="~/assets/404/magnifying-glass-400.jpg"
                         alt="A magnifying glass and pencil on top of a sketchbook filled with notes"
                     />
                 </div>
@@ -46,7 +46,7 @@
                 <div class="flex-shrink-0">
                     <img
                         class="h-48 w-full object-cover"
-                        src="~/assets/404/css.jpg"
+                        src="~/assets/404/css-400.jpg"
                         alt="Macbook laptop open to a text editor with CSS code"
                     />
                 </div>
@@ -86,7 +86,7 @@
                 <div class="flex-shrink-0">
                     <img
                         class="h-48 w-full object-cover"
-                        src="~/assets/404/google.jpg"
+                        src="~/assets/404/google-400.jpg"
                         alt="Laptop open to the Google Search home page"
                     />
                 </div>
