@@ -540,13 +540,18 @@
                         :name="events.coffee.name"
                         :logo="events.coffee.logo"
                         :slack="events.coffee.slack"
+                        :link-to="events.coffee.linkTo"
+                        :duration-info="events.coffee.durationInfo"
                     >
                         <span>
-                            YEGRB is Edmonton’s local Ruby Meetup. Ruby is a
-                            dynamic, open source programming language with a
-                            focus on simplicity and productivity. It has an
-                            elegant syntax that is natural to read and easy to
-                            write.
+                            #random_coffees is a channel where people can meet
+                            in person or virutally over coffee to meet other
+                            people in the Dev Edmonton Society community. It is
+                            ran using the RandomCoffees Slack integration, and
+                            pairs are created weekly. If you need a break you
+                            can exit the channel and rejoin when you are able to
+                            join a coffee. Join the Slack workspace to
+                            partipate.
                         </span>
                     </MeetupCard>
                 </div>
@@ -568,7 +573,9 @@ export default {
                 coffee: {
                     name: "Random Coffees",
                     logo: require("../assets/logos/coffee-192px.png"),
+                    linkTo: "https://devedmonton-invite.herokuapp.com/",
                     slack: "#random_coffees",
+                    durationInfo: "Duration: Ongoing (weekly)",
                 },
             },
             meetups: {
