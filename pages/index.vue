@@ -544,14 +544,12 @@
                         :duration-info="events.coffee.durationInfo"
                     >
                         <span>
-                            #random_coffees is a channel where people can meet
-                            in person or virutally over coffee to meet other
-                            people in the Dev Edmonton Society community. It is
-                            ran using the RandomCoffees Slack integration, and
-                            pairs are created weekly. If you need a break you
-                            can exit the channel and rejoin when you are able to
-                            join a coffee. Join the Slack workspace to
-                            partipate.
+                            #random_coffees is a weekly chance for you to meet
+                            other people in the Dev Edmonton community. Every
+                            week you will get randomly assigned to another
+                            person to have coffee with (virtually or in person
+                            if you are comfortable). Join the Slack workspace to
+                            participate.
                         </span>
                     </MeetupCard>
                 </div>
