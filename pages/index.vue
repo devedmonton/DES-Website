@@ -187,8 +187,123 @@
         </div>
 
         <div
-            id="get-involved"
+            id="about-our-slack"
             class="relative bg-white pt-8 -mt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8"
+        >
+            <div class="absolute inset-0">
+                <div class="h-1/3 sm:h-2/3"></div>
+            </div>
+            <div class="relative max-w-7xl mx-auto">
+                <div class="text-center">
+                    <h2
+                        class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10"
+                    >
+                        About Our Slack
+                    </h2>
+                </div>
+                <div
+                    class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-2 lg:max-w-none"
+                >
+                    <div
+                        id="slack-message-block"
+                        class="flex flex-col justify-around px-8"
+                    >
+                        <h3
+                            class="mt-2 text-xl leading-7 font-semibold text-gray-900"
+                        >
+                            Welcome Friend!
+                        </h3>
+                        <p class="text-gray-500">
+                            We have a Slack workspace to connect people who are
+                            involved with the Edmonton (YEG) tech scene. The
+                            people here range from being developers, designers,
+                            PM's, students, hobbists and more who love to talk
+                            about code. We also do events and network across
+                            Alberta.
+                        </p>
+                        <p class="text-gray-500">
+                            There are several channels that you can check out on
+                            the card. They range from being about a specific
+                            meetup, tech news, tech help, finding new
+                            opportunities, casual chatting and more. We have 80+
+                            other channels! If there's any channels we're
+                            missing all members are free to create any they
+                            want. If they're inactive for a few months, then
+                            they'll be deleted. Connect with other members of
+                            the community by joining the workspace.
+                        </p>
+
+                        <p class="text-gray-500">
+                            By joining this Slack you agree to abide by our
+                            <a
+                                class="text-brand-primary"
+                                href="/code_of_conduct/"
+                                >Code of Conduct</a
+                            >. Looking forward to chatting!
+                        </p>
+                    </div>
+
+                    <div>
+                        <div
+                            class="flex flex-col justify-between p-6 rounded-lg shadow-md overflow-hidden"
+                        >
+                            <h3
+                                class="mt-2 text-xl leading-7 font-semibold text-gray-900"
+                            >
+                                Useful Links
+                            </h3>
+                            <ul class="text-brand-primary list-disc text-l p-6">
+                                <li>
+                                    <a href="/code_of_conduct/"
+                                        >The Code of Conduct</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.youtube.com/c/DevEdmonton/videos"
+                                        >The Latest Meetup Videos</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="/board/">The Board Members</a>
+                                </li>
+                                <!-- When the Job Posting Board is made add it here -->
+                            </ul>
+                        </div>
+                        <div
+                            class="flex flex-col justify-between p-6 rounded-lg shadow-md overflow-hidden"
+                        >
+                            <h3
+                                class="mt-2 text-xl leading-7 font-semibold text-gray-900"
+                            >
+                                Channels to Checkout
+                            </h3>
+                            <ul class="text-l p-6 text-gray-500">
+                                <li>#introductions to say "Hi"</li>
+                                <li>
+                                    Several #meetup specific channels listed
+                                    below
+                                </li>
+                                <li>#random for casual conversations</li>
+                                <li>
+                                    #dev-talk and #dev-help for more tech
+                                    focused conversations
+                                </li>
+                                <li>
+                                    #opportunities where people can post and
+                                    look for jobs, internships, volunteer
+                                    positions or more
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div
+            id="get-involved"
+            class="relative bg-grey-000 pt-8 -mt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8"
         >
             <div class="absolute inset-0">
                 <div class="h-1/3 sm:h-2/3"></div>
@@ -374,7 +489,7 @@
 
         <div
             id="meetups"
-            class="relative bg-grey-000 pt-8 -mt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8"
+            class="relative bg-white pt-8 -mt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8"
         >
             <div class="absolute inset-0">
                 <div class="h-1/3 sm:h-2/3"></div>
@@ -662,5 +777,17 @@ export default {
 
 .links {
     padding-top: 15px;
+}
+
+#slack-message-block {
+    border-left: 5px solid;
+    border-image: linear-gradient(
+            to top,
+            #36c5f0 25%,
+            #2eb67d 50%,
+            #ecb22e 75%,
+            #e01e5a 100%
+        )
+        5;
 }
 </style>
