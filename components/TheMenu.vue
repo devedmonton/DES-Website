@@ -93,6 +93,10 @@ export default {
                     href: "/#what-we-do",
                 },
                 {
+                    name: "About Our Slack",
+                    href: "/#about-our-slack",
+                },
+                {
                     name: "Get Involved",
                     href: "/#get-involved",
                 },
