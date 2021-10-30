@@ -23,6 +23,7 @@
                     :slack="events.coffee.slack"
                     :link-to="events.coffee.linkTo"
                     :duration-info="events.coffee.durationInfo"
+                    :slack-link="events.coffee.slackLink"
                 >
                     <span>
                         #random_coffees is a weekly chance for you to meet other
@@ -51,6 +52,7 @@ export default {
                 logo: require("../assets/logos/coffee-192px.png"),
                 linkTo: "https://devedmonton-invite.herokuapp.com/",
                 slack: "#random_coffees",
+                slackLink: "https://devedmonton-invite.herokuapp.com/",
                 durationInfo: "Duration: Ongoing (weekly)",
             },
         },

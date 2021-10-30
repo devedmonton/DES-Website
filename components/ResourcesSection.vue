@@ -74,10 +74,31 @@
                         Edmonton, with support from ERIN, is growing the
                         coaching capacity in Edmonton.
                     </p>
-                    <p>
+                    <p class="mt-2">
                         TEC Edmonton (TEC) is seeking visionary business coaches
                         to help guide promising growth-stage companies to the
                         next milestones in their development.
+                    </p>
+                </MeetupCard>
+                <MeetupCard
+                    :logo="events.startupTNT.logo"
+                    :link-to="events.startupTNT.linkTo"
+                    :discord-link="events.startupTNT.discordLink"
+                >
+                    <p>
+                        At Startup TNT, we believe that having fun together is
+                        the starting point for community building. Whether you
+                        are in Edmonton, Calgary or Saskatoon, grab a drink (on
+                        us) and join us at our weekly Thursday Night Tradition -
+                        Happy Hour.
+                    </p>
+                    <p class="mt-2">
+                        Every Thursday 6-9pm on
+                        <a
+                            class="text-blue-500 hover:underline"
+                            href="https://discord.com/invite/cAUqerT"
+                            >Discord</a
+                        >.
                     </p>
                 </MeetupCard>
             </div>
@@ -110,6 +131,11 @@ export default {
                 erin: {
                     name: "Coaching Program from E-RIN",
                     linkTo: "https://www.edmontonrin.ca/coaching-program",
+                },
+                startupTNT: {
+                    logo: require("../assets/logos/StartUpTNTLogo.png"),
+                    linkTo: "https://www.edmontonrin.ca/coaching-program",
+                    discordLink: "https://discord.com/invite/cAUqerT",
                 },
             },
         };
