@@ -3,7 +3,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 top-0">
             <div class="flex items-center justify-between h-24">
                 <div class="flex-shrink-0">
-                    <a href="/">
+                    <a href="/#">
                         <img
                             class="block h-16 w-auto"
                             src="~/assets/logos/DevEdmonton-Logo-Light.svg"
@@ -108,12 +108,12 @@ export default {
                     href: "/#meetups",
                 },
                 {
-                    name: "Board",
-                    href: "/board",
+                    name: "Events",
+                    href: "/#community-events",
                 },
                 {
-                    name: "Code of Conduct",
-                    href: "/code_of_conduct/",
+                    name: "Resources",
+                    href: "/#resources",
                 },
                 {
                     name: "Contact",

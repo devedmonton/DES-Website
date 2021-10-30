@@ -1,8 +1,7 @@
 <template>
     <div>
         <div
-            id="about"
-            class="py-8 bg-white overflow-hidden max-w-7xl mx-auto sm:px-4"
+            class="relative py-8 bg-white overflow-hidden max-w-7xl mx-auto sm:px-4"
         >
             <div
                 class="relative mx-8 sm:mx-12 pb-8 lg:my-4 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center"
@@ -49,9 +48,9 @@
         </div>
 
         <div
-            id="what-we-do"
             class="relative bg-grey-000 pt-8 -mt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8"
         >
+            <a id="what-we-do" href="" class="anchor"></a>
             <div class="absolute inset-0">
                 <div class="h-1/3 sm:h-2/3"></div>
             </div>
@@ -187,9 +186,9 @@
         </div>
 
         <div
-            id="get-involved"
             class="relative bg-white pt-8 -mt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8"
         >
+            <a id="get-involved" href="" class="anchor"></a>
             <div class="absolute inset-0">
                 <div class="h-1/3 sm:h-2/3"></div>
             </div>
