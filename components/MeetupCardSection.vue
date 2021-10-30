@@ -21,6 +21,7 @@
                     :name="meetups.ruby.name"
                     :logo="meetups.ruby.logo"
                     :link-to="meetups.ruby.linkTo"
+                    :slack-link="meetups.ruby.slackLink"
                     :slack="meetups.ruby.slack"
                 >
                     <span>
@@ -34,6 +35,7 @@
                     :name="meetups.javascript.name"
                     :logo="meetups.javascript.logo"
                     :link-to="meetups.javascript.linkTo"
+                    :slack-link="meetups.javascript.slackLink"
                     :slack="meetups.javascript.slack"
                 >
                     <span>
@@ -47,6 +49,7 @@
                     :logo="meetups.mobileDev.logo"
                     :link-to="meetups.mobileDev.linkTo"
                     :slack="meetups.mobileDev.slack"
+                    :slack-link="meetups.mobileDev.slackLink"
                     logo-bg="bg-blue-100"
                 >
                     <span>
@@ -61,6 +64,7 @@
                     :name="meetups.edmontonPy.name"
                     :logo="meetups.edmontonPy.logo"
                     :link-to="meetups.edmontonPy.linkTo"
+                    :slack-link="meetups.edmontonPy.slackLink"
                     :slack="meetups.edmontonPy.slack"
                 >
                     <span>
@@ -74,6 +78,7 @@
                     :name="meetups.go.name"
                     :logo="meetups.go.logo"
                     :link-to="meetups.go.linkTo"
+                    :slack-link="meetups.go.slackLink"
                     :slack="meetups.go.slack"
                 >
                     <span>
@@ -87,6 +92,7 @@
                     :name="meetups.dotNet.name"
                     :logo="meetups.dotNet.logo"
                     :link-to="meetups.dotNet.linkTo"
+                    :slack-link="meetups.dotNet.slackLink"
                     :slack="meetups.dotNet.slack"
                 >
                     <span>
@@ -100,6 +106,7 @@
                     :logo="meetups.devOps.logo"
                     :link-to="meetups.devOps.linkTo"
                     :slack="meetups.devOps.slack"
+                    :slack-link="meetups.devOps.slackLink"
                     logo-bg="bg-blue-100"
                 >
                     <span>
@@ -114,6 +121,7 @@
                     :logo="meetups.yegRug.logo"
                     :link-to="meetups.yegRug.linkTo"
                     :slack="meetups.yegRug.slack"
+                    :slack-link="meetups.yegRug.slackLink"
                     logo-bg="bg-blue-100"
                 >
                     <span>
@@ -127,6 +135,7 @@
                     :name="meetups.yegwit.name"
                     :logo="meetups.yegwit.logo"
                     :link-to="meetups.yegwit.linkTo"
+                    :slack-link="meetups.yegwit.slackLink"
                     logo-bg="bg-blue-100"
                 >
                     <span>
@@ -156,12 +165,14 @@ export default {
                     name: "YEGrb",
                     logo: require("../assets/logos/ruby-240px.png"),
                     linkTo: "https://yegrb.com/",
+                    slackLink: "https://devedmonton-invite.herokuapp.com/",
                     slack: "#meetup-ruby",
                 },
                 javascript: {
                     name: "Exchange.js",
                     logo: require("../assets/logos/JavaScript-logo-240px.png"),
                     linkTo: "https://exchangejs.com/",
+                    slackLink: "https://devedmonton-invite.herokuapp.com/",
                     slack: "#meetup-javascript",
                 },
                 mobileDev: {
@@ -169,24 +180,28 @@ export default {
                     logo: require("../assets/logos/mobile-dev.svg"),
                     linkTo:
                         "https://www.meetup.com/startupedmonton/events/knjqbsyccfbgc/",
+                    slackLink: "https://devedmonton-invite.herokuapp.com/",
                     slack: "#meetup-mobile-dev",
                 },
                 edmontonPy: {
                     name: "Edmonton.Py",
                     logo: require("../assets/logos/python-logo.svg"),
                     linkTo: "http://edmontonpy.com/",
+                    slackLink: "https://devedmonton-invite.herokuapp.com/",
                     slack: "#meetup-edmontonpy",
                 },
                 go: {
                     name: "Go Meetup",
                     logo: require("../assets/logos/Go-Logo_Blue.svg"),
                     linkTo: "https://edmontongo.org/",
+                    slackLink: "https://devedmonton-invite.herokuapp.com/",
                     slack: "#meetup-go",
                 },
                 dotNet: {
                     name: "Edmonton .NET User Group",
                     logo: require("../assets/logos/dotNet_logo.png"),
                     linkTo: "http://edmug.net/",
+                    slackLink: "https://devedmonton-invite.herokuapp.com/",
                     slack: "#meetup-dotnet-edmug",
                 },
                 devOps: {
@@ -194,6 +209,7 @@ export default {
                     logo: require("../assets/logos/cogs-solid.svg"),
                     linkTo:
                         "https://www.meetup.com/startupedmonton/events/pxlrmqyzdbxb/",
+                    slackLink: "https://devedmonton-invite.herokuapp.com/",
                     slack: "#meetup-devops",
                 },
                 yegRug: {
@@ -201,12 +217,14 @@ export default {
                     logo: require("../assets/logos/r-logo.svg"),
                     linkTo:
                         "https://www.meetup.com/edmonton-r-user-group-yegrug",
+                    slackLink: "https://devedmonton-invite.herokuapp.com/",
                     slack: "#meetup-r",
                 },
                 yegwit: {
                     name: "Edmonton Women In Tech",
                     logo: require("../assets/logos/yegwit.png"),
                     linkTo: "https://yegwit.com/",
+                    slackLink: "https://devedmonton-invite.herokuapp.com/",
                     slack: "#meetup-r",
                 },
             },

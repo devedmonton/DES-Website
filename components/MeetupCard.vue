@@ -14,7 +14,7 @@
             <h3 class="text-xl font-medium pr-8">{{ name }}</h3>
             <span
                 v-if="linkTo"
-                class="pointer-events-none absolute top-0 right-0 text-gray-300 group-hover:text-gray-400"
+                class="pointer-events-none absolute top-0 right-0 text-gray-300 group-hover:text-brand-primary"
                 aria-hidden="true"
             >
                 <svg
@@ -39,7 +39,7 @@
                 </div>
             </component>
         </div>
-        <div class="mt-1">
+        <div class="mt-1 text-grey-700">
             <component
                 :is="slackLink ? 'a' : 'div'"
                 v-if="slack"
