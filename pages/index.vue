@@ -370,7 +370,7 @@
                 </div>
             </div>
         </div>
-        <MeetupCardSection />
+        <MeetupsSection />
         <EventsSection />
         <ResourcesSection />
     </div>
@@ -379,13 +379,13 @@
 <script>
 import VButton from "~/components/VButton.vue";
 import EventsSection from "../components/EventsSection.vue";
-import MeetupCardSection from "../components/MeetupCardSection.vue";
+import MeetupsSection from "../components/MeetupsSection.vue";
 import ResourcesSection from "../components/ResourcesSection.vue";
 
 export default {
     components: {
         EventsSection,
-        MeetupCardSection,
+        MeetupsSection,
         VButton,
         ResourcesSection,
     },
