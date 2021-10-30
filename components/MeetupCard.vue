@@ -4,13 +4,14 @@
     >
         <div class="flex items-center">
             <img
-                :class="`w-12 h-12 rounded-md inline-flex p-1 ${
+                v-if="logo"
+                :class="`h-12 mr-6 rounded-md inline-flex p-1 object-contain ${
                     logoBg ? logoBg : null
                 }`"
                 :src="logo"
                 :alt="`${name}-logo`"
             />
-            <h3 class="ml-6 text-xl font-medium pr-8">{{ name }}</h3>
+            <h3 class="text-xl font-medium pr-8">{{ name }}</h3>
         </div>
         <div class="mt-2">
             <div class="text-grey-700">
