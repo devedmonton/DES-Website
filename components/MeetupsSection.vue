@@ -165,14 +165,12 @@ export default {
                     name: "YEGrb",
                     logo: require("../assets/logos/ruby-240px.png"),
                     linkTo: "https://yegrb.com/",
-                    slackLink: "https://devedmonton-invite.herokuapp.com/",
                     slack: "#meetup-ruby",
                 },
                 javascript: {
                     name: "Exchange.js",
                     logo: require("../assets/logos/JavaScript-logo-240px.png"),
                     linkTo: "https://exchangejs.com/",
-                    slackLink: "https://devedmonton-invite.herokuapp.com/",
                     slack: "#meetup-javascript",
                 },
                 mobileDev: {
@@ -180,28 +178,24 @@ export default {
                     logo: require("../assets/logos/mobile-dev.svg"),
                     linkTo:
                         "https://www.meetup.com/startupedmonton/events/knjqbsyccfbgc/",
-                    slackLink: "https://devedmonton-invite.herokuapp.com/",
                     slack: "#meetup-mobile-dev",
                 },
                 edmontonPy: {
                     name: "Edmonton.Py",
                     logo: require("../assets/logos/python-logo.svg"),
                     linkTo: "http://edmontonpy.com/",
-                    slackLink: "https://devedmonton-invite.herokuapp.com/",
                     slack: "#meetup-edmontonpy",
                 },
                 go: {
                     name: "Go Meetup",
                     logo: require("../assets/logos/Go-Logo_Blue.svg"),
                     linkTo: "https://edmontongo.org/",
-                    slackLink: "https://devedmonton-invite.herokuapp.com/",
                     slack: "#meetup-go",
                 },
                 dotNet: {
                     name: "Edmonton .NET User Group",
                     logo: require("../assets/logos/dotNet_logo.png"),
                     linkTo: "http://edmug.net/",
-                    slackLink: "https://devedmonton-invite.herokuapp.com/",
                     slack: "#meetup-dotnet-edmug",
                 },
                 devOps: {
@@ -209,7 +203,6 @@ export default {
                     logo: require("../assets/logos/cogs-solid.svg"),
                     linkTo:
                         "https://www.meetup.com/startupedmonton/events/pxlrmqyzdbxb/",
-                    slackLink: "https://devedmonton-invite.herokuapp.com/",
                     slack: "#meetup-devops",
                 },
                 yegRug: {
@@ -217,14 +210,12 @@ export default {
                     logo: require("../assets/logos/r-logo.svg"),
                     linkTo:
                         "https://www.meetup.com/edmonton-r-user-group-yegrug",
-                    slackLink: "https://devedmonton-invite.herokuapp.com/",
                     slack: "#meetup-r",
                 },
                 yegwit: {
                     name: "Edmonton Women In Tech",
                     logo: require("../assets/logos/yegwit.png"),
                     linkTo: "https://yegwit.com/",
-                    slackLink: "https://devedmonton-invite.herokuapp.com/",
                     slack: "#meetup-r",
                 },
             },

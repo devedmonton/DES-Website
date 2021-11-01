@@ -25,8 +25,8 @@
                     <span>
                         ISAIC provides local high-performance computing
                         infrastructure that is affordable, tailorable and
-                        scalable. Our data sandboxes allow you to experiment and
-                        collaborate easily and securely. Through our
+                        scalable. Their data sandboxes allow you to experiment
+                        and collaborate easily and securely. Through their
                         partnerships and supports, ISAIC connects you to applied
                         knowledge and resources to help move your AI journey
                         forward. ISAIC is enabling experimentation, scale, and
@@ -35,20 +35,23 @@
                     </span>
                 </MeetupCard>
                 <MeetupCard
-                    :name="events.propel.name"
-                    :logo="events.propel.logo"
-                    :link-to="events.propel.linkTo"
+                    :name="events.startupEdmonton.name"
+                    :logo="events.startupEdmonton.logo"
+                    :link-to="events.startupEdmonton.linkTo"
                 >
-                    <span>
-                        Ready to boost your startup? Propel is our 12-week
-                        pre-accelerator program designed to support
-                        Alberta-based, early-stage, scalable digital technology
-                        startup founders by offering hands-on, individual
-                        support from expert mentors who have been there, a
-                        roadmap to build sales strategies, investment education
-                        and support as well as programming to find
-                        product-market fit or prepare to scale.
-                    </span>
+                    <p>
+                        Whether you’re exploring a new product idea or you’re
+                        looking to take your business to the next level, Startup
+                        Edmonton has programming designed for you. They offer
+                        four stages of programming along with resources and
+                        guidance every step of the way.
+                    </p>
+                    <p class="mt-2">
+                        As the economic impact of COVID-19 has been heavily felt
+                        by Edmonton’s startup community, Startup Edmonton is
+                        offering access to programs delivered ONLINE for $0 to
+                        Albertans, powered in-part by Alberta Innovates.
+                    </p>
                 </MeetupCard>
                 <MeetupCard
                     :name="events.remi.name"
@@ -56,14 +59,17 @@
                     :link-to="events.remi.linkTo"
                 >
                     <span>
-                        The REMI program is designed to help startups, SMEs, and
-                        enterprises use AI technology to make better decisions
-                        about how to most effectively reduce greenhouse gases
-                        while also improving operations and increasing revenue.
+                        The Reducing Emissions through Machine Intelligence
+                        (REMI) program is designed to help startups, sbuject
+                        matter experts, and enterprises use AI technology to
+                        make better decisions about how to most effectively
+                        reduce greenhouse gases while also improving operations
+                        and increasing revenue.
                     </span>
                 </MeetupCard>
                 <MeetupCard
                     :name="events.erin.name"
+                    :logo="events.erin.logo"
                     :link-to="events.erin.linkTo"
                 >
                     <p>
@@ -71,13 +77,9 @@
                         midsize firm scaling up its offerings, depends on the
                         wisdom and counsel of peers to reach the next level –
                         including high-quality business coaches and mentors. TEC
-                        Edmonton, with support from ERIN, is growing the
-                        coaching capacity in Edmonton.
-                    </p>
-                    <p class="mt-2">
-                        TEC Edmonton (TEC) is seeking visionary business coaches
-                        to help guide promising growth-stage companies to the
-                        next milestones in their development.
+                        Edmonton, with support from the Edmonton Regional
+                        Innovation Network (ERIN), is growing the coaching
+                        capacity in Edmonton.
                     </p>
                 </MeetupCard>
                 <MeetupCard
@@ -86,20 +88,13 @@
                     :discord-link="events.startupTNT.discordLink"
                 >
                     <p>
-                        At Startup TNT, we believe that having fun together is
-                        the starting point for community building. Whether you
-                        are in Edmonton, Calgary or Saskatoon, grab a drink (on
-                        us) and join us at our weekly Thursday Night Tradition -
+                        Startup TNT believes that having fun together is the
+                        starting point for community building. Whether you are
+                        in Edmonton, Calgary or Saskatoon, grab a drink (on us)
+                        and join us at our weekly Thursday Night Tradition -
                         Happy Hour.
                     </p>
-                    <p class="mt-2">
-                        Every Thursday 6-9pm on
-                        <a
-                            class="text-blue-500 hover:underline"
-                            href="https://discord.com/invite/cAUqerT"
-                            >Discord</a
-                        >.
-                    </p>
+                    <p class="mt-2">Every Thursday 6-9pm.</p>
                 </MeetupCard>
             </div>
         </div>
@@ -118,10 +113,10 @@ export default {
                     logo: require("../assets/logos/isaic-icon-logo.png"),
                     linkTo: "https://isaic.ece.ualberta.ca",
                 },
-                propel: {
-                    name: "Propel at Startup Edmonton",
+                startupEdmonton: {
+                    name: "Startup Edmonton",
                     logo: require("../assets/logos/Startup-Edmonton-Logo-300x116.png"),
-                    linkTo: "https://www.startupedmonton.com/propel",
+                    linkTo: "https://www.startupedmonton.com/programs",
                 },
                 remi: {
                     name: "REMI at Amii",
@@ -129,13 +124,13 @@ export default {
                     linkTo: "https://www.amii.ca/industry-solutions/remi/",
                 },
                 erin: {
-                    name: "Coaching Program from E-RIN",
+                    name: "Coaching Program from ERIN",
+                    logo: require("../assets/logos/ERIN+Logo.jpeg"),
                     linkTo: "https://www.edmontonrin.ca/coaching-program",
                 },
                 startupTNT: {
                     logo: require("../assets/logos/StartUpTNTLogo.png"),
-                    linkTo: "https://www.edmontonrin.ca/coaching-program",
-                    discordLink: "https://discord.com/invite/cAUqerT",
+                    linkTo: "https://www.startuptnt.com/happy-hour",
                 },
             },
         };
