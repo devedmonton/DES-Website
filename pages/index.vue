@@ -31,17 +31,14 @@
 
                 <div class="mt-10 -mx-4 relative lg:mt-0">
                     <div class="slack-content relative p-4 text-center">
-                        <p class="text-xl text-brand-primary">
-                            <a href="https://devedmonton-invite.herokuapp.com/">
-                                Join our community on Slack
-                            </a>
-                        </p>
-                        <img
-                            class="w-64 m-auto"
-                            src="~assets/logos/Slack_RGB.svg"
-                        />
-                        <a href="https://devedmonton-invite.herokuapp.com/">
-                            <VButton appearance="inverted">Join Slack</VButton>
+                        <a href="#about-our-slack">
+                            <p class="text-xl text-brand-primary">
+                                Learn more about our Slack!
+                            </p>
+                            <img
+                                class="w-64 m-auto"
+                                src="~assets/logos/Slack_RGB.svg"
+                            />
                         </a>
                     </div>
                 </div>
@@ -234,7 +231,7 @@
                         </p>
 
                         <p class="text-gray-500">
-                            By joining this Slack you agree to abide by our
+                            By joining the Slack you agree to abide by our
                             <a
                                 class="text-brand-primary"
                                 href="/code_of_conduct/"
@@ -247,28 +244,30 @@
                         <div
                             class="flex flex-col justify-between p-6 rounded-lg shadow-md overflow-hidden"
                         >
-                            <h3
-                                class="mt-2 text-xl leading-7 font-semibold text-gray-900"
-                            >
-                                Useful Links
-                            </h3>
-                            <ul class="text-brand-primary list-disc text-l p-6">
-                                <li>
-                                    <a href="/code_of_conduct/"
-                                        >The Code of Conduct</a
-                                    >
-                                </li>
-                                <li>
+                            <div class="mt-10 -mx-4 relative lg:mt-0">
+                                <div
+                                    class="slack-content relative p-4 text-center"
+                                >
+                                    <p class="text-xl text-brand-primary">
+                                        <a
+                                            href="https://devedmonton-invite.herokuapp.com/"
+                                        >
+                                            Join our community on Slack
+                                        </a>
+                                    </p>
+                                    <img
+                                        class="w-64 m-auto"
+                                        src="~assets/logos/Slack_RGB.svg"
+                                    />
                                     <a
-                                        href="https://www.youtube.com/c/DevEdmonton/videos"
-                                        >The Latest Meetup Videos</a
+                                        href="https://devedmonton-invite.herokuapp.com/"
                                     >
-                                </li>
-                                <li>
-                                    <a href="/board/">The Board Members</a>
-                                </li>
-                                <!-- When the Job Posting Board is made add it here -->
-                            </ul>
+                                        <VButton appearance="inverted"
+                                            >Join Slack</VButton
+                                        >
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                         <div
                             class="flex flex-col justify-between p-6 rounded-lg shadow-md overflow-hidden"
@@ -278,21 +277,42 @@
                             >
                                 Channels to Checkout
                             </h3>
-                            <ul class="text-l p-6 text-gray-500">
-                                <li>#introductions to say "Hi"</li>
+                            <ul class="text-l p-6 text-gray-500 list-disc">
                                 <li>
-                                    Several #meetup specific channels listed
-                                    below
-                                </li>
-                                <li>#random for casual conversations</li>
-                                <li>
-                                    #dev-talk and #dev-help for more tech
-                                    focused conversations
+                                    <span class="slack-channel-text"
+                                        >#introductions</span
+                                    >
+                                    to say "Hi"
                                 </li>
                                 <li>
-                                    #opportunities where people can post and
-                                    look for jobs, internships, volunteer
-                                    positions or more
+                                    Several
+                                    <span class="slack-channel-text"
+                                        >#meetup</span
+                                    >
+                                    specific channels listed below
+                                </li>
+                                <li>
+                                    <span class="slack-channel-text"
+                                        >#random</span
+                                    >
+                                    for casual conversations
+                                </li>
+                                <li>
+                                    <span class="slack-channel-text"
+                                        >#dev-talk</span
+                                    >
+                                    and
+                                    <span class="slack-channel-text"
+                                        >#dev-help</span
+                                    >
+                                    for more tech focused conversations
+                                </li>
+                                <li>
+                                    <span class="slack-channel-text"
+                                        >#opportunities</span
+                                    >
+                                    where people can post and look for jobs,
+                                    internships, volunteer positions or more
                                 </li>
                             </ul>
                         </div>
@@ -789,5 +809,10 @@ export default {
             #e01e5a 100%
         )
         5;
+}
+
+.slack-channel-text {
+    background-color: #fafafa;
+    color: black;
 }
 </style>
