@@ -59,6 +59,9 @@
                 </svg>
                 {{ durationInfo }}
             </div>
+            <div v-if="eventType" class="flex items-center text-grey-700">
+                Type: {{ eventType }}
+            </div>
             <p class="mt-2 text-sm text-gray-500">
                 <slot></slot>
             </p>
@@ -91,6 +94,7 @@ export default {
         linkTo: { type: String, required: true },
         slack: { type: String, default: null },
         durationInfo: { type: String, default: "" },
+        eventType: { type: String, default: "" },
     },
 };
 </script>

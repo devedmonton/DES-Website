@@ -101,6 +101,10 @@ export default {
                     href: "/#meetups",
                 },
                 {
+                    name: "Resources",
+                    href: "/resources",
+                },
+                {
                     name: "Board",
                     href: "/board",
                 },
