@@ -12,7 +12,7 @@
                 <div class="absolute inset-0" aria-hidden="true"></div>
             </div>
         </component>
-        <div class="relative flex items-center group mb-2">
+        <div class="flex items-center mb-2">
             <img
                 v-if="logo"
                 :class="`h-12 mr-6 rounded-md inline-flex p-1 object-contain ${
@@ -24,7 +24,7 @@
             <h3 class="text-xl font-medium pr-8">{{ name }}</h3>
             <span
                 v-if="linkTo"
-                class="pointer-events-none absolute top-0 right-0 text-gray-300 group-hover:text-brand-primary"
+                class="pointer-events-none absolute top-4 right-4 text-gray-300 group-hover:text-brand-primary"
                 aria-hidden="true"
             >
                 <svg
