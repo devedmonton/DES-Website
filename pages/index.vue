@@ -1,8 +1,7 @@
 <template>
     <div>
         <div
-            id="about"
-            class="py-8 bg-white overflow-hidden max-w-7xl mx-auto sm:px-4"
+            class="relative py-8 bg-white overflow-hidden max-w-7xl mx-auto sm:px-4"
         >
             <div
                 class="relative mx-8 sm:mx-12 pb-8 lg:my-4 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center"
@@ -46,9 +45,9 @@
         </div>
 
         <div
-            id="what-we-do"
             class="relative bg-grey-000 pt-8 -mt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8"
         >
+            <a id="what-we-do" href="" class="anchor"></a>
             <div class="absolute inset-0">
                 <div class="h-1/3 sm:h-2/3"></div>
             </div>
@@ -187,6 +186,7 @@
             id="about-our-slack"
             class="relative bg-white pt-8 -mt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8"
         >
+            <a id="get-involved" href="" class="anchor"></a>
             <div class="absolute inset-0">
                 <div class="h-1/3 sm:h-2/3"></div>
             </div>
@@ -690,87 +690,26 @@
                 </div>
             </div>
         </div>
+        =======
+        <MeetupsSection />
+        <EventsSection />
+        <ResourcesSection />
+        >>>>>>> main
     </div>
 </template>
 
 <script>
 import VButton from "~/components/VButton.vue";
+import EventsSection from "../components/EventsSection.vue";
+import MeetupsSection from "../components/MeetupsSection.vue";
+import ResourcesSection from "../components/ResourcesSection.vue";
 
 export default {
     components: {
+        EventsSection,
+        MeetupsSection,
         VButton,
-    },
-    data: () => {
-        return {
-            events: {
-                coffee: {
-                    name: "Random Coffees",
-                    logo: require("../assets/logos/coffee-192px.png"),
-                    linkTo: "https://devedmonton-invite.herokuapp.com/",
-                    slack: "#random_coffees",
-                    durationInfo: "Duration: Ongoing (weekly)",
-                },
-            },
-            meetups: {
-                ruby: {
-                    name: "YEGrb",
-                    logo: require("../assets/logos/ruby-240px.png"),
-                    linkTo: "https://yegrb.com/",
-                    slack: "#meetup-ruby",
-                },
-                javascript: {
-                    name: "Exchange.js",
-                    logo: require("../assets/logos/JavaScript-logo-240px.png"),
-                    linkTo: "https://exchangejs.com/",
-                    slack: "#meetup-javascript",
-                },
-                mobileDev: {
-                    name: "Mobile Dev Meetup",
-                    logo: require("../assets/logos/mobile-dev.svg"),
-                    linkTo:
-                        "https://www.meetup.com/startupedmonton/events/knjqbsyccfbgc/",
-                    slack: "#meetup-mobile-dev",
-                },
-                edmontonPy: {
-                    name: "Edmonton.Py",
-                    logo: require("../assets/logos/python-logo.svg"),
-                    linkTo: "http://edmontonpy.com/",
-                    slack: "#meetup-edmontonpy",
-                },
-                go: {
-                    name: "Go Meetup",
-                    logo: require("../assets/logos/Go-Logo_Blue.svg"),
-                    linkTo: "https://edmontongo.org/",
-                    slack: "#meetup-go",
-                },
-                dotNet: {
-                    name: "Edmonton .NET User Group",
-                    logo: require("../assets/logos/dotNet_logo.png"),
-                    linkTo: "http://edmug.net/",
-                    slack: "#meetup-dotnet-edmug",
-                },
-                devOps: {
-                    name: "Meetup Dev Ops",
-                    logo: require("../assets/logos/cogs-solid.svg"),
-                    linkTo:
-                        "https://www.meetup.com/startupedmonton/events/pxlrmqyzdbxb/",
-                    slack: "#meetup-devops",
-                },
-                yegRug: {
-                    name: "Edmonton R User Group",
-                    logo: require("../assets/logos/r-logo.svg"),
-                    linkTo:
-                        "https://www.meetup.com/edmonton-r-user-group-yegrug",
-                    slack: "#meetup-r",
-                },
-                yegwit: {
-                    name: "Edmonton Women In Tech",
-                    logo: require("../assets/logos/yegwit.png"),
-                    linkTo: "https://yegwit.com/",
-                    slack: "#meetup-r",
-                },
-            },
-        };
+        ResourcesSection,
     },
 };
 </script>
