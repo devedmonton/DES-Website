@@ -30,7 +30,7 @@
 
                 <div class="mt-10 -mx-4 relative lg:mt-0">
                     <div class="slack-content relative p-4 text-center">
-                        <a href="#about-our-slack">
+                        <a href="/slack">
                             <p class="text-xl text-brand-primary">
                                 Learn more about our Slack!
                             </p>
@@ -38,6 +38,11 @@
                                 class="w-64 m-auto"
                                 src="~assets/logos/Slack_RGB.svg"
                             />
+                        </a>
+                        <a href="https://devedmonton-invite.herokuapp.com/">
+                            <VButton appearance="inverted"
+                                >Join the Slack</VButton
+                            >
                         </a>
                     </div>
                 </div>
@@ -183,147 +188,8 @@
         </div>
 
         <div
-            id="about-our-slack"
-            class="relative bg-white pt-8 -mt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8"
-        >
-            <a id="get-involved" href="" class="anchor"></a>
-            <div class="absolute inset-0">
-                <div class="h-1/3 sm:h-2/3"></div>
-            </div>
-            <div class="relative max-w-7xl mx-auto">
-                <div class="text-center">
-                    <h2
-                        class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10"
-                    >
-                        About Our Slack
-                    </h2>
-                </div>
-                <div
-                    class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-2 lg:max-w-none"
-                >
-                    <div
-                        id="slack-message-block"
-                        class="flex flex-col justify-around px-8"
-                    >
-                        <h3
-                            class="mt-2 text-xl leading-7 font-semibold text-gray-900"
-                        >
-                            Welcome Friend!
-                        </h3>
-                        <p class="text-gray-500">
-                            We have a Slack workspace to connect people who are
-                            involved with the Edmonton (YEG) tech scene. The
-                            people here range from being developers, designers,
-                            PM's, students, hobbists and more who love to talk
-                            about code. We also do events and network across
-                            Alberta.
-                        </p>
-                        <p class="text-gray-500">
-                            There are several channels that you can check out on
-                            the card. They range from being about a specific
-                            meetup, tech news, tech help, finding new
-                            opportunities, casual chatting and more. We have 80+
-                            other channels! If there's any channels we're
-                            missing all members are free to create any they
-                            want. If they're inactive for a few months, then
-                            they'll be deleted. Connect with other members of
-                            the community by joining the workspace.
-                        </p>
-
-                        <p class="text-gray-500">
-                            By joining the Slack you agree to abide by our
-                            <a
-                                class="text-brand-primary"
-                                href="/code_of_conduct/"
-                                >Code of Conduct</a
-                            >. Looking forward to chatting!
-                        </p>
-                    </div>
-
-                    <div>
-                        <div
-                            class="flex flex-col justify-between p-6 rounded-lg shadow-md overflow-hidden"
-                        >
-                            <div class="mt-10 -mx-4 relative lg:mt-0">
-                                <div
-                                    class="slack-content relative p-4 text-center"
-                                >
-                                    <p class="text-xl text-brand-primary">
-                                        <a
-                                            href="https://devedmonton-invite.herokuapp.com/"
-                                        >
-                                            Join our community on Slack
-                                        </a>
-                                    </p>
-                                    <img
-                                        class="w-64 m-auto"
-                                        src="~assets/logos/Slack_RGB.svg"
-                                    />
-                                    <a
-                                        href="https://devedmonton-invite.herokuapp.com/"
-                                    >
-                                        <VButton appearance="inverted"
-                                            >Join Slack</VButton
-                                        >
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            class="flex flex-col justify-between p-6 rounded-lg shadow-md overflow-hidden"
-                        >
-                            <h3
-                                class="mt-2 text-xl leading-7 font-semibold text-gray-900"
-                            >
-                                Channels to Checkout
-                            </h3>
-                            <ul class="text-l p-6 text-gray-500 list-disc">
-                                <li>
-                                    <span class="slack-channel-text"
-                                        >#introductions</span
-                                    >
-                                    to say "Hi"
-                                </li>
-                                <li>
-                                    Several
-                                    <span class="slack-channel-text"
-                                        >#meetup</span
-                                    >
-                                    specific channels listed below
-                                </li>
-                                <li>
-                                    <span class="slack-channel-text"
-                                        >#random</span
-                                    >
-                                    for casual conversations
-                                </li>
-                                <li>
-                                    <span class="slack-channel-text"
-                                        >#dev-talk</span
-                                    >
-                                    and
-                                    <span class="slack-channel-text"
-                                        >#dev-help</span
-                                    >
-                                    for more tech focused conversations
-                                </li>
-                                <li>
-                                    <span class="slack-channel-text"
-                                        >#opportunities</span
-                                    >
-                                    where people can post and look for jobs,
-                                    internships, volunteer positions or more
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div
             id="get-involved"
-            class="relative bg-grey-000 pt-8 -mt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8"
+            class="relative bg-white pt-8 -mt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8"
         >
             <div class="absolute inset-0">
                 <div class="h-1/3 sm:h-2/3"></div>
@@ -506,195 +372,9 @@
                 </div>
             </div>
         </div>
-
-        <div
-            id="meetups"
-            class="relative bg-white pt-8 -mt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8"
-        >
-            <div class="absolute inset-0">
-                <div class="h-1/3 sm:h-2/3"></div>
-            </div>
-            <div class="relative max-w-7xl mx-auto">
-                <div class="text-center">
-                    <h2
-                        class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10"
-                    >
-                        Meetups We Support
-                    </h2>
-                </div>
-                <div
-                    class="mt-8 rounded-lg bg-gray-200 overflow-hidden shadow divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px"
-                >
-                    <MeetupCard
-                        :name="meetups.ruby.name"
-                        :logo="meetups.ruby.logo"
-                        :link-to="meetups.ruby.linkTo"
-                        :slack="meetups.ruby.slack"
-                    >
-                        <span>
-                            YEGRB is Edmonton’s local Ruby Meetup. Ruby is a
-                            dynamic, open source programming language with a
-                            focus on simplicity and productivity. It has an
-                            elegant syntax that is natural to read and easy to
-                            write.
-                        </span>
-                    </MeetupCard>
-                    <MeetupCard
-                        :name="meetups.javascript.name"
-                        :logo="meetups.javascript.logo"
-                        :link-to="meetups.javascript.linkTo"
-                        :slack="meetups.javascript.slack"
-                    >
-                        <span>
-                            Exchange.js is an open community of local developers
-                            and designers, who meet monthly to discuss a wide
-                            range of topics within the JavaScript ecosystem.
-                        </span>
-                    </MeetupCard>
-                    <MeetupCard
-                        :name="meetups.mobileDev.name"
-                        :logo="meetups.mobileDev.logo"
-                        :link-to="meetups.mobileDev.linkTo"
-                        :slack="meetups.mobileDev.slack"
-                        logo-bg="bg-blue-100"
-                    >
-                        <span>
-                            Edmonton Mobile Developers is a community of
-                            programmers, designers, and hackers interested in
-                            mobile development. We discuss a broad range of
-                            topics and technologies relevant to the mobile
-                            ecosystem while sharing knowledge and experience.
-                        </span>
-                    </MeetupCard>
-                    <MeetupCard
-                        :name="meetups.edmontonPy.name"
-                        :logo="meetups.edmontonPy.logo"
-                        :link-to="meetups.edmontonPy.linkTo"
-                        :slack="meetups.edmontonPy.slack"
-                    >
-                        <span>
-                            We hope to foster a strong, supportive, and
-                            proficient Python community in the Edmonton area.
-                            Everyone interested in any aspect of Python
-                            development is welcome to join.
-                        </span>
-                    </MeetupCard>
-                    <MeetupCard
-                        :name="meetups.go.name"
-                        :logo="meetups.go.logo"
-                        :link-to="meetups.go.linkTo"
-                        :slack="meetups.go.slack"
-                    >
-                        <span>
-                            Go is an open source programming language that
-                            enables the production of simple, efficient, and
-                            reliable software at scale. Edmonton Go is a meetup
-                            to collaborate, discuss, and learn Go.
-                        </span>
-                    </MeetupCard>
-                    <MeetupCard
-                        :name="meetups.dotNet.name"
-                        :logo="meetups.dotNet.logo"
-                        :link-to="meetups.dotNet.linkTo"
-                        :slack="meetups.dotNet.slack"
-                    >
-                        <span>
-                            The Edmonton .NET User Group is a non-profit
-                            organization which empowers the IT Professionals and
-                            Developers using the Microsoft .NET Framework.
-                        </span>
-                    </MeetupCard>
-                    <MeetupCard
-                        :name="meetups.devOps.name"
-                        :logo="meetups.devOps.logo"
-                        :link-to="meetups.devOps.linkTo"
-                        :slack="meetups.devOps.slack"
-                        logo-bg="bg-blue-100"
-                    >
-                        <span>
-                            DevOps YEG is a platform for DevOps enthusiasts and
-                            professionals to share best practises and knowledge
-                            around managing modern software development
-                            operations.
-                        </span>
-                    </MeetupCard>
-                    <!-- Cog svg icon provided by FontAwesome https://fontawesome.com/license/free -->
-                    <MeetupCard
-                        :name="meetups.yegRug.name"
-                        :logo="meetups.yegRug.logo"
-                        :link-to="meetups.yegRug.linkTo"
-                        :slack="meetups.yegRug.slack"
-                        logo-bg="bg-blue-100"
-                    >
-                        <span>
-                            The Edmonton R User Group (YEGRUG) is an
-                            R-enthusiast group hosting events on data wrangling
-                            to visualization and web development with R. Learn
-                            R, hone your skills, network, all skill levels are
-                            welcome.
-                        </span>
-                    </MeetupCard>
-                    <MeetupCard
-                        :name="meetups.yegwit.name"
-                        :logo="meetups.yegwit.logo"
-                        :link-to="meetups.yegwit.linkTo"
-                        logo-bg="bg-blue-100"
-                    >
-                        <span>
-                            YEGWIT aims to build a strong and safe group for
-                            women, diverse genders, and allies in tech with the
-                            goal of fostering engagement and opportunity,
-                            providing mentorship, and creating community. We are
-                            establishing a group that allows individuals to
-                            share ideas, concerns, thoughts and actions, to
-                            create an equitable environment within the industry.
-                        </span>
-                    </MeetupCard>
-                </div>
-            </div>
-        </div>
-        <div
-            id="community-events"
-            class="relative bg-grey-000 pt-8 -mt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8"
-        >
-            <div class="absolute inset-0">
-                <div class="h-1/3 sm:h-2/3"></div>
-            </div>
-            <div class="relative max-w-7xl mx-auto">
-                <div class="text-center">
-                    <h2
-                        class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10"
-                    >
-                        Community Events
-                    </h2>
-                </div>
-                <div
-                    class="mt-8 rounded-lg bg-gray-200 overflow-hidden shadow divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px"
-                >
-                    <MeetupCard
-                        :name="events.coffee.name"
-                        :logo="events.coffee.logo"
-                        :slack="events.coffee.slack"
-                        :link-to="events.coffee.linkTo"
-                        :duration-info="events.coffee.durationInfo"
-                    >
-                        <span>
-                            #random_coffees is a weekly chance for you to meet
-                            other people in the Dev Edmonton community. Every
-                            week you will get randomly assigned to another
-                            person to have coffee with (virtually or in person
-                            if you are comfortable). Join the Slack workspace to
-                            participate.
-                        </span>
-                    </MeetupCard>
-                </div>
-            </div>
-        </div>
-        =======
         <MeetupsSection />
         <EventsSection />
         <ResourcesSection />
-        >>>>>>> main
     </div>
 </template>
 
@@ -736,22 +416,5 @@ export default {
 
 .links {
     padding-top: 15px;
-}
-
-#slack-message-block {
-    border-left: 5px solid;
-    border-image: linear-gradient(
-            to top,
-            #36c5f0 25%,
-            #2eb67d 50%,
-            #ecb22e 75%,
-            #e01e5a 100%
-        )
-        5;
-}
-
-.slack-channel-text {
-    background-color: #fafafa;
-    color: black;
 }
 </style>
