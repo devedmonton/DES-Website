@@ -3,7 +3,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 top-0">
             <div class="flex items-center justify-between h-24">
                 <div class="flex-shrink-0">
-                    <a href="/">
+                    <a href="/#">
                         <img
                             class="block h-16 w-auto"
                             src="~/assets/logos/DevEdmonton-Logo-Light.svg"
@@ -11,7 +11,7 @@
                         />
                     </a>
                 </div>
-                <div class="hidden md:block md:ml-6">
+                <div class="hidden lg:block lg:ml-6">
                     <div class="flex">
                         <a
                             v-for="link in menuLinks"
@@ -23,7 +23,10 @@
                         </a>
                     </div>
                 </div>
-                <div class="-mr-2 flex md:hidden">
+                <div class="hidden lg:block lg:ml-2 flex-shrink-0">
+                    <SocialLinks class="px-2 justify-left space-x-2" />
+                </div>
+                <div class="-mr-2 flex lg:hidden">
                     <!-- Mobile menu button -->
                     <button
                         id="mobile-btn"
@@ -78,6 +81,10 @@
                 >
                     {{ link.name }}
                 </a>
+                <SocialLinks
+                    class="px-3 pt-4 pb-2 justify-left space-x-4"
+                    img-class="h-8 w-8 svg-invert"
+                />
             </div>
         </div>
     </nav>
@@ -101,12 +108,12 @@ export default {
                     href: "/#meetups",
                 },
                 {
-                    name: "Board",
-                    href: "/board",
+                    name: "Events",
+                    href: "/#community-events",
                 },
                 {
-                    name: "Code of Conduct",
-                    href: "/code_of_conduct/",
+                    name: "Resources",
+                    href: "/#resources",
                 },
                 {
                     name: "Contact",

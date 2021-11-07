@@ -33,7 +33,7 @@
                     <a href="https://1password.com/">
                         <img
                             class="h-10"
-                            src="~/assets/logos/1P-logo-word.png"
+                            src="~/assets/logos/1P-wordmark.svg"
                             alt="1 Password"
                         />
                     </a>
@@ -47,6 +47,27 @@
                     >
                     for providing a team account for DES members to manage our
                     passwords.
+                </p>
+            </SponsorCard>
+            <SponsorCard>
+                <template #image>
+                    <a href="https://shortcut.com/">
+                        <img
+                            class="h-10"
+                            src="~/assets/logos/Shortcut_full_color.svg"
+                            alt="shortcut"
+                        />
+                    </a>
+                </template>
+                <p class="text-lg text-grey-600">
+                    Thanks to
+                    <a
+                        class="text-brand-primary underline"
+                        href="https://shortcut.com/"
+                        >Shortcut.</a
+                    >
+                    The project management platform we use to help organise our
+                    team.
                 </p>
             </SponsorCard>
         </div>
