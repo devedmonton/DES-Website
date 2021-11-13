@@ -13,5 +13,8 @@ dist
 # Service worker
 sw.*
 
-# Local Netlify folder
+# DS Store
+*DS_Store
+
+#Netlify
 .netlify

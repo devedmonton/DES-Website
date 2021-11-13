@@ -1,13 +1,9 @@
 <template>
-    <!--
-  Tailwind UI components require Tailwind CSS v1.8 and the @tailwindcss/ui plugin.
-  Read the documentation to get started: https://tailwindui.com/documentation
--->
     <nav class="bg-brand-primary fixed w-full z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 top-0">
             <div class="flex items-center justify-between h-24">
                 <div class="flex-shrink-0">
-                    <a href="/">
+                    <a href="/#">
                         <img
                             class="block h-16 w-auto"
                             src="~/assets/logos/DevEdmonton-Logo-Light.svg"
@@ -15,7 +11,7 @@
                         />
                     </a>
                 </div>
-                <div class="hidden sm:block sm:ml-6">
+                <div class="hidden lg:block lg:ml-6">
                     <div class="flex">
                         <a
                             v-for="link in menuLinks"
@@ -27,8 +23,10 @@
                         </a>
                     </div>
                 </div>
-
-                <div class="-mr-2 flex sm:hidden">
+                <div class="hidden lg:block lg:ml-2 flex-shrink-0">
+                    <SocialLinks class="px-2 justify-left space-x-2" />
+                </div>
+                <div class="-mr-2 flex lg:hidden">
                     <!-- Mobile menu button -->
                     <button
                         id="mobile-btn"
@@ -37,12 +35,7 @@
                         aria-expanded="false"
                         @click="toggleMenu"
                     >
-                        <!-- Icon when menu is closed. -->
-                        <!--
-            Heroicon name: menu
-
-            Menu open: "hidden", Menu closed: "block"
-          -->
+                        <!-- Menu open: "hidden", Menu closed: "block" -->
                         <svg
                             class="block h-6 w-6"
                             xmlns="http://www.w3.org/2000/svg"
@@ -57,12 +50,7 @@
                                 d="M4 6h16M4 12h16M4 18h16"
                             />
                         </svg>
-                        <!-- Icon when menu is open. -->
-                        <!--
-            Heroicon name: x
-
-            Menu open: "block", Menu closed: "hidden"
-          -->
+                        <!-- Menu open: "block", Menu closed: "hidden" -->
                         <svg
                             class="hidden h-6 w-6"
                             xmlns="http://www.w3.org/2000/svg"
@@ -81,13 +69,8 @@
                 </div>
             </div>
         </div>
-
-        <!--
-    Mobile menu, toggle classes based on menu state.
-
-    Menu open: "block", Menu closed: "hidden"
-  -->
-        <div id="mobile-menu" class="hidden sm:hidden">
+        <!-- Menu open: "block", Menu closed: "hidden" -->
+        <div id="mobile-menu" class="hidden md:hidden">
             <div class="px-2 pt-2 pb-3">
                 <a
                     v-for="link in menuLinks"
@@ -98,6 +81,10 @@
                 >
                     {{ link.name }}
                 </a>
+                <SocialLinks
+                    class="px-3 pt-4 pb-2 justify-left space-x-4"
+                    img-class="h-8 w-8 svg-invert"
+                />
             </div>
         </div>
     </nav>
@@ -117,12 +104,16 @@ export default {
                     href: "/#get-involved",
                 },
                 {
-                    name: "Board",
-                    href: "/board",
+                    name: "Meetups",
+                    href: "/#meetups",
                 },
                 {
-                    name: "Code of Conduct",
-                    href: "/code_of_conduct/",
+                    name: "Events",
+                    href: "/#community-events",
+                },
+                {
+                    name: "Resources",
+                    href: "/#resources",
                 },
                 {
                     name: "Contact",

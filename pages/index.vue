@@ -1,8 +1,7 @@
 <template>
     <div>
         <div
-            id="about"
-            class="py-8 bg-white overflow-hidden max-w-7xl mx-auto sm:px-4"
+            class="relative py-8 bg-white overflow-hidden max-w-7xl mx-auto sm:px-4"
         >
             <div
                 class="relative mx-8 sm:mx-12 pb-8 lg:my-4 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center"
@@ -37,7 +36,7 @@
                             </a>
                         </p>
                         <img
-                            class="max-w-md m-auto"
+                            class="w-64 m-auto"
                             src="~assets/logos/Slack_RGB.svg"
                         />
                         <a href="https://devedmonton-invite.herokuapp.com/">
@@ -49,9 +48,9 @@
         </div>
 
         <div
-            id="what-we-do"
-            class="relative bg-grey-000 pt-16 -mt-8 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8"
+            class="relative bg-grey-000 pt-8 -mt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8"
         >
+            <a id="what-we-do" href="" class="anchor"></a>
             <div class="absolute inset-0">
                 <div class="h-1/3 sm:h-2/3"></div>
             </div>
@@ -187,9 +186,9 @@
         </div>
 
         <div
-            id="get-involved"
-            class="relative bg-white pt-16 -mt-8 pb-4 px-4 sm:px-6 lg:pt-24 lg:pb-12 lg:px-8"
+            class="relative bg-white pt-8 -mt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8"
         >
+            <a id="get-involved" href="" class="anchor"></a>
             <div class="absolute inset-0">
                 <div class="h-1/3 sm:h-2/3"></div>
             </div>
@@ -281,7 +280,7 @@
                                     >
                                         If you're like us you're probably a
                                         developer keen to start a meetup or
-                                        organize and event for your favourite
+                                        organize an event for your favourite
                                         language or technologies. We've been
                                         there, and want to help!
                                     </p>
@@ -299,7 +298,7 @@
                                 <div class="flex justify-center mt-4">
                                     <a
                                         class="m-auto"
-                                        href="mailto:organizer-support@devedmonton.com?subject=I'm%20interested%20in%20help%20organizing%20an%20Edmonton%20technology%20event"
+                                        href="mailto:board@devedmonton.com?subject=I'm%20interested%20in%20help%20organizing%20an%20Edmonton%20technology%20event"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
@@ -356,7 +355,7 @@
                                 </div>
                                 <div class="flex justify-center mt-4">
                                     <a
-                                        href="mailto:community-support@devedmonton.com?subject=Supporting%20Dev%20Edmonton%20Society"
+                                        href="mailto:board@devedmonton.com?subject=Supporting%20Dev%20Edmonton%20Society"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
@@ -371,18 +370,27 @@
                 </div>
             </div>
         </div>
+        <MeetupsSection />
+        <EventsSection />
+        <ResourcesSection />
         <SignupForm />
     </div>
 </template>
 
 <script>
-import VButton from "../components/VButton.vue";
 import SignupForm from "../components/SignupForm";
+import VButton from "~/components/VButton.vue";
+import EventsSection from "../components/EventsSection.vue";
+import MeetupsSection from "../components/MeetupsSection.vue";
+import ResourcesSection from "../components/ResourcesSection.vue";
 
 export default {
     components: {
+        EventsSection,
+        MeetupsSection,
         VButton,
         SignupForm,
+        ResourcesSection,
     },
 };
 </script>

@@ -1,0 +1,91 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributorsSortAlphabetically": true,
+  "contributors": [
+    {
+      "login": "dboydgit",
+      "name": "Derryk Boyd",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24216368?v=4",
+      "profile": "https://github.com/dboydgit",
+      "contributions": [
+        "design",
+        "code",
+        "review",
+        "ideas"
+      ]
+    },
+    {
+      "login": "Estyn",
+      "name": "Estyn Edwards",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1813396?v=4",
+      "profile": "http://www.estynedwards.com",
+      "contributions": [
+        "code",
+        "design",
+        "doc"
+      ]
+    },
+    {
+      "login": "JoshMacSween",
+      "name": "Josh MacSween",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37757951?v=4",
+      "profile": "https://joshmacsween.netlify.app/",
+      "contributions": [
+        "code",
+        "design"
+      ]
+    },
+    {
+      "login": "MarkBennett",
+      "name": "Mark Bennett",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61872?v=4",
+      "profile": "http://burmis.ca",
+      "contributions": [
+        "code",
+        "design",
+        "review",
+        "doc"
+      ]
+    },
+    {
+      "login": "SteveReiter",
+      "name": "SteveReiter",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8506743?v=4",
+      "profile": "https://github.com/SteveReiter",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "MandyMeindersma",
+      "name": "Mandy Meindersma",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17459171?v=4",
+      "profile": "http://mandymeindersma.com/",
+      "contributions": [
+        "code",
+        "design",
+        "doc",
+        "review"
+      ]
+    },
+    {
+      "login": "blerg-rush",
+      "name": "Kelsey Gabriel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47253497?v=4",
+      "profile": "https://github.com/blerg-rush",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "devedmonton.com",
+  "projectOwner": "devedmonton",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}

@@ -24,7 +24,7 @@
                     >.
                 </p>
                 <p class="py-2">
-                    This code of conduct outlines our expectations for all those
+                    This Code of Conduct outlines our expectations for all those
                     who participate in our community, as well as the
                     consequences for unacceptable behavior.
                 </p>
@@ -64,7 +64,7 @@
                     The following behaviors are expected and requested of all
                     community members:
                 </p>
-                <ul class="list-disc">
+                <ul class="list-disc ml-10">
                     <li class="py-1">
                         Participate in an authentic and active way. In doing so,
                         you contribute to the health and longevity of this
@@ -82,7 +82,7 @@
                     <li class="py-1">
                         Be mindful of your surroundings and of your fellow
                         participants. Alert community leaders if you notice a
-                        dangerous situation, someone in distress, or violations
+                        dangerous situation, someone in distress, or incidents
                         of this Code of Conduct, even if they seem
                         inconsequential.
                     </li>
@@ -106,7 +106,7 @@
                     The following behaviors are considered harassment and are
                     unacceptable within our community:
                 </p>
-                <ul class="py-2 list-disc">
+                <ul class="py-2 list-disc ml-10">
                     <li class="py-1">
                         Violence, threats of violence or violent language
                         directed against another person.
@@ -171,12 +171,12 @@
                 <p class="py-2">
                     In an effort to build a more collaborative and inclusive
                     community, we always endevour to resolve disputes and
-                    conduct violations through education, dialog, and respectful
+                    conduct incidents through education, dialog, and respectful
                     communication. People who demonstrate a sincere effort to
                     change behaviour will be given a reasonable opportunity to
                     do so, and having done so to participate in the community,
-                    but continued violations will not be tolerated and may
-                    result in further actions at the discretion of the community
+                    but continued incidents will not be tolerated and may result
+                    in further actions at the discretion of the community
                     organizers.
                 </p>
                 <p class="py-2">
@@ -196,30 +196,60 @@
                     6. Reporting Guidelines
                 </h2>
                 <p class="py-2">
-                    If you are subject to or witness unacceptable behavior, or
-                    have any other concerns, please notify a community organizer
-                    as soon as possible.
+                    If you are subject to or witness unacceptable behavior
+                    please notify the Code of Conduct Committee by filling out
+                    the form below.
                 </p>
+                <form action="https://forms.gle/NR56fRQUVzdbf1v3A">
+                    <button
+                        type="submit"
+                        class="inline-flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out my-5"
+                    >
+                        Report a Code of Conduct incident
+                    </button>
+                </form>
                 <p class="py-2">
+                    We have a
                     <a
                         class="text-brand-primary"
-                        href="mailto:coc-report@devedmonton.com"
+                        href="https://docs.google.com/document/d/1mIXjGSY1P_R_KQ9z7fcbU_2_-yj2v99ir0op3Abx3SU/edit?usp=sharing"
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
-                        coc-report@devedmonton.com</a
+                        working document
+                    </a>
+                    that outlines what the Code of Conduct Committee does, what
+                    happens when you file a report and possible reprocussions
+                    once a report is submitted. If you have any questions please
+                    email
+                    <a
+                        class="text-brand-primary"
+                        href="mailto:code-of-conduct-committee@devedmonton.com"
                     >
-                </p>
-                <p class="py-2">
-                    <a class="text-brand-primary" href="/coc_reporting">
-                        Reporting Guidelines</a
+                        code-of-conduct-committee@devedmonton.com</a
+                    >. All reports will be kept confidential to the board and
+                    the Code of Conduct Committee.
+                    <strong>
+                        If you believe anyone is in physical danger, please
+                        notify appropriate law enforcement first.
+                    </strong>
+                    Largely taken from
+                    <a
+                        class="text-brand-primary"
+                        href="https://www.djangoproject.com/conduct/reporting/"
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
-                </p>
-                <p class="py-2">
-                    Additionally, community organizers are available to help
-                    community members engage with local law enforcement or to
-                    otherwise help those experiencing unacceptable behavior feel
-                    safe. In the context of in-person events, organizers will
-                    also provide escorts as desired by the person experiencing
-                    distress.
+                        Django
+                    </a>
+                    and
+                    <a
+                        class="text-brand-primary"
+                        href="https://otter.technology/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Otter Tech</a
+                    >. Thanks!
                 </p>
             </li>
             <li>
@@ -237,7 +267,7 @@
                     offline.
                 </p>
                 <p class="py-2">
-                    This code of conduct and its related procedures also applies
+                    This Code of Conduct and its related procedures also applies
                     to unacceptable behavior occurring outside the scope of
                     community activities when such behavior has the potential to
                     adversely affect the safety and well-being of community
@@ -270,9 +300,9 @@
                 <p class="py-2">
                     <a
                         class="text-brand-primary"
-                        href="mailto:conduct@devedmonton.com"
+                        href="mailto:code-of-conduct-committee@devedmonton.com"
                     >
-                        conduct@devedmonton.com</a
+                        code-of-conduct-committee@devedmonton.com</a
                     >
                 </p>
             </li>
