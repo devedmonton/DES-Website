@@ -1,6 +1,6 @@
 <template>
     <div
-        class="relative bg-grey-000 pt-8 -mt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8"
+        class="relative bg-white pt-8 -mt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8"
     >
         <a id="meetups" class="anchor"></a>
         <div class="absolute inset-0">

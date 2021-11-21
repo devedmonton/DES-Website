@@ -100,10 +100,6 @@ export default {
                     href: "/#what-we-do",
                 },
                 {
-                    name: "About Our Slack",
-                    href: "/slack",
-                },
-                {
                     name: "Get Involved",
                     href: "/#get-involved",
                 },

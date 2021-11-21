@@ -30,7 +30,7 @@
 
                 <div class="mt-10 -mx-4 relative lg:mt-0">
                     <div class="slack-content relative p-4 text-center">
-                        <a href="/slack">
+                        <a href="#about-our-slack">
                             <p class="text-xl text-brand-primary">
                                 Learn more about our Slack!
                             </p>
@@ -39,9 +39,9 @@
                                 src="~assets/logos/Slack_RGB.svg"
                             />
                         </a>
-                        <a href="https://devedmonton-invite.herokuapp.com/">
+                        <a href="#about-our-slack">
                             <VButton appearance="inverted"
-                                >Join the Slack</VButton
+                                >About Our Slack</VButton
                             >
                         </a>
                     </div>
@@ -187,9 +187,11 @@
             </div>
         </div>
 
+        <SlackSection />
+
         <div
             id="get-involved"
-            class="relative bg-white pt-8 -mt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8"
+            class="relative bg-grey-000 pt-8 -mt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8"
         >
             <div class="absolute inset-0">
                 <div class="h-1/3 sm:h-2/3"></div>
