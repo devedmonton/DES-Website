@@ -6,7 +6,7 @@ exports.handler = async function (event) {
     try {
         mailchimp.setConfig({
             apiKey,
-            server: "us1",
+            server: "us20",
         });
         const email = JSON.parse(event.body).email;
         const res = await mailchimp.lists.addListMember(listID, {
