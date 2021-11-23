@@ -377,10 +377,12 @@
         <MeetupsSection />
         <EventsSection />
         <ResourcesSection />
+        <SignupForm />
     </div>
 </template>
 
 <script>
+import SignupForm from "../components/SignupForm";
 import VButton from "~/components/VButton.vue";
 import EventsSection from "../components/EventsSection.vue";
 import MeetupsSection from "../components/MeetupsSection.vue";
@@ -391,6 +393,7 @@ export default {
         EventsSection,
         MeetupsSection,
         VButton,
+        SignupForm,
         ResourcesSection,
     },
 };
