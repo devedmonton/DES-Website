@@ -8,10 +8,13 @@ exports.handler = async function (event) {
             apiKey,
             server: "us20",
         });
-        const email = JSON.parse(event.body).email;
+        const { email, firstName } = JSON.parse(event.body);
         const res = await mailchimp.lists.addListMember(listID, {
             email_address: email,
             status: "pending",
+            merge_fields: {
+                FNAME: firstName,
+            },
         });
         return {
             statusCode: 200,
@@ -19,7 +22,7 @@ exports.handler = async function (event) {
         };
     } catch (e) {
         return {
-            statusCode: e.status,
+            statusCode: 500,
             body:
                 e.response?.text ||
                 JSON.stringify({ error: "Error adding email" }),

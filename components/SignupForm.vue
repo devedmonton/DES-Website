@@ -16,12 +16,22 @@
                         inbox.
                     </p>
                 </div>
-                <div class="mt-8 sm:w-full sm:max-w-md">
+                <div class="mt-8 sm:w-full sm:max-w-2xl">
                     <form
                         class="sm:flex"
                         name="newsletter-signup"
                         @submit.prevent="emailSignUp"
                     >
+                        <input
+                            id="firstName"
+                            v-model="signUpName"
+                            name="firstName"
+                            type="text"
+                            autocomplete="given-name"
+                            required
+                            class="w-full sm:w-48 border-white px-4 py-2 mr-4 mb-4 sm:mb-0 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white rounded-md"
+                            placeholder="First Name"
+                        />
                         <input
                             id="emailAddress"
                             v-model="signUpEmail"
@@ -41,7 +51,13 @@
                     </form>
                 </div>
                 <div v-if="signUpSuccess" class="pt-4 text-lg text-blue-100">
-                    <span>{{ signUpSuccess }}</span>
+                    <p>
+                        {{
+                            `We have sent an email to ${signUpSuccessEmail} with a link to confirm
+                        your subscription.`
+                        }}
+                    </p>
+                    <p>Check your spam folder if you don't see it</p>
                 </div>
                 <div v-if="signUpError" class="pt-4 text-lg text-blue-100">
                     <span>{{ signUpError }}</span>
@@ -56,31 +72,47 @@ export default {
     data: function () {
         return {
             signUpEmail: "",
-            signUpSuccess: null,
-            signUpError: null,
+            signUpName: "",
+            signUpSuccess: false,
+            signUpSuccessEmail: "",
+            signUpError: "",
         };
     },
     methods: {
         emailSignUp: async function () {
+            const genericError =
+                "Whoops! Looks like we couldn't add your email. Please try again or use our contact form.";
             const self = this;
-            self.signUpError = null;
-            self.signUpSuccess = null;
+            self.signUpError = "";
+            self.signUpSuccess = false;
+            self.signUpSuccessEmail = "";
+
             fetch("/.netlify/functions/newsletter-signup", {
                 method: "POST",
-                body: JSON.stringify({ email: this.signUpEmail }),
+                body: JSON.stringify({
+                    email: this.signUpEmail,
+                    firstName: this.signUpName,
+                }),
             })
                 .then((res) => res.json())
                 .then((data) => {
-                    if (data.title === "Member Exists")
+                    if (data.title === "Member Exists") {
                         self.signUpError = "Your email is already on our list.";
-                    else if (data.status === 400)
-                        self.signUpError =
-                            "Whoops! Looks like we couldn't add your email. Please try again or use our contact form.";
-                    else if (data.signUpEmail)
-                        self.signUpSuccess = `We have sent an email to ${data.signUpEmail} with a link to confirm your subscription.`;
-                    self.signUpEmail = "";
+                    } else if (!data.signUpEmail) {
+                        self.signUpError = genericError;
+                    } else if (data.signUpEmail) {
+                        self.signUpSuccessEmail = data.signUpEmail;
+                        self.signUpSuccess = true;
+                    }
                 })
-                .catch((err) => console.error(err));
+                .catch((err) => {
+                    console.error(err);
+                    self.signUpError = genericError;
+                })
+                .finally(() => {
+                    self.signUpEmail = "";
+                    self.signUpName = "";
+                });
         },
     },
 };
