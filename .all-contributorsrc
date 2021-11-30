@@ -80,6 +80,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "djphan",
+      "name": "Dan Phan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6673572?v=4",
+      "profile": "http://djphan.github.io/home-page/",
+      "contributions": [
+        "code",
+        "design"
+      ]
     }
   ],
   "contributorsPerLine": 7,
