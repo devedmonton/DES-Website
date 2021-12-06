@@ -12,13 +12,12 @@
                         three year terms. Every year at the Annual General
                         Meeting (AGM) elections will be held for any open
                         positions. Details on how to apply and other information
-                        regarding the open roles will be posted on our
+                        regarding the roles are posted on our
                         <NuxtLink
                             to="/board_recruiting"
                             class="text-brand-primary"
-                            >board recruitment page</NuxtLink
+                            >board recruitment page.</NuxtLink
                         >
-                        prior to the AGM.
                     </p>
                     <p class="py-2">
                         Dev Edmonton Society desires to build a board with
@@ -27,7 +26,7 @@
                     <p class="py-2">
                         A new board was elected at the society’s AGM on January
                         23<sup>rd</sup>
-                        2021. The following members were elected to the board.
+                        2021.
                     </p>
                 </div>
             </li>

@@ -2,9 +2,8 @@
     <div class="max-w-7xl mx-auto spx-6 px-6 lg:px-8">
         <h1 class="text-2xl font-bold py-4">Board Recruiting</h1>
         <p>
-            There are currently no open board positions. Open positions will be
-            posted here in the months preceding the society’s Annual General
-            Meeting.
+            Open positions will advertised in the months preceding the society’s
+            Annual General Meeting.
         </p>
         <ol>
             <li>
@@ -20,8 +19,9 @@
                 </p>
                 <div class="py-2">
                     <span><strong>Roles</strong></span>
-                    <ul class="list-disc">
+                    <ul class="list-disc ml-10">
                         <li>President</li>
+                        <li>Vice President</li>
                         <li>Secretary</li>
                         <li>Treasurer</li>
                         <li>Member At Large</li>
@@ -36,7 +36,7 @@
                     There are many great reasons to join the Dev Edmonton
                     Society Board, including but not limited to:
                 </p>
-                <ul class="list-disc">
+                <ul class="list-disc ml-10">
                     <li>Giving back to the community</li>
                     <li>Board Experience</li>
                     <li>Fellowship</li>
@@ -74,12 +74,12 @@
                 </p>
             </li>
             <li>
-                <h2 class="text-xl font-bold py-2 border-b border-lightgrey">
-                    Responsibilities
-                </h2>
-                <h3>Board Members</h3>
+                <h1 class="text-2xl font-bold py-4">Responsibilities</h1>
+                <h3 class="text-lg font-bold py-1 border-b border-lightgrey">
+                    Board Members
+                </h3>
                 <div class="py-2">
-                    <ul class="list-disc">
+                    <ul class="list-disc ml-10">
                         <li>Understand the society’s mission and values</li>
                         <li>
                             Act as advocates and ambassadors for the society and
@@ -98,7 +98,7 @@
                     President
                 </h3>
                 <div class="py-2">
-                    <ul class="list-disc">
+                    <ul class="list-disc ml-10">
                         <li>Member of the Board</li>
                         <li>Serves as the Chief Volunteer of Dev Edmonton</li>
                         <li>Provides leadership to the board</li>
@@ -117,10 +117,19 @@
                     </ul>
                 </div>
                 <h3 class="text-lg font-bold py-1 border-b border-lightgrey">
+                    Vice President
+                </h3>
+                <div class="py-2">
+                    <ul class="list-disc ml-10">
+                        <li>Member of the Board</li>
+                        <li>Aides President in any of their duties</li>
+                    </ul>
+                </div>
+                <h3 class="text-lg font-bold py-1 border-b border-lightgrey">
                     Secretary
                 </h3>
                 <div class="py-2">
-                    <ul class="list-disc">
+                    <ul class="list-disc ml-10">
                         <li>Member of the board</li>
                         <li>Maintains records of the board</li>
                         <li>Takes minutes of board meetings</li>
@@ -138,7 +147,7 @@
                     Treasurer
                 </h3>
                 <div class="py-2">
-                    <ul class="list-disc">
+                    <ul class="list-disc ml-10">
                         <li>Member of the board</li>
                         <li>Manages finances of the organization</li>
                         <li>Financial background</li>
@@ -146,23 +155,6 @@
                         <li>
                             Yearly financial statement submitted to the board
                             for approval
-                        </li>
-                    </ul>
-                </div>
-                <h3 class="text-lg font-bold py-1 border-b border-lightgrey">
-                    Community Director
-                </h3>
-                <div class="py-2">
-                    <ul class="list-disc">
-                        <li>Member of the board</li>
-                        <li>
-                            Coordinates community and student outreach
-                            activities
-                        </li>
-                        <li>Manages DES social media accounts</li>
-                        <li>
-                            Provides marketing copy and resources for DES
-                            community to share
                         </li>
                     </ul>
                 </div>
