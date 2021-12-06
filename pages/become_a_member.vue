@@ -45,6 +45,7 @@
                 annually (we will remind you 😛 ) and if you have any questions
                 about when your membership expires, these can be answered from
                 <a
+                    class="text-brand-primary"
                     href="https://docs.google.com/document/d/1i6oXabir-628csa2bQacHpc17Kmhec9EfkyHij9yQGM/edit#heading=h.sns5qzyi4gru"
                     >the bylaws.</a
                 >
