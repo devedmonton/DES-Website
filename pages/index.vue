@@ -246,6 +246,22 @@
                                         where one of our friendly community
                                         members will help you find your way.
                                     </p>
+                                    <p
+                                        class="mt-3 text-base leading-6 text-gray-500"
+                                    >
+                                        If you are interested in becoming more
+                                        involved (like borrowing our equiment or
+                                        voting on community decisions) then
+                                        <NuxtLink
+                                            to="/become_a_member"
+                                            class="text-brand-primary"
+                                        >
+                                            find more information about becoming
+                                            a member here.
+                                        </NuxtLink>
+                                        You do not need to be a member to come
+                                        to events or participate in the slack!
+                                    </p>
                                 </div>
                                 <div class="flex justify-center mt-4">
                                     <a

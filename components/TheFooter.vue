@@ -17,6 +17,15 @@
                 </div>
 
                 <div class="px-5 py-2">
+                    <NuxtLink
+                        to="/become_a_member"
+                        class="text-base text-gray-500 hover:text-gray-900"
+                    >
+                        Become a member
+                    </NuxtLink>
+                </div>
+
+                <div class="px-5 py-2">
                     <a
                         href="https://docs.google.com/document/d/1i6oXabir-628csa2bQacHpc17Kmhec9EfkyHij9yQGM/edit#heading=h.sns5qzyi4gru"
                         class="text-base text-gray-500 hover:text-gray-900"
