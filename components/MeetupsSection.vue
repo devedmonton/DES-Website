@@ -75,20 +75,6 @@
                     </span>
                 </MeetupCard>
                 <MeetupCard
-                    :name="meetups.go.name"
-                    :logo="meetups.go.logo"
-                    :link-to="meetups.go.linkTo"
-                    :slack-link="meetups.go.slackLink"
-                    :slack="meetups.go.slack"
-                >
-                    <span>
-                        Go is an open source programming language that enables
-                        the production of simple, efficient, and reliable
-                        software at scale. Edmonton Go is a meetup to
-                        collaborate, discuss, and learn Go.
-                    </span>
-                </MeetupCard>
-                <MeetupCard
                     :name="meetups.dotNet.name"
                     :logo="meetups.dotNet.logo"
                     :link-to="meetups.dotNet.linkTo"
@@ -185,12 +171,6 @@ export default {
                     logo: require("../assets/logos/python-logo.svg"),
                     linkTo: "http://edmontonpy.com/",
                     slack: "#meetup-edmontonpy",
-                },
-                go: {
-                    name: "Go Meetup",
-                    logo: require("../assets/logos/Go-Logo_Blue.svg"),
-                    linkTo: "https://edmontongo.org/",
-                    slack: "#meetup-go",
                 },
                 dotNet: {
                     name: "Edmonton .NET User Group",
