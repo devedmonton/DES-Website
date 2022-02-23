@@ -5,7 +5,7 @@
                 <img
                     class="w-full max-w-sm object-cover object-top shadow-lg rounded-lg md:h-80 lg:h-60"
                     :src="`${imageLink}`"
-                    alt=""
+                    alt="Photo of board member smiling"
                 />
             </div>
 

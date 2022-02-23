@@ -7,7 +7,7 @@
                         <img
                             class="block h-16 w-auto"
                             src="~/assets/logos/DevEdmonton-Logo-Light.svg"
-                            alt="Workflow logo"
+                            alt="Dev Edmonton logo"
                         />
                     </a>
                 </div>
