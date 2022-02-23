@@ -1,5 +1,6 @@
 <template>
-    <div class="bg-white">
+    <div class="relative bg-white">
+        <a id="keep-up-to-date" class="anchor"></a>
         <div class="max-w-7xl mx-auto px-4 pt-8 pb-8 sm:px-6 lg:px-12">
             <div
                 class="px-6 py-4 bg-brand-primary rounded-lg md:py-8 md:px-8 lg:py-8 lg:px-16 sm:flex sm:flex-col sm:items-center sm:text-center"
