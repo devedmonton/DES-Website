@@ -37,6 +37,7 @@
                             <img
                                 class="w-64 m-auto"
                                 src="~assets/logos/Slack_RGB.svg"
+                                alt="slack logo"
                             />
                         </a>
                         <a href="#about-our-slack">
@@ -74,7 +75,7 @@
                             <img
                                 class="h-48 w-full object-cover"
                                 src="~/assets/homepage/meetups-and-events.jpg"
-                                alt=""
+                                alt="Group of people posing together at a past event"
                             />
                         </div>
                         <div
@@ -115,7 +116,7 @@
                             <img
                                 class="h-48 w-full object-cover"
                                 src="~/assets/homepage/connect-community.jpg"
-                                alt=""
+                                alt="5 hands coming together"
                             />
                         </div>
                         <div
@@ -154,7 +155,7 @@
                             <img
                                 class="h-48 w-full object-cover"
                                 src="~/assets/homepage/provide-a-platform.jpg"
-                                alt=""
+                                alt="lego bricks in a pile"
                             />
                         </div>
                         <div
@@ -214,7 +215,7 @@
                             <img
                                 class="h-48 w-full object-cover"
                                 src="~/assets/homepage/get-involved-dev.jpg"
-                                alt=""
+                                alt="Developer sitting at a computer looking at code"
                             />
                         </div>
                         <div
@@ -282,7 +283,7 @@
                             <img
                                 class="h-48 w-full object-cover"
                                 src="~/assets/homepage/get-involved-meetups.png"
-                                alt=""
+                                alt="A group of developers sitting at a table hard at work"
                             />
                         </div>
                         <div
@@ -337,7 +338,7 @@
                             <img
                                 class="h-48 w-full object-cover"
                                 src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
-                                alt=""
+                                alt="Simple desk set up"
                             />
                         </div>
                         <div

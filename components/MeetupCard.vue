@@ -6,6 +6,7 @@
             :is="linkTo ? 'a' : 'div'"
             :href="linkTo || ''"
             class="focus:outline-none"
+            :aria-label="name + ' website'"
         >
             <!-- Extend touch target to entire header -->
             <div class="flex items-center">

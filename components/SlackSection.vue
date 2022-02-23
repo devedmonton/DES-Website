@@ -73,6 +73,7 @@
                                     <img
                                         class="w-64 m-auto"
                                         src="~assets/logos/Slack_RGB.svg"
+                                        alt="slack logo"
                                     />
                                     <a
                                         href="https://devedmonton-invite.herokuapp.com/"
