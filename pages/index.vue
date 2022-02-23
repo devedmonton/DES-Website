@@ -53,7 +53,7 @@
         <div
             class="relative bg-grey-000 pt-8 -mt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8"
         >
-            <a id="what-we-do" href="" class="anchor"></a>
+            <a id="what-we-do" href="/#what-we-do" class="anchor"></a>
             <div class="absolute inset-0">
                 <div class="h-1/3 sm:h-2/3"></div>
             </div>
@@ -193,7 +193,7 @@
         <div
             class="relative bg-grey-000 pt-8 -mt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8"
         >
-            <a id="get-involved" href="" class="anchor"></a>
+            <a id="get-involved" href="/#get-involved" class="anchor"></a>
             <div class="absolute inset-0">
                 <div class="h-1/3 sm:h-2/3"></div>
             </div>
