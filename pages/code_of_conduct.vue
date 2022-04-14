@@ -1,5 +1,5 @@
 <template>
-    <div class="max-w-7xl mx-auto spx-6 px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto spx-6 px-6 lg:px-8 code-of-coduct">
         <h1 class="text-2xl font-bold py-4">Code of Conduct</h1>
         <ol>
             <li>
@@ -64,7 +64,7 @@
                     The following behaviors are expected and requested of all
                     community members:
                 </p>
-                <ul class="list-disc ml-10">
+                <ol class="ml-10 multiLevelNumberNotation">
                     <li class="py-1">
                         Participate in an authentic and active way. In doing so,
                         you contribute to the health and longevity of this
@@ -96,7 +96,21 @@
                         public. Treat the information of others as you'd like
                         yours to be treated.
                     </li>
-                </ul>
+                    <li class="py-1">
+                        Avoid posting/messaging/approaching with the same
+                        message frequently. If something could be shared in
+                        multiple places, make sure that your message is on topic
+                        and respectful. Do not spam our members in public or in
+                        private.
+                        <ol class="ml-10 multiLevelNumberNotation">
+                            <li class="py-1">
+                                Please consider that just because you can share
+                                something in multiple places, doesn't mean that
+                                you should.
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
             </li>
             <li>
                 <h2 class="text-xl font-bold py-2 border-b border-lightgrey">
@@ -106,7 +120,7 @@
                     The following behaviors are considered harassment and are
                     unacceptable within our community:
                 </p>
-                <ul class="py-2 list-disc ml-10">
+                <ol class="py-2 ml-10 multiLevelNumberNotation">
                     <li class="py-1">
                         Violence, threats of violence or violent language
                         directed against another person.
@@ -157,7 +171,7 @@
                         emails, or other biographical or identifying
                         information) without explicit and prior consent.
                     </li>
-                </ul>
+                </ol>
             </li>
             <li>
                 <h2 class="text-xl font-bold py-2 border-b border-lightgrey">
