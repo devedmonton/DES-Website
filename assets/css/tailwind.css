@@ -18,3 +18,22 @@ html {
     top: -96px;
     visibility: hidden;
 }
+
+
+
+/* these css changes are to be able to do the multilevel numbering on the Code
+of Conduct page */
+.code-of-coduct ol {
+    counter-reset: section;
+}
+
+.code-of-coduct li:before {
+    counter-increment: section;
+    content: counters(section, ".") " ";
+    visibility: hidden;
+}
+
+.code-of-coduct .multiLevelNumberNotation > li:before {
+    font-weight: bold;
+    visibility: visible;
+}
