@@ -50,9 +50,9 @@ export default {
             coffee: {
                 name: "Random Coffees",
                 logo: require("../assets/logos/coffee-192px.png"),
-                linkTo: "https://devedmonton-invite.herokuapp.com/",
+                linkTo: "https://join.slack.com/t/devedmonton/shared_invite/zt-1h0s5j0g4-ntARRvWGapJcnckM34jdZw",
                 slack: "#random_coffees",
-                slackLink: "https://devedmonton-invite.herokuapp.com/",
+                slackLink: "https://join.slack.com/t/devedmonton/shared_invite/zt-1h0s5j0g4-ntARRvWGapJcnckM34jdZw",
                 durationInfo: "Duration: Ongoing (weekly)",
             },
         },

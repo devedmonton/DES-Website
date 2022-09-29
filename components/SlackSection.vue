@@ -65,7 +65,7 @@
                                 >
                                     <p class="text-xl text-brand-primary">
                                         <a
-                                            href="https://devedmonton-invite.herokuapp.com/"
+                                            href="https://join.slack.com/t/devedmonton/shared_invite/zt-1h0s5j0g4-ntARRvWGapJcnckM34jdZw/"
                                         >
                                             Join our community on Slack
                                         </a>
@@ -76,7 +76,7 @@
                                         alt="slack logo"
                                     />
                                     <a
-                                        href="https://devedmonton-invite.herokuapp.com/"
+                                        href="https://join.slack.com/t/devedmonton/shared_invite/zt-1h0s5j0g4-ntARRvWGapJcnckM34jdZw"
                                     >
                                         <VButton appearance="inverted"
                                             >Join the Slack</VButton

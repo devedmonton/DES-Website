@@ -239,7 +239,7 @@
                                     >
                                         <a
                                             class="text-brand-primary"
-                                            href="https://devedmonton-invite.herokuapp.com/"
+                                            href="https://join.slack.com/t/devedmonton/shared_invite/zt-1h0s5j0g4-ntARRvWGapJcnckM34jdZw"
                                             >Get started by joining our Slack</a
                                         >
                                         and make sure to say hello in our
@@ -266,7 +266,7 @@
                                 </div>
                                 <div class="flex justify-center mt-4">
                                     <a
-                                        href="https://devedmonton-invite.herokuapp.com/"
+                                        href="https://join.slack.com/t/devedmonton/shared_invite/zt-1h0s5j0g4-ntARRvWGapJcnckM34jdZw"
                                     >
                                         <VButton appearance="inverted"
                                             >Join Slack</VButton
