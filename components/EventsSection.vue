@@ -51,10 +51,10 @@ export default {
                 name: "Random Coffees",
                 logo: require("../assets/logos/coffee-192px.png"),
                 linkTo:
-                    "https://join.slack.com/t/devedmonton/shared_invite/zt-1h0s5j0g4-ntARRvWGapJcnckM34jdZw",
+                    "https://join.slack.com/t/devedmonton/shared_invite/zt-1hqylgb8i-pKr5nUmRwOJwdLHVce0rXg",
                 slack: "#random_coffees",
                 slackLink:
-                    "https://join.slack.com/t/devedmonton/shared_invite/zt-1h0s5j0g4-ntARRvWGapJcnckM34jdZw",
+                    "https://join.slack.com/t/devedmonton/shared_invite/zt-1hqylgb8i-pKr5nUmRwOJwdLHVce0rXg",
                 durationInfo: "Duration: Ongoing (weekly)",
             },
         },

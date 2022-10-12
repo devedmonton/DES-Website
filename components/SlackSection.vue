@@ -65,7 +65,7 @@
                                 >
                                     <p class="text-xl text-brand-primary">
                                         <a
-                                            href="https://join.slack.com/t/devedmonton/shared_invite/zt-1h0s5j0g4-ntARRvWGapJcnckM34jdZw/"
+                                            href="https://join.slack.com/t/devedmonton/shared_invite/zt-1hqylgb8i-pKr5nUmRwOJwdLHVce0rXg"
                                         >
                                             Join our community on Slack
                                         </a>
@@ -76,7 +76,7 @@
                                         alt="slack logo"
                                     />
                                     <a
-                                        href="https://join.slack.com/t/devedmonton/shared_invite/zt-1h0s5j0g4-ntARRvWGapJcnckM34jdZw"
+                                        href="https://join.slack.com/t/devedmonton/shared_invite/zt-1hqylgb8i-pKr5nUmRwOJwdLHVce0rXg"
                                     >
                                         <VButton appearance="inverted"
                                             >Join the Slack</VButton
