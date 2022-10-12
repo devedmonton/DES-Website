@@ -82,6 +82,20 @@
                                             >Join the Slack</VButton
                                         >
                                     </a>
+
+                                    <p
+                                        class="text-gray-500 italic font-bold p-4"
+                                    >
+                                        If you get an "invalid link" error our
+                                        Slack invite link has expired. Please
+                                        email
+                                        <a
+                                            href="mailto:board@devedmonton.com?subject=Your Slack Invite link is broken!&body=Heads up that someone needs to contact Slack support for a fresh one. ~ A friendly DES member."
+                                            class="text-brand-primary"
+                                            >board@devedmonton.com</a
+                                        >
+                                        and let us know!
+                                    </p>
                                 </div>
                             </div>
                         </div>
