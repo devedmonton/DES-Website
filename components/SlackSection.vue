@@ -65,7 +65,7 @@
                                 >
                                     <p class="text-xl text-brand-primary">
                                         <a
-                                            href="https://devedmonton-invite.herokuapp.com/"
+                                            href="https://join.slack.com/t/devedmonton/shared_invite/zt-1hqylgb8i-pKr5nUmRwOJwdLHVce0rXg"
                                         >
                                             Join our community on Slack
                                         </a>
@@ -76,12 +76,26 @@
                                         alt="slack logo"
                                     />
                                     <a
-                                        href="https://devedmonton-invite.herokuapp.com/"
+                                        href="https://join.slack.com/t/devedmonton/shared_invite/zt-1hqylgb8i-pKr5nUmRwOJwdLHVce0rXg"
                                     >
                                         <VButton appearance="inverted"
                                             >Join the Slack</VButton
                                         >
                                     </a>
+
+                                    <p
+                                        class="text-gray-500 italic font-bold p-4"
+                                    >
+                                        If you get an "invalid link" error our
+                                        Slack invite link has expired. Please
+                                        email
+                                        <a
+                                            href="mailto:board@devedmonton.com?subject=Your Slack Invite link is broken!&body=Heads up that someone needs to contact Slack support for a fresh one. ~ A friendly DES member."
+                                            class="text-brand-primary"
+                                            >board@devedmonton.com</a
+                                        >
+                                        and let us know!
+                                    </p>
                                 </div>
                             </div>
                         </div>
