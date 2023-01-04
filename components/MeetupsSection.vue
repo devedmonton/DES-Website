@@ -45,22 +45,6 @@
                     </span>
                 </MeetupCard>
                 <MeetupCard
-                    :name="meetups.mobileDev.name"
-                    :logo="meetups.mobileDev.logo"
-                    :link-to="meetups.mobileDev.linkTo"
-                    :slack="meetups.mobileDev.slack"
-                    :slack-link="meetups.mobileDev.slackLink"
-                    logo-bg="bg-blue-100"
-                >
-                    <span>
-                        Edmonton Mobile Developers is a community of
-                        programmers, designers, and hackers interested in mobile
-                        development. We discuss a broad range of topics and
-                        technologies relevant to the mobile ecosystem while
-                        sharing knowledge and experience.
-                    </span>
-                </MeetupCard>
-                <MeetupCard
                     :name="meetups.edmontonPy.name"
                     :logo="meetups.edmontonPy.logo"
                     :link-to="meetups.edmontonPy.linkTo"
@@ -85,20 +69,6 @@
                         The Edmonton .NET User Group is a non-profit
                         organization which empowers the IT Professionals and
                         Developers using the Microsoft .NET Framework.
-                    </span>
-                </MeetupCard>
-                <MeetupCard
-                    :name="meetups.devOps.name"
-                    :logo="meetups.devOps.logo"
-                    :link-to="meetups.devOps.linkTo"
-                    :slack="meetups.devOps.slack"
-                    :slack-link="meetups.devOps.slackLink"
-                    logo-bg="bg-blue-100"
-                >
-                    <span>
-                        DevOps YEG is a platform for DevOps enthusiasts and
-                        professionals to share best practises and knowledge
-                        around managing modern software development operations.
                     </span>
                 </MeetupCard>
                 <!-- Cog svg icon provided by FontAwesome https://fontawesome.com/license/free -->
@@ -159,13 +129,6 @@ export default {
                     linkTo: "https://exchangejs.com/",
                     slack: "#meetup-javascript",
                 },
-                mobileDev: {
-                    name: "Mobile Dev Meetup",
-                    logo: require("../assets/logos/mobile-dev.svg"),
-                    linkTo:
-                        "https://www.meetup.com/startupedmonton/events/knjqbsyccfbgc/",
-                    slack: "#meetup-mobile-dev",
-                },
                 edmontonPy: {
                     name: "Edmonton.Py",
                     logo: require("../assets/logos/python-logo.svg"),
@@ -177,13 +140,6 @@ export default {
                     logo: require("../assets/logos/dotNet_logo.png"),
                     linkTo: "http://edmug.net/",
                     slack: "#meetup-dotnet-edmug",
-                },
-                devOps: {
-                    name: "Meetup Dev Ops",
-                    logo: require("../assets/logos/cogs-solid.svg"),
-                    linkTo:
-                        "https://www.meetup.com/startupedmonton/events/pxlrmqyzdbxb/",
-                    slack: "#meetup-devops",
                 },
                 yegRug: {
                     name: "Edmonton R User Group",
