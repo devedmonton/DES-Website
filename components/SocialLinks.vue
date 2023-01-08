@@ -29,12 +29,6 @@ export default {
         return {
             links: [
                 {
-                    name: "Facebook",
-                    info: "Dev Edmonton Society Facebook",
-                    href: "https://facebook.com/devedmontonsociety",
-                    logo: require("../assets/logos/social/facebook.svg"),
-                },
-                {
                     name: "Twitter",
                     info: "Dev Edmonton Society Twitter",
                     href: "https://twitter.com/devedmonton",
