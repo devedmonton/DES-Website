@@ -91,7 +91,7 @@ export default {
                     title: "Treasurer",
                     imageLink: require("~/assets/boardPictures/laurenBriske.jpg"),
                     description:
-                        "Lauren Briske is the Interim Director at <a class='text-indigo-600' href='https://startupedmonton.com/'>Startup Edmonton</a>. She is a passionate supporter of the startup and tech community and knows that a thriving tech ecosystem grows on the shoulders of a strong community.<br /><br />Through the Dev Edmonton Society, her goal is to empower local leaders to contribute to a growing community and to welcome more students, experienced developers, and aspiring developers into this great community.<br /><br />When she’s not working or volunteering, she’s probably riding down a mountain somewhere on skis or bikes.",
+                        "Lauren Briske is a Product Manager at <a class='text-indigo-600' href='https://www.aretolabs.com/'>Areto Labs</a>. She is a passionate supporter of the startup and tech community and knows that a thriving tech ecosystem grows on the shoulders of a strong community.<br /><br />Through the Dev Edmonton Society, her goal is to empower local leaders to contribute to a growing community and to welcome more students, experienced developers, and aspiring developers into this great community.<br /><br />When she’s not working or volunteering, she’s probably riding down a mountain somewhere on skis or bikes.",
                     twitterHandle: "",
                     linkedInAccount:
                         "https://www.linkedin.com/in/lauren-briske-03ba902b/",
@@ -103,7 +103,7 @@ export default {
                     title: "Secretary",
                     imageLink: require("~/assets/boardPictures/mandyMeindersma.jpg"),
                     description:
-                        "Mandy Meindersma is a Backend Developer at <a class='text-indigo-600' href='https://dotdash.com/'>Dotdash</a>. She loves web development, teaching kidlets about computing science and hardware (making robots, light up costumes and IoT type of things).<br /><br /> She has loved getting more involved with DES through YEGWIT (Edmonton Women In Tech), CODEVID-19 (COVID-19 Hackathon) and now being able to help with organization and memberships!<br /><br /> Outside of tech she absolutely loves acro yoga, her cat Goose, and writing letters.",
+                        "Mandy Meindersma is a Backend Developer. She loves web development, teaching kidlets about computing science and hardware (making robots, light up costumes and IoT type of things).<br /><br /> She has loved getting more involved with DES through YEGWIT (Edmonton Women In Tech), CODEVID-19 (COVID-19 Hackathon) and now being able to help with organization and memberships!<br /><br /> Outside of tech she absolutely loves acro yoga, her cat Goose, and writing letters.",
                     twitterHandle: "",
                     linkedInAccount:
                         "https://www.linkedin.com/in/mandy-meindersma/",
@@ -126,7 +126,7 @@ export default {
                     title: "Member At Large",
                     imageLink: require("~/assets/boardPictures/jeremyNickurak.jpeg"),
                     description:
-                        "Jeremy Nickurak is a resiliency lead for Dotdash Meredith in SRE/digital-operations, focused on making the process of stuff going bad go better.<br /><br /> Jeremy loves staying connected virtually and in person with the growing Edmonton development and technology space, meeting new folks, and telling stories of years of technology going well and poorly.<br /><br />Jeremy is passionate about git, python, and outside of tech, loves playing the ukulele.",
+                        "Jeremy Nickurak is a resiliency lead for <a class='text-indigo-600' href='https://www.dotdashmeredith.com/'>Dotdash Meredith</a> in SRE/digital-operations, focused on making the process of stuff going bad go better.<br /><br /> Jeremy loves staying connected virtually and in person with the growing Edmonton development and technology space, meeting new folks, and telling stories of years of technology going well and poorly.<br /><br />Jeremy is passionate about git, python, and outside of tech, loves playing the ukulele.",
                     twitterHandle: "",
                     linkedInAccount: "https://linkedin.com/in/nickurak",
                     slackAccount: "Jeremy",
@@ -137,7 +137,7 @@ export default {
                     title: "Member At Large",
                     imageLink: require("~/assets/boardPictures/celiaNicholls.jpg"),
                     description:
-                        "Celia is in her final semester of Web Design and Development in the Digital Media and IT program at NAIT (although she sometimes feels as though she should have gone into pest control, she spends so much time debugging).<br /><br /> Her strengths include UX/UI and responsive design, front-end development and content creation. She is passionate about helping to increase student engagement with Dev Edmonton as a way to pay forward all the mentorship and help she’s received from devs in the community.<br /><br /> In her free time, she enjoys writing and drawing comics and dabbling in esoteric crafts like needlepoint and macramé.",
+                        "Celia has finished her Web Design and Development in the Digital Media and IT program at NAIT (although she sometimes feels as though she should have gone into pest control, she spends so much time debugging).<br /><br /> Her strengths include UX/UI and responsive design, front-end development and content creation. She is passionate about helping to increase student engagement with Dev Edmonton as a way to pay forward all the mentorship and help she’s received from devs in the community.<br /><br /> In her free time, she enjoys writing and drawing comics and dabbling in esoteric crafts like needlepoint and macramé.",
                     twitterHandle: "",
                     linkedInAccount:
                         "https://www.linkedin.com/in/celia-nicholls/",
