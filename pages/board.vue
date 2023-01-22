@@ -122,14 +122,14 @@ export default {
                 },
                 {
                     id: 5,
-                    name: "Alyssa Diehl",
+                    name: "Jeremy Nickurak",
                     title: "Member At Large",
-                    imageLink: require("~/assets/boardPictures/alyssaDiehl.jpg"),
+                    imageLink: require("~/assets/boardPictures/jeremyNickurak.jpeg"),
                     description:
-                        "Alyssa has been working in the field of Career Development, Recruitment & HR for +7 years. She manages employment programs for <a class='text-indigo-600' href='https://manpowerab.com/development/'>Manpower’s Workforce Development</a> department. She is interested in the tech & innovation industry here in Alberta and seeing a diverse labour market & workforce.<br /><br /> Her passion lies in assisting job seekers find their future career path and loves to connect with job seekers from any field and experience level.<br /><br />  Alyssa is always available to give assistance on market insights, resume review or LinkedIn tips!",
-                    twitterHandle: "Lyss_diehl",
-                    linkedInAccount: "https://ca.linkedin.com/in/alyssajdiehl",
-                    slackAccount: "Alyssa Diehl",
+                        "Jeremy Nickurak is a resiliency lead for Dotdash Meredith in SRE/digital-operations, focused on making the process of stuff going bad go better.<br /><br /> Jeremy loves staying connected virtually and in person with the growing Edmonton development and technology space, meeting new folks, and telling stories of years of technology going well and poorly.<br /><br />Jeremy is passionate about git, python, and outside of tech, loves playing the ukulele.",
+                    twitterHandle: "",
+                    linkedInAccount: "https://linkedin.com/in/nickurak",
+                    slackAccount: "Jeremy",
                 },
                 {
                     id: 6,
