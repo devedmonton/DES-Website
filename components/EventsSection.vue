@@ -50,8 +50,7 @@ export default {
             coffee: {
                 name: "Random Coffees",
                 logo: require("../assets/logos/coffee-192px.png"),
-                linkTo:
-                    "https://join.slack.com/t/devedmonton/shared_invite/zt-1hqylgb8i-pKr5nUmRwOJwdLHVce0rXg",
+                linkTo: "https://join.slack.com/t/devedmonton/shared_invite/zt-1hqylgb8i-pKr5nUmRwOJwdLHVce0rXg",
                 slack: "#random_coffees",
                 slackLink:
                     "https://join.slack.com/t/devedmonton/shared_invite/zt-1hqylgb8i-pKr5nUmRwOJwdLHVce0rXg",
