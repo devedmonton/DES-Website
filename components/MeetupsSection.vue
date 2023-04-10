@@ -104,6 +104,23 @@
                         environment within the industry.
                     </span>
                 </MeetupCard>
+                <MeetupCard
+                    :name="meetups.weeklydevchat.name"
+                    :logo="meetups.weeklydevchat.logo"
+                    :link-to="meetups.weeklydevchat.linkTo"
+                >
+                    <span>
+                        Weekly Dev Chat is a place to ask questions, hear
+                        different view points, and get to know your fellow
+                        developers. Every week there is an initial topic posted
+                        to get the discussion started. Sometimes we discuss the
+                        initial topic the entire chat, other times the topic
+                        changes several times through the natural flow of the
+                        conversation. Everyone and anyone is welcome to join as
+                        long as you are kind, supportive, and respectful of
+                        others.
+                    </span>
+                </MeetupCard>
             </div>
         </div>
     </div>
@@ -153,6 +170,11 @@ export default {
                     logo: require("../assets/logos/yegwit.png"),
                     linkTo: "https://yegwit.com/",
                     slack: "#meetup-r",
+                },
+                weeklydevchat: {
+                    name: "Weekly Dev Chat",
+                    logo: require("../assets/logos/weeklydevchat-logo.svg"),
+                    linkTo: "https://weeklydevchat.com/",
                 },
             },
         };
