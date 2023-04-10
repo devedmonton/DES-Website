@@ -90,6 +90,15 @@
         "code",
         "design"
       ]
+    },
+    {
+      "login": "EmmettAMartin",
+      "name": "Emmett",
+      "avatar_url": "https://avatars.githubusercontent.com/u/109122151?v=4",
+      "profile": "https://github.com/EmmettAMartin",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -97,5 +106,6 @@
   "projectOwner": "devedmonton",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": true,
+  "commitConvention": "angular"
 }
