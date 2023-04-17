@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5f9bdcfb-7b48-46e8-a58d-dfd2b32d8ccc/deploy-status)](https://app.netlify.com/sites/dev-edmonton/deploys)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # devedmonton.com
@@ -57,6 +57,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="http://burmis.ca"><img src="https://avatars.githubusercontent.com/u/61872?v=4?s=100" width="100px;" alt="Mark Bennett"/><br /><sub><b>Mark Bennett</b></sub></a><br /><a href="https://github.com/devedmonton/devedmonton.com/commits?author=MarkBennett" title="Code">💻</a> <a href="#design-MarkBennett" title="Design">🎨</a> <a href="https://github.com/devedmonton/devedmonton.com/pulls?q=is%3Apr+reviewed-by%3AMarkBennett" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/devedmonton/devedmonton.com/commits?author=MarkBennett" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/salmy101"><img src="https://avatars.githubusercontent.com/u/104947398?v=4?s=100" width="100px;" alt="Salma Ibrahim"/><br /><sub><b>Salma Ibrahim</b></sub></a><br /><a href="https://github.com/devedmonton/devedmonton.com/commits?author=salmy101" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/SteveReiter"><img src="https://avatars.githubusercontent.com/u/8506743?v=4?s=100" width="100px;" alt="SteveReiter"/><br /><sub><b>SteveReiter</b></sub></a><br /><a href="https://github.com/devedmonton/devedmonton.com/commits?author=SteveReiter" title="Documentation">📖</a></td>
     </tr>
   </tbody>
