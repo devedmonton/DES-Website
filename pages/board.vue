@@ -143,6 +143,18 @@ export default {
                         "https://www.linkedin.com/in/celia-nicholls/",
                     slackAccount: "Celia Nicholls",
                 },
+                {
+                    id: 7,
+                    name: "Salma Ibrahim",
+                    title: "Member At Large",
+                    imageLink: require("~/assets/boardPictures/salmaIbrahim.jpg"),
+                    description:
+                        "Salma Ibrahim is an aspiring junior software developer. She got her start in coding with <a class='text-indigo-600' href='https://www.lighthouselabs.ca/'>Lighthouse Labs</a> in the Full Stack Web Development Bootcamp in May of 2022. There she wrote here first lines of code and has loved learning ever since. Salma has recently gotten in involved with DES when she was looking for a way to connect to the developing community in Edmonton!<br /><br /> When she isn’t coding, Salma works at a non-profit called <a class='text-indigo-600' href='https://bgcbigs.ca/'>BGCBigs</a> at a local club enjoying time with the kiddos. Salma also likes watching films, baking, and most of all reading. Her favs include the Ember in the Ashes Quartet, The Book Thief, books by Ruta Sepetys, and her childhood favourite, Lemony Snicket",
+                    twitterHandle: "",
+                    linkedInAccount:
+                        "https://www.linkedin.com/in/salma-ibrahim-a1275817a/",
+                    slackAccount: "Salma Ibrahim",
+                },
             ],
         };
     },
