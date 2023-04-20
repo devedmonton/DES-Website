@@ -64,7 +64,7 @@
                 >
                     <span>
                         Edmonton Unlimited provides free programming and
-                        resources that Edmontons innovators, big thinkers and
+                        resources that Edmonton's innovators, big thinkers and
                         problem solvers need to turn their ideas into solutions.
                     </span>
                 </MeetupCard>
@@ -76,7 +76,7 @@
                     <p>
                         Any business, whether a freshly-launched start-up or a
                         midsize firm scaling up its offerings, depends on the
-                        wisdom and counsel of peers to reach the next level
+                        wisdom and counsel of peers to reach the next level,
                         including high-quality business coaches and mentors.
                     </p>
                 </MeetupCard>
@@ -101,11 +101,11 @@
                     <p>
                         Technology Alberta exists to nurture a dedicated
                         community of people and organizations whose coordinated
-                        and collaborative efforts help to make Albertas
-                        entrepreneurial advanced technologycompanies the global
+                        and collaborative efforts help to make Alberta's
+                        entrepreneurial advanced technology companies the global
                         vendors of choice. We achieve our goal through
-                        entrepreneur led, community driven events, programs, and
-                        initiatives.
+                        entrepreneur led and community driven events, programs,
+                        and initiatives.
                     </p>
                 </MeetupCard>
                 <MeetupCard
