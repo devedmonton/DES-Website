@@ -35,36 +35,37 @@
                     </span>
                 </MeetupCard>
                 <MeetupCard
+                    :name="events.amii.name"
+                    :logo="events.amii.logo"
+                    :link-to="events.amii.linkTo"
+                >
+                    <span>
+                        Amii (Alberta Machine Intelligence Institute) works to
+                        connect with the community to Alberta's growing AI
+                        ecosystem, offer training and advanced education and
+                        gives your company tools to harness the potential of
+                        artificial intelligence.
+                    </span>
+                </MeetupCard>
+                <MeetupCard
                     :name="events.startupEdmonton.name"
                     :logo="events.startupEdmonton.logo"
                     :link-to="events.startupEdmonton.linkTo"
                 >
                     <p>
-                        Whether you’re exploring a new product idea or you’re
-                        looking to take your business to the next level, Startup
-                        Edmonton has programming designed for you. They offer
-                        four stages of programming along with resources and
-                        guidance every step of the way.
-                    </p>
-                    <p class="mt-2">
-                        As the economic impact of COVID-19 has been heavily felt
-                        by Edmonton’s startup community, Startup Edmonton is
-                        offering access to programs delivered ONLINE for $0 to
-                        Albertans, powered in-part by Alberta Innovates.
+                        FYI Startup Edmonton has become Edmonton Unlimited and
+                        has a new space! See card the next card.
                     </p>
                 </MeetupCard>
                 <MeetupCard
-                    :name="events.remi.name"
-                    :logo="events.remi.logo"
-                    :link-to="events.remi.linkTo"
+                    :name="events.edmontonUnlimited.name"
+                    :logo="events.edmontonUnlimited.logo"
+                    :link-to="events.edmontonUnlimited.linkTo"
                 >
                     <span>
-                        The Reducing Emissions through Machine Intelligence
-                        (REMI) program is designed to help startups, sbuject
-                        matter experts, and enterprises use AI technology to
-                        make better decisions about how to most effectively
-                        reduce greenhouse gases while also improving operations
-                        and increasing revenue.
+                        Edmonton Unlimited provides free programming and
+                        resources that Edmonton's innovators, big thinkers and
+                        problem solvers need to turn their ideas into solutions.
                     </span>
                 </MeetupCard>
                 <MeetupCard
@@ -75,17 +76,13 @@
                     <p>
                         Any business, whether a freshly-launched start-up or a
                         midsize firm scaling up its offerings, depends on the
-                        wisdom and counsel of peers to reach the next level –
-                        including high-quality business coaches and mentors. TEC
-                        Edmonton, with support from the Edmonton Regional
-                        Innovation Network (ERIN), is growing the coaching
-                        capacity in Edmonton.
+                        wisdom and counsel of peers to reach the next level,
+                        including high-quality business coaches and mentors.
                     </p>
                 </MeetupCard>
                 <MeetupCard
                     :logo="events.startupTNT.logo"
                     :link-to="events.startupTNT.linkTo"
-                    :discord-link="events.startupTNT.discordLink"
                 >
                     <p>
                         Startup TNT believes that having fun together is the
@@ -95,6 +92,50 @@
                         Happy Hour.
                     </p>
                     <p class="mt-2">Every Thursday 6-9pm.</p>
+                </MeetupCard>
+                <MeetupCard
+                    :name="events.techAlberta.name"
+                    :logo="events.techAlberta.logo"
+                    :link-to="events.techAlberta.linkTo"
+                >
+                    <p>
+                        Technology Alberta exists to nurture a dedicated
+                        community of people and organizations whose coordinated
+                        and collaborative efforts help to make Alberta's
+                        entrepreneurial advanced technology companies the global
+                        vendors of choice. We achieve our goal through
+                        entrepreneur led and community driven events, programs,
+                        and initiatives.
+                    </p>
+                </MeetupCard>
+                <MeetupCard
+                    :name="events.gdg.name"
+                    :logo="events.gdg.logo"
+                    :link-to="events.gdg.linkTo"
+                >
+                    <span>
+                        Google Developer Groups has an Edmonton chapter! Their
+                        vision is to foster an engaging and inclusive
+                        developer's community. A place where you can meet your
+                        fellow developers, career mentors, and boost your
+                        technical skills. Whether you are an advanced developer,
+                        or you just start to pivot your way in the tech
+                        industry, we welcome you to the community. They mostly
+                        focus on Google Technologies, such as Google Cloud
+                        Computing, Firebase, Flutter, Andirod, Machine Learning,
+                        and Earth Engine.
+                    </span>
+                </MeetupCard>
+                <MeetupCard
+                    :logo="events.clc.logo"
+                    :link-to="events.clc.linkTo"
+                >
+                    <span>
+                        Canada Learning Code designs, delivers, and partners on
+                        technology education for people in Canada. They have
+                        workshops for kids, teens, girls, and adults. They are
+                        always looking for mentors, teachers and coordinators.
+                    </span>
                 </MeetupCard>
             </div>
         </div>
@@ -111,26 +152,46 @@ export default {
                 isaic: {
                     name: "ISAIC",
                     logo: require("../assets/logos/isaic-icon-logo.png"),
-                    linkTo: "https://isaic.ece.ualberta.ca",
+                    linkTo: "https://www.isaic.ca",
+                },
+                amii: {
+                    name: "Training at Amii",
+                    logo: require("../assets/logos/amii.svg"),
+                    linkTo: "https://www.amii.ca",
                 },
                 startupEdmonton: {
                     name: "Startup Edmonton",
                     logo: require("../assets/logos/Startup-Edmonton-Logo-300x116.png"),
                     linkTo: "https://www.startupedmonton.com/programs",
                 },
-                remi: {
-                    name: "REMI at Amii",
-                    logo: require("../assets/logos/amii.svg"),
-                    linkTo: "https://www.amii.ca/industry-solutions/remi/",
+                edmontonUnlimited: {
+                    name: "Edmonton Unlimited",
+                    logo: require("../assets/logos/edmontonUnlimited.svg"),
+                    linkTo: "https://edmontonunlimited.com",
                 },
                 erin: {
-                    name: "Coaching Program from ERIN",
+                    name: "Mentoring from ERIN",
                     logo: require("../assets/logos/ERIN+Logo.jpeg"),
-                    linkTo: "https://www.edmontonrin.ca/coaching-program",
+                    linkTo: "https://www.edmontonrin.ca",
                 },
                 startupTNT: {
-                    logo: require("../assets/logos/StartUpTNTLogo.png"),
+                    logo: require("../assets/logos/StartUpTNTLogo.jpg"),
                     linkTo: "https://www.startuptnt.com/happy-hour",
+                },
+                techAlberta: {
+                    name: "Technology Alberta",
+                    logo: require("../assets/logos/techAlberta.png"),
+                    linkTo: "https://technologyalberta.com",
+                },
+                gdg: {
+                    name: "Google Developer Groups",
+                    logo: require("../assets/logos/gdgLogo.png"),
+                    linkTo: "https://gdg.community.dev/gdg-cloud-edmonton",
+                },
+                clc: {
+                    logo: require("../assets/logos/clc.png"),
+                    linkTo:
+                        "https://www.canadalearningcode.ca/chapters/edmonton",
                 },
             },
         };
