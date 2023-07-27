@@ -17,22 +17,35 @@
             <div
                 class="mt-8 rounded-lg bg-gray-200 overflow-hidden shadow divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px"
             >
-                <MeetupCard
-                    :name="events.coffee.name"
-                    :logo="events.coffee.logo"
-                    :slack="events.coffee.slack"
-                    :link-to="events.coffee.linkTo"
-                    :duration-info="events.coffee.durationInfo"
-                    :slack-link="events.coffee.slackLink"
+            <MeetupCard
+                    :name="events.gdg.name"
+                    :logo="events.gdg.logo"
+                    :link-to="events.gdg.linkTo"
                 >
                     <span>
-                        #random_coffees is a weekly chance for you to meet other
-                        people in the Dev Edmonton community. Every week you
-                        will get randomly assigned to another person to have
-                        coffee with (virtually or in person if you are
-                        comfortable). Join the Slack workspace to participate.
+                        Google Developer Groups has an Edmonton chapter! Their
+                        vision is to foster an engaging and inclusive
+                        developer's community. A place where you can meet your
+                        fellow developers, career mentors, and boost your
+                        technical skills. Whether you are an advanced developer,
+                        or you just start to pivot your way in the tech
+                        industry, we welcome you to the community. They mostly
+                        focus on Google Technologies, such as Google Cloud
+                        Computing, Firebase, Flutter, Andirod, Machine Learning,
+                        and Earth Engine.
                     </span>
                 </MeetupCard>
+                <MeetupCard
+                    :logo="events.clc.logo"
+                    :link-to="events.clc.linkTo"
+                >
+                    <span>
+                        Canada Learning Code designs, delivers, and partners on
+                        technology education for people in Canada. They have
+                        workshops for kids, teens, girls, and adults. They are
+                        always looking for mentors, teachers and coordinators.
+                    </span>
+                </MeetupCard>                
             </div>
         </div>
     </div>
@@ -47,16 +60,16 @@ export default {
     },
     data: () => ({
         events: {
-            coffee: {
-                name: "Random Coffees",
-                logo: require("../assets/logos/coffee-192px.png"),
-                linkTo:
-                    "https://join.slack.com/t/devedmonton/shared_invite/zt-1hqylgb8i-pKr5nUmRwOJwdLHVce0rXg",
-                slack: "#random_coffees",
-                slackLink:
-                    "https://join.slack.com/t/devedmonton/shared_invite/zt-1hqylgb8i-pKr5nUmRwOJwdLHVce0rXg",
-                durationInfo: "Duration: Ongoing (weekly)",
-            },
+            gdg: {
+                    name: "Google Developer Groups",
+                    logo: require("../assets/logos/gdgLogo.png"),
+                    linkTo: "https://gdg.community.dev/gdg-cloud-edmonton",
+                },
+                clc: {
+                    logo: require("../assets/logos/clc.png"),
+                    linkTo:
+                        "https://www.canadalearningcode.ca/chapters/edmonton",
+                },
         },
     }),
 };
