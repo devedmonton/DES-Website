@@ -108,13 +108,24 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "Jhemming93",
+      "name": "Jhemming93",
+      "avatar_url": "https://avatars.githubusercontent.com/u/97263089?v=4",
+      "profile": "https://github.com/Jhemming93",
+      "contributions": [
+        "ideas",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
-  "projectName": "devedmonton.com",
+  "projectName": "DES-Website",
   "projectOwner": "devedmonton",
   "repoType": "github",
   "repoHost": "https://github.com",
   "skipCi": true,
-  "commitConvention": "angular"
+  "commitConvention": "angular",
+  "commitType": "docs"
 }
