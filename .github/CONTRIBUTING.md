@@ -16,6 +16,7 @@ Are you new to open source? Start here!
     -   Normally you would just be able to assign an issue to yourself but the permissions for this repo are weird.
     -   You might have to DM Mandy Meindersma on the DES slack and she can assign you to the issue you want
 -   Make the coding changes required for that issue
+    -   You will probably want to instal prettier on whatever editor you are using to save you a lot of headaches later.
 -   Make sure to run the linter!!! (instructions in the `README.md`)
 -   Make a pull request and fill out the portions of the template
 -   Moderators will be notified that you made your pr. You won't be able to add reviewers but we will see it and get to it! I promise
@@ -37,4 +38,5 @@ Are you new to open source? Start here!
 
 If you have a windows machine there might be a couple issues that come up. Some that we know so far:
 
--   You might have to remove the single quotes in the `link-check` [file list](https://github.com/devedmonton/DES-Website/blob/main/package.json#L13). Just don't commit this change when you make your pr.
+-   You might have to remove the single quotes in the `lint-check` [file list](https://github.com/devedmonton/DES-Website/blob/main/package.json#L13). Just don't commit this change when you make your pr.
+-   `nvm use` doesn't seem to find the correct node version. Check the `.nvmrc` file to see what version we are at

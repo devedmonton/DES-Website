@@ -1,6 +1,9 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5f9bdcfb-7b48-46e8-a58d-dfd2b32d8ccc/deploy-status)](https://app.netlify.com/sites/dev-edmonton/deploys)
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # devedmonton.com
@@ -10,6 +13,8 @@ New home for the devedmonton.com website
 > Fostering a stronger software development community in Edmonton.
 
 ## Build Setup
+
+Note that all of these commands have been tested and used on Mac/unix machines, if you are on windows and these do not work for you look in the contributing guidelines for help.
 
 ```bash
 # switch to project node version
@@ -35,6 +40,7 @@ $ npm run lint-check
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
 # Resources
+
 Icons sourced from [Iconify](https://iconify.design/icon-sets/mdi/)
 
 ## Contributors ✨
