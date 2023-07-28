@@ -1,7 +1,7 @@
 module.exports = {
-    extends: ['@zazen/stylelint-config'],
+    extends: ["@zazen/stylelint-config"],
     rules: {
-        'at-rule-no-unknown': [true, { ignoreAtRules: ['include', 'mixin'] }],
-        'value-list-comma-newline-after': null,
+        "at-rule-no-unknown": [true, { ignoreAtRules: ["include", "mixin"] }],
+        "value-list-comma-newline-after": null,
     },
-}
+};

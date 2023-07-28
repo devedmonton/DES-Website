@@ -13,7 +13,8 @@ export default {
             {
                 hid: "description",
                 name: "description",
-                content: "Fostering a stronger software development community in Edmonton. We are made up of people who believe that an impactful, diverse, and collaborative developer community enriches us all. We realize this vision by sharing knowledge and ideas, understanding the community and its needs, promoting events and initiatives, and supporting technology meetups and organizations.",
+                content:
+                    "Fostering a stronger software development community in Edmonton. We are made up of people who believe that an impactful, diverse, and collaborative developer community enriches us all. We realize this vision by sharing knowledge and ideas, understanding the community and its needs, promoting events and initiatives, and supporting technology meetups and organizations.",
             },
         ],
         link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],

@@ -1,6 +1,9 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5f9bdcfb-7b48-46e8-a58d-dfd2b32d8ccc/deploy-status)](https://app.netlify.com/sites/dev-edmonton/deploys)
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # devedmonton.com
@@ -35,6 +38,7 @@ $ npm run lint-check
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
 # Resources
+
 Icons sourced from [Iconify](https://iconify.design/icon-sets/mdi/)
 
 ## Contributors ✨
