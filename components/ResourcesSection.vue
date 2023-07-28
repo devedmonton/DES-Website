@@ -108,35 +108,6 @@
                         and initiatives.
                     </p>
                 </MeetupCard>
-                <MeetupCard
-                    :name="events.gdg.name"
-                    :logo="events.gdg.logo"
-                    :link-to="events.gdg.linkTo"
-                >
-                    <span>
-                        Google Developer Groups has an Edmonton chapter! Their
-                        vision is to foster an engaging and inclusive
-                        developer's community. A place where you can meet your
-                        fellow developers, career mentors, and boost your
-                        technical skills. Whether you are an advanced developer,
-                        or you just start to pivot your way in the tech
-                        industry, we welcome you to the community. They mostly
-                        focus on Google Technologies, such as Google Cloud
-                        Computing, Firebase, Flutter, Andirod, Machine Learning,
-                        and Earth Engine.
-                    </span>
-                </MeetupCard>
-                <MeetupCard
-                    :logo="events.clc.logo"
-                    :link-to="events.clc.linkTo"
-                >
-                    <span>
-                        Canada Learning Code designs, delivers, and partners on
-                        technology education for people in Canada. They have
-                        workshops for kids, teens, girls, and adults. They are
-                        always looking for mentors, teachers and coordinators.
-                    </span>
-                </MeetupCard>
             </div>
         </div>
     </div>
@@ -182,16 +153,6 @@ export default {
                     name: "Technology Alberta",
                     logo: require("../assets/logos/techAlberta.png"),
                     linkTo: "https://technologyalberta.com",
-                },
-                gdg: {
-                    name: "Google Developer Groups",
-                    logo: require("../assets/logos/gdgLogo.png"),
-                    linkTo: "https://gdg.community.dev/gdg-cloud-edmonton",
-                },
-                clc: {
-                    logo: require("../assets/logos/clc.png"),
-                    linkTo:
-                        "https://www.canadalearningcode.ca/chapters/edmonton",
                 },
             },
         };
