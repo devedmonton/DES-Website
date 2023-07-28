@@ -17,7 +17,7 @@
             <div
                 class="mt-8 rounded-lg bg-gray-200 overflow-hidden shadow divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px"
             >
-            <MeetupCard
+                <MeetupCard
                     :name="events.gdg.name"
                     :logo="events.gdg.logo"
                     :link-to="events.gdg.linkTo"
@@ -61,15 +61,14 @@ export default {
     data: () => ({
         events: {
             gdg: {
-                    name: "Google Developer Groups",
-                    logo: require("../assets/logos/gdgLogo.png"),
-                    linkTo: "https://gdg.community.dev/gdg-cloud-edmonton",
-                },
-                clc: {
-                    logo: require("../assets/logos/clc.png"),
-                    linkTo:
-                        "https://www.canadalearningcode.ca/chapters/edmonton",
-                },
+                name: "Google Developer Groups",
+                logo: require("../assets/logos/gdgLogo.png"),
+                linkTo: "https://gdg.community.dev/gdg-cloud-edmonton",
+            },
+            clc: {
+                logo: require("../assets/logos/clc.png"),
+                linkTo: "https://www.canadalearningcode.ca/chapters/edmonton",
+            },
         },
     }),
 };
