@@ -70,7 +70,7 @@
             </div>
         </div>
         <!-- Menu open: "block", Menu closed: "hidden" -->
-        <div id="mobile-menu" class="hidden md:hidden">
+        <div id="mobile-menu" class="hidden lg:hidden">
             <div class="px-2 pt-2 pb-3">
                 <a
                     v-for="link in menuLinks"
