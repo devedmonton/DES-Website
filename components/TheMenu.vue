@@ -3,24 +3,24 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 top-0">
             <div class="flex items-center justify-between h-24">
                 <div class="flex-shrink-0">
-                    <a href="/#">
+                    <nuxt-link :to="'#'">
                         <img
                             class="block h-16 w-auto"
                             src="~/assets/logos/DevEdmonton-Logo-Light.svg"
                             alt="Dev Edmonton logo"
                         />
-                    </a>
+                    </nuxt-link>
                 </div>
                 <div class="hidden lg:block lg:ml-6">
                     <div class="flex">
-                        <a
+                        <nuxt-link
                             v-for="link in menuLinks"
                             :key="link.name"
-                            :href="link.href"
+                            :to="link.href"
                             class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
                         >
                             {{ link.name }}
-                        </a>
+                        </nuxt-link>
                     </div>
                 </div>
                 <div class="hidden lg:block lg:ml-2 flex-shrink-0">
