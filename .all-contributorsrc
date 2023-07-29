@@ -118,6 +118,15 @@
         "ideas",
         "code"
       ]
+    },
+    {
+      "login": "VitalJeevanjot",
+      "name": "Jeevanjot Singh Vital",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40867747?v=4",
+      "profile": "https://www.linkedin.com/in/jeevanjot-singh/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
