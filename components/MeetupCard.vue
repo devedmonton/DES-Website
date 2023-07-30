@@ -5,6 +5,7 @@
         <component
             :is="linkTo ? 'a' : 'div'"
             :href="linkTo || ''"
+            :target="linkTo ? '_blank' : '_self'"
             class="focus:outline-none"
             :aria-label="name + ' website'"
         >
