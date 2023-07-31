@@ -17,7 +17,11 @@
             <div
                 class="mt-8 rounded-lg bg-gray-200 overflow-hidden shadow divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px"
             >
-                <MeetupCard v-for="meetup in meetups" v-bind="meetup">
+                <MeetupCard
+                    v-for="(meetup, index) in meetups"
+                    v-bind="meetup"
+                    :key="index"
+                >
                 </MeetupCard>
             </div>
         </div>
