@@ -80,7 +80,8 @@
                 {{ durationInfo }}
             </div>
             <p class="mt-2 text-sm text-gray-500">
-                <slot></slot>
+                {{ description }}
+                <slot v-if="!description"></slot>
             </p>
         </div>
     </div>
@@ -95,6 +96,7 @@ export default {
         linkTo: { type: String, required: true },
         slack: { type: String, default: null },
         durationInfo: { type: String, default: "" },
+        description: { type: String, default: "" },
     },
 };
 </script>
