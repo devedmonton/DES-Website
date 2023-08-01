@@ -3,7 +3,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 top-0">
             <div class="flex items-center justify-between h-24">
                 <div class="flex-shrink-0">
-                    <NuxtLink :to="'#'">
+                    <NuxtLink :to="'/'">
                         <img
                             class="block h-16 w-auto"
                             src="~/assets/logos/DevEdmonton-Logo-Light.svg"
