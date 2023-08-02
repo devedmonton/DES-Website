@@ -3,24 +3,24 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 top-0">
             <div class="flex items-center justify-between h-24">
                 <div class="flex-shrink-0">
-                    <a href="/#">
+                    <NuxtLink :to="'#'">
                         <img
                             class="block h-16 w-auto"
                             src="~/assets/logos/DevEdmonton-Logo-Light.svg"
                             alt="Dev Edmonton logo"
                         />
-                    </a>
+                    </NuxtLink>
                 </div>
                 <div class="hidden lg:block lg:ml-6">
                     <div class="flex">
-                        <a
+                        <NuxtLink
                             v-for="link in menuLinks"
                             :key="link.name"
-                            :href="link.href"
+                            :to="link.href"
                             class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
                         >
                             {{ link.name }}
-                        </a>
+                        </NuxtLink>
                     </div>
                 </div>
                 <div class="hidden lg:block lg:ml-2 flex-shrink-0">
@@ -70,17 +70,17 @@
             </div>
         </div>
         <!-- Menu open: "block", Menu closed: "hidden" -->
-        <div id="mobile-menu" class="hidden md:hidden">
+        <div id="mobile-menu" class="hidden lg:hidden">
             <div class="px-2 pt-2 pb-3">
-                <a
+                <NuxtLink
                     v-for="link in menuLinks"
                     :key="link.name"
-                    :href="link.href"
+                    :to="link.href"
                     class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
                     @click="toggleMenu"
                 >
                     {{ link.name }}
-                </a>
+                </NuxtLink>
                 <SocialLinks
                     class="px-3 pt-4 pb-2 justify-left space-x-4"
                     img-class="h-8 w-8 svg-invert"

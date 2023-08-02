@@ -116,7 +116,37 @@
       "profile": "https://github.com/Jhemming93",
       "contributions": [
         "ideas",
+        "code",
+        "review"
+      ]
+    },
+    {
+      "login": "VitalJeevanjot",
+      "name": "Jeevanjot Singh Vital",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40867747?v=4",
+      "profile": "https://www.linkedin.com/in/jeevanjot-singh/",
+      "contributions": [
         "code"
+      ]
+    },
+    {
+      "login": "deejayjay",
+      "name": "Deepak Joy Jose",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72120524?v=4",
+      "profile": "https://github.com/deejayjay",
+      "contributions": [
+        "code",
+        "ideas"
+      ]
+    },
+    {
+      "login": "olimpiuus",
+      "name": "Yuriy Kolegin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/101880197?v=4",
+      "profile": "https://github.com/olimpiuus",
+      "contributions": [
+        "code",
+        "ideas"
       ]
     }
   ],

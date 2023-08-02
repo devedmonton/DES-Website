@@ -16,5 +16,5 @@ sw.*
 # DS Store
 *DS_Store
 
-#Netlify
+# Netlify
 .netlify
