@@ -53,6 +53,7 @@ export default {
                         and Earth Engine.`,
             },
             clc: {
+                name: "Canada Learning Code",
                 logo: require("../assets/logos/clc.png"),
                 linkTo: "https://www.canadalearningcode.ca/chapters/edmonton",
                 description: ` Canada Learning Code designs, delivers, and partners on
@@ -61,6 +62,7 @@ export default {
                         always looking for mentors, teachers and coordinators.`,
             },
             rac: {
+                name: "Rainforest Alberta",
                 logo: require("../assets/logos/rac.png"),
                 linkTo: "https://www.rainforestab.ca/edmonton.html",
                 description: ` Rainforest Alberta is an informal organization working
@@ -73,6 +75,7 @@ export default {
                         Summits.`,
             },
             elug: {
+                name: "Edmonton Linux Users Group",
                 logo: require("../assets/logos/elug.png"),
                 linkTo: "https://elug.ca",
                 description: ` The Edmonton Linux User Group (ELUG) is a group of
@@ -83,6 +86,7 @@ export default {
                         They virtually meet every 4th Thursday of the month.`,
             },
             ohm: {
+                name: "Open Hardware Meetup",
                 logo: require("../assets/logos/ohm.png"),
                 linkTo:
                     "https://www.meetup.com/edmontonunlimited/events/pcwlzsyfchbpb/",
@@ -96,6 +100,7 @@ export default {
                         They meet every 2nd Thursday of every month.`,
             },
             bcyeg: {
+                name: "Beta City YEG",
                 logo: require("../assets/logos/bcyeg.png"),
                 linkTo: "https://betacity.ca/",
                 description: ` Beta City YEG is Edmonton’s citizen driven meetup with a
@@ -104,9 +109,15 @@ export default {
                         that improve their community through connection and
                         technology. They meet every 4th Wednesday of the month.`,
             },
+            yegTechWednesdays: {
+                name: "Edmonton Tech Wednesdays",
+                logo: require("../assets/logos/yeg-tech-wed.png"),
+                linkTo:
+                    "https://www.eventbrite.ca/e/edmonton-tech-wednesdays-tickets-662082084337",
+                description: `Edmonton Tech Wednesdays is a weekly event where anyone who loves tech 
+                can mingle and connect with others in the tech sector in a casual and relaxed environment. Whether you're a developer, marketer, entrepreneur, or simply have an interest in tech, this is the perfect opportunity to network with like-minded individuals, exchange ideas, and build meaningful relationships.`,
+            },
         },
     }),
 };
 </script>
-
-<style></style>
