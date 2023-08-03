@@ -18,6 +18,7 @@
                             :key="link.name"
                             :to="link.href"
                             class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
+                            @click="toggleMenu"
                         >
                             {{ link.name }}
                         </NuxtLink>
@@ -77,9 +78,10 @@
                     :key="link.name"
                     :to="link.href"
                     class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
-                    @click="toggleMenu"
                 >
-                    {{ link.name }}
+                    <a class="w-full block" @click="toggleMenu">
+                        {{ link.name }}
+                    </a>
                 </NuxtLink>
                 <SocialLinks
                     class="px-3 pt-4 pb-2 justify-left space-x-4"
