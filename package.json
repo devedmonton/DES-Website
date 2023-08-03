@@ -10,7 +10,7 @@
     "start": "nuxt start",
     "generate": "npm run test && nuxt generate",
     "test": "npm run lint-check",
-    "lint-check": "eslint '{components,layouts,pages}/**/*.vue'git "
+    "lint-check": "eslint '{components,layouts,pages}/**/*.vue'"
   },
   "dependencies": {
     "@mailchimp/mailchimp_marketing": "^3.0.28",
