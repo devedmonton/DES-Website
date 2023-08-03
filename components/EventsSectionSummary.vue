@@ -1,5 +1,7 @@
 <template>
-  <div class="relative pt-8 -mt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8">
+  <div
+    class="relative bg-grey-000 pt-8 -mt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8"
+  >
     <a id="community-events" href="/#community-events" class="anchor"></a>
     <div class="absolute inset-0">
       <div class="h-1/3 sm:h-2/3"></div>
@@ -16,7 +18,7 @@
         class="mt-8 rounded-lg bg-gray-200 overflow-hidden shadow divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px"
       >
         <MeetupCard
-          v-for="(event, index) in events"
+          v-for="(event, index) in limitedEvents"
           v-bind="event"
           :key="index"
         >
@@ -32,6 +34,12 @@ import MeetupCard from "./MeetupCard.vue";
 export default {
   components: {
     MeetupCard,
+  },
+  props: {
+    cardLimit: {
+      type: Number,
+      default: 5,
+    },
   },
   data: () => ({
     events: {
@@ -117,5 +125,11 @@ export default {
       },
     },
   }),
+  computed: {
+    limitedEvents() {
+      console.log(Array.from(this.events).slice(0, this.cardLimit));
+      return Array.from(this.events).slice(0, this.cardLimit);
+    },
+  },
 };
 </script>
