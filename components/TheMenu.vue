@@ -1,5 +1,5 @@
 <template>
-    <nav class="bg-brand-primary fixed w-full z-10">
+    <nav id="navMenu" class="bg-brand-primary fixed w-full z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 top-0">
             <div class="flex items-center justify-between h-24">
                 <div class="flex-shrink-0">
@@ -18,7 +18,6 @@
                             :key="link.name"
                             :to="link.href"
                             class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
-                            @click="toggleMenu"
                         >
                             {{ link.name }}
                         </NuxtLink>
@@ -34,7 +33,7 @@
                         class="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-brand-primary-dark focus:outline-none focus:bg-brand-primary-dark transition duration-150 ease-in-out"
                         aria-label="Main menu"
                         aria-expanded="false"
-                        @click="toggleMenu"
+                        @click="openMenu"
                     >
                         <!-- Menu open: "hidden", Menu closed: "block" -->
                         <svg
@@ -71,7 +70,7 @@
             </div>
         </div>
         <!-- Menu open: "block", Menu closed: "hidden" -->
-        <div id="mobile-menu" class="hidden lg:hidden">
+        <div id="mobile-menu" class="hidden block lg:hidden">
             <div class="px-2 pt-2 pb-3">
                 <NuxtLink
                     v-for="link in menuLinks"
@@ -79,7 +78,7 @@
                     :to="link.href"
                     class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
                 >
-                    <a class="w-full block" @click="toggleMenu">
+                    <a class="w-full block" @click="closeMenu">
                         {{ link.name }}
                     </a>
                 </NuxtLink>
@@ -126,10 +125,32 @@ export default {
     },
     computed: {},
     methods: {
-        toggleMenu: function () {
+        closeMenu: function (event) {
+            if (!event) {
+                return;
+            }
+            if (event.target instanceof Element) {
+                const target = event.target;
+                const menu = document.getElementById("navMenu");
+                if (!menu.contains(target)) {
+                    const mobileMenu = document.getElementById("mobile-menu");
+                    mobileMenu.classList.add("hidden");
+                    document.removeEventListener(
+                        "click",
+                        this.addCloseMenuListener
+                    );
+                }
+            }
+        },
+        openMenu: function () {
             const mobileMenu = document.getElementById("mobile-menu");
-            mobileMenu.classList.toggle("hidden");
-            mobileMenu.classList.toggle("block");
+            mobileMenu.classList.remove("hidden");
+            this.addCloseMenuListener();
+        },
+        addCloseMenuListener: function () {
+            document.addEventListener("click", (event) => {
+                this.closeMenu(event);
+            });
         },
     },
 };
