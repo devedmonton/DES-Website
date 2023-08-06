@@ -5,6 +5,7 @@
             :key="link.name"
             :href="link.href"
             :title="link.info"
+            target="_blank"
         >
             <span class="sr-only">{{ link.name }}</span>
             <img
