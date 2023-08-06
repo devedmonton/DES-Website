@@ -139,13 +139,11 @@ export default {
             }
         },
         closeMenu: function () {
-            console.log("close");
             const mobileMenu = document.getElementById("mobile-menu");
             mobileMenu.classList.add("hidden");
             document.removeEventListener("click", this.closeMenuHandler);
         },
         openMenu: function () {
-            console.log("open");
             const mobileMenu = document.getElementById("mobile-menu");
             mobileMenu.classList.remove("hidden");
             document.addEventListener("click", this.closeMenuHandler(event));
