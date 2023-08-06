@@ -1,18 +1,8 @@
 <template>
     <div class="flex items-center">
-        <a
-            v-for="link in links"
-            :key="link.name"
-            :href="link.href"
-            :title="link.info"
-        >
+        <a v-for="link in links" :key="link.name" :href="link.href" :title="link.info" target="_blank">
             <span class="sr-only">{{ link.name }}</span>
-            <img
-                :class="imgClass"
-                :src="link.logo"
-                :alt="link.name"
-                aria-hidden="true"
-            />
+            <img :class="imgClass" :src="link.logo" :alt="link.name" aria-hidden="true" />
         </a>
     </div>
 </template>
