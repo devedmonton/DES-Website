@@ -12,16 +12,14 @@
                     </NuxtLink>
                 </div>
                 <div class="hidden lg:block lg:ml-6">
-                    <div class="flex">
-                        <NuxtLink
-                            v-for="link in menuLinks"
-                            :key="link.name"
-                            :to="link.href"
-                            class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
-                        >
-                            {{ link.name }}
-                        </NuxtLink>
-                    </div>
+                    <NuxtLink
+                        v-for="link in menuLinks"
+                        :key="link.name"
+                        :to="link.href"
+                        class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
+                    >
+                        {{ link.name }}
+                    </NuxtLink>
                 </div>
                 <div class="hidden lg:block lg:ml-2 flex-shrink-0">
                     <SocialLinks class="px-2 justify-left space-x-2" />
@@ -33,7 +31,7 @@
                         class="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-brand-primary-dark focus:outline-none focus:bg-brand-primary-dark transition duration-150 ease-in-out"
                         aria-label="Main menu"
                         aria-expanded="false"
-                        @click="openMenu"
+                        @click="toggleMenu"
                     >
                         <!-- Menu open: "hidden", Menu closed: "block" -->
                         <svg
@@ -71,22 +69,25 @@
         </div>
         <!-- Menu open: "block", Menu closed: "hidden" -->
         <div id="mobile-menu" class="hidden block lg:hidden">
-            <div class="px-2 pt-2 pb-3">
-                <NuxtLink
+            <ul class="px-2 pt-2 pb-3">
+                <li
                     v-for="link in menuLinks"
                     :key="link.name"
-                    :to="link.href"
-                    class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
+                    @click="closeMenu"
                 >
-                    <a class="w-full block" @click="closeMenu">
+                    <NuxtLink
+                        :to="link.href"
+                        class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-brand-primary-dark focus:outline-none focus:text-white focus:bg-brand-primary-dark transition duration-150 ease-in-out"
+                    >
                         {{ link.name }}
-                    </a>
-                </NuxtLink>
+                    </NuxtLink>
+                </li>
+
                 <SocialLinks
                     class="px-3 pt-4 pb-2 justify-left space-x-4"
                     img-class="h-8 w-8 svg-invert"
                 />
-            </div>
+            </ul>
         </div>
     </nav>
 </template>
@@ -125,7 +126,7 @@ export default {
     },
     computed: {},
     methods: {
-        closeMenu: function (event) {
+        closeMenuHandler: function (event) {
             if (!event) {
                 return;
             }
@@ -133,24 +134,27 @@ export default {
                 const target = event.target;
                 const menu = document.getElementById("navMenu");
                 if (!menu.contains(target)) {
-                    const mobileMenu = document.getElementById("mobile-menu");
-                    mobileMenu.classList.add("hidden");
-                    document.removeEventListener(
-                        "click",
-                        this.addCloseMenuListener
-                    );
+                    this.closeMenu();
                 }
             }
         },
+        closeMenu: function () {
+            console.log("close");
+            const mobileMenu = document.getElementById("mobile-menu");
+            mobileMenu.classList.add("hidden");
+            document.removeEventListener("click", this.closeMenuHandler);
+        },
         openMenu: function () {
+            console.log("open");
             const mobileMenu = document.getElementById("mobile-menu");
             mobileMenu.classList.remove("hidden");
-            this.addCloseMenuListener();
+            document.addEventListener("click", this.closeMenuHandler(event));
         },
-        addCloseMenuListener: function () {
-            document.addEventListener("click", (event) => {
-                this.closeMenu(event);
-            });
+        toggleMenu: function () {
+            const mobileMenu = document.getElementById("mobile-menu");
+            mobileMenu.classList.contains("hidden")
+                ? this.openMenu()
+                : this.closeMenu();
         },
     },
 };
