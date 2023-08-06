@@ -146,7 +146,7 @@ export default {
         openMenu: function () {
             const mobileMenu = document.getElementById("mobile-menu");
             mobileMenu.classList.remove("hidden");
-            document.addEventListener("click", this.closeMenuHandler(event));
+            document.addEventListener("click", this.closeMenuHandler);
         },
         toggleMenu: function () {
             const mobileMenu = document.getElementById("mobile-menu");
