@@ -392,8 +392,8 @@
             </div>
         </div>
         <MeetupsSection />
-        <EventsSection />
-        <ResourcesSection />
+        <EventsSectionSummary :card-limit="5" />
+        <ResourcesSectionSummary :card-limit="5" />
         <SignupForm />
     </div>
 </template>
@@ -401,17 +401,17 @@
 <script>
 import SignupForm from "../components/SignupForm";
 import VButton from "~/components/VButton.vue";
-import EventsSection from "../components/EventsSection.vue";
+import EventsSectionSummary from "../components/EventsSectionSummary.vue";
 import MeetupsSection from "../components/MeetupsSection.vue";
-import ResourcesSection from "../components/ResourcesSection.vue";
+import ResourcesSectionSummary from "../components/ResourcesSectionSummary.vue";
 
 export default {
     components: {
-        EventsSection,
-        MeetupsSection,
         VButton,
         SignupForm,
-        ResourcesSection,
+        MeetupsSection,
+        EventsSectionSummary,
+        ResourcesSectionSummary,
     },
 };
 </script>

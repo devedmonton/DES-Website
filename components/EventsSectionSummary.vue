@@ -1,5 +1,8 @@
 <template>
-    <div class="relative pt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8">
+    <div
+        class="relative bg-grey-000 pt-8 -mt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8"
+    >
+        <a id="community-events" href="/#community-events" class="anchor"></a>
         <div class="absolute inset-0">
             <div class="h-1/3 sm:h-2/3"></div>
         </div>
@@ -15,11 +18,14 @@
                 class="mt-8 rounded-lg bg-gray-200 overflow-hidden shadow divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px"
             >
                 <MeetupCard
-                    v-for="(event, index) in events"
+                    v-for="(event, index) in limitedEvents"
                     v-bind="event"
                     :key="index"
                 >
                 </MeetupCard>
+                <ViewAll :card-limit="cardLimit" link-to="/all_events"
+                    >View All Events</ViewAll
+                >
             </div>
         </div>
     </div>
@@ -27,14 +33,26 @@
 
 <script>
 import MeetupCard from "./MeetupCard.vue";
+import ViewAll from "./ViewAll.vue";
 
 export default {
     components: {
         MeetupCard,
+        ViewAll,
+    },
+    props: {
+        // Use this property to limit the number of cards displayed
+        cardLimit: {
+            type: Number,
+            default: 5,
+        },
     },
     computed: {
-        events() {
-            return this.$store.getters["events/getAllEvents"];
+        // The limited events based on the cardLimit
+        limitedEvents() {
+            return this.$store.getters["events/getLimitedEvents"](
+                this.cardLimit
+            );
         },
     },
 };
