@@ -87,6 +87,7 @@ export const getters = {
     getAllEvents: (state) => {
         return state.events;
     },
+    // Used to get a limited number of events for the home page based on the card limit
     getLimitedEvents: (state) => (cardLimit) => {
         const allEvents = {};
 

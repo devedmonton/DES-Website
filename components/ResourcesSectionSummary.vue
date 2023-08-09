@@ -43,12 +43,14 @@ import ViewAll from "./ViewAll.vue";
 export default {
     components: { MeetupCard, ViewAll },
     props: {
+        // Use this property to limit the number of cards displayed
         cardLimit: {
             type: Number,
             default: 5,
         },
     },
     computed: {
+        // The limited resources based on the cardLimit
         limitedResources() {
             return this.$store.getters["resources/getLimitedResources"](
                 this.cardLimit

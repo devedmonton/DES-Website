@@ -41,12 +41,14 @@ export default {
         ViewAll,
     },
     props: {
+        // Use this property to limit the number of cards displayed
         cardLimit: {
             type: Number,
             default: 5,
         },
     },
     computed: {
+        // The limited events based on the cardLimit
         limitedEvents() {
             return this.$store.getters["events/getLimitedEvents"](
                 this.cardLimit

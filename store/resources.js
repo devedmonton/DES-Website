@@ -56,6 +56,7 @@ export const getters = {
     getAllResources: (state) => {
         return state.resources;
     },
+    // Used to get a limited number of resources for the home page based on the card limit
     getLimitedResources: (state) => (cardLimit) => {
         const allResources = {};
 

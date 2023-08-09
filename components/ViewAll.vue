@@ -26,6 +26,7 @@
 <script>
 export default {
     props: {
+        // Used to determine whether the link should span 2 columns or not
         cardLimit: {
             type: Number,
             default: 5,
