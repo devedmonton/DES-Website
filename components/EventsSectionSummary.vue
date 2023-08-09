@@ -17,12 +17,12 @@
             <div
                 class="mt-8 rounded-lg bg-gray-200 overflow-hidden shadow divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px"
             >
-                <MeetupCard
+                <ExternalInfoCard
                     v-for="(event, index) in limitedEvents"
                     v-bind="event"
                     :key="index"
                 >
-                </MeetupCard>
+                </ExternalInfoCard>
                 <ViewAll :card-limit="cardLimit" link-to="/all_events"
                     >View All Events</ViewAll
                 >
@@ -32,12 +32,12 @@
 </template>
 
 <script>
-import MeetupCard from "./MeetupCard.vue";
+import ExternalInfoCard from "./ExternalInfoCard.vue";
 import ViewAll from "./ViewAll.vue";
 
 export default {
     components: {
-        MeetupCard,
+        ExternalInfoCard,
         ViewAll,
     },
     props: {
