@@ -48,7 +48,7 @@ export default {
   },
   computed: {
     limitedEvents() {
-      return this.$store.getters["events/getLimitedEvents"](5);
+      return this.$store.getters["events/getLimitedEvents"](this.cardLimit);
     },
   },
 };
