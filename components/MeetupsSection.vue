@@ -91,7 +91,6 @@ export default {
                     name: "Edmonton Women In Tech",
                     logo: require("../assets/logos/yegwit.png"),
                     linkTo: "https://yegwit.com/",
-                    slack: "#meetup-r",
                     description: ` YEGWIT aims to build a strong and safe group for women,
                         diverse genders, and allies in tech with the goal of
                         fostering engagement and opportunity, providing
