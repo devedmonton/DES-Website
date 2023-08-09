@@ -14,23 +14,23 @@
             <div
                 class="mt-8 rounded-lg bg-gray-200 overflow-hidden shadow divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px"
             >
-                <MeetupCard
+                <ExternalInfoCard
                     v-for="(event, index) in events"
                     v-bind="event"
                     :key="index"
                 >
-                </MeetupCard>
+                </ExternalInfoCard>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import MeetupCard from "./MeetupCard.vue";
+import ExternalInfoCard from "./ExternalInfoCard.vue";
 
 export default {
     components: {
-        MeetupCard,
+        ExternalInfoCard,
     },
     computed: {
         events() {
