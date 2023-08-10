@@ -78,8 +78,7 @@ export default {
                 yegRug: {
                     name: "Edmonton R User Group",
                     logo: require("../assets/logos/r-logo.svg"),
-                    linkTo:
-                        "https://www.meetup.com/edmonton-r-user-group-yegrug",
+                    linkTo: "https://www.meetup.com/edmonton-r-user-group-yegrug",
                     slack: "#meetup-r",
                     description: `
                     The Edmonton R User Group (YEGRUG) is an R-enthusiast
