@@ -155,6 +155,18 @@ export default {
                         "https://www.linkedin.com/in/salma-ibrahim-a1275817a/",
                     slackAccount: "Salma Ibrahim",
                 },
+                {
+                    id: 8,
+                    name: "Justice Hemming",
+                    title: "Member At Large",
+                    imageLink: require("~/assets/boardPictures/justiceHemming.jpg"),
+                    description:
+                        "Justice Hemming is an emerging Junior Web Developer, completing his Web Design and Development in the Digital Media and IT program at NAIT. He has been active in the community by running events for the Junior Devs group, and looks to continue to help build a community that everyone feels welcome in by getting involved with DES.<br /><br />When it comes to building websites, Justice is more of a jack of all trades focusing on both front and back end development, he loves the aspect of how coding is ever changing with three always being more to learn.<br /><br />When Justice isn’t coding you will still find Justice probably not far from the computer, gaming with friends, or taking on his passion for cooking and baking. His favorite thing to bake is mini cherry cheesecake.",
+                    twitterHandle: "",
+                    linkedInAccount:
+                        "https://www.linkedin.com/in/justice-hemming-ab459559/",
+                    slackAccount: "Justice Hemming",
+                },
             ],
         };
     },
