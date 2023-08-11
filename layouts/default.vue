@@ -2,7 +2,7 @@
     <div class="flex flex-col justify-between min-h-screen">
         <TheMenu />
         <nuxt class="mb-auto pt-24 pb-4" />
-        <TheFooter :is-special-footer="isSpecialFooter" />
+        <TheFooter />
         <Banner
             v-if="showBanner"
             :name="bannerName"
@@ -30,12 +30,6 @@ export default {
             showBanner: false,
             bannerName: "announcement-banner",
         };
-    },
-    computed: {
-        isSpecialFooter() {
-            const specialFooterRoutes = ["/all_events", "/all_resources"];
-            return specialFooterRoutes.includes(this.$route.path);
-        },
     },
     mounted: function () {
         // uncomment to show banner on load

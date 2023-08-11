@@ -5,7 +5,7 @@
         >
             Sponsors
         </h1>
-        <div class="cards-grid">
+        <div class="cards-grid py-2">
             <SponsorCard>
                 <template #image>
                     <a href="https://tailwindcss.com">
