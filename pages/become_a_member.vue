@@ -1,6 +1,10 @@
 <template>
     <div class="max-w-7xl mx-auto spx-6 px-6 lg:px-8 text-lg">
-        <h1 class="text-2xl font-bold py-4">Become a Member</h1>
+        <h1
+            class="py-4 text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10"
+        >
+            Become a Member
+        </h1>
         <div class="text-gray-500">
             <p class="py-2">
                 Thank you for your interest in becoming a DES member! Firstly we
