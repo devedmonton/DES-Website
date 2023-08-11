@@ -5,7 +5,9 @@
                 <input type="hidden" name="form-name" value="contact" />
                 <div>
                     <div>
-                        <h3 class="text-lg leading-6 font-medium text-gray-900">
+                        <h3
+                            class="py-4 text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10"
+                        >
                             Contact Us
                         </h3>
                         <p class="mt-1 text-sm leading-5 text-gray-500">

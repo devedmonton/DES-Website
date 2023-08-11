@@ -1,6 +1,10 @@
 <template>
     <div class="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-2xl font-bold py-4">Sponsors</h1>
+        <h1
+            class="py-4 text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10"
+        >
+            Sponsors
+        </h1>
         <div class="cards-grid">
             <SponsorCard>
                 <template #image>
