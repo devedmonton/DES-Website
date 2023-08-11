@@ -3,12 +3,14 @@
         <TheMenu />
         <nuxt class="mb-auto pt-24 pb-4" />
         <TheFooter :is-special-footer="isSpecialFooter" />
-        <Banner v-if="showBanner"
-                :name="bannerName"
-                message=""
-                short-msg=""
-                link=""
-                button-text="Click Here" />
+        <Banner
+            v-if="showBanner"
+            :name="bannerName"
+            message=""
+            short-msg=""
+            link=""
+            button-text="Click Here"
+        />
     </div>
 </template>
 
