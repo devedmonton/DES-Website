@@ -1,6 +1,6 @@
 <template>
     <div
-        class="relative py-8 bg-white overflow-hidden max-w-7xl mx-auto sm:px-4"
+        class="relative bg-grey-000 mt-8 pb-16 sm:px-6 pt-8 lg:pt-24 px-4 lg:px-8"
     >
         <div class="text-gray-500">
             <EventsSection />
