@@ -72,7 +72,7 @@
                                     </p>
                                     <img
                                         class="w-64 m-auto"
-                                        src="~assets/logos/Slack_RGB.svg"
+                                        src="/img/logos/Slack_RGB.svg"
                                         alt="slack logo"
                                     />
                                     <a

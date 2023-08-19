@@ -1,9 +1,9 @@
 <template>
     <div class="flex flex-col justify-between min-h-screen">
         <TheMenu />
-        <nuxt class="mb-auto pt-24 pb-4" />
+        <NuxtPage class="mb-auto pt-24 pb-4" />
         <TheFooter />
-        <Banner
+        <BannerAnnouncements
             v-if="showBanner"
             :name="bannerName"
             message=""
@@ -17,13 +17,13 @@
 <script>
 import TheFooter from "~/components/TheFooter";
 import TheMenu from "~/components/TheMenu";
-import Banner from "~/components/Banner";
+import BannerAnnouncements from "~/components/BannerAnnouncements";
 
 export default {
     components: {
         TheFooter,
         TheMenu,
-        Banner,
+        BannerAnnouncements,
     },
     data: function () {
         return {

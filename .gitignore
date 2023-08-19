@@ -18,3 +18,7 @@ sw.*
 
 # Netlify
 .netlify
+
+# Static project Nuxt 3
+
+.output
