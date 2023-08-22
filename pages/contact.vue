@@ -108,4 +108,30 @@
 export default {};
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.form-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    border-color: #d2d6dc;
+    border-radius: 0.375rem;
+    border-width: 1px;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0.5rem 0.75rem;
+}
+
+.form-textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    border-color: #d2d6dc;
+    border-radius: 0.375rem;
+    border-width: 1px;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0.5rem 0.75rem;
+}
+</style>
