@@ -10,7 +10,8 @@
     "start": "nuxt start",
     "generate": "npm run test && nuxt generate",
     "test": "npm run lint-check",
-    "lint-check": "eslint '{components,layouts,pages}/**/*.vue'"
+    "lint-check": "eslint '{components,layouts,pages}/**/*.vue'",
+    "lint-fix": "eslint '{components,layouts,pages}/**/*.vue' --fix"
   },
   "dependencies": {
     "@babel/eslint-parser": "^7.22.10",

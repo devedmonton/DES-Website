@@ -2,8 +2,8 @@ import { defineStore } from "pinia";
 
 export const useEventsStore = defineStore("events", {
     state: () => ({
-        events: {
-            gdg: {
+        events: [
+            {
                 name: "Google Developer Groups",
                 logo: "/img/logos/gdgLogo.png",
                 linkTo: "https://gdg.community.dev/gdg-cloud-edmonton",
@@ -18,7 +18,7 @@ export const useEventsStore = defineStore("events", {
               Computing, Firebase, Flutter, Android, Machine Learning,
               and Earth Engine.`,
             },
-            clc: {
+            {
                 name: "Canada Learning Code",
                 logo: "/img/logos/clc.png",
                 linkTo: "https://www.canadalearningcode.ca/chapters/edmonton",
@@ -27,7 +27,7 @@ export const useEventsStore = defineStore("events", {
               workshops for kids, teens, girls, and adults. They are
               always looking for mentors, teachers and coordinators.`,
             },
-            rac: {
+            {
                 name: "Rainforest Alberta",
                 logo: "/img/logos/rac.png",
                 linkTo: "https://www.rainforestab.ca/edmonton.html",
@@ -40,7 +40,7 @@ export const useEventsStore = defineStore("events", {
               different types of events: Weekly, Monthly & Annual
               Summits.`,
             },
-            elug: {
+            {
                 name: "Edmonton Linux Users Group",
                 logo: "/img/logos/elug.png",
                 linkTo: "https://elug.ca",
@@ -51,7 +51,7 @@ export const useEventsStore = defineStore("events", {
               free and open source software. Everybody is welcome.
               They virtually meet every 4th Thursday of the month.`,
             },
-            ohm: {
+            {
                 name: "Open Hardware Meetup",
                 logo: "/img/logos/ohm.png",
                 linkTo: "https://www.meetup.com/edmontonunlimited/events/pcwlzsyfchbpb/",
@@ -64,7 +64,7 @@ export const useEventsStore = defineStore("events", {
               magnetic computer displays for the virtually impaired.
               They meet every 2nd Thursday of every month.`,
             },
-            bcyeg: {
+            {
                 name: "Beta City YEG",
                 logo: "/img/logos/bcyeg.png",
                 linkTo: "https://betacity.ca/",
@@ -74,20 +74,20 @@ export const useEventsStore = defineStore("events", {
               that improve their community through connection and
               technology. They meet every 4th Wednesday of the month.`,
             },
-            yegTechWednesdays: {
+            {
                 name: "Edmonton Tech Wednesdays",
                 logo: "/img/logos/yeg-tech-wed.png",
                 linkTo: "https://www.eventbrite.ca/e/edmonton-tech-wednesdays-tickets-662082084337",
                 description: `Edmonton Tech Wednesdays is a weekly event where anyone who loves tech
       can mingle and connect with others in the tech sector in a casual and relaxed environment. Whether you're a developer, marketer, entrepreneur, or simply have an interest in tech, this is the perfect opportunity to network with like-minded individuals, exchange ideas, and build meaningful relationships.`,
             },
-        },
+        ],
     }),
 
     getters: {
         getAllEvents: (state) => state.events,
 
         getLimitedEvents: (state) => (cardLimit) =>
-            Object.values(state.events).slice(0, cardLimit),
+            state.events.slice(0, cardLimit),
     },
 });
