@@ -36,7 +36,9 @@ export default {
 <style>
 .button {
     letter-spacing: -0.03em;
-    font-variation-settings: "wght" 700, "slnt" calc(-1 * 0);
+    font-variation-settings:
+        "wght" 700,
+        "slnt" calc(-1 * 0);
     border-bottom-color: theme("colors.brand-primary");
 }
 

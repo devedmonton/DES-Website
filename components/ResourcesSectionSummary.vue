@@ -18,12 +18,12 @@
                 class="mt-8 rounded-lg bg-gray-200 overflow-hidden shadow divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px"
             >
                 <ExternalInfoCard
-                    v-for="(resource, index) in limitedResources"
+                    v-for="(resource, index) in store.getLimitedResources(
+                        cardLimit,
+                    )"
+                    v-bind="resource"
                     :key="index"
-                    :logo="resource.logo"
-                    :link-to="resource.linkTo"
                 >
-                    <span>{{ resource.description }}</span>
                     <p v-if="resource.meetingTime" class="mt-2">
                         {{ resource.meetingTime }}
                     </p>
@@ -39,6 +39,7 @@
 <script>
 import ExternalInfoCard from "./ExternalInfoCard.vue";
 import ViewAll from "./ViewAll.vue";
+import { useResourcesStore } from "../store/resources";
 
 export default {
     components: { ExternalInfoCard, ViewAll },
@@ -49,13 +50,9 @@ export default {
             default: 5,
         },
     },
-    computed: {
-        // The limited resources based on the cardLimit
-        limitedResources() {
-            return this.$store.getters["resources/getLimitedResources"](
-                this.cardLimit
-            );
-        },
+    setup() {
+        const store = useResourcesStore();
+        return { store };
     },
 };
 </script>

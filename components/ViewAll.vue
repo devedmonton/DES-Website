@@ -42,7 +42,9 @@ export default {
 <style scoped>
 .link__all {
     font-size: 1.25rem;
-    transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition:
+        background 0.2s ease-in-out,
+        color 0.2s ease-in-out;
     position: relative;
 }
 
