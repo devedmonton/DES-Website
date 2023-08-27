@@ -70,7 +70,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/SteveReiter"><img src="https://avatars.githubusercontent.com/u/8506743?v=4?s=100" width="100px;" alt="SteveReiter"/><br /><sub><b>SteveReiter</b></sub></a><br /><a href="https://github.com/devedmonton/DES-Website/commits?author=SteveReiter" title="Documentation">📖</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/olimpiuus"><img src="https://avatars.githubusercontent.com/u/101880197?v=4?s=100" width="100px;" alt="Yuriy Kolegin"/><br /><sub><b>Yuriy Kolegin</b></sub></a><br /><a href="https://github.com/devedmonton/DES-Website/commits?author=olimpiuus" title="Code">💻</a> <a href="#ideas-olimpiuus" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/olimpiuus"><img src="https://avatars.githubusercontent.com/u/101880197?v=4?s=100" width="100px;" alt="Yuriy Kolegin"/><br /><sub><b>Yuriy Kolegin</b></sub></a><br /><a href="https://github.com/devedmonton/DES-Website/commits?author=olimpiuus" title="Code">💻</a> <a href="#ideas-olimpiuus" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/devedmonton/DES-Website/issues?q=author%3Aolimpiuus" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
