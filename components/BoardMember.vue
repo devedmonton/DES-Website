@@ -73,10 +73,14 @@
                             >
                         </div>
                     </div>
+                    <!-- Using v-html here since description contains link tags -->
+                    <!-- Should be OK to disable lint warning as the html strings are stored in the repository -->
+                    <!-- eslint-disable vue/no-v-html -->
                     <div
                         class="text-medium text-gray-500"
                         v-html="description"
-                    />
+                    ></div>
+                    <!--  eslint-enable vue/no-v-html -->
                 </div>
             </div>
         </div>
