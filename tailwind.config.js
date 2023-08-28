@@ -58,6 +58,5 @@ export default {
         },
     },
     variants: {},
-    // Remove aspect-ratio once it's got more browser support and is rolled into Tailwind proper
     plugins: [],
 };
