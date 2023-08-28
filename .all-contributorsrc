@@ -147,7 +147,8 @@
       "profile": "https://github.com/olimpiuus",
       "contributions": [
         "code",
-        "ideas"
+        "ideas",
+        "bug"
       ]
     },
     {
@@ -155,6 +156,15 @@
       "name": "Praveen Shinde",
       "avatar_url": "https://avatars.githubusercontent.com/u/107350270?v=4",
       "profile": "https://praveenshinde.pages.dev/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "innith",
+      "name": "Nithin Reddy Bathula",
+      "avatar_url": "https://avatars.githubusercontent.com/u/97607439?v=4",
+      "profile": "https://github.com/innith",
       "contributions": [
         "code"
       ]
