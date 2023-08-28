@@ -25,10 +25,9 @@
                                 First name
                             </label>
                             <div class="mt-1 rounded-md shadow-sm">
-                                <input
+                                <InputStyled
                                     id="first_name"
                                     name="first_name"
-                                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                                 />
                             </div>
                         </div>
@@ -41,11 +40,7 @@
                                 Last name
                             </label>
                             <div class="mt-1 rounded-md shadow-sm">
-                                <input
-                                    id="last_name"
-                                    name="last_name"
-                                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                                />
+                                <InputStyled id="last_name" name="last_name" />
                             </div>
                         </div>
 
@@ -57,11 +52,10 @@
                                 Email address
                             </label>
                             <div class="mt-1 rounded-md shadow-sm">
-                                <input
+                                <InputStyled
                                     id="email"
                                     name="email"
                                     type="email"
-                                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                                 />
                             </div>
                         </div>
@@ -74,12 +68,11 @@
                                 Message
                             </label>
                             <div class="mt-1 rounded-md shadow-sm">
-                                <textarea
+                                <TextAreaStyled
                                     id="message"
                                     name="message"
                                     rows="6"
-                                    class="form-textarea block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                                ></textarea>
+                                />
                             </div>
                             <p class="mt-2 text-sm text-gray-500">
                                 We love getting messages.
@@ -105,33 +98,12 @@
 </template>
 
 <script>
-export default {};
+import InputStyled from "@/components/InputStyled.vue";
+import TextAreaStyled from "@/components/TextAreaStyled.vue";
+
+export default {
+    components: { InputStyled, TextAreaStyled },
+};
 </script>
 
-<style scoped>
-.form-input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: #fff;
-    border-color: #d2d6dc;
-    border-radius: 0.375rem;
-    border-width: 1px;
-    font-size: 1rem;
-    line-height: 1.5;
-    padding: 0.5rem 0.75rem;
-}
-
-.form-textarea {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: #fff;
-    border-color: #d2d6dc;
-    border-radius: 0.375rem;
-    border-width: 1px;
-    font-size: 1rem;
-    line-height: 1.5;
-    padding: 0.5rem 0.75rem;
-}
-</style>
+<style scoped></style>

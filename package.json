@@ -19,16 +19,17 @@
     "@nuxtjs/pwa": "^3.3.5",
     "@pinia/nuxt": "^0.4.11",
     "nuxt": "^3.6.5",
-    "open-color": "^1.9.1"
+    "open-color": "^1.9.1",
+    "tailwind-merge": "^1.14.0"
   },
   "devDependencies": {
+    "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@vue/test-utils": "^2.4.1",
     "eslint": "^8.47.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-vue": "^9.17.0",
-    "prettier": "^3.0.1",
-    "@nuxtjs/google-analytics": "^2.4.0"
+    "prettier": "^3.0.1"
   }
 }
