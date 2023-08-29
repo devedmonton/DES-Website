@@ -18,7 +18,10 @@ module.exports = {
     },
     globals: {
         $nuxt: true,
+        defineNuxtConfig: true,
+        defineNuxtPlugin: true,
     },
+    ignorePatterns: ["node_modules/", ".nuxt/", "dist/", "static"],
     parserOptions: {
         parser: "@babel/eslint-parser",
         requireConfigFile: false,

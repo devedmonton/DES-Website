@@ -22,8 +22,8 @@ export default defineNuxtConfig({
         ],
     },
     /*
-    ** Customize the progress-bar color
-    */
+     ** Customize the progress-bar color
+     */
     loading: { color: "#fff" },
 
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
@@ -40,5 +40,5 @@ export default defineNuxtConfig({
 
     googleAnalytics: {
         id: "UA-180778341-1",
-    }
+    },
 });
