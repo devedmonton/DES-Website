@@ -1,6 +1,6 @@
 <template>
     <div
-        class="relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500"
+        class="relative p-6 bg-white group focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500"
     >
         <component
             :is="linkTo ? 'a' : 'div'"
@@ -15,22 +15,26 @@
             </div>
         </component>
         <div class="flex items-center mb-2">
-            <img
-                v-if="logo"
-                :class="`h-12 mr-6 rounded-md inline-flex p-1 object-contain ${
-                    logoBg ? logoBg : null
-                }`"
-                :src="logo"
-                :alt="`${name}-logo`"
-            />
-            <h3 class="text-xl font-medium pr-8">{{ name }}</h3>
+            <div
+                class="flex items-center lg:items-center lg:flex-row sm:flex-col sm:items-start"
+            >
+                <img
+                    v-if="logo"
+                    :class="`h-12 mr-6 rounded-md inline-flex p-1 object-contain ${
+                        logoBg ? logoBg : null
+                    }`"
+                    :src="logo"
+                    :alt="`${name}-logo`"
+                />
+                <h3 class="pr-8 text-xl font-medium">{{ name }}</h3>
+            </div>
             <span
                 v-if="linkTo"
-                class="pointer-events-none absolute top-4 right-4 text-gray-300 group-hover:text-brand-primary"
+                class="absolute text-gray-300 pointer-events-none top-4 right-4 group-hover:text-brand-primary"
                 aria-hidden="true"
             >
                 <svg
-                    class="h-6 w-6"
+                    class="w-6 h-6"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
                     viewBox="0 0 24 24"
