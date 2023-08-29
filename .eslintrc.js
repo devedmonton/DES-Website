@@ -5,10 +5,10 @@ module.exports = {
         browser: true,
     },
     extends: [
-        "plugin:vue/recommended",
         "eslint:recommended",
+        "plugin:vue/recommended",
         "plugin:vue/vue3-recommended",
-        "plugin:prettier/recommended",
+        "prettier",
     ],
     rules: {
         "vue/component-name-in-template-casing": ["error", "PascalCase"],

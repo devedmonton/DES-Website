@@ -10,6 +10,8 @@
     "start": "nuxt start",
     "generate": "npm run test && nuxt generate",
     "test": "npm run lint-check",
+    "format": "prettier --write .",
+    "format-check": "prettier --check .",
     "lint-check": "eslint '{components,layouts,pages}/**/*.vue'",
     "lint-fix": "eslint '{components,layouts,pages}/**/*.vue' --fix"
   },
@@ -30,6 +32,6 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-vue": "^9.17.0",
-    "prettier": "^3.0.1"
+    "prettier": "3.0.3"
   }
 }
