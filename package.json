@@ -6,10 +6,10 @@
   "private": true,
   "scripts": {
     "dev": "nuxt dev",
-    "build": "npm run test && nuxt build",
+    "build": "npm run lint-check && vitest run && nuxt build",
     "start": "nuxt start",
-    "generate": "npm run test && nuxt generate",
-    "test": "npm run lint-check",
+    "generate": "npm run lint-check && vitest run && nuxt generate",
+    "test": "vitest",
     "lint-check": "eslint '{components,layouts,pages}/**/*.vue'",
     "lint-fix": "eslint '{components,layouts,pages}/**/*.vue' --fix"
   },
@@ -25,11 +25,14 @@
   "devDependencies": {
     "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/tailwindcss": "^6.8.0",
+    "@vitejs/plugin-vue": "^4.3.4",
     "@vue/test-utils": "^2.4.1",
     "eslint": "^8.47.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-vue": "^9.17.0",
-    "prettier": "^3.0.1"
+    "happy-dom": "^10.11.2",
+    "prettier": "^3.0.1",
+    "vitest": "^0.34.3"
   }
 }
