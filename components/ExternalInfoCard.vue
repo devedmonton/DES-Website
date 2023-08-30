@@ -15,9 +15,7 @@
             </div>
         </component>
         <div class="flex items-center mb-2 pr-6">
-            <div
-                class="flex flex-wrap gap-x-6 gap-y-2 items-center lg:items-center"
-            >
+            <div class="flex flex-wrap gap-x-6 gap-y-2 items-center">
                 <img
                     v-if="logo"
                     :class="`h-12 rounded-md inline-flex p-1 object-contain ${
