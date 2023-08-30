@@ -15,10 +15,10 @@
             </div>
         </component>
         <div class="flex items-center mb-2 pr-6">
-            <div class="flex flex-wrap gap-x-6 gap-y-2 items-center">
+            <div class="flex flex-wrap gap-x-4 gap-y-2 items-center">
                 <img
                     v-if="logo"
-                    :class="`h-12 rounded-md inline-flex p-1 object-contain ${
+                    :class="`h-10 inline-flex object-contain ${
                         logoBg ? logoBg : null
                     }`"
                     :src="logo"
