@@ -14,19 +14,17 @@
                 <div class="absolute inset-0" aria-hidden="true"></div>
             </div>
         </component>
-        <div class="flex items-center mb-2">
-            <div
-                class="flex items-center lg:items-center lg:flex-row sm:flex-col sm:items-start"
-            >
+        <div class="flex items-center mb-2 pr-6">
+            <div class="flex flex-wrap gap-x-6 gap-y-2 items-center">
                 <img
                     v-if="logo"
-                    :class="`h-12 mr-6 rounded-md inline-flex p-1 object-contain ${
+                    :class="`h-12 rounded-md inline-flex p-1 object-contain ${
                         logoBg ? logoBg : null
                     }`"
                     :src="logo"
                     :alt="`${name}-logo`"
                 />
-                <h3 class="pr-8 text-xl font-medium">{{ name }}</h3>
+                <h3 class="text-xl font-medium">{{ name }}</h3>
             </div>
             <span
                 v-if="linkTo"
