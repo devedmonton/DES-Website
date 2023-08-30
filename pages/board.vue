@@ -79,18 +79,6 @@ export default {
             members: [
                 {
                     id: 1,
-                    name: "Ian Phillipchuck",
-                    title: "President",
-                    imageLink: "/img/boardPictures/ianPhillipchuck.jpg",
-                    description:
-                        "Ian Phillipchuk is a Manager, Software Engineering at <a class='text-indigo-600' href='https://getjobber.com/'>Jobber</a>. Professionally, he does Software Consulting, Mobile and Web Development, as well as managing software teams and client projects.<br /><br /> At Dev Edmonton, he wants to grow the society to do more to help all the Devs in Edmonton, from providing resources for Meetups and Conferences for veteran developers, and helping new devs find their way and their first opportunities.<br /><br />Personally, he's probably getting fragged in Destiny 2 PVP for the bajillionth time, or building Lego with his kids.",
-                    twitterHandle: "Protagorist",
-                    linkedInAccount:
-                        "https://www.linkedin.com/in/ian-phillipchuk-69a7009a/",
-                    slackAccount: "Ian Phillipchuck",
-                },
-                {
-                    id: 2,
                     name: "Lauren Briske",
                     title: "Treasurer",
                     imageLink: "/img/boardPictures/laurenBriske.jpg",
@@ -102,7 +90,7 @@ export default {
                     slackAccount: "laurenbriske",
                 },
                 {
-                    id: 3,
+                    id: 2,
                     name: "Mandy Meindersma",
                     title: "Secretary",
                     imageLink: "/img/boardPictures/mandyMeindersma.jpg",
@@ -114,7 +102,7 @@ export default {
                     slackAccount: "Mandy Meindersma",
                 },
                 {
-                    id: 4,
+                    id: 3,
                     name: "Abram Hindle",
                     title: "Member At Large",
                     imageLink: "/img/boardPictures/abramHindle.jpg",
@@ -125,7 +113,7 @@ export default {
                     slackAccount: "Abram",
                 },
                 {
-                    id: 5,
+                    id: 4,
                     name: "Jeremy Nickurak",
                     title: "Member At Large",
                     imageLink: "/img/boardPictures/jeremyNickurak.jpeg",
@@ -136,7 +124,7 @@ export default {
                     slackAccount: "Jeremy",
                 },
                 {
-                    id: 6,
+                    id: 5,
                     name: "Celia Nicholls",
                     title: "Member At Large",
                     imageLink: "/img/boardPictures/celiaNicholls.jpg",
@@ -148,7 +136,7 @@ export default {
                     slackAccount: "Celia Nicholls",
                 },
                 {
-                    id: 7,
+                    id: 6,
                     name: "Salma Ibrahim",
                     title: "Member At Large",
                     imageLink: "/img/boardPictures/salmaIbrahim.jpg",
@@ -160,7 +148,7 @@ export default {
                     slackAccount: "Salma Ibrahim",
                 },
                 {
-                    id: 8,
+                    id: 7,
                     name: "Justice Hemming",
                     title: "Member At Large",
                     imageLink: "/img/boardPictures/justiceHemming.jpg",
