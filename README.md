@@ -33,8 +33,17 @@ $ npm run start
 # generate static project
 $ npm run generate
 
+# run tests
+$ npm test # run all tests and watch for changes
+$ npm run test-run # a single run of all the tests
+
 # run the linter
-$ npm run lint-check
+$ npm run lint-check # check for linting errors
+$ npm run lint-fix # fix linting errors
+
+# run the formatter
+$ npm run format-check # check for formatting errors
+$ npm run format # fix formatting errors
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
