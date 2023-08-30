@@ -10,8 +10,10 @@
     "start": "nuxt start",
     "generate": "npm run lint-check && vitest run && nuxt generate",
     "test": "vitest",
-    "lint-check": "eslint '{components,layouts,pages}/**/*.vue'",
-    "lint-fix": "eslint '{components,layouts,pages}/**/*.vue' --fix"
+    "format": "prettier --write .",
+    "format-check": "prettier --check .",
+    "lint-check": "eslint . --ext .js,.vue",
+    "lint-fix": "eslint . --ext .js,.vue --fix"
   },
   "dependencies": {
     "@babel/eslint-parser": "^7.22.10",
@@ -29,10 +31,9 @@
     "@vue/test-utils": "^2.4.1",
     "eslint": "^8.47.0",
     "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-vue": "^9.17.0",
     "happy-dom": "^10.11.2",
-    "prettier": "^3.0.1",
+    "prettier": "3.0.3",
     "vitest": "^0.34.3"
   }
 }
