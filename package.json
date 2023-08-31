@@ -14,7 +14,8 @@
     "format": "prettier --write .",
     "format-check": "prettier --check .",
     "lint-check": "eslint . --ext .js,.vue",
-    "lint-fix": "eslint . --ext .js,.vue --fix"
+    "lint-fix": "eslint . --ext .js,.vue --fix",
+    "pr-checks": "npm run lint-check && npm run format-check && npm run test-run"
   },
   "dependencies": {
     "@babel/eslint-parser": "^7.22.10",
