@@ -5,6 +5,7 @@
             :key="link.name"
             :href="link.href"
             :title="link.info"
+            target="_blank"
         >
             <span class="sr-only">{{ link.name }}</span>
             <img
@@ -32,25 +33,25 @@ export default {
                     name: "Twitter",
                     info: "Dev Edmonton Society Twitter",
                     href: "https://twitter.com/devedmonton",
-                    logo: require("../assets/logos/social/twitter.svg"),
+                    logo: "/img/logos/social/twitter.svg",
                 },
                 {
                     name: "GitHub",
                     info: "Dev Edmonton Society GitHub",
                     href: "https://github.com/devedmonton",
-                    logo: require("../assets/logos/social/github.svg"),
+                    logo: "/img/logos/social/github.svg",
                 },
                 {
                     name: "LinkedIn Group",
                     info: "Dev Edmonton Society LinkedIn Group",
                     href: "https://www.linkedin.com/groups/14007480/",
-                    logo: require("../assets/logos/social/linkedin.svg"),
+                    logo: "/img/logos/social/linkedin.svg",
                 },
                 {
                     name: "YouTube",
                     info: "Dev Edmonton Society YouTube",
                     href: "https://youtube.com/devedmonton",
-                    logo: require("../assets/logos/social/youtube.svg"),
+                    logo: "/img/logos/social/youtube.svg",
                 },
             ],
         };

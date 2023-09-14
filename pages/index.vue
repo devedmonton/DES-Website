@@ -36,7 +36,7 @@
                             </p>
                             <img
                                 class="w-64 m-auto"
-                                src="~assets/logos/Slack_RGB.svg"
+                                src="/img/logos/Slack_RGB.svg"
                                 alt="slack logo"
                             />
                         </a>
@@ -74,7 +74,7 @@
                         <div class="flex-shrink-0">
                             <img
                                 class="h-48 w-full object-cover"
-                                src="~/assets/homepage/meetups-and-events.jpg"
+                                src="/img/homepage/meetups-and-events.jpg"
                                 alt="Group of people posing together at a past event"
                             />
                         </div>
@@ -115,7 +115,7 @@
                         <div class="flex-shrink-0">
                             <img
                                 class="h-48 w-full object-cover"
-                                src="~/assets/homepage/connect-community.jpg"
+                                src="/img/homepage/connect-community.jpg"
                                 alt="5 hands coming together"
                             />
                         </div>
@@ -154,7 +154,7 @@
                         <div class="flex-shrink-0">
                             <img
                                 class="h-48 w-full object-cover"
-                                src="~/assets/homepage/provide-a-platform.jpg"
+                                src="/img/homepage/provide-a-platform.jpg"
                                 alt="lego bricks in a pile"
                             />
                         </div>
@@ -214,7 +214,7 @@
                         <div class="flex-shrink-0">
                             <img
                                 class="h-48 w-full object-cover"
-                                src="~/assets/homepage/get-involved-dev.jpg"
+                                src="/img/homepage/get-involved-dev.jpg"
                                 alt="Developer sitting at a computer looking at code"
                             />
                         </div>
@@ -282,7 +282,7 @@
                         <div class="flex-shrink-0">
                             <img
                                 class="h-48 w-full object-cover"
-                                src="~/assets/homepage/get-involved-meetups.png"
+                                src="/img/homepage/get-involved-meetups.png"
                                 alt="A group of developers sitting at a table hard at work"
                             />
                         </div>
@@ -392,26 +392,26 @@
             </div>
         </div>
         <MeetupsSection />
-        <EventsSection />
-        <ResourcesSection />
+        <EventsSectionSummary :card-limit="5" />
+        <ResourcesSectionSummary :card-limit="5" />
         <SignupForm />
     </div>
 </template>
 
 <script>
 import SignupForm from "../components/SignupForm";
-import VButton from "~/components/VButton.vue";
-import EventsSection from "../components/EventsSection.vue";
+import VButton from "../components/VButton.vue";
+import EventsSectionSummary from "../components/EventsSectionSummary.vue";
 import MeetupsSection from "../components/MeetupsSection.vue";
-import ResourcesSection from "../components/ResourcesSection.vue";
+import ResourcesSectionSummary from "../components/ResourcesSectionSummary.vue";
 
 export default {
     components: {
-        EventsSection,
-        MeetupsSection,
         VButton,
         SignupForm,
-        ResourcesSection,
+        MeetupsSection,
+        EventsSectionSummary,
+        ResourcesSectionSummary,
     },
 };
 </script>
@@ -419,8 +419,15 @@ export default {
 <style>
 .title {
     display: block;
-    font-family: "Quicksand", "Source Sans Pro", -apple-system,
-        BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    font-family:
+        "Quicksand",
+        "Source Sans Pro",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
         sans-serif;
     font-size: 100px;
     font-weight: 300;

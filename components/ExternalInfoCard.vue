@@ -1,6 +1,6 @@
 <template>
     <div
-        class="relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500"
+        class="relative p-6 bg-white group focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500"
     >
         <component
             :is="linkTo ? 'a' : 'div'"
@@ -14,23 +14,25 @@
                 <div class="absolute inset-0" aria-hidden="true"></div>
             </div>
         </component>
-        <div class="flex items-center mb-2">
-            <img
-                v-if="logo"
-                :class="`h-12 mr-6 rounded-md inline-flex p-1 object-contain ${
-                    logoBg ? logoBg : null
-                }`"
-                :src="logo"
-                :alt="`${name}-logo`"
-            />
-            <h3 class="text-xl font-medium pr-8">{{ name }}</h3>
+        <div class="flex items-center mb-2 pr-6">
+            <div class="flex flex-wrap gap-x-4 gap-y-2 items-center">
+                <img
+                    v-if="logo"
+                    :class="`h-10 inline-flex object-contain ${
+                        logoBg ? logoBg : null
+                    }`"
+                    :src="logo"
+                    :alt="`${name}-logo`"
+                />
+                <h3 class="text-xl font-medium">{{ name }}</h3>
+            </div>
             <span
                 v-if="linkTo"
-                class="pointer-events-none absolute top-4 right-4 text-gray-300 group-hover:text-brand-primary"
+                class="absolute text-gray-300 pointer-events-none top-4 right-4 group-hover:text-brand-primary"
                 aria-hidden="true"
             >
                 <svg
-                    class="h-6 w-6"
+                    class="w-6 h-6"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
                     viewBox="0 0 24 24"
@@ -56,29 +58,6 @@
                 </svg>
                 <span>{{ slack }} on slack</span>
             </div>
-            <div
-                v-if="durationInfo"
-                class="flex items-center text-grey-700 mt-1"
-            >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                    class="w-5 h-5 mr-2"
-                    fill="#868e96"
-                    aria-hidden="true"
-                    preserveAspectRatio="xMidYMid meet"
-                >
-                    <g fill="#231F20">
-                        <path
-                            d="M256 11C120.9 11 11 120.9 11 256s109.9 245 245 245 245-109.9 245-245S391.1 11 256 11zm203.2 255.4h20.7c-2.5 54-24.1 103-58.3 140.5L407 392.3c-4.1-4.1-10.7-4.1-14.7 0-4.1 4.1-4.1 10.7 0 14.7l14.6 14.6c-37.5 34.2-86.5 55.8-140.5 58.3v-20.7c0-5.8-4.7-10.4-10.4-10.4-5.8 0-10.4 4.7-10.4 10.4v20.7c-54-2.5-103-24.1-140.5-58.3l14.6-14.6c4.1-4.1 4.1-10.7 0-14.7-4.1-4.1-10.7-4.1-14.7 0l-14.6 14.6c-34.1-37.5-55.8-86.5-58.3-140.4h20.7c5.8 0 10.4-4.7 10.4-10.4s-4.7-10.4-10.4-10.4H32.1c2.5-54 24.1-103 58.3-140.5l14.6 14.6c4.1 4.1 10.7 4.1 14.7 0 4.1-4.1 4.1-10.7 0-14.7l-14.6-14.6c37.5-34.2 86.5-55.8 140.5-58.3v20.7c0 5.8 4.7 10.4 10.4 10.4 5.8 0 10.4-4.7 10.4-10.4V32.1c54 2.5 103 24.1 140.5 58.3L392.3 105c-4.1 4.1-4.1 10.7 0 14.7 4.1 4.1 10.7 4.1 14.7 0l14.6-14.6c34.2 37.5 55.8 86.5 58.3 140.5h-20.7c-5.8 0-10.4 4.7-10.4 10.4s4.6 10.4 10.4 10.4z"
-                        />
-                        <path
-                            d="M364.3 245.6h-97.9V101.2c0-5.8-4.7-10.4-10.4-10.4-5.8 0-10.4 4.7-10.4 10.4v144.4h-42.7c-5.8 0-10.4 4.7-10.4 10.4s4.7 10.4 10.4 10.4h42.7v39.4c0 5.8 4.7 10.4 10.4 10.4 5.8 0 10.4-4.7 10.4-10.4v-39.4h97.9c5.8 0 10.4-4.7 10.4-10.4s-4.7-10.4-10.4-10.4z"
-                        />
-                    </g>
-                </svg>
-                {{ durationInfo }}
-            </div>
             <p class="mt-2 text-sm text-gray-500">
                 {{ description }}
                 <slot v-if="!description"></slot>
@@ -95,10 +74,7 @@ export default {
         name: { type: String, default: "" },
         linkTo: { type: String, required: true },
         slack: { type: String, default: null },
-        durationInfo: { type: String, default: "" },
         description: { type: String, default: "" },
     },
 };
 </script>
-
-<style></style>

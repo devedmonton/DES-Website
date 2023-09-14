@@ -18,7 +18,7 @@
                 <div class="flex-shrink-0">
                     <img
                         class="h-48 w-full object-cover"
-                        src="~/assets/404/magnifying-glass-800.jpg"
+                        src="/img/404/magnifying-glass-800.jpg"
                         alt="A magnifying glass and pencil on top of a sketchbook filled with notes"
                     />
                 </div>
@@ -46,7 +46,7 @@
                 <div class="flex-shrink-0">
                     <img
                         class="h-48 w-full object-cover"
-                        src="~/assets/404/css-800.jpg"
+                        src="/img/404/css-800.jpg"
                         alt="Macbook laptop open to a text editor with CSS code"
                     />
                 </div>
@@ -86,7 +86,7 @@
                 <div class="flex-shrink-0">
                     <img
                         class="h-48 w-full object-cover"
-                        src="~/assets/404/google-800.jpg"
+                        src="/img/404/google-800.jpg"
                         alt="Laptop open to the Google Search home page"
                     />
                 </div>
@@ -120,7 +120,7 @@
 </template>
 
 <script>
-import VButton from "~/components/VButton.vue";
+import VButton from "../components/VButton.vue";
 
 export default {
     components: {

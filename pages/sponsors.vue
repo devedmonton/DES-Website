@@ -1,13 +1,17 @@
 <template>
     <div class="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-2xl font-bold py-4">Sponsors</h1>
-        <div class="cards-grid">
+        <h1
+            class="py-4 text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10"
+        >
+            Sponsors
+        </h1>
+        <div class="cards-grid py-2">
             <SponsorCard>
                 <template #image>
                     <a href="https://tailwindcss.com">
                         <img
                             class="h-10"
-                            src="~/assets/logos/tailwindcss-logo.svg"
+                            src="/img/logos/tailwindcss-logo.svg"
                             alt="tailwindcss"
                         />
                     </a>
@@ -33,7 +37,7 @@
                     <a href="https://1password.com/">
                         <img
                             class="h-10"
-                            src="~/assets/logos/1P-wordmark.svg"
+                            src="/img/logos/1P-wordmark.svg"
                             alt="1 Password"
                         />
                     </a>
@@ -54,7 +58,7 @@
                     <a href="https://shortcut.com/">
                         <img
                             class="h-10"
-                            src="~/assets/logos/Shortcut_full_color.svg"
+                            src="/img/logos/Shortcut_full_color.svg"
                             alt="shortcut"
                         />
                     </a>

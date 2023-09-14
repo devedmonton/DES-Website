@@ -1,7 +1,10 @@
-export default {
-    /*
-     ** Headers of the page
-     */
+// https://v3.nuxtjs.org/api/configuration/nuxt.config
+export default defineNuxtConfig({
+    modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt"],
+    buildModules: ["@nuxtjs/pwa"],
+    alias: {
+        pinia: "/node_modules/@pinia/nuxt/node_modules/pinia/dist/pinia.mjs",
+    },
     head: {
         title: "Dev Edmonton Society",
         meta: [
@@ -13,53 +16,29 @@ export default {
             {
                 hid: "description",
                 name: "description",
-                content: "Fostering a stronger software development community in Edmonton. We are made up of people who believe that an impactful, diverse, and collaborative developer community enriches us all. We realize this vision by sharing knowledge and ideas, understanding the community and its needs, promoting events and initiatives, and supporting technology meetups and organizations.",
+                content:
+                    "Fostering a stronger software development community in Edmonton. We are made up of people who believe that an impactful, diverse, and collaborative developer community enriches us all. We realize this vision by sharing knowledge and ideas, understanding the community and its needs, promoting events and initiatives, and supporting technology meetups and organizations.",
             },
         ],
-        link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     },
-    /*
-     ** Auto Import Components
-     */
-    components: true,
     /*
      ** Customize the progress-bar color
      */
     loading: { color: "#fff" },
-    /*
-     ** Global CSS
-     */
-    css: [],
-    /*
-     ** Plugins to load before mounting the App
-     */
-    plugins: [],
-    /*
-     ** Nuxt.js build-modules
-     */
-    buildModules: [
-        // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-        "@nuxtjs/tailwindcss",
-        // Doc: https://google-analytics.nuxtjs.org
-        "@nuxtjs/google-analytics",
-        // Doc https://pwa.nuxtjs.org/
-        "@nuxtjs/pwa",
-    ],
-    /*
-     ** PWA Settings
-     */
+
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+
+    options: {
+        vite: {},
+    },
+
+    components: true,
+
     pwa: {
         meta: { mobileApp: false },
     },
-    /*
-     ** Build configuration
-     */
-    build: {
-        /*
-         ** You can extend webpack config here
-         */
-    },
+
     googleAnalytics: {
         id: "UA-180778341-1",
     },
-};
+});

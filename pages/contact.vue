@@ -5,7 +5,9 @@
                 <input type="hidden" name="form-name" value="contact" />
                 <div>
                     <div>
-                        <h3 class="text-lg leading-6 font-medium text-gray-900">
+                        <h3
+                            class="py-4 text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10"
+                        >
                             Contact Us
                         </h3>
                         <p class="mt-1 text-sm leading-5 text-gray-500">
@@ -23,10 +25,9 @@
                                 First name
                             </label>
                             <div class="mt-1 rounded-md shadow-sm">
-                                <input
+                                <InputStyled
                                     id="first_name"
                                     name="first_name"
-                                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                                 />
                             </div>
                         </div>
@@ -39,11 +40,7 @@
                                 Last name
                             </label>
                             <div class="mt-1 rounded-md shadow-sm">
-                                <input
-                                    id="last_name"
-                                    name="last_name"
-                                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                                />
+                                <InputStyled id="last_name" name="last_name" />
                             </div>
                         </div>
 
@@ -55,11 +52,10 @@
                                 Email address
                             </label>
                             <div class="mt-1 rounded-md shadow-sm">
-                                <input
+                                <InputStyled
                                     id="email"
                                     name="email"
                                     type="email"
-                                    class="form-input block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                                 />
                             </div>
                         </div>
@@ -72,12 +68,11 @@
                                 Message
                             </label>
                             <div class="mt-1 rounded-md shadow-sm">
-                                <textarea
+                                <TextAreaStyled
                                     id="message"
                                     name="message"
                                     rows="6"
-                                    class="form-textarea block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                                ></textarea>
+                                />
                             </div>
                             <p class="mt-2 text-sm text-gray-500">
                                 We love getting messages.
@@ -103,7 +98,12 @@
 </template>
 
 <script>
-export default {};
+import InputStyled from "@/components/InputStyled.vue";
+import TextAreaStyled from "@/components/TextAreaStyled.vue";
+
+export default {
+    components: { InputStyled, TextAreaStyled },
+};
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped></style>

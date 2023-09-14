@@ -12,9 +12,14 @@ dist
 
 # Service worker
 sw.*
+static/sw.js
 
 # DS Store
 *DS_Store
 
 # Netlify
 .netlify
+
+# Static project Nuxt 3
+
+.output
