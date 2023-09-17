@@ -5,6 +5,89 @@
         >
             Sponsors
         </h1>
+        <h3
+            class="py-2 text-3xl leading-9 tracking-tight font-bold text-gray-900 sm:text-2xl sm:leading-10"
+        >
+            Terabyte Tier
+        </h3>
+        <div class="cards-grid py-2">
+            <SponsorCard>
+                <template #image>
+                    <a href="https://getjobber.com">
+                        <img
+                            class="h-10"
+                            src="/img/logos/jobber-logo.png"
+                            alt="jobber"
+                        />
+                    </a>
+                </template>
+                <p class="text-lg text-grey-600">
+                    Thanks to
+                    <a
+                        class="text-brand-primary underline"
+                        href="https://getjobber.com"
+                        >Jobber</a
+                    >
+                    for allowing us to have a space for meet ups for the next
+                    year! Couldn't happen without them!
+                </p>
+            </SponsorCard>
+
+            <SponsorCard>
+                <template #image>
+                    <a href="https://www.dotdashmeredith.com">
+                        <img
+                            class="h-10"
+                            src="/img/logos/dotdash-meredith-logo.svg"
+                            alt="dotdashmeredith"
+                        />
+                    </a>
+                </template>
+                <p class="text-lg text-grey-600">
+                    Thanks to
+                    <a
+                        class="text-brand-primary underline"
+                        href="https://www.dotdashmeredith.com"
+                        >Dotdash Meredith</a
+                    >
+                    for providing us with pizza and swag to help our meetups off
+                    the ground.
+                </p>
+            </SponsorCard>
+        </div>
+        <h3
+            class="py-2 text-3xl leading-9 tracking-tight font-bold text-gray-900 sm:text-2xl sm:leading-10"
+        >
+            Byte Tier
+        </h3>
+        <div class="cards-grid py-2">
+            <SponsorCard>
+                <template #image>
+                    <a href="https://place.com">
+                        <img
+                            class="h-10"
+                            src="/img/logos/place-logo.png"
+                            alt="place"
+                        />
+                    </a>
+                </template>
+                <p class="text-lg text-grey-600">
+                    Thanks to
+                    <a
+                        class="text-brand-primary underline"
+                        href="https://place.com"
+                        >Place</a
+                    >
+                    for providing us with funding for events and providing job
+                    shadow opportunities to our hackathon winners.
+                </p>
+            </SponsorCard>
+        </div>
+        <h3
+            class="py-2 text-3xl leading-9 tracking-tight font-bold text-gray-900 sm:text-2xl sm:leading-10"
+        >
+            Bit Tier
+        </h3>
         <div class="cards-grid py-2">
             <SponsorCard>
                 <template #image>
