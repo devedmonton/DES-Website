@@ -4,15 +4,15 @@ import TheMenu from "../../components/TheMenu.vue";
 
 test("TheMenu.vue", async () => {
     const wrapper = mount(TheMenu);
-    expect(wrapper.html()).toBeTruthy()
+    expect(wrapper.html()).toBeTruthy();
 });
 
-test("closeMenu", async()=>{
+test("closeMenu", async () => {
     const wrapper = mount(TheMenu);
     const spy = vi.spyOn(wrapper.vm, "closeMenu");
-    spy.mockImplementationOnce(()=>{})
-    wrapper.vm.closeMenu()
-    expect(spy).toHaveBeenCalled()
+    spy.mockImplementationOnce(() => {});
+    wrapper.vm.closeMenu();
+    expect(spy).toHaveBeenCalled();
 });
 
 test("closeMenuHandler", async () => {
