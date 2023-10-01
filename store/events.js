@@ -5,7 +5,7 @@ export const useEventsStore = defineStore("events", {
         events: [
             {
                 name: "Google Developer Groups",
-                logo: "/img/logos/events/gdgLogo.png",
+                logoImg: "/events/gdgLogo.png",
                 linkTo: "https://gdg.community.dev/gdg-cloud-edmonton",
                 description: ` Google Developer Groups has an Edmonton chapter! Their
               vision is to foster an engaging and inclusive
@@ -20,7 +20,7 @@ export const useEventsStore = defineStore("events", {
             },
             {
                 name: "Canada Learning Code",
-                logo: "/img/logos/events/clc.png",
+                logoImg: "/events/clc.png",
                 linkTo: "https://www.canadalearningcode.ca/chapters/edmonton",
                 description: ` Canada Learning Code designs, delivers, and partners on
               technology education for people in Canada. They have
@@ -29,7 +29,7 @@ export const useEventsStore = defineStore("events", {
             },
             {
                 name: "Rainforest Alberta",
-                logo: "/img/logos/events/rac.png",
+                logoImg: "/events/rac.png",
                 linkTo: "https://www.rainforestab.ca/edmonton.html",
                 description: ` Rainforest Alberta is an informal organization working
               towards improving Alberta's innovation ecosystem. They
@@ -42,7 +42,7 @@ export const useEventsStore = defineStore("events", {
             },
             {
                 name: "Edmonton Linux Users Group",
-                logo: "/img/logos/events/elug.png",
+                logoImg: "/events/elug.png",
                 linkTo: "https://elug.ca",
                 description: ` The Edmonton Linux User Group (ELUG) is a group of
               enthusiasts interested in sharing knowledge of Linux and
@@ -53,7 +53,7 @@ export const useEventsStore = defineStore("events", {
             },
             {
                 name: "Open Hardware Meetup",
-                logo: "/img/logos/events/ohm.png",
+                logoImg: "/events/ohm.png",
                 linkTo: "https://www.meetup.com/edmontonunlimited/events/pcwlzsyfchbpb/",
                 description: ` The Open Hardware Meetup is a place where all kinds of
               people can share an interest in the intersection of
@@ -66,7 +66,7 @@ export const useEventsStore = defineStore("events", {
             },
             {
                 name: "Beta City YEG",
-                logo: "/img/logos/events/bcyeg.png",
+                logoImg: "/events/bcyeg.png",
                 linkTo: "https://betacity.ca/",
                 description: ` Beta City YEG is Edmonton’s citizen driven meetup with a
               mandate to connect citizens with opportunities to learn
@@ -76,7 +76,7 @@ export const useEventsStore = defineStore("events", {
             },
             {
                 name: "Edmonton Tech Wednesdays",
-                logo: "/img/logos/events/yeg-tech-wed.png",
+                logoImg: "/events/yeg-tech-wed.png",
                 linkTo: "https://www.eventbrite.ca/e/edmonton-tech-wednesdays-tickets-662082084337",
                 description: `Edmonton Tech Wednesdays is a weekly event where anyone who loves tech
       can mingle and connect with others in the tech sector in a casual and relaxed environment. Whether you're a developer, marketer, entrepreneur, or simply have an interest in tech, this is the perfect opportunity to network with like-minded individuals, exchange ideas, and build meaningful relationships.`,

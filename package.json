@@ -20,6 +20,7 @@
   "dependencies": {
     "@babel/eslint-parser": "^7.22.10",
     "@mailchimp/mailchimp_marketing": "^3.0.28",
+    "@nuxt/image": "^1.0.0-rc.2",
     "@nuxtjs/pwa": "^3.3.5",
     "@pinia/nuxt": "^0.4.11",
     "nuxt": "^3.6.5",
