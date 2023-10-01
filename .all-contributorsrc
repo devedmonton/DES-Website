@@ -178,6 +178,15 @@
         "code",
         "design"
       ]
+    },
+    {
+      "login": "NitinRamnani",
+      "name": "Nitin Ramnani",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16476523?v=4",
+      "profile": "https://github.com/NitinRamnani",
+      "contributions": [
+        "test"
+      ]
     }
   ],
   "contributorsPerLine": 7,
