@@ -72,10 +72,10 @@
                         class="flex flex-col rounded-lg shadow-lg overflow-hidden"
                     >
                         <div class="flex-shrink-0">
-                            <img
+                            <NuxtImg
                                 class="h-48 w-full object-cover"
-                                src="/img/homepage/meetups-and-events.jpg"
                                 alt="Group of people posing together at a past event"
+                                src="/homepage/meetups-and-events.jpg"
                             />
                         </div>
                         <div
@@ -113,10 +113,10 @@
                         class="flex flex-col rounded-lg shadow-lg overflow-hidden"
                     >
                         <div class="flex-shrink-0">
-                            <img
+                            <NuxtImg
                                 class="h-48 w-full object-cover"
-                                src="/img/homepage/connect-community.jpg"
-                                alt="5 hands coming together"
+                                alt="Group of people posing together at a past event"
+                                src="/homepage/connect-community.jpg"
                             />
                         </div>
                         <div
@@ -152,10 +152,10 @@
                         class="flex flex-col rounded-lg shadow-lg overflow-hidden"
                     >
                         <div class="flex-shrink-0">
-                            <img
+                            <NuxtImg
                                 class="h-48 w-full object-cover"
-                                src="/img/homepage/provide-a-platform.jpg"
-                                alt="lego bricks in a pile"
+                                alt="Group of people posing together at a past event"
+                                src="/homepage/provide-a-platform.jpg"
                             />
                         </div>
                         <div
@@ -212,9 +212,9 @@
                         class="flex flex-col rounded-lg shadow-lg overflow-hidden"
                     >
                         <div class="flex-shrink-0">
-                            <img
+                            <NuxtImg
                                 class="h-48 w-full object-cover"
-                                src="/img/homepage/get-involved-dev.jpg"
+                                src="/homepage/get-involved-dev.jpg"
                                 alt="Developer sitting at a computer looking at code"
                             />
                         </div>
@@ -280,10 +280,10 @@
                         class="flex flex-col rounded-lg shadow-lg overflow-hidden"
                     >
                         <div class="flex-shrink-0">
-                            <img
+                            <NuxtImg
                                 class="h-48 w-full object-cover"
-                                src="/img/homepage/get-involved-meetups.png"
-                                alt="A group of developers sitting at a table hard at work"
+                                src="/homepage/get-involved-meetups.png"
+                                alt="Developer sitting at a computer looking at code"
                             />
                         </div>
                         <div

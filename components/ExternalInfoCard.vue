@@ -17,11 +17,15 @@
         <div class="flex items-center mb-2 pr-6">
             <div class="flex flex-wrap gap-x-4 gap-y-2 items-center">
                 <img
-                    v-if="logo"
-                    :class="`h-10 inline-flex object-contain ${
-                        logoBg ? logoBg : null
-                    }`"
-                    :src="logo"
+                    v-if="logoSvg"
+                    :class="`h-10 inline-flex object-contain`"
+                    :src="logoSvg"
+                    :alt="`${name}-logo`"
+                />
+                <NuxtImg
+                    v-else-if="logoImg"
+                    class="h-10 inline-flex object-contain"
+                    :src="logoImg"
                     :alt="`${name}-logo`"
                 />
                 <h3 class="text-xl font-medium">{{ name }}</h3>
@@ -69,8 +73,8 @@
 <script>
 export default {
     props: {
-        logo: { type: String, default: "" },
-        logoBg: { type: String, default: "" },
+        logoSvg: { type: String, default: "" },
+        logoImg: { type: String, default: "" },
         name: { type: String, default: "" },
         linkTo: { type: String, required: true },
         slack: { type: String, default: null },
