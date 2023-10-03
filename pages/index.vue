@@ -1,4 +1,7 @@
 <template>
+    <Head>
+      <Title>Dev Edmonton Society</Title>
+    </Head>
     <div>
         <div
             class="relative py-8 bg-white overflow-hidden max-w-7xl mx-auto sm:px-4"

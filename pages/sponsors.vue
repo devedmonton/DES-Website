@@ -1,4 +1,7 @@
 <template>
+    <Head>
+      <Title>Dev Edmonton Society - Sponsors</Title>
+    </Head>
     <div class="w-full h-full bg-grey-000">
         <div class="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
             <h1
