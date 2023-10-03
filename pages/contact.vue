@@ -1,8 +1,8 @@
 <template>
-    <Head>
-      <Title>Dev Edmonton Society - Contact us</Title>
-    </Head>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Head>
+            <Title>Dev Edmonton Society - Contact us</Title>
+        </Head>
         <div class="max-w-3xl mx-auto py-4 sm:py-8">
             <form name="contact" method="POST" netlify>
                 <input type="hidden" name="form-name" value="contact" />

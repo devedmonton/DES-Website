@@ -1,10 +1,10 @@
 <template>
-    <Head>
-      <Title>Dev Edmonton Society - 404</Title>
-    </Head>
     <div
         class="max-w-7xl mx-auto sm:px-6 lg:px-8 flex flex-1 flex-col justify-center"
     >
+        <Head>
+            <Title>Dev Edmonton Society - 404</Title>
+        </Head>
         <h1 class="text-5xl text-brand-primary font-bold">
             Uh Oh! There is a 404!
         </h1>
