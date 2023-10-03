@@ -11,6 +11,13 @@ export const useResourcesStore = defineStore("resources", {
                     "ISAIC provides local high-performance computing infrastructure that is affordable, tailorable and scalable. Their data sandboxes allow you to experiment and collaborate easily and securely. Through their partnerships and supports, ISAIC connects you to applied knowledge and resources to help move your AI journey forward. ISAIC is enabling experimentation, scale, and powering the A.I.mbition of Western Canadian businesses pursuing AI/ML adoption.",
             },
             {
+                name: "Work Nicer",
+                logoSvg: "/WorkNicer_9PHPpKJxJ.png",
+                linkTo: "https://www.worknicer.com",
+                description:
+                    "Work Nicer is Alberta's number one coworking community, with six outposts across Edmonton and Calgary. Designed for teams of one to 100, Work Nicer is home to 1,400 members and 400+ businesses. From graphic designers and marketing teams, to accountants and lawyers, Work Nicer is where awesome people come together to be productive in an inspiring and supportive environment. After all, no one succeeds alone!",
+            },
+            {
                 name: "Training at Amii",
                 logoSvg: "/img/logos/resources/amii.svg",
                 linkTo: "https://www.amii.ca",
