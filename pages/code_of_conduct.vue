@@ -20,7 +20,7 @@
                     protected under
                     <a
                         class="text-brand-primary"
-                        href="http://www.qp.alberta.ca/documents/Acts/A25P5.pdf"
+                        href="https://www.qp.alberta.ca/documents/Acts/A25P5.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
@@ -333,7 +333,7 @@
                         This Code of Conduct is distributed under a
                         <a
                             class="text-brand-primary"
-                            href="http://creativecommons.org/licenses/by-sa/3.0/"
+                            href="https://creativecommons.org/licenses/by-sa/3.0/"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -353,22 +353,11 @@
                         and the
                         <a
                             class="text-brand-primary"
-                            href="http://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Policy"
+                            href="https://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Policy"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             Geek Feminism Anti-Harassment Policy</a
-                        >
-                    </p>
-                    <p class="py-2">
-                        Retrieved on November 22, 2016 from
-                        <a
-                            class="text-brand-primary"
-                            href="http://citizencodeofconduct.org/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            http://citizencodeofconduct.org/</a
                         >
                     </p>
                 </div>

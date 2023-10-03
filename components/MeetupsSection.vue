@@ -41,7 +41,7 @@ export default {
                 ruby: {
                     name: "YEGrb",
                     logoImg: "/meetups/ruby-240px.png",
-                    linkTo: "https://yegrb.com/",
+                    linkTo: "https://exchangejs.com/",
                     slack: "#meetup-ruby",
                     description: ` YEGRB is Edmonton’s local Ruby Meetup. Ruby is a
                         dynamic, open source programming language with a focus
@@ -60,7 +60,7 @@ export default {
                 edmontonPy: {
                     name: "Edmonton.Py",
                     logoSvg: "/img/logos/meetups/python-logo.svg",
-                    linkTo: "http://edmontonpy.com/",
+                    linkTo: "https://exchangejs.com/",
                     slack: "#meetup-edmontonpy",
                     description: `We hope to foster a strong, supportive, and proficient
                         Python community in the Edmonton area. Everyone
@@ -71,7 +71,7 @@ export default {
                 dotNet: {
                     name: "Edmonton .NET User Group",
                     logoImg: "/meetups/dotNet_logo.png",
-                    linkTo: "http://edmug.net/",
+                    linkTo: "https://www.meetup.com/Edmonton-NET-User-Group/",
                     slack: "#meetup-dotnet-edmug",
                     description: ` The Edmonton .NET User Group is a non-profit
                         organization which empowers the IT Professionals and
