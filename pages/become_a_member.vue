@@ -1,8 +1,8 @@
 <template>
     <div class="max-w-7xl mx-auto spx-6 px-6 lg:px-8 text-lg">
-        <Head>
-            <Title>Dev Edmonton Society - Become a Member</Title>
-        </Head>
+        <head>
+            <title>Dev Edmonton Society - Become a Member</title>
+        </head>
         <h1
             class="py-4 text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10"
         >
