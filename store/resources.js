@@ -12,7 +12,7 @@ export const useResourcesStore = defineStore("resources", {
             },
             {
                 name: "Work Nicer",
-                logoSvg: "/WorkNicer.png",
+                logoImg: "/WorkNicer.png",
                 linkTo: "https://www.worknicer.com",
                 description:
                     "Work Nicer is Alberta's number one coworking community, with six outposts across Edmonton and Calgary. Designed for teams of one to 100, Work Nicer is home to 1,400 members and 400+ businesses. From graphic designers and marketing teams, to accountants and lawyers, Work Nicer is where awesome people come together to be productive in an inspiring and supportive environment. After all, no one succeeds alone!",
