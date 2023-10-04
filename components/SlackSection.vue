@@ -76,7 +76,7 @@
                                         alt="slack logo"
                                     />
                                     <a
-                                        href="https://join.slack.com/t/devedmonton/shared_invite/zt-24bp1mmie-XdXUv1eYy4MRElmXZaoqdg"
+                                        href="https://join.slack.com/t/devedmonton/shared_invite/zt-24bp1mmie-XdXUv1eYy4MRElmXZaoqdg" 
                                     >
                                         <VButton appearance="inverted"
                                             >Join the Slack</VButton

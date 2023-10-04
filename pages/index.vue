@@ -269,7 +269,7 @@
                                 </div>
                                 <div class="flex justify-center mt-4">
                                     <a
-                                        href="https://join.slack.com/t/devedmonton/shared_invite/zt-24bp1mmie-XdXUv1eYy4MRElmXZaoqdg"
+                                        href="https://join.slack.com/t/devedmonton/shared_invite/zt-24bp1mmie-XdXUv1eYy4MRElmXZaoqdg" 
                                     >
                                         <VButton appearance="inverted"
                                             >Join Slack</VButton
