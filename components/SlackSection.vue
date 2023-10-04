@@ -164,6 +164,12 @@
 </template>
 <script>
 import { slackJoinLink } from "../store/joinslacklink"
+
+export default {
+    setup() {
+        return { slackJoinLink };
+    },
+};
 </script>
 <style>
 #slack-message-block {

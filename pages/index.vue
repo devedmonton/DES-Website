@@ -417,6 +417,9 @@ export default {
         EventsSectionSummary,
         ResourcesSectionSummary,
     },
+    setup() {
+        return { slackJoinLink };
+    },
 };
 </script>
 
