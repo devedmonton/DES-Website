@@ -242,7 +242,7 @@
                                     >
                                         <a
                                             class="text-brand-primary"
-                                            href="https://join.slack.com/t/devedmonton/shared_invite/zt-24bp1mmie-XdXUv1eYy4MRElmXZaoqdg"
+                                            :href="slackJoinLink"
                                             >Get started by joining our Slack</a
                                         >
                                         and make sure to say hello in our
@@ -269,7 +269,7 @@
                                 </div>
                                 <div class="flex justify-center mt-4">
                                     <a
-                                        href="https://join.slack.com/t/devedmonton/shared_invite/zt-24bp1mmie-XdXUv1eYy4MRElmXZaoqdg"
+                                        :href="slackJoinLink"
                                     >
                                         <VButton appearance="inverted"
                                             >Join Slack</VButton
@@ -407,6 +407,7 @@ import VButton from "../components/VButton.vue";
 import EventsSectionSummary from "../components/EventsSectionSummary.vue";
 import MeetupsSection from "../components/MeetupsSection.vue";
 import ResourcesSectionSummary from "../components/ResourcesSectionSummary.vue";
+import { slackJoinLink } from "../store/joinslacklink"
 
 export default {
     components: {

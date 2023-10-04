@@ -65,7 +65,7 @@
                                 >
                                     <p class="text-xl text-brand-primary">
                                         <a
-                                            href="https://join.slack.com/t/devedmonton/shared_invite/zt-24bp1mmie-XdXUv1eYy4MRElmXZaoqdg"
+                                        :href="slackJoinLink"
                                         >
                                             Join our community on Slack
                                         </a>
@@ -76,7 +76,7 @@
                                         alt="slack logo"
                                     />
                                     <a
-                                        href="https://join.slack.com/t/devedmonton/shared_invite/zt-24bp1mmie-XdXUv1eYy4MRElmXZaoqdg"
+                                    :href="slackJoinLink"
                                     >
                                         <VButton appearance="inverted"
                                             >Join the Slack</VButton
@@ -162,7 +162,9 @@
         </div>
     </div>
 </template>
-
+<script>
+import { slackJoinLink } from "../store/joinslacklink"
+</script>
 <style>
 #slack-message-block {
     border-left: 5px solid;
