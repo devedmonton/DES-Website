@@ -29,7 +29,7 @@ export const useResourcesStore = defineStore("resources", {
                 logoImg: "/Startup-Edmonton-Logo-300x116.png",
                 linkTo: "https://www.startupedmonton.com/programs",
                 description:
-                    "FYI Startup Edmonton has become Edmonton Unlimited and has a new space! See card the next card.",
+                    "FYI Startup Edmonton has become Edmonton Unlimited and has a new space! See the next card.",
             },
             {
                 name: "Edmonton Unlimited",
