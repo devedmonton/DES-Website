@@ -2,6 +2,9 @@
     <div
         class="max-w-7xl mx-auto sm:px-6 lg:px-8 flex flex-1 flex-col justify-center"
     >
+        <head>
+            <title>Dev Edmonton Society - 404</title>
+        </head>
         <h1 class="text-5xl text-brand-primary font-bold">
             Uh Oh! There is a 404!
         </h1>
@@ -16,10 +19,11 @@
         >
             <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
                 <div class="flex-shrink-0">
-                    <img
+                    <NuxtImg
                         class="h-48 w-full object-cover"
-                        src="/img/404/magnifying-glass-800.jpg"
+                        src="/404/magnifying-glass-800.jpg"
                         alt="A magnifying glass and pencil on top of a sketchbook filled with notes"
+                        width="400"
                     />
                 </div>
 
@@ -44,10 +48,11 @@
 
             <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
                 <div class="flex-shrink-0">
-                    <img
+                    <NuxtImg
                         class="h-48 w-full object-cover"
-                        src="/img/404/css-800.jpg"
+                        src="/404/css-800.jpg"
                         alt="Macbook laptop open to a text editor with CSS code"
+                        width="400"
                     />
                 </div>
 
@@ -84,10 +89,11 @@
 
             <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
                 <div class="flex-shrink-0">
-                    <img
+                    <NuxtImg
                         class="h-48 w-full object-cover"
-                        src="/img/404/google-800.jpg"
+                        src="/404/google-800.jpg"
                         alt="Laptop open to the Google Search home page"
+                        width="400"
                     />
                 </div>
 

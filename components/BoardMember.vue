@@ -2,10 +2,11 @@
     <li class="py-4 md:py-0">
         <div class="md:grid md:grid-cols-3 lg:gap-8 sm:pb-2">
             <div class="md:col-span-3 lg:col-span-1">
-                <img
+                <NuxtImg
                     class="w-full max-w-sm object-cover object-top shadow-lg rounded-lg md:h-80 lg:h-60"
                     :src="`${imageLink}`"
                     alt="Photo of board member smiling"
+                    width="400"
                 />
             </div>
 
@@ -37,7 +38,7 @@
                         <div v-if="twitterHandle" class="flex pb-1">
                             <span class="sr-only">Twitter</span>
                             <!-- using v-bind directive shorthand to construct twitter link -->
-                            <a :href="'http://twitter.com/' + twitterHandle">
+                            <a :href="'https://twitter.com/' + twitterHandle">
                                 <svg
                                     class="inline w-5 h-5"
                                     fill="#c0c0c0"
