@@ -2,6 +2,10 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <head>
             <title>Dev Edmonton Society - Contact us</title>
+            <meta
+                name="description"
+                content="A form for people to contact us if they have any questions or thoughts to share."
+            />
         </head>
         <div class="max-w-3xl mx-auto py-4 sm:py-8">
             <form name="contact" method="POST" netlify>

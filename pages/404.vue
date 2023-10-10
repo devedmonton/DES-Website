@@ -4,6 +4,10 @@
     >
         <head>
             <title>Dev Edmonton Society - 404</title>
+            <meta
+                name="description"
+                content="Our 404 page when the user goes to a wrong page."
+            />
         </head>
         <h1 class="text-5xl text-brand-primary font-bold">
             Uh Oh! There is a 404!
