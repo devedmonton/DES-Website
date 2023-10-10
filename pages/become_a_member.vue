@@ -2,6 +2,10 @@
     <div class="max-w-7xl mx-auto spx-6 px-6 lg:px-8 text-lg">
         <head>
             <title>Dev Edmonton Society - Become a Member</title>
+            <meta
+                name="description"
+                content="Information about how to become a member of the Dev Edmonton Society and the benefits it gives you."
+            />
         </head>
         <h1
             class="py-4 text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10"

@@ -2,6 +2,10 @@
     <div class="w-full h-full bg-grey-000">
         <head>
             <title>Dev Edmonton Society - Sponsors</title>
+            <meta
+                name="description"
+                content="The wonderful companies that help us to continue our meetups, events and initiatives."
+            />
         </head>
         <div class="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
             <h1
