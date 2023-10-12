@@ -99,10 +99,10 @@ export default {
                 {
                     id: 2,
                     name: "Mandy Meindersma",
-                    title: "Secretary",
+                    title: "Vice President + Secretary",
                     imageLink: "BoardPictures/mandyMeindersma.jpg",
                     description:
-                        "Mandy Meindersma is a Backend Developer. She loves web development, teaching kidlets about computing science and hardware (making robots, light up costumes and IoT type of things).<br /><br /> She has loved getting more involved with DES through YEGWIT (Edmonton Women In Tech), CODEVID-19 (COVID-19 Hackathon) and now being able to help with organization and memberships!<br /><br /> Outside of tech she absolutely loves acro yoga, her cat Goose, and writing letters.",
+                        "Mandy Meindersma is a Senior Backend Developer at <a class='text-indigo-600' href='https://www.dotdashmeredith.com/'>Dotdash Meredith</a>. She loves web development, teaching kidlets about computing science and hardware (making robots, light up costumes and IoT type of things).<br /><br /> She has loved getting more involved with DES through YEGWIT (Edmonton Women In Tech), CODEVID-19 (COVID-19 Hackathon) and now being able to help with organization and memberships!<br /><br /> Outside of tech she absolutely loves acro yoga, her cat Goose, and writing letters.",
                     twitterHandle: "",
                     linkedInAccount:
                         "https://www.linkedin.com/in/mandy-meindersma/",
@@ -125,7 +125,7 @@ export default {
                     title: "Member At Large",
                     imageLink: "BoardPictures/jeremyNickurak.jpeg",
                     description:
-                        "Jeremy Nickurak is a resiliency lead for <a class='text-indigo-600' href='https://www.dotdashmeredith.com/'>Dotdash Meredith</a> in SRE/digital-operations, focused on making the process of stuff going bad go better.<br /><br /> Jeremy loves staying connected virtually and in person with the growing Edmonton development and technology space, meeting new folks, and telling stories of years of technology going well and poorly.<br /><br />Jeremy is passionate about git, python, and outside of tech, loves playing the ukulele.",
+                        "Jeremy Nickurak is a Senior Project Manager and Site Reliability Expert for <a class='text-indigo-600' href='https://www.dotdashmeredith.com/'>Dotdash Meredith</a> focused on making the process of stuff going bad go better.<br /><br /> Jeremy loves staying connected virtually and in person with the growing Edmonton development and technology space, meeting new folks, and telling stories of years of technology going well and poorly.<br /><br />Jeremy is passionate about git, python, and outside of tech, loves playing the ukulele.",
                     twitterHandle: "",
                     linkedInAccount: "https://linkedin.com/in/nickurak",
                     slackAccount: "Jeremy",
