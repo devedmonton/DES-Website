@@ -1,12 +1,12 @@
 <template>
     <div class="w-full h-full bg-grey-000">
-        <head>
-            <title>Dev Edmonton Society - Sponsors</title>
-            <meta
+        <Head>
+            <Title>Dev Edmonton Society - Sponsors</Title>
+            <Meta
                 name="description"
                 content="The wonderful companies that help us to continue our meetups, events and initiatives."
             />
-        </head>
+        </Head>
         <div class="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
             <h1
                 class="py-4 text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10"

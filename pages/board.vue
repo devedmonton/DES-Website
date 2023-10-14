@@ -1,12 +1,12 @@
 <template>
     <div class="max-w-7xl mx-auto spx-6 px-6 lg:px-8 text-lg">
-        <head>
-            <title>Dev Edmonton Society - Board</title>
-            <meta
+        <Head>
+            <Title>Dev Edmonton Society - Board</Title>
+            <Meta
                 name="description"
                 content="Listing all the current members of the Dev Edmonton Society board."
             />
-        </head>
+        </Head>
         <h1
             class="py-4 text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10"
         >
