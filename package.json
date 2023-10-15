@@ -6,9 +6,9 @@
   "private": true,
   "scripts": {
     "dev": "nuxt dev",
-    "build": "npm run lint-check && vitest run && nuxt build",
+    "build": "npm run pr-checks && nuxt build",
     "start": "nuxt start",
-    "generate": "npm run lint-check && vitest run && nuxt generate",
+    "generate": "npm run pr-checks && nuxt generate",
     "test": "vitest",
     "test-run": "vitest run",
     "format": "prettier --write .",
