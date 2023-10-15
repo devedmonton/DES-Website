@@ -1,12 +1,12 @@
 <template>
     <div>
-        <head>
-            <title>Dev Edmonton Society</title>
-            <meta
+        <Head>
+            <Title>Dev Edmonton Society</Title>
+            <Meta
                 name="description"
                 content="Fostering a stronger software development community in Edmonton. We are made up of people who believe that an impactful, diverse, and collaborative developer community enriches us all. We realize this vision by sharing knowledge and ideas, understanding the community and its needs, promoting events and initiatives, and supporting technology meetups and organizations."
             />
-        </head>
+        </Head>
         <div
             class="relative py-8 bg-white overflow-hidden max-w-7xl mx-auto sm:px-4"
         >
@@ -246,7 +246,7 @@
                                     >
                                         <a
                                             class="text-brand-primary"
-                                            :href="slackJoinLink"
+                                            :href="SLACK_JOIN_LINK"
                                             >Get started by joining our Slack</a
                                         >
                                         and make sure to say hello in our
@@ -272,9 +272,7 @@
                                     </p>
                                 </div>
                                 <div class="flex justify-center mt-4">
-                                    <a
-                                        :href="slackJoinLink"
-                                    >
+                                    <a :href="SLACK_JOIN_LINK">
                                         <VButton appearance="inverted"
                                             >Join Slack</VButton
                                         >
@@ -411,7 +409,7 @@ import VButton from "../components/VButton.vue";
 import EventsSectionSummary from "../components/EventsSectionSummary.vue";
 import MeetupsSection from "../components/MeetupsSection.vue";
 import ResourcesSectionSummary from "../components/ResourcesSectionSummary.vue";
-import { slackJoinLink } from "../store/joinslacklink"
+import { SLACK_JOIN_LINK } from "../store/constants";
 
 export default {
     components: {
@@ -422,7 +420,7 @@ export default {
         ResourcesSectionSummary,
     },
     setup() {
-        return { slackJoinLink };
+        return { SLACK_JOIN_LINK };
     },
 };
 </script>
