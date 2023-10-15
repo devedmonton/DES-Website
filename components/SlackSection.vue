@@ -64,9 +64,7 @@
                                     class="slack-content relative p-4 text-center"
                                 >
                                     <p class="text-xl text-brand-primary">
-                                        <a
-                                        :href="slackJoinLink"
-                                        >
+                                        <a :href="SLACK_JOIN_LINK">
                                             Join our community on Slack
                                         </a>
                                     </p>
@@ -75,9 +73,7 @@
                                         src="/img/logos/Slack_RGB.svg"
                                         alt="slack logo"
                                     />
-                                    <a
-                                    :href="slackJoinLink"
-                                    >
+                                    <a :href="SLACK_JOIN_LINK">
                                         <VButton appearance="inverted"
                                             >Join the Slack</VButton
                                         >
@@ -163,11 +159,11 @@
     </div>
 </template>
 <script>
-import { slackJoinLink } from "../store/joinslacklink"
+import { SLACK_JOIN_LINK } from "../store/constants";
 
 export default {
     setup() {
-        return { slackJoinLink };
+        return { SLACK_JOIN_LINK };
     },
 };
 </script>
