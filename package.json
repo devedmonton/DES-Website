@@ -6,9 +6,9 @@
   "private": true,
   "scripts": {
     "dev": "nuxt dev",
-    "build": "npm run lint-check && vitest run && nuxt build",
+    "build": "npm run pr-checks && nuxt build",
     "start": "nuxt start",
-    "generate": "npm run lint-check && vitest run && nuxt generate",
+    "generate": "npm run pr-checks && nuxt generate",
     "test": "vitest",
     "test-run": "vitest run",
     "format": "prettier --write .",
@@ -28,6 +28,7 @@
     "tailwind-merge": "^1.14.0"
   },
   "devDependencies": {
+    "@nuxt/test-utils": "^3.7.4",
     "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@vitejs/plugin-vue": "^4.3.4",
@@ -37,6 +38,6 @@
     "eslint-plugin-vue": "^9.17.0",
     "happy-dom": "^10.11.2",
     "prettier": "3.0.3",
-    "vitest": "^0.34.3"
+    "vitest": "^0.33.0"
   }
 }
