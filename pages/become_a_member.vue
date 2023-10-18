@@ -55,9 +55,7 @@
                 memberships@devedmonton.com. Membership fee's are to be paid
                 annually (we will remind you 😛 ) and if you have any questions
                 about when your membership expires, these can be answered from
-                <NuxtLink to="/bylaws" class="text-brand-primary">
-                    the bylaws.
-                </NuxtLink>
+                <a href="/bylaws" class="text-brand-primary"> the bylaws. </a>
             </p>
         </div>
         <div class="flex justify-center mt-4">

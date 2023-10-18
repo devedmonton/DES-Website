@@ -26,12 +26,12 @@
                 </div>
 
                 <div class="px-5 py-2">
-                    <NuxtLink
-                        to="/bylaws"
+                    <a
+                        href="/bylaws"
                         class="text-base hover:text-black text-grey-900"
                     >
                         Bylaws
-                    </NuxtLink>
+                    </a>
                 </div>
 
                 <div class="px-5 py-2">
