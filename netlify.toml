@@ -1,0 +1,9 @@
+[[redirects]]
+  from = "/2021-survey"
+  to = "https://docs.google.com/forms/d/e/1FAIpQLSeUyguShgoj6TZmqTboJN8qFVjKagrn1WRFvOuqDHqyGHEWeA/viewform?usp=sf_link"
+  status = 301
+
+  [[redirects]]
+  from = "/bylaws"
+  to = "https://docs.google.com/forms/d/e/1FAIpQLSeUyguShgoj6TZmqTboJN8qFVjKagrn1WRFvOuqDHqyGHEWeA/viewform?usp=sf_link"
+  status = 301
