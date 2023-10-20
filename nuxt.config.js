@@ -72,7 +72,7 @@ export default defineNuxtConfig({
             baseURL: "https://ik.imagekit.io/des",
         },
     },
-    
+
     // nitro settings
     nitro: {
         prerender: {
