@@ -15,16 +15,7 @@
 </template>
 
 <script>
-import TheFooter from "~/components/TheFooter";
-import TheMenu from "~/components/TheMenu";
-import BannerAnnouncements from "~/components/BannerAnnouncements";
-
 export default {
-    components: {
-        TheFooter,
-        TheMenu,
-        BannerAnnouncements,
-    },
     data: function () {
         return {
             showBanner: false,
@@ -54,6 +45,7 @@ html {
     font-size: 16px;
     word-spacing: 1px;
     text-size-adjust: 100%;
+    scroll-behavior: smooth;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 }

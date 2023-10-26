@@ -29,13 +29,9 @@
 </template>
 
 <script>
-import ExternalInfoCard from "@/components/ExternalInfoCard.vue";
 import { useResourcesStore } from "@/store/resources";
 
 export default {
-    components: {
-        ExternalInfoCard,
-    },
     setup() {
         const store = useResourcesStore();
         return { store };

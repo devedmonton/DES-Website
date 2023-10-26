@@ -75,12 +75,7 @@
 </template>
 
 <script>
-import BoardMember from "@/components/BoardMember";
-
 export default {
-    components: {
-        BoardMember,
-    },
     data: function () {
         return {
             members: [

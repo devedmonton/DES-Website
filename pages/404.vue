@@ -130,13 +130,7 @@
 </template>
 
 <script>
-import VButton from "@/components/VButton.vue";
-
-export default {
-    components: {
-        VButton,
-    },
-};
+export default {};
 </script>
 
 <style></style>

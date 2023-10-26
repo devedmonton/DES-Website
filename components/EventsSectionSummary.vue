@@ -32,15 +32,9 @@
 </template>
 
 <script>
-import ExternalInfoCard from "@/components/ExternalInfoCard.vue";
-import ViewAll from "@/components/ViewAll.vue";
 import { useEventsStore } from "@/store/events";
 
 export default {
-    components: {
-        ExternalInfoCard,
-        ViewAll,
-    },
     props: {
         // Use this property to limit the number of cards displayed
         cardLimit: {

@@ -171,12 +171,7 @@
 </template>
 
 <script>
-import SponsorCard from "@/components/SponsorCard";
-export default {
-    components: {
-        SponsorCard,
-    },
-};
+export default {};
 </script>
 
 <style>

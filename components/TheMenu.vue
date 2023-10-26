@@ -93,11 +93,7 @@
 </template>
 
 <script>
-import SocialLinks from "@/components/SocialLinks.vue";
 export default {
-    components: {
-        SocialLinks,
-    },
     data: function () {
         return {
             menuLinks: [

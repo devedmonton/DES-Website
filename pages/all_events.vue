@@ -8,17 +8,9 @@
             />
         </Head>
         <div class="text-gray-500">
-            <EventsSection />
+            <SectionEventsSection />
         </div>
     </div>
 </template>
 
-<script>
-import EventsSection from "@/components/EventsSection.vue";
-
-export default {
-    components: {
-        EventsSection,
-    },
-};
-</script>
+<script></script>
