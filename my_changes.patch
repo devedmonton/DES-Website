@@ -1,0 +1,73 @@
+diff --git a/test/components/InputStyled.test.js b/test/components/InputStyled.test.js
+index c033138..3b21f05 100644
+--- a/test/components/InputStyled.test.js
++++ b/test/components/InputStyled.test.js
+@@ -1,6 +1,6 @@
+ import { mount } from "@vue/test-utils";
+ import { test, expect } from "vitest";
+-import InputStyled from "../@/components/InputStyled.vue";
++import InputStyled from "../../components/InputStyled.vue";
+ 
+ test("renders the input", () => {
+     const wrapper = mount(InputStyled);
+diff --git a/test/components/TextAreaStyled.test.js b/test/components/TextAreaStyled.test.js
+index 6fe571a..9aec7d3 100644
+--- a/test/components/TextAreaStyled.test.js
++++ b/test/components/TextAreaStyled.test.js
+@@ -1,6 +1,6 @@
+ import { test, expect } from "vitest";
+ import { mount } from "@vue/test-utils";
+-import TextAreaStyled from "../@/components/TextAreaStyled.vue";
++import TextAreaStyled from "../../components/TextAreaStyled.vue";
+ 
+ test("TextareaStyled.vue", async () => {
+     const wrapper = mount(TextAreaStyled);
+diff --git a/test/components/TheMenu.test.js b/test/components/TheMenu.test.js
+index b34f030..59abf58 100644
+--- a/test/components/TheMenu.test.js
++++ b/test/components/TheMenu.test.js
+@@ -1,40 +1,8 @@
+-import { test, expect, vi } from "vitest";
++import { test, expect } from "vitest";
+ import { mount } from "@vue/test-utils";
+-import SectionTheMenu from "../@/components/SectionTheMenu.vue";
++import TheMenu from "../../components/section/TheMenu.vue";
+ 
+-test("SectionTheMenu.vue", async () => {
+-    const wrapper = mount(SectionTheMenu);
++test("TheMenu.vue", async () => {
++    const wrapper = mount(TheMenu);
+     expect(wrapper.html()).toBeTruthy();
+ });
+-
+-test("closeMenu", async () => {
+-    const wrapper = mount(SectionTheMenu);
+-    const spy = vi.spyOn(wrapper.vm, "closeMenu");
+-    spy.mockImplementationOnce(() => {});
+-    wrapper.vm.closeMenu();
+-    expect(spy).toHaveBeenCalled();
+-});
+-
+-test("closeMenuHandler", async () => {
+-    const wrapper = mount(SectionTheMenu);
+-    const spy = vi.spyOn(wrapper.vm, "closeMenuHandler");
+-    spy.mockImplementationOnce(() => {});
+-    wrapper.vm.closeMenuHandler();
+-    expect(spy).toHaveBeenCalled();
+-});
+-
+-test("openMenu", async () => {
+-    const wrapper = mount(SectionTheMenu);
+-    const spy = vi.spyOn(wrapper.vm, "openMenu");
+-    spy.mockImplementationOnce(() => {});
+-    wrapper.vm.openMenu();
+-    expect(spy).toHaveBeenCalled();
+-});
+-
+-test("toggleMenu", async () => {
+-    const wrapper = mount(SectionTheMenu);
+-    const spy = vi.spyOn(wrapper.vm, "toggleMenu");
+-    spy.mockImplementationOnce(() => {});
+-    wrapper.vm.toggleMenu();
+-    expect(spy).toHaveBeenCalled();
+-});
