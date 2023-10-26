@@ -1,6 +1,6 @@
 import { test, expect, vi } from "vitest";
 import { mount } from "@vue/test-utils";
-import TheMenu from "../../components/TheMenu.vue";
+import TheMenu from "../@/components/TheMenu.vue";
 
 test("TheMenu.vue", async () => {
     const wrapper = mount(TheMenu);

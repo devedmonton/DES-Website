@@ -171,7 +171,7 @@
 </template>
 
 <script>
-import SponsorCard from "../components/SponsorCard";
+import SponsorCard from "@/components/SponsorCard";
 export default {
     components: {
         SponsorCard,

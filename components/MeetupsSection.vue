@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import ExternalInfoCard from "./ExternalInfoCard.vue";
+import ExternalInfoCard from "@/components/ExternalInfoCard.vue";
 
 // imports SVG`s
 

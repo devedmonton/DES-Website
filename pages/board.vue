@@ -75,7 +75,7 @@
 </template>
 
 <script>
-import BoardMember from "../components/BoardMember";
+import BoardMember from "@/components/BoardMember";
 
 export default {
     components: {

@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import ResourcesSection from "../components/ResourcesSection.vue";
+import ResourcesSection from "@/components/ResourcesSection.vue";
 
 export default {
     components: {

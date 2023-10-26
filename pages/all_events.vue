@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import EventsSection from "../components/EventsSection.vue";
+import EventsSection from "@/components/EventsSection.vue";
 
 export default {
     components: {

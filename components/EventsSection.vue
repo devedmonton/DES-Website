@@ -26,8 +26,8 @@
 </template>
 
 <script>
-import ExternalInfoCard from "./ExternalInfoCard.vue";
-import { useEventsStore } from "../store/events";
+import ExternalInfoCard from "@/components/ExternalInfoCard.vue";
+import { useEventsStore } from "@/store/events";
 
 export default {
     components: {
