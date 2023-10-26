@@ -1,8 +1,8 @@
 <template>
     <div class="flex flex-col justify-between min-h-screen">
-        <TheMenu />
+        <SectionTheMenu />
         <NuxtPage class="mb-auto pt-24 pb-4" />
-        <TheFooter />
+        <SectionTheFooter />
         <BannerAnnouncements
             v-if="showBanner"
             :name="bannerName"

@@ -8,7 +8,7 @@
             />
         </Head>
         <div class="text-gray-500">
-            <SectionEventsSection />
+            <SectionEvents />
         </div>
     </div>
 </template>

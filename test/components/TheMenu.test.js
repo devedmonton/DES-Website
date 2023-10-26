@@ -1,14 +1,14 @@
 import { test, expect, vi } from "vitest";
 import { mount } from "@vue/test-utils";
-import TheMenu from "../@/components/TheMenu.vue";
+import SectionTheMenu from "../@/components/SectionTheMenu.vue";
 
-test("TheMenu.vue", async () => {
-    const wrapper = mount(TheMenu);
+test("SectionTheMenu.vue", async () => {
+    const wrapper = mount(SectionTheMenu);
     expect(wrapper.html()).toBeTruthy();
 });
 
 test("closeMenu", async () => {
-    const wrapper = mount(TheMenu);
+    const wrapper = mount(SectionTheMenu);
     const spy = vi.spyOn(wrapper.vm, "closeMenu");
     spy.mockImplementationOnce(() => {});
     wrapper.vm.closeMenu();
@@ -16,7 +16,7 @@ test("closeMenu", async () => {
 });
 
 test("closeMenuHandler", async () => {
-    const wrapper = mount(TheMenu);
+    const wrapper = mount(SectionTheMenu);
     const spy = vi.spyOn(wrapper.vm, "closeMenuHandler");
     spy.mockImplementationOnce(() => {});
     wrapper.vm.closeMenuHandler();
@@ -24,7 +24,7 @@ test("closeMenuHandler", async () => {
 });
 
 test("openMenu", async () => {
-    const wrapper = mount(TheMenu);
+    const wrapper = mount(SectionTheMenu);
     const spy = vi.spyOn(wrapper.vm, "openMenu");
     spy.mockImplementationOnce(() => {});
     wrapper.vm.openMenu();
@@ -32,7 +32,7 @@ test("openMenu", async () => {
 });
 
 test("toggleMenu", async () => {
-    const wrapper = mount(TheMenu);
+    const wrapper = mount(SectionTheMenu);
     const spy = vi.spyOn(wrapper.vm, "toggleMenu");
     spy.mockImplementationOnce(() => {});
     wrapper.vm.toggleMenu();

@@ -195,7 +195,7 @@
             </div>
         </div>
 
-        <SlackSection />
+        <SectionSlackBanner />
 
         <div
             class="relative bg-grey-000 pt-8 -mt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8"
@@ -396,10 +396,10 @@
                 </div>
             </div>
         </div>
-        <MeetupsSection />
-        <EventsSectionSummary :card-limit="5" />
-        <ResourcesSectionSummary :card-limit="5" />
-        <SignupForm />
+        <SectionMeetups />
+        <SectionEventsSummary :card-limit="5" />
+        <SectionResourcesSummary :card-limit="5" />
+        <SectionSignupForm />
     </div>
 </template>
 

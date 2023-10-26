@@ -8,7 +8,7 @@
             />
         </Head>
         <div class="text-gray-500">
-            <ResourcesSection />
+            <SectionResources />
         </div>
     </div>
 </template>

@@ -68,7 +68,7 @@
             </div>
         </div>
         <!-- Menu open: "block", Menu closed: "hidden" -->
-        <div id="mobile-menu" class="hidden block lg:hidden">
+        <div id="mobile-menu" class="hidden lg:hidden">
             <ul class="px-2 pt-2 pb-3">
                 <li
                     v-for="link in menuLinks"
