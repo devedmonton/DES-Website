@@ -23,7 +23,7 @@
                     :key="index"
                 >
                 </ExternalInfoCard>
-                <ViewAll :card-limit="cardLimit" link-to="/all_events"
+                <ViewAll :card-limit="cardLimit" link-to="/events"
                     >View All Events</ViewAll
                 >
             </div>

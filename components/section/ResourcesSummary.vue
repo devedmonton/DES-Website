@@ -28,7 +28,7 @@
                         {{ resource.meetingTime }}
                     </p>
                 </ExternalInfoCard>
-                <ViewAll :card-limit="cardLimit" link-to="/all_resources"
+                <ViewAll :card-limit="cardLimit" link-to="/resources"
                     >View All Resources</ViewAll
                 >
             </div>
