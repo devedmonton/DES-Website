@@ -47,9 +47,9 @@
                                 alt="slack logo"
                             />
                         </a>
-                        <a href="#about-our-slack">
-                            <VButton appearance="inverted"
-                                >About Our Slack</VButton
+                        <a href="#about-our-slack" >
+                            <Button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                                >About Our Slack</Button
                             >
                         </a>
                     </div>
