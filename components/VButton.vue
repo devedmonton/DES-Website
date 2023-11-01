@@ -5,10 +5,10 @@
             class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white border-brand-primary focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150"
             :class="[
                 appearance === 'default'
-                    ? 'text-brand-primary hover:text-white bg-white hover:bg-brand-primary hover:text-white'
+                    ? 'text-brand-primary hover:text-white bg-white hover:bg-brand-primary '
                     : null,
                 appearance === 'inverted'
-                    ? 'text-white hover:text-brand-primary bg-brand-primary hover:bg-white hover: hover:border-1 border-solid border-sky-500'
+                    ? 'text-white hover:text-brand-primary bg-brand-primary hover:bg-white  hover:border border-solid hover:border-brand-primary'
                     : null,
             ]"
         >
