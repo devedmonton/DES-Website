@@ -159,7 +159,7 @@
     </div>
 </template>
 <script>
-import { SLACK_JOIN_LINK } from "../store/constants";
+import { SLACK_JOIN_LINK } from "@/store/constants";
 
 export default {
     setup() {

@@ -105,12 +105,7 @@
 </template>
 
 <script>
-import InputStyled from "@/components/InputStyled.vue";
-import TextAreaStyled from "@/components/TextAreaStyled.vue";
-
-export default {
-    components: { InputStyled, TextAreaStyled },
-};
+export default {};
 </script>
 
 <style scoped></style>

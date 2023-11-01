@@ -149,8 +149,8 @@
 
 <script>
 import VButton from "/components/VButton.vue";
-import TheMenu from "/components/TheMenu.vue";
-import TheFooter from "/components/TheFooter.vue";
+import TheMenu from "@/components/section/TheMenu.vue";
+import TheFooter from "@/components/section/TheFooter.vue";
 
 export default {
     components: {
