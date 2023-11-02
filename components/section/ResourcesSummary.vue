@@ -28,7 +28,7 @@
                         {{ resource.meetingTime }}
                     </p>
                 </ExternalInfoCard>
-                <ViewAll :card-limit="cardLimit" link-to="/all_resources"
+                <ViewAll :card-limit="cardLimit" link-to="/resources"
                     >View All Resources</ViewAll
                 >
             </div>
@@ -37,12 +37,9 @@
 </template>
 
 <script>
-import ExternalInfoCard from "./ExternalInfoCard.vue";
-import ViewAll from "./ViewAll.vue";
-import { useResourcesStore } from "../store/resources";
+import { useResourcesStore } from "@/store/resources";
 
 export default {
-    components: { ExternalInfoCard, ViewAll },
     props: {
         // Use this property to limit the number of cards displayed
         cardLimit: {

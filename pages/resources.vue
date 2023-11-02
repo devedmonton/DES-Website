@@ -8,17 +8,11 @@
             />
         </Head>
         <div class="text-gray-500">
-            <ResourcesSection />
+            <SectionResources />
         </div>
     </div>
 </template>
 
 <script>
-import ResourcesSection from "../components/ResourcesSection.vue";
-
-export default {
-    components: {
-        ResourcesSection,
-    },
-};
+export default {};
 </script>

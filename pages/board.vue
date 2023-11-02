@@ -55,7 +55,7 @@
                         <ul
                             class="md:grid md:grid-cols-2 md:items-start md:gap-x-6 md:gap-y-6 md:space-y-0"
                         >
-                            <BoardMember
+                            <SectionBoardMember
                                 v-for="member in members"
                                 :key="member.id"
                                 :name="member.name"
@@ -75,12 +75,7 @@
 </template>
 
 <script>
-import BoardMember from "../components/BoardMember";
-
 export default {
-    components: {
-        BoardMember,
-    },
     data: function () {
         return {
             members: [

@@ -29,12 +29,9 @@
 </template>
 
 <script>
-import ExternalInfoCard from "./ExternalInfoCard.vue";
-
 // imports SVG`s
 
 export default {
-    components: { ExternalInfoCard },
     data() {
         return {
             meetups: {
