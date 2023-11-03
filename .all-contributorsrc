@@ -215,6 +215,15 @@
         "code",
         "ideas"
       ]
+    },
+    {
+      "login": "LalitDeore",
+      "name": "Lalit Deore",
+      "avatar_url": "https://avatars.githubusercontent.com/u/92305713?v=4",
+      "profile": "https://github.com/LalitDeore",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
