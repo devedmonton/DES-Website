@@ -8,7 +8,7 @@
                     ? 'text-brand-primary hover:text-white bg-white hover:bg-brand-primary '
                     : null,
                 appearance === 'inverted'
-                    ? 'text-white hover:text-brand-primary bg-brand-primary hover:bg-white  hover:border border-solid hover:border-brand-primary'
+                    ? 'text-white hover:text-brand-primary bg-brand-primary hover:bg-white hover:border hover:border-solid hover:border-brand-primary'
                     : null,
             ]"
         >
