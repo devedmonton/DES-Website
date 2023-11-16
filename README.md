@@ -42,6 +42,12 @@ $ npm run lint-fix # fix linting errors
 # run the formatter
 $ npm run format-check # check for formatting errors
 $ npm run format # fix formatting errors
+
+# run pr checks
+$ npm run pr-checks
+
+# fix all linting and formatting errors
+$ npm run fix-linting-formatting-errors
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
