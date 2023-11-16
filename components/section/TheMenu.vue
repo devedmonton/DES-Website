@@ -167,6 +167,10 @@ export default {
                     href: "/resources",
                 },
                 {
+                    name: "Newsletter",
+                    href: "/#newsletter",
+                },
+                {
                     name: "Contact",
                     href: "/contact",
                 },
