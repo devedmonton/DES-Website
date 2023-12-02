@@ -59,6 +59,7 @@
                                 v-for="member in members"
                                 :key="member.id"
                                 :name="member.name"
+                                :pronouns="member.pronouns"
                                 :title="member.title"
                                 :description="member.description"
                                 :image-link="member.imageLink"
@@ -82,6 +83,7 @@ export default {
                 {
                     id: 1,
                     name: "Lauren Briske",
+                    pronouns: "She/Her",
                     title: "Treasurer",
                     imageLink: "BoardPictures/laurenBriske.jpg",
                     description:
@@ -94,6 +96,7 @@ export default {
                 {
                     id: 2,
                     name: "Mandy Meindersma",
+                    pronouns: "She/Her",
                     title: "Vice President + Secretary",
                     imageLink: "BoardPictures/mandyMeindersma.jpg",
                     description:
@@ -106,6 +109,7 @@ export default {
                 {
                     id: 3,
                     name: "Abram Hindle",
+                    pronouns: "He/Him",
                     title: "Member At Large",
                     imageLink: "BoardPictures/abramHindle.jpg",
                     description:
@@ -117,6 +121,7 @@ export default {
                 {
                     id: 4,
                     name: "Jeremy Nickurak",
+                    pronouns: "He/Him",
                     title: "Member At Large",
                     imageLink: "BoardPictures/jeremyNickurak.jpeg",
                     description:
@@ -128,6 +133,7 @@ export default {
                 {
                     id: 5,
                     name: "Celia Nicholls",
+                    pronouns: "She/Her",
                     title: "Member At Large",
                     imageLink: "BoardPictures/celiaNicholls.jpg",
                     description:
@@ -140,6 +146,7 @@ export default {
                 {
                     id: 6,
                     name: "Salma Ibrahim",
+                    pronouns: "She/Her",
                     title: "Member At Large",
                     imageLink: "BoardPictures/salmaIbrahim.jpg",
                     description:
@@ -152,6 +159,7 @@ export default {
                 {
                     id: 7,
                     name: "Justice Hemming",
+                    pronouns: "He/Him",
                     title: "Member At Large",
                     imageLink: "BoardPictures/justiceHemming.jpg",
                     description:
