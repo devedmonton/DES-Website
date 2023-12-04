@@ -396,7 +396,7 @@
                 </div>
             </div>
         </div>
-        <SectionMeetups />
+        <SectionMeetupsSummary :card-limit="5" />
         <SectionEventsSummary :card-limit="5" />
         <SectionResourcesSummary :card-limit="5" />
         <SectionSignupForm />

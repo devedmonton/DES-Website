@@ -159,6 +159,10 @@ export default {
                     ],
                 },
                 {
+                    name: "Meetups",
+                    href: "/meetups",
+                },
+                {
                     name: "Events",
                     href: "/events",
                 },
