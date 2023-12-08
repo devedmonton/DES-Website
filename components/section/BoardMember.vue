@@ -13,7 +13,11 @@
             <div class="md:col-span-3 lg:col-span-2">
                 <div class="space-y-1">
                     <div class="text-lg font-medium">
-                        <h3>{{ name }}</h3>
+                        <h3 class="inline pr-1.5">{{ name }}</h3>
+                        <span class="text-xs pt-0.5 text-gray-500 inline">
+                            {{ pronouns }}
+                        </span>
+
                         <p class="text-indigo-600">{{ title }}</p>
                         <div v-if="linkedInAccount" class="flex pb-1">
                             <span class="sr-only">linkedIn</span>
@@ -93,6 +97,7 @@ export default {
     props: {
         name: { type: String, default: "" },
         title: { type: String, default: "" },
+        pronouns: { type: String, default: "" },
         description: { type: String, default: "" },
         imageLink: { type: String, default: "" },
         twitterHandle: { type: String, default: "" },
