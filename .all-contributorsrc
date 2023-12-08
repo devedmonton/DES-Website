@@ -224,6 +224,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "dcampbelld",
+      "name": "Danielle Campbell",
+      "avatar_url": "https://avatars.githubusercontent.com/u/48037071?v=4",
+      "profile": "https://github.com/dcampbelld",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
