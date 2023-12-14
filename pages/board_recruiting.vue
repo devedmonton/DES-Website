@@ -118,6 +118,10 @@
                             interested in social media they can delegate to a
                             volunteer to do this
                         </li>
+                        <li>
+                            Check the slack frequently (at least once every
+                            week, or every few days)
+                        </li>
                     </ul>
                 </div>
                 <h3 class="text-lg font-bold py-1 border-b border-lightgrey">
