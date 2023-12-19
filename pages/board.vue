@@ -132,19 +132,6 @@ export default {
                 },
                 {
                     id: 5,
-                    name: "Celia Nicholls",
-                    pronouns: "She/Her",
-                    title: "Member At Large",
-                    imageLink: "BoardPictures/celiaNicholls.jpg",
-                    description:
-                        "Celia has finished her Web Design and Development in the Digital Media and IT program at NAIT (although she sometimes feels as though she should have gone into pest control, she spends so much time debugging).<br /><br /> Her strengths include UX/UI and responsive design, front-end development and content creation. She is passionate about helping to increase student engagement with Dev Edmonton as a way to pay forward all the mentorship and help she’s received from devs in the community.<br /><br /> In her free time, she enjoys writing and drawing comics and dabbling in esoteric crafts like needlepoint and macramé.",
-                    twitterHandle: "",
-                    linkedInAccount:
-                        "https://www.linkedin.com/in/celia-nicholls/",
-                    slackAccount: "Celia Nicholls",
-                },
-                {
-                    id: 6,
                     name: "Salma Ibrahim",
                     pronouns: "She/Her",
                     title: "Member At Large",
@@ -157,7 +144,7 @@ export default {
                     slackAccount: "Salma Ibrahim",
                 },
                 {
-                    id: 7,
+                    id: 6,
                     name: "Justice Hemming",
                     pronouns: "He/Him",
                     title: "Member At Large",
