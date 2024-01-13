@@ -142,14 +142,6 @@
                                     where people can post and look for jobs,
                                     internships, volunteer positions or more
                                 </li>
-                                <li>
-                                    <span class="slack-channel-text"
-                                        >#random-coffees</span
-                                    >
-                                    to be matched with other members of the
-                                    channel to meet other members of the the
-                                    slack
-                                </li>
                             </ul>
                         </div>
                     </div>
