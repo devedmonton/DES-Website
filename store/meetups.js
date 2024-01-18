@@ -80,9 +80,8 @@ export const useMeetupsStore = defineStore("meetups", {
                     others.`,
             },
             {
-                name: "Edmonton Data Science Meetup",
-                logoSvg:
-                    "https://ik.imagekit.io/des/meetups/DataScience_Nvpcx6-aY?updatedAt=1698789157558",
+                name: "Edmonton Data Science Community",
+                logoSvg: "/img/logos/meetups/DataScience.png",
                 linkTo: "https://www.meetup.com/edmonton-data-science-community/",
                 slack: "#data-science",
                 description: `The Edmonton Data Community aims to build a safe 
