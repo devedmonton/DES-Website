@@ -79,6 +79,17 @@ export const useMeetupsStore = defineStore("meetups", {
                     long as you are kind, supportive, and respectful of
                     others.`,
             },
+            {
+                name: "Edmonton Data Science Community",
+                logoImg: "/meetups/DataScience",
+                linkTo: "https://www.meetup.com/edmonton-data-science-community/",
+                slack: "#data-science",
+                description: `The Edmonton Data Community aims to build a safe 
+                    space for folks in the data space to connect, share knowledge 
+                    and grow together. Whether you want to talk about Python 
+                    for Data Analytics or how to transform business requirements 
+                    into data science products, this will be the place for you.`,
+            },
         ],
     }),
 
