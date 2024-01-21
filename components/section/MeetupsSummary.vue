@@ -17,10 +17,10 @@
             <div
                 class="mt-8 rounded-lg bg-gray-200 overflow-hidden shadow divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px"
             >
-                <ExternalInfoCard
-                    v-for="(meetup, index) in store.getLimitedMeetups(
-                        cardLimit,
-                    )"
+                <!-- Using ClientOnly to prevent hydation mismatch -->
+                <ClientOnly>
+                    <ExternalInfoCard
+                    v-for="(meetup, index) in shuffledMeetups"
                     v-bind="meetup"
                     :key="index"
                 >
@@ -28,6 +28,8 @@
                         {{ meetup.meetingTime }}
                     </p>
                 </ExternalInfoCard>
+                </ClientOnly>
+
                 <ViewAll :card-limit="cardLimit" link-to="/meetups"
                     >View All Meetups</ViewAll
                 >
@@ -37,7 +39,10 @@
 </template>
 
 <script>
+import {computed} from 'vue'
+
 import { useMeetupsStore } from "@/store/meetups";
+import { shuffleArray } from "@/utilities/helpers"
 
 export default {
     props: {
@@ -49,7 +54,12 @@ export default {
     },
     setup() {
         const store = useMeetupsStore();
-        return { store };
+
+        const shuffledMeetups = computed(() => {
+            return shuffleArray(store.getLimitedMeetups(5));
+        });
+
+        return { shuffledMeetups };
     },
 };
 </script>
