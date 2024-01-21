@@ -55,6 +55,7 @@ export default {
     setup() {
         const store = useMeetupsStore();
 
+        // Gets a random list of meetups limited to the cardLimit(5)
         const shuffledMeetups = computed(() => {
             return shuffleArray(store.getLimitedMeetups(5));
         });
