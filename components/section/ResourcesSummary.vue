@@ -17,17 +17,17 @@
             <div
                 class="mt-8 rounded-lg bg-gray-200 overflow-hidden shadow divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px"
             >
-                <ExternalInfoCard
-                    v-for="(resource, index) in store.getLimitedResources(
-                        cardLimit,
-                    )"
-                    v-bind="resource"
-                    :key="index"
-                >
-                    <p v-if="resource.meetingTime" class="mt-2">
-                        {{ resource.meetingTime }}
-                    </p>
-                </ExternalInfoCard>
+                <ClientOnly>
+                    <ExternalInfoCard
+                        v-for="(resource, index) in shuffledResources"
+                        v-bind="resource"
+                        :key="index"
+                    >
+                        <p v-if="resource.meetingTime" class="mt-2">
+                            {{ resource.meetingTime }}
+                        </p>
+                    </ExternalInfoCard>
+                </ClientOnly>
                 <ViewAll :card-limit="cardLimit" link-to="/resources"
                     >View All Resources</ViewAll
                 >
@@ -37,7 +37,10 @@
 </template>
 
 <script>
+import { computed } from "vue";
+
 import { useResourcesStore } from "@/store/resources";
+import { shuffleArray } from "@/utilities/helpers";
 
 export default {
     props: {
@@ -47,9 +50,15 @@ export default {
             default: 5,
         },
     },
-    setup() {
+    setup(props) {
         const store = useResourcesStore();
-        return { store };
+
+        // Gets a random list of resources limited to the cardLimit (default value is 5)
+        const shuffledResources = computed(() => {
+            return shuffleArray(store.getLimitedResources(props.cardLimit));
+        });
+
+        return { shuffledResources };
     },
 };
 </script>
