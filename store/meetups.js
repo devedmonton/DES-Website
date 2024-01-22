@@ -90,6 +90,16 @@ export const useMeetupsStore = defineStore("meetups", {
                     for Data Analytics or how to transform business requirements 
                     into data science products, this will be the place for you.`,
             },
+            {
+                name: "YEGSec",
+                logoImg: "/meetups/YEGSec.png",
+                linkTo: "https://www.yegsec.ca",
+                description: `We meet on a monthly-ish basis to discuss security, 
+                    drink beer, and socialize. If you're into that sort of thing 
+                    then you should probably join us. If you hate waiting, and who 
+                    can blame you, you're more than welcome to join us in Slack. 
+                    Tweet @yegsec for an invite!`,
+            },
         ],
     }),
 
