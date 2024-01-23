@@ -1,5 +1,7 @@
 import { defineStore } from "pinia";
 
+import { shuffleArray } from "@/utilities/helpers";
+
 export const useMeetupsStore = defineStore("meetups", {
     state: () => ({
         meetups: [
@@ -95,8 +97,9 @@ export const useMeetupsStore = defineStore("meetups", {
 
     getters: {
         getAllMeetups: (state) => state.meetups,
-        // Used to get a limited number of meetups for the home page based on the card limit
+
+        // Shuffles the meetups, then returns a limited number of meetups.
         getLimitedMeetups: (state) => (cardLimit) =>
-            state.meetups.slice(0, cardLimit),
+            shuffleArray(state.meetups).slice(0, cardLimit),
     },
 });
