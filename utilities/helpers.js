@@ -17,7 +17,7 @@ export const shuffleArray = (array) => {
 
         [shuffledArray[currentIndex], shuffledArray[randomIndex]] = [
             shuffledArray[randomIndex],
-            shuffledArray[currentIndex]
+            shuffledArray[currentIndex],
         ];
     }
 
