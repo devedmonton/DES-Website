@@ -17,12 +17,14 @@
             <div
                 class="mt-8 rounded-lg bg-gray-200 overflow-hidden shadow divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px"
             >
-                <ExternalInfoCard
-                    v-for="(event, index) in store.getLimitedEvents(cardLimit)"
-                    v-bind="event"
-                    :key="index"
-                >
-                </ExternalInfoCard>
+                <!-- Using ClientOnly to prevent hydation mismatch -->
+                <ClientOnly>
+                    <ExternalInfoCard
+                        v-for="(event, index) in shuffledEvents"
+                        v-bind="event"
+                        :key="index"
+                    />
+                </ClientOnly>
                 <ViewAll :card-limit="cardLimit" link-to="/events"
                     >View All Events</ViewAll
                 >
@@ -32,6 +34,8 @@
 </template>
 
 <script>
+import { computed } from "vue";
+
 import { useEventsStore } from "@/store/events";
 
 export default {
@@ -42,9 +46,14 @@ export default {
             default: 5,
         },
     },
-    setup() {
+    setup(props) {
         const store = useEventsStore();
-        return { store };
+
+        // Gets a random list of events limited to the cardLimit (default value is 5)
+        const shuffledEvents = computed(() =>
+            store.getLimitedEvents(props.cardLimit),
+        );
+        return { shuffledEvents };
     },
 };
 </script>

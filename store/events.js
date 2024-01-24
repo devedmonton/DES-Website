@@ -1,5 +1,7 @@
 import { defineStore } from "pinia";
 
+import { shuffleArray } from "@/utilities/helpers";
+
 export const useEventsStore = defineStore("events", {
     state: () => ({
         events: [
@@ -87,7 +89,8 @@ export const useEventsStore = defineStore("events", {
     getters: {
         getAllEvents: (state) => state.events,
 
+        // Shuffles the events, then returns a limited number of events.
         getLimitedEvents: (state) => (cardLimit) =>
-            state.events.slice(0, cardLimit),
+            shuffleArray(state.events).slice(0, cardLimit),
     },
 });

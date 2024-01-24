@@ -1,5 +1,7 @@
 import { defineStore } from "pinia";
 
+import { shuffleArray } from "@/utilities/helpers";
+
 export const useResourcesStore = defineStore("resources", {
     state: () => ({
         resources: [
@@ -22,7 +24,7 @@ export const useResourcesStore = defineStore("resources", {
                 logoImg: "/Startup-Edmonton-Logo-300x116.png",
                 linkTo: "https://www.startupedmonton.com/programs",
                 description:
-                    "FYI Startup Edmonton has become Edmonton Unlimited and has a new space! See the next card.",
+                    "FYI, Startup Edmonton has become Edmonton Unlimited and has a new space!. Check out Edmonton Unlimited under resources for more information.",
             },
             {
                 name: "Edmonton Unlimited",
@@ -57,8 +59,9 @@ export const useResourcesStore = defineStore("resources", {
 
     getters: {
         getAllResources: (state) => state.resources,
-        // Used to get a limited number of events for the home page based on the card limit
+
+        // Shuffles the resources, then returns a limited number of resources.
         getLimitedResources: (state) => (cardLimit) =>
-            state.resources.slice(0, cardLimit),
+            shuffleArray(state.resources).slice(0, cardLimit),
     },
 });
