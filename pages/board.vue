@@ -82,19 +82,6 @@ export default {
             members: [
                 {
                     id: 1,
-                    name: "Lauren Briske",
-                    pronouns: "She/Her",
-                    title: "Treasurer",
-                    imageLink: "BoardPictures/laurenBriske.jpg",
-                    description:
-                        "Lauren Briske is a Product Manager at <a class='text-indigo-600' href='https://www.aretolabs.com/'>Areto Labs</a>. She is a passionate supporter of the startup and tech community and knows that a thriving tech ecosystem grows on the shoulders of a strong community.<br /><br />Through the Dev Edmonton Society, her goal is to empower local leaders to contribute to a growing community and to welcome more students, experienced developers, and aspiring developers into this great community.<br /><br />When she’s not working or volunteering, she’s probably riding down a mountain somewhere on skis or bikes.",
-                    twitterHandle: "",
-                    linkedInAccount:
-                        "https://www.linkedin.com/in/lauren-briske-03ba902b/",
-                    slackAccount: "laurenbriske",
-                },
-                {
-                    id: 2,
                     name: "Mandy Meindersma",
                     pronouns: "She/Her",
                     title: "Vice President + Secretary",
@@ -107,7 +94,7 @@ export default {
                     slackAccount: "Mandy Meindersma",
                 },
                 {
-                    id: 3,
+                    id: 2,
                     name: "Abram Hindle",
                     pronouns: "He/Him",
                     title: "Member At Large",
@@ -119,7 +106,7 @@ export default {
                     slackAccount: "Abram",
                 },
                 {
-                    id: 4,
+                    id: 3,
                     name: "Jeremy Nickurak",
                     pronouns: "He/Him",
                     title: "Member At Large",
@@ -131,7 +118,7 @@ export default {
                     slackAccount: "Jeremy",
                 },
                 {
-                    id: 5,
+                    id: 4,
                     name: "Salma Ibrahim",
                     pronouns: "She/Her",
                     title: "Member At Large",
@@ -144,7 +131,7 @@ export default {
                     slackAccount: "Salma Ibrahim",
                 },
                 {
-                    id: 6,
+                    id: 5,
                     name: "Justice Hemming",
                     pronouns: "He/Him",
                     title: "Member At Large",
