@@ -13,7 +13,7 @@ export const useMeetupsStore = defineStore("meetups", {
                 description: ` YEGRB is Edmonton’s local Ruby Meetup. Ruby is a
                     dynamic, open source programming language with a focus
                     on simplicity and productivity. It has an elegant syntax
-                    that is natural to read and easy to write.`,
+                    that is natural to read and easy to write. This is a test`,
             },
             {
                 name: "Exchange.js",
