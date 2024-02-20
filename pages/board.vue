@@ -36,8 +36,8 @@
                     </p>
                     <p class="py-2">
                         A new board was elected at the society’s AGM on January
-                        23<sup>rd</sup>
-                        2021.
+                        27<sup>th</sup>
+                        2024.
                     </p>
                 </div>
             </li>
@@ -82,22 +82,9 @@ export default {
             members: [
                 {
                     id: 1,
-                    name: "Lauren Briske",
-                    pronouns: "She/Her",
-                    title: "Treasurer",
-                    imageLink: "BoardPictures/laurenBriske.jpg",
-                    description:
-                        "Lauren Briske is a Product Manager at <a class='text-indigo-600' href='https://www.aretolabs.com/'>Areto Labs</a>. She is a passionate supporter of the startup and tech community and knows that a thriving tech ecosystem grows on the shoulders of a strong community.<br /><br />Through the Dev Edmonton Society, her goal is to empower local leaders to contribute to a growing community and to welcome more students, experienced developers, and aspiring developers into this great community.<br /><br />When she’s not working or volunteering, she’s probably riding down a mountain somewhere on skis or bikes.",
-                    twitterHandle: "",
-                    linkedInAccount:
-                        "https://www.linkedin.com/in/lauren-briske-03ba902b/",
-                    slackAccount: "laurenbriske",
-                },
-                {
-                    id: 2,
                     name: "Mandy Meindersma",
                     pronouns: "She/Her",
-                    title: "Vice President + Secretary",
+                    title: "President",
                     imageLink: "BoardPictures/mandyMeindersma.jpg",
                     description:
                         "Mandy Meindersma is a Senior Backend Developer at <a class='text-indigo-600' href='https://www.dotdashmeredith.com/'>Dotdash Meredith</a>. She loves web development, teaching kidlets about computing science and hardware (making robots, light up costumes and IoT type of things).<br /><br /> She has loved getting more involved with DES through YEGWIT (Edmonton Women In Tech), CODEVID-19 (COVID-19 Hackathon) and now being able to help with organization and memberships!<br /><br /> Outside of tech she absolutely loves acro yoga, her cat Goose, and writing letters.",
@@ -106,6 +93,20 @@ export default {
                         "https://www.linkedin.com/in/mandy-meindersma/",
                     slackAccount: "Mandy Meindersma",
                 },
+                {
+                    id: 2,
+                    name: "Leslie Tshuma",
+                    pronouns: "He/Him",
+                    title: "Vice President",
+                    imageLink: "BoardPictures/LeslieTshuma.jpg",
+                    description:
+                        "Leslie is a Mobility Services Analyst II at <a class='text-indigo-600' href='https://www.albertahealthservices.ca/'>Alberta Health Services</a>. He is passionate about community and loves welcoming folks to the Dev Edmonton Society Slack.<br /><br /> He has a fascination for DevOps and has a couple of HP Servers in his home lab. He also runs a new-ish YouTube channel.<br /><br />In his personal time, he enjoys outdoor activities such as walking, hiking, cycling, and going on day trips and excursions with his family. Music plays a significant role in his life, both in singing and listening.",
+                    twitterHandle: "",
+                    linkedInAccount:
+                        "https://www.linkedin.com/in/leslietshuma/",
+                    slackAccount: "Leslie Tshuma",
+                },
+
                 {
                     id: 3,
                     name: "Abram Hindle",
