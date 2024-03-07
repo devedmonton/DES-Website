@@ -148,10 +148,10 @@ export default {
                     id: 6,
                     name: "Justice Hemming",
                     pronouns: "He/Him",
-                    title: "Member At Large",
+                    title: "Treasurer",
                     imageLink: "BoardPictures/justiceHemming.jpg",
                     description:
-                        "Justice Hemming is an emerging Junior Web Developer, completed his Web Design and Development degree at NAIT in 2023. He has been active in the community by running events for the Junior Devs group, and looks to continue to help build a community that everyone feels welcome in by getting involved with DES.<br /><br />When it comes to building websites, Justice is more of a jack of all trades focusing on both Front End and Back End development, he loves the aspect of how coding is ever changing with there always being more to learn.<br /><br />When Justice isn’t coding you will still find Justice probably not far from the computer, gaming with friends, or taking on his passion for cooking and baking. His favorite thing to bake is mini cherry cheesecake.",
+                        "Justice Hemming is a Junior Web Developer, who completed his Web Design and Development degree at NAIT in 2023. He has been active in the community by running events for the Junior Devs group, and looks to continue to help build a community that everyone feels welcome in by getting involved with DES.<br /><br />When Justice isn’t coding you will still probably find Justice not far from the computer, gaming with friends, or taking on his passion for cooking and baking. His favorite thing to bake is mini cherry cheesecake.",
                     twitterHandle: "",
                     linkedInAccount:
                         "https://www.linkedin.com/in/justice-hemming-ab459559/",
