@@ -196,6 +196,52 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "shassshank",
+      "name": "Shashank Patil",
+      "avatar_url": "https://avatars.githubusercontent.com/u/115841059?v=4",
+      "profile": "https://github.com/shassshank",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "kodyVS",
+      "name": "KodyS",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59428387?v=4",
+      "profile": "http://www.vansloten.ca",
+      "contributions": [
+        "code",
+        "ideas"
+      ]
+    },
+    {
+      "login": "LalitDeore",
+      "name": "Lalit Deore",
+      "avatar_url": "https://avatars.githubusercontent.com/u/92305713?v=4",
+      "profile": "https://github.com/LalitDeore",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "dcampbelld",
+      "name": "Danielle Campbell",
+      "avatar_url": "https://avatars.githubusercontent.com/u/48037071?v=4",
+      "profile": "https://github.com/dcampbelld",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "leslietech",
+      "name": "Leslie Tshuma",
+      "avatar_url": "https://avatars.githubusercontent.com/u/49253776?v=4",
+      "profile": "https://github.com/leslietech",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,

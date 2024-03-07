@@ -1,5 +1,7 @@
 import { defineStore } from "pinia";
 
+import { shuffleArray } from "@/utilities/helpers";
+
 export const useResourcesStore = defineStore("resources", {
     state: () => ({
         resources: [
@@ -9,13 +11,6 @@ export const useResourcesStore = defineStore("resources", {
                 linkTo: "https://www.isaic.ca",
                 description:
                     "ISAIC provides local high-performance computing infrastructure that is affordable, tailorable and scalable. Their data sandboxes allow you to experiment and collaborate easily and securely. Through their partnerships and supports, ISAIC connects you to applied knowledge and resources to help move your AI journey forward. ISAIC is enabling experimentation, scale, and powering the A.I.mbition of Western Canadian businesses pursuing AI/ML adoption.",
-            },
-            {
-                name: "Work Nicer",
-                logoImg: "/WorkNicer.png",
-                linkTo: "https://www.worknicer.com",
-                description:
-                    "Work Nicer is Alberta's number one coworking community, with six outposts across Edmonton and Calgary. Designed for teams of one to 100, Work Nicer is home to 1,400 members and 400+ businesses. From graphic designers and marketing teams, to accountants and lawyers, Work Nicer is where awesome people come together to be productive in an inspiring and supportive environment. After all, no one succeeds alone!",
             },
             {
                 name: "Training at Amii",
@@ -29,7 +24,7 @@ export const useResourcesStore = defineStore("resources", {
                 logoImg: "/Startup-Edmonton-Logo-300x116.png",
                 linkTo: "https://www.startupedmonton.com/programs",
                 description:
-                    "FYI Startup Edmonton has become Edmonton Unlimited and has a new space! See the next card.",
+                    "FYI, Startup Edmonton has become Edmonton Unlimited and has a new space!. Check out Edmonton Unlimited under resources for more information.",
             },
             {
                 name: "Edmonton Unlimited",
@@ -64,8 +59,9 @@ export const useResourcesStore = defineStore("resources", {
 
     getters: {
         getAllResources: (state) => state.resources,
-        // Used to get a limited number of events for the home page based on the card limit
+
+        // Shuffles the resources, then returns a limited number of resources.
         getLimitedResources: (state) => (cardLimit) =>
-            state.resources.slice(0, cardLimit),
+            shuffleArray(state.resources).slice(0, cardLimit),
     },
 });

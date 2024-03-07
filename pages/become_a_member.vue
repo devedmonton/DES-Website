@@ -1,8 +1,12 @@
 <template>
     <div class="max-w-7xl mx-auto spx-6 px-6 lg:px-8 text-lg">
-        <head>
-            <title>Dev Edmonton Society - Become a Member</title>
-        </head>
+        <Head>
+            <Title>Dev Edmonton Society - Become a Member</Title>
+            <Meta
+                name="description"
+                content="Information about how to become a member of the Dev Edmonton Society and the benefits it gives you."
+            />
+        </Head>
         <h1
             class="py-4 text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10"
         >
@@ -51,11 +55,7 @@
                 memberships@devedmonton.com. Membership fee's are to be paid
                 annually (we will remind you 😛 ) and if you have any questions
                 about when your membership expires, these can be answered from
-                <a
-                    class="text-brand-primary"
-                    href="https://docs.google.com/document/d/1i6oXabir-628csa2bQacHpc17Kmhec9EfkyHij9yQGM/edit#heading=h.sns5qzyi4gru"
-                    >the bylaws.</a
-                >
+                <a href="/bylaws" class="text-brand-primary"> the bylaws. </a>
             </p>
         </div>
         <div class="flex justify-center mt-4">

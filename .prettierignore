@@ -18,5 +18,10 @@ static/sw.js
 .netlify
 
 # Static project Nuxt 3
-
 .output
+
+# Markdown files
+*.md
+
+# Automated files
+.all-contributorsrc

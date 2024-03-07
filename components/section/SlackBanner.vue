@@ -1,9 +1,9 @@
 <template>
     <div>
         <div
-            id="about-our-slack"
             class="relative bg-white pt-8 -mt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8"
         >
+            <a id="about-our-slack" href="/#about-our-slack" class="anchor"></a>
             <div class="absolute inset-0">
                 <div class="h-1/3 sm:h-2/3"></div>
             </div>
@@ -64,9 +64,7 @@
                                     class="slack-content relative p-4 text-center"
                                 >
                                     <p class="text-xl text-brand-primary">
-                                        <a
-                                            href="https://join.slack.com/t/devedmonton/shared_invite/zt-1hqylgb8i-pKr5nUmRwOJwdLHVce0rXg"
-                                        >
+                                        <a :href="SLACK_JOIN_LINK">
                                             Join our community on Slack
                                         </a>
                                     </p>
@@ -75,9 +73,7 @@
                                         src="/img/logos/Slack_RGB.svg"
                                         alt="slack logo"
                                     />
-                                    <a
-                                        href="https://join.slack.com/t/devedmonton/shared_invite/zt-1hqylgb8i-pKr5nUmRwOJwdLHVce0rXg"
-                                    >
+                                    <a :href="SLACK_JOIN_LINK">
                                         <VButton appearance="inverted"
                                             >Join the Slack</VButton
                                         >
@@ -146,14 +142,6 @@
                                     where people can post and look for jobs,
                                     internships, volunteer positions or more
                                 </li>
-                                <li>
-                                    <span class="slack-channel-text"
-                                        >#random-coffees</span
-                                    >
-                                    to be matched with other members of the
-                                    channel to meet other members of the the
-                                    slack
-                                </li>
                             </ul>
                         </div>
                     </div>
@@ -162,7 +150,15 @@
         </div>
     </div>
 </template>
+<script>
+import { SLACK_JOIN_LINK } from "@/store/constants";
 
+export default {
+    setup() {
+        return { SLACK_JOIN_LINK };
+    },
+};
+</script>
 <style>
 #slack-message-block {
     border-left: 5px solid;

@@ -6,16 +6,17 @@
   "private": true,
   "scripts": {
     "dev": "nuxt dev",
-    "build": "npm run lint-check && vitest run && nuxt build",
+    "build": "npm run pr-checks && nuxt build",
     "start": "nuxt start",
-    "generate": "npm run lint-check && vitest run && nuxt generate",
+    "generate": "npm run pr-checks && nuxt generate",
     "test": "vitest",
     "test-run": "vitest run",
     "format": "prettier --write .",
     "format-check": "prettier --check .",
     "lint-check": "eslint . --ext .js,.vue",
     "lint-fix": "eslint . --ext .js,.vue --fix",
-    "pr-checks": "npm run lint-check && npm run format-check && npm run test-run"
+    "pr-checks": "npm run lint-check && npm run format-check && npm run test-run",
+    "fix-linting-formatting-errors": "npm run format && npm run lint-fix"
   },
   "dependencies": {
     "@babel/eslint-parser": "^7.22.10",
@@ -28,6 +29,7 @@
     "tailwind-merge": "^1.14.0"
   },
   "devDependencies": {
+    "@nuxt/test-utils": "^3.7.4",
     "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@vitejs/plugin-vue": "^4.3.4",
@@ -37,6 +39,6 @@
     "eslint-plugin-vue": "^9.17.0",
     "happy-dom": "^10.11.2",
     "prettier": "3.0.3",
-    "vitest": "^0.34.3"
+    "vitest": "^0.33.0"
   }
 }

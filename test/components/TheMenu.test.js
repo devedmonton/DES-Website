@@ -1,40 +1,24 @@
 import { test, expect, vi } from "vitest";
 import { mount } from "@vue/test-utils";
-import TheMenu from "../../components/TheMenu.vue";
+import TheMenu from "../../components/section/TheMenu.vue";
 
 test("TheMenu.vue", async () => {
     const wrapper = mount(TheMenu);
     expect(wrapper.html()).toBeTruthy();
 });
 
-test("closeMenu", async () => {
+test("closeMobileMenu", async () => {
     const wrapper = mount(TheMenu);
-    const spy = vi.spyOn(wrapper.vm, "closeMenu");
+    const spy = vi.spyOn(wrapper.vm, "closeMobileMenu");
     spy.mockImplementationOnce(() => {});
-    wrapper.vm.closeMenu();
+    wrapper.vm.closeMobileMenu();
     expect(spy).toHaveBeenCalled();
 });
 
-test("closeMenuHandler", async () => {
+test("toggleMobileMenu", async () => {
     const wrapper = mount(TheMenu);
-    const spy = vi.spyOn(wrapper.vm, "closeMenuHandler");
+    const spy = vi.spyOn(wrapper.vm, "toggleMobileMenu");
     spy.mockImplementationOnce(() => {});
-    wrapper.vm.closeMenuHandler();
-    expect(spy).toHaveBeenCalled();
-});
-
-test("openMenu", async () => {
-    const wrapper = mount(TheMenu);
-    const spy = vi.spyOn(wrapper.vm, "openMenu");
-    spy.mockImplementationOnce(() => {});
-    wrapper.vm.openMenu();
-    expect(spy).toHaveBeenCalled();
-});
-
-test("toggleMenu", async () => {
-    const wrapper = mount(TheMenu);
-    const spy = vi.spyOn(wrapper.vm, "toggleMenu");
-    spy.mockImplementationOnce(() => {});
-    wrapper.vm.toggleMenu();
+    wrapper.vm.toggleMobileMenu();
     expect(spy).toHaveBeenCalled();
 });

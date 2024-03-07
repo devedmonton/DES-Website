@@ -26,13 +26,9 @@
 </template>
 
 <script>
-import ExternalInfoCard from "./ExternalInfoCard.vue";
-import { useEventsStore } from "../store/events";
+import { useEventsStore } from "@/store/events";
 
 export default {
-    components: {
-        ExternalInfoCard,
-    },
     setup() {
         const store = useEventsStore();
         return { store };

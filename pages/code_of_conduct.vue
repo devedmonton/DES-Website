@@ -1,8 +1,12 @@
 <template>
     <div class="max-w-7xl mx-auto spx-6 px-6 lg:px-8 code-of-coduct">
-        <head>
-            <title>Dev Edmonton Society - Code of Conduct</title>
-        </head>
+        <Head>
+            <Title>Dev Edmonton Society - Code of Conduct</Title>
+            <Meta
+                name="description"
+                content="Listing all the stipulations in our code of conduct that our members have to follow."
+            />
+        </Head>
         <h1
             class="py-4 text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10"
         >

@@ -1,8 +1,12 @@
 <template>
     <div class="max-w-7xl mx-auto spx-6 px-6 lg:px-8">
-        <head>
-            <title>Dev Edmonton Society - Board Recruiting</title>
-        </head>
+        <Head>
+            <Title>Dev Edmonton Society - Board Recruiting</Title>
+            <Meta
+                name="description"
+                content="Information about applying for the board which we publicize every three years when the board turns over."
+            />
+        </Head>
         <h1
             class="py-4 text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10"
         >
@@ -99,6 +103,25 @@
                         </li>
                         <li>Participate in one or more committees</li>
                         <li>3 Year commitment</li>
+                        <li>
+                            Provide support for in person events, whether that
+                            is helping deliver items to events, being at the
+                            door to greet people or working to build a
+                            relationship and organization with a company that
+                            will allow us to use their building (ex: configuring
+                            the door access system)
+                        </li>
+                        <li>
+                            Provide some marketing/social media efforts
+                            (especially our newsletter). Note that this doesn't
+                            have to be done by a board member, if they are not
+                            interested in social media they can delegate to a
+                            volunteer to do this
+                        </li>
+                        <li>
+                            Check the slack frequently (at least once every
+                            week, or every few days)
+                        </li>
                     </ul>
                 </div>
                 <h3 class="text-lg font-bold py-1 border-b border-lightgrey">

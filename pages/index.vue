@@ -1,8 +1,12 @@
 <template>
     <div>
-        <head>
-            <title>Dev Edmonton Society</title>
-        </head>
+        <Head>
+            <Title>Dev Edmonton Society</Title>
+            <Meta
+                name="description"
+                content="Fostering a stronger software development community in Edmonton. We are made up of people who believe that an impactful, diverse, and collaborative developer community enriches us all. We realize this vision by sharing knowledge and ideas, understanding the community and its needs, promoting events and initiatives, and supporting technology meetups and organizations."
+            />
+        </Head>
         <div
             class="relative py-8 bg-white overflow-hidden max-w-7xl mx-auto sm:px-4"
         >
@@ -191,7 +195,7 @@
             </div>
         </div>
 
-        <SlackSection />
+        <SectionSlackBanner />
 
         <div
             class="relative bg-grey-000 pt-8 -mt-8 pb-16 px-4 sm:px-6 lg:pt-12 lg:px-8"
@@ -242,7 +246,7 @@
                                     >
                                         <a
                                             class="text-brand-primary"
-                                            href="https://join.slack.com/t/devedmonton/shared_invite/zt-1hqylgb8i-pKr5nUmRwOJwdLHVce0rXg"
+                                            :href="SLACK_JOIN_LINK"
                                             >Get started by joining our Slack</a
                                         >
                                         and make sure to say hello in our
@@ -268,9 +272,7 @@
                                     </p>
                                 </div>
                                 <div class="flex justify-center mt-4">
-                                    <a
-                                        href="https://join.slack.com/t/devedmonton/shared_invite/zt-1hqylgb8i-pKr5nUmRwOJwdLHVce0rXg"
-                                    >
+                                    <a :href="SLACK_JOIN_LINK">
                                         <VButton appearance="inverted"
                                             >Join Slack</VButton
                                         >
@@ -394,27 +396,19 @@
                 </div>
             </div>
         </div>
-        <MeetupsSection />
-        <EventsSectionSummary :card-limit="5" />
-        <ResourcesSectionSummary :card-limit="5" />
-        <SignupForm />
+        <SectionMeetupsSummary :card-limit="5" />
+        <SectionEventsSummary :card-limit="5" />
+        <SectionResourcesSummary :card-limit="5" />
+        <SectionSignupForm />
     </div>
 </template>
 
 <script>
-import SignupForm from "../components/SignupForm";
-import VButton from "../components/VButton.vue";
-import EventsSectionSummary from "../components/EventsSectionSummary.vue";
-import MeetupsSection from "../components/MeetupsSection.vue";
-import ResourcesSectionSummary from "../components/ResourcesSectionSummary.vue";
+import { SLACK_JOIN_LINK } from "@/store/constants";
 
 export default {
-    components: {
-        VButton,
-        SignupForm,
-        MeetupsSection,
-        EventsSectionSummary,
-        ResourcesSectionSummary,
+    setup() {
+        return { SLACK_JOIN_LINK };
     },
 };
 </script>
