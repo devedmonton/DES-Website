@@ -106,9 +106,20 @@ export default {
                         "https://www.linkedin.com/in/leslietshuma/",
                     slackAccount: "Leslie Tshuma",
                 },
-
                 {
                     id: 3,
+                    name: "Patricia Borlongan",
+                    pronouns: "She/Her",
+                    title: "Secretary",
+                    imageLink: "BoardPictures/patriciaBorlongan.jpg",
+                    description:
+                        "Patricia Borlongan is a front-end developer at <a class='text-indigo-600' href='https://www.goodmorning.com'>Goodmorning.com</a>. Her passion for human-centered design drives her to create user-friendly digital products. <br/> <br/> Thanks to DES, she learned about Canada Learning Code back in 2019, which she still volunteers for with a particular focus on empowering women in tech. Patricia's blend of tech prowess and creative flair makes her a valuable asset both professionally and in her community involvement. <br/> <br/> When not working on anything tech related, she does digital illustration, watches the Edmonton Oilers, or trying out a new restaurant in Edmonton!",
+                    twitterHandle: "patacat_",
+                    linkedInAccount: "https://www.linkedin.com/in/pborlongan/",
+                    slackAccount: "Pat",
+                },
+                {
+                    id: 4,
                     name: "Abram Hindle",
                     pronouns: "He/Him",
                     title: "Member At Large",
@@ -120,7 +131,7 @@ export default {
                     slackAccount: "Abram",
                 },
                 {
-                    id: 4,
+                    id: 5,
                     name: "Jeremy Nickurak",
                     pronouns: "He/Him",
                     title: "Member At Large",
@@ -132,7 +143,7 @@ export default {
                     slackAccount: "Jeremy",
                 },
                 {
-                    id: 5,
+                    id: 6,
                     name: "Salma Ibrahim",
                     pronouns: "She/Her",
                     title: "Member At Large",
@@ -145,7 +156,7 @@ export default {
                     slackAccount: "Salma Ibrahim",
                 },
                 {
-                    id: 6,
+                    id: 7,
                     name: "Justice Hemming",
                     pronouns: "He/Him",
                     title: "Treasurer",
