@@ -1,16 +1,11 @@
 <template>
     <div class="flex flex-col justify-between min-h-screen">
-        <SectionTheMenu />
+        <AppHeader />
         <NuxtPage class="mb-auto pt-24 pb-4" />
-        <SectionTheFooter />
-        <BannerAnnouncements
-            v-if="showBanner"
-            :name="bannerName"
-            message=""
-            short-msg=""
-            link=""
-            button-text="Click Here"
-        />
+        <AppFooter />
+        <AppBannerAnnouncements
+v-if="showBanner" :name="bannerName" message="" short-msg="" link=""
+            button-text="Click Here" />
     </div>
 </template>
 

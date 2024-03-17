@@ -1,6 +1,21 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-    modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt", "@nuxt/image"],
+    modules: [
+        "@nuxtjs/tailwindcss",
+        '@nuxt/content',
+        "@nuxt/image",
+        '@nuxtjs/seo',
+        'nuxt-icon',
+    ],
+
+    content: {
+      documentDriven: true,
+    },
+
+    site: {
+      url: 'https://devedmonton.com',
+    },
+
     buildModules: ["@nuxtjs/pwa"],
     alias: {
         pinia: "/node_modules/@pinia/nuxt/node_modules/pinia/dist/pinia.mjs",
@@ -55,7 +70,24 @@ export default defineNuxtConfig({
         vite: {},
     },
 
-    components: true,
+    components: {
+        dirs: [
+          {
+            prefix: "app",
+            path: "~/components/app/",
+          },
+          {
+            global: true,
+            prefix: "section",
+            path: "~/components/section/",
+          },
+          {
+            global: true,
+            prefix: "",
+            path: "~/components/content/",
+          },
+        ],
+    },
 
     pwa: {
         meta: { mobileApp: false },

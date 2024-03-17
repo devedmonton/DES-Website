@@ -1,14 +1,14 @@
 import { test, expect, vi } from "vitest";
 import { mount } from "@vue/test-utils";
-import TheMenu from "../../components/section/TheMenu.vue";
+import AppHeader from "../../components/app/Header.vue";
 
-test("TheMenu.vue", async () => {
-    const wrapper = mount(TheMenu);
+test("AppHeader.vue", async () => {
+    const wrapper = mount(AppHeader);
     expect(wrapper.html()).toBeTruthy();
 });
 
 test("closeMobileMenu", async () => {
-    const wrapper = mount(TheMenu);
+    const wrapper = mount(AppHeader);
     const spy = vi.spyOn(wrapper.vm, "closeMobileMenu");
     spy.mockImplementationOnce(() => {});
     wrapper.vm.closeMobileMenu();
@@ -16,7 +16,7 @@ test("closeMobileMenu", async () => {
 });
 
 test("toggleMobileMenu", async () => {
-    const wrapper = mount(TheMenu);
+    const wrapper = mount(AppHeader);
     const spy = vi.spyOn(wrapper.vm, "toggleMobileMenu");
     spy.mockImplementationOnce(() => {});
     wrapper.vm.toggleMobileMenu();

@@ -1,0 +1,23 @@
+# Become a Member
+
+Thank you for your interest in becoming a DES member! Firstly we would like to point out that **you do not need to be a member to use the DES Slack, attend meetups and events, or to join the monthly society meeting and AGM.**
+
+Any member of the public is welcome to:
+
+- Join the Edmonton developer community
+- Chat on our Slack
+- Attend DES supported meetups and events
+- Come out to DES monthly planning meetings
+- Participate in Working Groups
+
+Membership is only required to:
+
+- Vote on society business
+- Borrow DES equipment (cameras, mics, etc.)
+- Use the DES resources (like our YouTube channel or streaming tools)
+- Start an event or group officially supported by DES
+- Use the DES name or branding
+- Champion a Working Group
+- Give us $20/year to support the work we do (thank you!)
+
+If you're still interested in becoming a member, please complete the form below and then e-transfer $20 to memberships@devedmonton.com. Membership fee's are to be paid annually (we will remind you 😛 ) and if you have any questions about when your membership expires, these can be answered from [the bylaws](https://docs.google.com/document/d/1i6oXabir-628csa2bQacHpc17Kmhec9EfkyHij9yQGM/edit).
