@@ -99,7 +99,7 @@
                                         class="mt-3 text-base leading-6 text-gray-500"
                                     >
                                         If you're a technology meetup or event
-                                        organizers, we've got your back!
+                                        organizer, we've got your back!
                                     </p>
                                     <p
                                         class="mt-3 text-base leading-6 text-gray-500"
@@ -141,7 +141,7 @@
                                     >
                                         Technology changes faster everyday, and
                                         a great technology community needs to
-                                        stay connected if we want to keep us.
+                                        stay connected if we want to keep up.
                                     </p>
                                     <p
                                         class="mt-3 text-base leading-6 text-gray-500"
@@ -361,14 +361,14 @@
                                     >
                                         Whether you're a growing startup or an
                                         established player the Dev Edmonton
-                                        Society can help your understand the
+                                        Society can help you understand the
                                         tools and technologies shaping your
                                         business.
                                     </p>
                                     <p
                                         class="mt-3 text-base leading-6 text-gray-500"
                                     >
-                                        Supporting and growning the Edmonton
+                                        Supporting and growing the Edmonton
                                         tech community takes many shapes, from
                                         simple financial donations to direct
                                         engagemenent by providing speakers,
