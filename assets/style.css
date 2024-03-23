@@ -1,0 +1,8 @@
+
+.md-content ul {
+  @apply list-disc pl-8 my-4 text-gray-600;
+}
+
+.md-content ol {
+  @apply list-decimal pl-8 my-4 text-gray-600 text-base;
+}
