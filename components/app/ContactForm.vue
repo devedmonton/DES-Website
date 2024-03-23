@@ -17,15 +17,15 @@
           >
             Contact Us
           </h3>
-          <p class="mt-1 text-sm leading-5 text-gray-500">
+          <p class="mt-1 text-sm leading-5">
             Send us a note.
           </p>
         </div>
-        <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+        <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6 text-neutral-700 dark:text-white">
           <div class="sm:col-span-3">
             <label
               for="first_name"
-              class="block text-sm font-medium leading-5 text-gray-700"
+              class="block text-sm font-medium leading-5"
             >
               First name
             </label>
@@ -40,7 +40,7 @@
           <div class="sm:col-span-3">
             <label
               for="last_name"
-              class="block text-sm font-medium leading-5 text-gray-700"
+              class="block text-sm font-medium leading-5"
             >
               Last name
             </label>
@@ -55,7 +55,7 @@
           <div class="sm:col-span-6">
             <label
               for="email"
-              class="block text-sm font-medium leading-5 text-gray-700"
+              class="block text-sm font-medium leading-5"
             >
               Email address
             </label>
@@ -71,7 +71,7 @@
           <div class="sm:col-span-6">
             <label
               for="about"
-              class="block text-sm font-medium leading-5 text-gray-700"
+              class="block text-sm font-medium leading-5"
             >
               Message
             </label>
@@ -82,7 +82,7 @@
                 rows="6"
               />
             </div>
-            <p class="mt-2 text-sm text-gray-500">
+            <p class="mt-2 text-sm">
               We love getting messages.
             </p>
           </div>

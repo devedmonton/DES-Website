@@ -49,7 +49,7 @@ const colors = {
       <h1 class="mt-5 font-medium text-base lg-text-4xl">
         <strong :class="colors[color]['500']">{{ code }}</strong> | {{ title }}
       </h1>
-      <p class="text-neutral-500 mt-4 lg-text-xl">
+      <p class="text-neutral-400 mt-4 lg-text-xl">
         {{ message }}
       </p>
     </div>
