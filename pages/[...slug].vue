@@ -34,6 +34,7 @@ if (page.value) {
 <template>
   <main
     class="md-content mt-12 max-w-7xl mx-auto px-8"
+    :class="{ 'flex justify-center items-center': !page }"
     :style="{ minHeight }"
   >
     <ContentRenderer
@@ -48,7 +49,13 @@ if (page.value) {
       </template>
     </ContentRenderer>
     <div v-else>
-      404
+      <AppError
+        code="404" 
+        title="Page not found"
+        message="The page you are looking for does not exist."
+        icon="i-ph-x-circle"
+        color="red"
+      />
     </div>
   </main>
 </template>
