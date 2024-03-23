@@ -18,12 +18,3 @@ useServerSeoMeta({
     </Body>
   </Html>
 </template>
-
-<style>
-p + p {
-  @apply mt-4;
-}
-.nuxt-loading-indicator, .nuxt-scroll-indicator {
-  @apply bg-gradient-to-r to-secondary from-blue-700;
-}
-</style>

@@ -1,8 +1,15 @@
-
 .md-content ul {
   @apply list-disc pl-8 my-4 text-gray-600;
 }
 
 .md-content ol {
   @apply list-decimal pl-8 my-4 text-gray-600 text-base;
+}
+
+p + p {
+  @apply mt-4;
+}
+
+.nuxt-loading-indicator, .nuxt-scroll-indicator {
+  @apply bg-gradient-to-r to-secondary from-blue-700;
 }
