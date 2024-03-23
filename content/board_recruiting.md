@@ -1,7 +1,3 @@
----
-
----
-
 # Board Recruiting
 
 Open positions will advertised in the months preceding the society’s Annual General Meeting.
