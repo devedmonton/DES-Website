@@ -24,10 +24,10 @@ export const services: Service[] = [
     description: `
     <p>There so many ways to get involved in the Edmonton developer community!</p>
     <p>
-      <a href="https://join.slack.com/t/devedmonton/shared_invite/zt-24bp1mmie-XdXUv1eYy4MRElmXZaoqdg" class="text-primary">Get started by joining our Slack</a> and make sure to say hello in our #introductions channel where one of our friendly community members will help you find your way.
+      <a href="https://join.slack.com/t/devedmonton/shared_invite/zt-24bp1mmie-XdXUv1eYy4MRElmXZaoqdg" class="text-primary font-bold">Get started by joining our Slack</a> and make sure to say hello in our #introductions channel where one of our friendly community members will help you find your way.
     </p>
     <p>
-    If you are interested in becoming more involved (like borrowing our equipment or voting on community decisions) then <a class="text-primary" href="/become_a_member">find more information about becoming a member here.</a> You do not need to be a member to come to events or participate in the slack!
+    If you are interested in becoming more involved (like borrowing our equipment or voting on community decisions) then <a class="text-primary font-bold" href="/become_a_member">find more information about becoming a member here.</a> You do not need to be a member to come to events or participate in the slack!
     </p>
     `,
     link: {
