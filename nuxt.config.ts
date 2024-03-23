@@ -61,7 +61,7 @@ export default defineNuxtConfig({
   
     // @nuxtjs/seo
     site: {
-      url: 'https://devedmonton-new.vercel.app',
+      url: process.env.NUXT_PUBLIC_SITE_URL ?? 'https://devedmonton.com',
       name: 'Dev Edmonton Society',
       strictNuxtContentPaths: true,
     },
