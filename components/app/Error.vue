@@ -5,9 +5,7 @@ withDefaults(defineProps<{
   message: string
   icon?: string
   color?: 'blue' | 'red' | 'green' | 'yellow' | 'orange'
-  padding?: boolean
 }>(), {
-  padding: true,
   color: 'blue',
 })
 
@@ -41,7 +39,7 @@ const colors = {
 </script>
 
 <template>
-  <div class="flex items-center justify-center w-full" :class="{ '': padding }">
+  <div class="flex items-center justify-center w-full">
     <div class="text-center">
       <div v-if="icon" class="inline-flex rounded-full p-4" :class="colors[color]['100']">
         <div :class="colors[color]['200']" class="rounded-full p-4">
