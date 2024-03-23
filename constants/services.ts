@@ -47,7 +47,7 @@ export const services: Service[] = [
   {
     name: 'As A Business',
     image: 'https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
-    description: 'Whether you\'re a growing startup or an established player the Dev Edmonton Society can help your understand the tools and technologies shaping your business.<br><br>Supporting and growing the Edmonton tech community takes many shapes, from simple financial donations to direct engagement by providing speakers, venues, resources and donations of employee time. We want to help your business grow and find a community of technologists passionate about the tools you need to succeed!',
+    description: 'Whether you\'re a growing startup or an established player the Dev Edmonton Society can help you understand the tools and technologies shaping your business.<br><br>Supporting and growing the Edmonton tech community takes many shapes, from simple financial donations to direct engagement by providing speakers, venues, resources and donations of employee time. We want to help your business grow and find a community of technologists passionate about the tools you need to succeed!',
     link: {
       url: 'mailto:board@devedmonton.com?subject=Supporting%20Dev%20Edmonton%20Society',
       text: 'Support Local Tech'
