@@ -12,28 +12,29 @@ const { data: navigation } = await useAsyncData('navigation:footer', () => fetch
     class="container mx-auto"
   >
     <div class="w-full max-w-screen-xl mx-auto py-4 md:py-8 border-t border-neutral-400/20">
-      <div class="sm:flex sm:items-center sm:justify-between">
+      <div class="flex md:flex-row flex-col gap-8 items-center justify-between py-4">
         <NuxtLink
           title="Dev Edmonton Society"
           to="/"
-          class="flex items-center mb-4 ml-4 sm:m-0"
+          class="flex justify-center md:order-1 order-2"
         >
           <AppLogo
             :scrolling="true"
             class="h-12"
           />
         </NuxtLink>
-        <ul class="flex flex-wrap gap-2 items-center mb-6 text-sm font-medium text-gray-600 sm:mb-0 dark:text-gray-400">
+        <ul class="flex flex-wrap justify-center gap-4 items-center text-sm font-medium text-gray-600 dark:text-gray-400 md:mx-0 mx-2 order-1">
           <li
             v-for="item of navigation"
             :key="item.title"
+            class="mb-4"
           >
             <NuxtLink
               :title="item.title"
               :prefetch="false"
               :to="item._path"
               exact-active-class="text-primary bg-gray-400/20"
-              class="hover:underline py-1.5 px-4 rounded-lg"
+              class="hover:underline py-1.5 px-4 rounded-lg bg-gray-400/20"
             >
               {{ item.title }}
             </NuxtLink>

@@ -12,7 +12,7 @@
         <div class="md:col-span-3 lg:col-span-1">
           <NuxtImg
             v-if="board.image"
-            class="w-full max-w-sm object-cover object-top shadow-lg rounded-lg md:h-80 lg:h-60"
+            class="w-full md:max-w-sm md:h-80 lg:h-60 object-cover object-top shadow-lg rounded-lg border border-neutral-400/40"
             :src="board.image"
             provider="imagekit"
             alt="Photo of board member smiling"
@@ -36,7 +36,7 @@
 
               <div
                 v-if="board.socials"
-                class="flex gap-4 absolute md:right-4 right-14 top-2"
+                class="flex gap-4 absolute md:right-4 right-2 top-2"
               >
                 <NuxtLink
                   v-for="(value, key) in board.socials"
