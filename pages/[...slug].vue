@@ -18,7 +18,7 @@ const minHeight = computed(() => {
 
 if (page.value) {
   const title = page.value?.title ?? 'Dev Edmonton Society'
-  const description = page.value.data?.description ?? 'Fostering a stronger software development community in Edmonton. We are made up of people who believe that an impactful, diverse, and collaborative developer community enriches us all. We realize this vision by sharing knowledge and ideas, understanding the community and its needs, promoting events and initiatives, and supporting technology meetups and organizations.'
+  const description = page.value?.description !== '' ? page.value.description : 'Fostering a stronger software development community in Edmonton. We are made up of people who believe that an impactful, diverse, and collaborative developer community enriches us all. We realize this vision by sharing knowledge and ideas, understanding the community and its needs, promoting events and initiatives, and supporting technology meetups and organizations.'
   useSeoMeta({
     title,
     description,

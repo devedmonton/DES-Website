@@ -1,3 +1,7 @@
+---
+description: Information about applying for the board which we publicize every three years when the board turns over.
+---
+
 # Board Recruiting
 
 Open positions will advertised in the months preceding the society’s Annual General Meeting.
