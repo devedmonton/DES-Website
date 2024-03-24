@@ -11,7 +11,7 @@ Say something like "this pr fixes #123" because github uses keywords like "fixes
 
 ## Does the following command run without warnings or errors?
 
--   [ ] yes! `npm run pr-checks`
+-   [ ] yes! `pnpm lint`
 
 ## Have you taken a look at our [contributing guidelines](https://github.com/devedmonton/DES-Website/blob/main/.github/CONTRIBUTING.md)?
 

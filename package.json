@@ -6,7 +6,7 @@
   "author": "Dev Edmonton Society",
   "scripts": {
     "dev": "nuxt dev",
-    "build": "nuxt build",
+    "build": "pnpm lint && nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
     "postinstall": "nuxt prepare",

@@ -41,9 +41,20 @@ const colors = {
 <template>
   <div class="flex items-center justify-center w-full">
     <div class="text-center">
-      <div v-if="icon" class="inline-flex rounded-full p-4" :class="colors[color]['100']">
-        <div :class="colors[color]['200']" class="rounded-full p-4">
-          <Icon :class="colors[color]['500']" class="w-12 h-12":name="icon" />
+      <div
+        v-if="icon"
+        class="inline-flex rounded-full p-4"
+        :class="colors[color]['100']"
+      >
+        <div
+          :class="colors[color]['200']"
+          class="rounded-full p-4"
+        >
+          <Icon
+            :class="colors[color]['500']"
+            class="w-12 h-12"
+            :name="icon"
+          />
         </div>
       </div>
       <h1 class="mt-5 font-medium text-base lg-text-4xl">
