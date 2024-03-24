@@ -81,7 +81,7 @@ defineOgImage({
         <h2 class="text-center text-4xl font-bold mb-8">
           What We Do
         </h2>
-        <div class="grid lg:grid-cols-3 grid-cols-1 gap-8 place-items-center">
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 place-items-center">
           <AppCardVertical
             v-for="service of services.slice(0, 3)"
             :key="service.name"
