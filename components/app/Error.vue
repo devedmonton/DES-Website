@@ -43,21 +43,21 @@ const colors = {
     <div class="text-center">
       <div
         v-if="icon"
-        class="inline-flex rounded-full p-4"
+        class="inline-flex rounded-full p-8"
         :class="colors[color]['100']"
       >
         <div
           :class="colors[color]['200']"
-          class="rounded-full p-4"
+          class="rounded-full p-8"
         >
           <Icon
             :class="colors[color]['500']"
-            class="w-12 h-12"
+            class="w-20 h-20"
             :name="icon"
           />
         </div>
       </div>
-      <h1 class="mt-5 font-medium text-base lg-text-4xl">
+      <h1 class="mt-4 font-medium text-4xl">
         <strong :class="colors[color]['500']">{{ code }}</strong> | {{ title }}
       </h1>
       <p class="text-neutral-400 mt-4 lg-text-xl">

@@ -33,8 +33,7 @@ if (page.value) {
 
 <template>
   <main
-    class="md-content mt-12 max-w-7xl mx-auto px-8"
-    :class="{ 'flex justify-center items-center': !page }"
+    class="md-content max-w-7xl mx-auto flex justify-center items-center px-8 mt-12 mb-4"
     :style="{ minHeight }"
   >
     <ContentRenderer
@@ -43,9 +42,12 @@ if (page.value) {
     >
       <ContentRendererMarkdown :value="page" />
       <template #empty>
-        <p>
-          No content found.
-        </p>
+        <AppError
+          code="204" 
+          title="Document is Empty"
+          message="Please add content."
+          icon="i-ph-file-duotone"
+        />
       </template>
     </ContentRenderer>
     <div v-else>
