@@ -34,7 +34,7 @@ const { data: navigation } = await useAsyncData('navigation:footer', () => fetch
               :prefetch="false"
               :to="item._path"
               exact-active-class="text-primary bg-gray-400/20"
-              class="hover:underline py-1.5 px-4 rounded-lg bg-gray-400/20"
+              class="hover:underline py-1.5 px-4 rounded-lg"
             >
               {{ item.title }}
             </NuxtLink>
