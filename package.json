@@ -6,15 +6,15 @@
   "author": "Dev Edmonton Society",
   "scripts": {
     "dev": "nuxt dev",
-    "build": "pnpm pr-checks && nuxt build",
+    "build": "npm run pr-checks && nuxt build",
     "start": "nuxt start",
-    "generate": "pnpm pr-checks && nuxt generate",
+    "generate": "npm run pr-checks && nuxt generate",
     "postinstall": "nuxt prepare",
     "test": "vitest",
     "test:run": "vitest run",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "pr-checks": "pnpm lint && pnpm test:run"
+    "pr-checks": "npm run lint && npm run test:run"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.9.0",
@@ -31,7 +31,7 @@
     "@vueuse/core": "^10.9.0",
     "@vueuse/nuxt": "^10.9.0",
     "eslint": "^8.57.0",
-    "happy-dom": "^14.3.6",
+    "happy-dom": "^13.10.1",
     "nuxt": "^3.11.1",
     "nuxt-icon": "^0.6.10",
     "swiper": "^11.0.7",

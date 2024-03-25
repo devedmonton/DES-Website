@@ -19,21 +19,24 @@ Note that all of these commands have been tested and used on Mac/unix machines, 
 $ nvm use
 
 # install dependencies
-$ pnpm install
+$ npm run install
 
 # serve with hot reload at localhost:3000
-$ pnpm dev
+$ npm run dev
 
 # build production bundle and launch server
-$ pnpm build
-$ pnpm start
+$ npm run build
+$ npm run start
 
 # generate static project
-$ pnpm generate
+$ npm run generate
 
 # run the linter
-$ pnpm lint # check for linting errors
-$ pnpm lint:fix # fix linting errors
+$ npm run lint # check for linting errors
+$ npm run lint:fix # fix linting errors
+
+# run pr checks
+$ npm run pr-checks
 ```
 
 For detailed explanation on how things work, check out [Nuxt docs](https://nuxt.com).
