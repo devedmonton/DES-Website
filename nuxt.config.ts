@@ -57,6 +57,7 @@ export default defineNuxtConfig({
       '@nuxt/content',
       '@nuxtjs/color-mode',
       '@nuxtjs/tailwindcss',
+      '@nuxt/test-utils/module',
     ],
   
     // @nuxtjs/seo
