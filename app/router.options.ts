@@ -33,10 +33,13 @@ export default <RouterConfig>{
       return
     }
 
-    // If same route, do nothing
-    if (to.path === from.path)
-      return window.scrollTo({ top: 0, behavior: 'smooth' })
-
-    return { top: 0 }
+    return new Promise((resolve) => {
+      nuxtApp.hooks.hookOnce('page:finish', () => {
+        resolve({
+          top: 0,
+          behavior: 'smooth'
+        })
+      })
+    })
   },
 }
