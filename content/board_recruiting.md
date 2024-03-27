@@ -27,11 +27,11 @@ There are many great reasons to join the Dev Edmonton Society Board, including b
 - Networking
 - Having an impact
 
-## Key Compentencies
+## Key Competencies
 
-DES looks to build a board that, as a collective body, excercises essential competencies. We have identified the following compentencies that the board needs to possess.
+DES looks to build a board that, as a collective body, exercises essential competencies. We have identified the following competencies that the board needs to possess.
 
-Visonary: strong belief in our Mission: “Dev Edmonton Society is made up of people who believe that an impactful, diverse, and collaborative developer community enriches us all. We realize this vision by sharing knowledge and ideas, understanding the community and its needs, promoting events and initiatives, and supporting technology meetups and organizations.”
+Visionary: strong belief in our Mission: “Dev Edmonton Society is made up of people who believe that an impactful, diverse, and collaborative developer community enriches us all. We realize this vision by sharing knowledge and ideas, understanding the community and its needs, promoting events and initiatives, and supporting technology meetups and organizations.”
 
 Connector: ability to identify and develop relationships to support our society.
 
