@@ -9,7 +9,7 @@ export const boards = [
       slack: '@Mandy Meindersma',
     },
     bio: `
-    <p>Mandy Meindersma is a Senior Backend Developer at <a class="text-primary" href="https://www.dotdashmeredith.com/">Dotdash Meredith</a>. She loves web development, teaching kidlets about computing science and hardware (making robots, light up costumes and IoT type of things).</p>
+    <p>Mandy Meindersma is a Senior Backend Developer at <a class="text-primary font-bold" href="https://www.dotdashmeredith.com/">Dotdash Meredith</a>. She loves web development, teaching kidlets about computing science and hardware (making robots, light up costumes and IoT type of things).</p>
     <p>She has loved getting more involved with DES through YEGWIT (Edmonton Women In Tech), CODEVID-19 (COVID-19 Hackathon) and now being able to help with organization and memberships!</p>
     <p>Outside of tech she absolutely loves acro yoga, her cat Goose, and writing letters.</p>
     `,
@@ -24,7 +24,7 @@ export const boards = [
       slack: '@Leslie Tshuma',
     },
     bio: `
-    <p>Leslie is a Mobility Services Analyst II at <a class="text-primary" href="https://www.albertahealthservices.ca/">Alberta Health Services</a>. He is passionate about community and loves welcoming folks to the Dev Edmonton Society Slack.</p>
+    <p>Leslie is a Mobility Services Analyst II at <a class="text-primary font-bold" href="https://www.albertahealthservices.ca/">Alberta Health Services</a>. He is passionate about community and loves welcoming folks to the Dev Edmonton Society Slack.</p>
     <p>He has a fascination for DevOps and has a couple of HP Servers in his home lab. He also runs a new-ish YouTube channel.</p>
     <p>In his personal time, he enjoys outdoor activities such as walking, hiking, cycling, and going on day trips and excursions with his family. Music plays a significant role in his life, both in singing and listening.</p>
     `,
@@ -40,7 +40,7 @@ export const boards = [
       slack: '@Pat',
     },
     bio: `
-    <p>Patricia Borlongan is a front-end developer at <a class="text-primary" href="https://www.goodmorning.com/">Goodmorning.com</a>. Her passion for human-centered design drives her to create user-friendly digital products.</p>
+    <p>Patricia Borlongan is a front-end developer at <a class="text-primary font-bold" href="https://www.goodmorning.com/">Goodmorning.com</a>. Her passion for human-centered design drives her to create user-friendly digital products.</p>
     <p>Thanks to DES, she learned about Canada Learning Code back in 2019, which she still volunteers for with a particular focus on empowering women in tech. Patricia's blend of tech prowess and creative flair makes her a valuable asset both professionally and in her community involvement.</p>
     <p>When not working on anything tech related, she does digital illustration, watches the Edmonton Oilers, or trying out a new restaurant in Edmonton!</p>
     `,
@@ -57,7 +57,7 @@ export const boards = [
     <p>Abram Hindle is an associate professor of Computing Science at the University of Alberta. His research focuses on problems relating to mining software repositories, improving software engineering-oriented information retrieval with contextual information, the impact of software maintenance on software energy consumption, and how software engineering informs computer music.</p>
     <p>He likes applying machine learning in music, art, and science. Sadly Abram has no taste in music and produces reprehensible sounding noise using his software development abilities.</p>
     <p>Abram received a PhD in computer science from the University of Waterloo, and Masters and Bachelors in Computer Science from the University of Victoria. Contact him at abram.hindle@ualberta.ca</p>
-    <a class="text-primary" href="https://softwareprocess.es/">softwareprocess.es</a>
+    <a class="text-primary font-bold" href="https://softwareprocess.es/">softwareprocess.es</a>
     `,
   },
   {
@@ -70,7 +70,7 @@ export const boards = [
       slack: '@Jeremy',
     },
     bio: `
-    <p>Jeremy Nickurak is a Senior Project Manager and Site Reliability Expert for <a class="text-primary" href="https://www.dotdashmeredith.com">Dotdash Meredith</a> focused on making the process of stuff going bad go better.</p>
+    <p>Jeremy Nickurak is a Senior Project Manager and Site Reliability Expert for <a class="text-primary font-bold" href="https://www.dotdashmeredith.com">Dotdash Meredith</a> focused on making the process of stuff going bad go better.</p>
     <p>Jeremy loves staying connected virtually and in person with the growing Edmonton development and technology space, meeting new folks, and telling stories of years of technology going well and poorly.</p>
     <p>nJeremy is passionate about git, python, and outside of tech, loves playing the ukulele.</p>
     `,
@@ -85,8 +85,8 @@ export const boards = [
       slack: '@Salma Ibrahim',
     },
     bio: `
-    <p>Salma Ibrahim is an aspiring junior software developer. She got her start in coding with <a class="text-primary" href="https://www.lighthouselabs.ca/">Lighthouse Labs</a> in the Full Stack Web Development Bootcamp in May of 2022. There she wrote here first lines of code and has loved learning ever since. Salma has recently gotten in involved with DES when she was looking for a way to connect to the developing community in Edmonton!</p>
-    <p>When she isn’t coding, Salma works at a non-profit called <a class="text-primary" href="https://bgcbigs.ca/">BGCBigs</a> at a local club enjoying time with the kiddos. Salma also likes watching films, baking, and most of all reading. Her favs include the Ember in the Ashes Quartet, The Book Thief, books by Ruta Sepetys, and her childhood favourite, Lemony Snicket</p>
+    <p>Salma Ibrahim is an aspiring junior software developer. She got her start in coding with <a class="text-primary font-bold" href="https://www.lighthouselabs.ca/">Lighthouse Labs</a> in the Full Stack Web Development Bootcamp in May of 2022. There she wrote here first lines of code and has loved learning ever since. Salma has recently gotten in involved with DES when she was looking for a way to connect to the developing community in Edmonton!</p>
+    <p>When she isn’t coding, Salma works at a non-profit called <a class="text-primary font-bold" href="https://bgcbigs.ca/">BGCBigs</a> at a local club enjoying time with the kiddos. Salma also likes watching films, baking, and most of all reading. Her favs include the Ember in the Ashes Quartet, The Book Thief, books by Ruta Sepetys, and her childhood favourite, Lemony Snicket</p>
     `,
   },
   {

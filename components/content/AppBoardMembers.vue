@@ -30,7 +30,7 @@
                 {{ board.pronouns }}
               </span>
 
-              <div class="text-primary">
+              <div class="text-primary dark:text-secondary">
                 {{ board.title }}
               </div>
 
@@ -56,7 +56,7 @@
               </div>
             </div>
             <div
-              class="text-medium text-gray-500"
+              class="text-medium text-neutral-500 dark:text-neutral-300"
               v-html="board.bio"
             />
           </div>

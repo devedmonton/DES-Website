@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { twMerge } from 'tailwind-merge'
+
 defineProps({
   href: {
     type: String,
@@ -16,7 +18,7 @@ defineProps({
   <NuxtLink
     :href="href"
     :target="target"
-    class="text-primary font-bold hover:underline"
+    :class="twMerge('text-primary font-bold hover:underline', $attrs.class)"
   >
     <slot />
   </NuxtLink>

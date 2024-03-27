@@ -28,7 +28,7 @@ const categorized = computed(() => {
         <div
           v-for="sponsor of group.sponsors"
           :key="sponsor.name"
-          class="w-full sm:max-w-sm rounded-lg overflow-hidden shadow-lg border"
+          class="w-full sm:max-w-sm rounded-lg overflow-hidden shadow-lg dark:bg-neutral-800 border"
         >
           <Icon
             class="w-64 h-28 px-6"

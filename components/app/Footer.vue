@@ -32,7 +32,7 @@ const { data: navigation } = await useAsyncData('navigation:footer', () => fetch
             <NuxtLink
               :title="item.title"
               :to="item._path"
-              exact-active-class="text-primary bg-gray-400/20"
+              exact-active-class="text-primary dark:text-secondary bg-gray-400/20"
               class="hover:underline py-1.5 px-4 rounded-lg"
             >
               {{ item.title }}

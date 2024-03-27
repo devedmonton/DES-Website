@@ -70,7 +70,7 @@
 
           <div class="sm:col-span-6">
             <label
-              for="about"
+              for="message"
               class="block text-sm font-medium leading-5"
             >
               Message
