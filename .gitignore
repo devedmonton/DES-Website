@@ -1,25 +1,30 @@
-# dependencies
-node_modules
-
-# logs
-npm-debug.log
-
-# Nuxt build
+# Nuxt dev/build outputs
+.output
+.data
 .nuxt
-
-# Nuxt generate
+.nitro
+.cache
 dist
 
-# Service worker
+# Node dependencies
+node_modules
+
+# Logs
+npm-debug.log
+logs
+*.log
+
+# Misc
+.DS_Store
+.fleet
+.idea
 sw.*
 static/sw.js
 
-# DS Store
-*DS_Store
+# Local env files
+.env
+.env.*
+!.env.example
 
 # Netlify
 .netlify
-
-# Static project Nuxt 3
-
-.output
