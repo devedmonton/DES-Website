@@ -4,13 +4,13 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-24-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-# devedmonton.com
+# Dev Edmonton Society
 
-New home for the devedmonton.com website
+New home for the [devedmonton.com](devedmonton.com) website
 
 > Fostering a stronger software development community in Edmonton.
 
-## Build Setup
+## Development Setup
 
 Note that all of these commands have been tested and used on Mac/unix machines, if you are on windows and these do not work for you look in the contributing guidelines for help.
 
@@ -19,7 +19,7 @@ Note that all of these commands have been tested and used on Mac/unix machines, 
 $ nvm use
 
 # install dependencies
-$ npm install
+$ npm run install
 
 # serve with hot reload at localhost:3000
 $ npm run dev
@@ -31,30 +31,19 @@ $ npm run start
 # generate static project
 $ npm run generate
 
-# run tests
-$ npm test # run all tests and watch for changes
-$ npm run test-run # a single run of all the tests
-
 # run the linter
-$ npm run lint-check # check for linting errors
-$ npm run lint-fix # fix linting errors
-
-# run the formatter
-$ npm run format-check # check for formatting errors
-$ npm run format # fix formatting errors
+$ npm run lint # check for linting errors
+$ npm run lint:fix # fix linting errors
 
 # run pr checks
 $ npm run pr-checks
-
-# fix all linting and formatting errors
-$ npm run fix-linting-formatting-errors
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+For detailed explanation on how things work, check out [Nuxt docs](https://nuxt.com).
 
 # Resources
 
-Icons sourced from [Iconify](https://iconify.design/icon-sets/mdi/)
+Icons sourced from [Iconify](https://iconify.design/icon-sets/ph/)
 
 ## Contributors ✨
 

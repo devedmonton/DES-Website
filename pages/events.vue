@@ -1,16 +1,22 @@
-<template>
-    <div class="relative bg-grey-000 mt-8 pb-16 sm:px-6 lg:pt-24 px-4 lg:px-8">
-        <Head>
-            <Title>Dev Edmonton Society - Events</Title>
-            <Meta
-                name="description"
-                content="List of all the organizations that have fun tech events in Edmonton."
-            />
-        </Head>
-        <div class="text-gray-500">
-            <SectionEvents />
-        </div>
-    </div>
-</template>
+<script setup lang="ts">
+const group = { name: 'Community Events', items: events }
 
-<script></script>
+const title = 'Events'
+const description = 'List of all the organizations that have fun tech events in Edmonton.'
+
+useServerSeoMeta({
+  title,
+  description,
+})
+
+defineOgImage({
+  component: 'AppOgImageFrame',
+  icon: 'i-ph-calendar-blank-duotone',
+})
+</script>
+
+<template>
+  <main>
+    <AppSection :group="group" />
+  </main>
+</template>
