@@ -7,9 +7,7 @@ withDefaults(defineProps<{
 </script>
 
 <template>
-  <svg
-    viewBox="0 0 196 128"
-  >
+  <svg viewBox="0 0 196 128">
     <g>
       <path
         :class="scrolling ? 'fill-primary' : 'fill-white'"

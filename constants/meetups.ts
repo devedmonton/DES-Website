@@ -19,7 +19,7 @@ export const meetups = [
   },
   {
     name: 'Edmonton.Py',
-    image: '/assets/images/logos/meetups/python-logo.svg',
+    image: '/python.svg',
     to: 'https://exchangejs.com/',
     description: 'We hope to foster a strong, supportive, and proficient Python community in the Edmonton area. Everyone interested in any aspect of Python development is welcome to join.',
     socials: {
@@ -37,7 +37,7 @@ export const meetups = [
   },
   {
     name: 'Edmonton R User Group',
-    image: '/assets/images/logos/meetups/r-logo.svg',
+    image: '/r.svg',
     to: 'https://www.meetup.com/edmonton-r-user-group-yegrug',
     description: 'The Edmonton R User Group (YEGRUG) is an R-enthusiast group hosting events on data wrangling to visualization and web development with R. Learn R, hone your skills, network, all skill levels are welcome.',
     socials: {
@@ -52,7 +52,7 @@ export const meetups = [
   },
   {
     name: 'Weekly Dev Chat',
-    image: '/assets/images/logos/meetups/weeklydevchat-logo.svg',
+    image: '/weeklydevchat.svg',
     to: 'https://weeklydevchat.com/',
     description: 'Weekly Dev Chat is a place to ask questions, hear different viewpoints, and get to know your fellow developers. Every week there is an initial topic posted to get the discussion started. Sometimes we discuss the initial topic the entire chat, other times the topic changes several times through the natural flow of the conversation. Everyone and anyone is welcome to join as long as you are kind, supportive, and respectful of others.',
   },

@@ -1,7 +1,7 @@
 export const events = [
   {
     name: 'Google Developer Groups',
-    image: '/assets/icons/gdg-logo.svg',
+    image: '/events/gdgLogo.png',
     to: 'https://gdg.community.dev/gdg-cloud-edmonton',
     description: 'Google Developer Groups has an Edmonton chapter! Their vision is to foster an engaging and inclusive developer\'s community. A place where you can meet your fellow developers, career mentors, and boost your technical skills. Whether you are an advanced developer, or you just start to pivot your way in the tech industry, we welcome you to the community. They mostly focus on Google Technologies, such as Google Cloud Computing, Firebase, Flutter, Android, Machine Learning, and Earth Engine.',
   },

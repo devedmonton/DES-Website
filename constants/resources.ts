@@ -7,7 +7,7 @@ export const resources = [
   },
   {
     name: 'Training at Amii',
-    image: '/assets/images/logos/resources/amii.svg',
+    image: '/amii.svg',
     to: 'https://www.amii.ca',
     description: 'Amii (Alberta Machine Intelligence Institute) works to connect with the community to Alberta\'s growing AI ecosystem, offer training and advanced education and gives your company tools to harness the potential of artificial intelligence.',
   },
@@ -19,7 +19,7 @@ export const resources = [
   },
   {
     name: 'Edmonton Unlimited',
-    image: '/assets/images/logos/resources/edmontonUnlimited.svg',
+    image: '/edmontonUnlimited.svg',
     to: 'https://edmontonunlimited.com',
     description: 'Edmonton Unlimited provides free programming and resources that Edmonton\'s innovators, big thinkers and problem solvers need to turn their ideas into solutions.',
   },
