@@ -6,7 +6,7 @@ const props = defineProps<{
   to?: string
   image?: string
   description?: string
-  socials?: {}
+  socials?: object
   size?: number
 }>()
 
