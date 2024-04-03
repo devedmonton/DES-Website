@@ -1,29 +1,11 @@
 export const meetups = [
   {
-    name: 'YEGrb',
-    description: `YEGRB is Edmonton’s local Ruby Meetup. Ruby is a dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.`,
+    name: 'Javascript, Ruby and Python Meetup',
+    description: `A combination of the YEGRB, Exchange.js, and Edmonton.py community! A polyglot meetup that focusses on cool JS, Ruby and Python things. Both student's and working professionals welcome!`,
     to: `https://exchangejs.com`,
-    image: '/meetups/ruby-240px.png',
+    image: '/meetups/Python-js-ruby.png',
     socials: {
-      slack: '#meetup-ruby',
-    },
-  },
-  {
-    name: 'Exchange.js',
-    image: '/meetups/JavaScript-logo-240px.png',
-    to: 'https://exchangejs.com',
-    description: 'Exchange.js is an open community of local developers and designers, who meet monthly to discuss a wide range of topics within the JavaScript ecosystem.',
-    socials: {
-      slack: '#meetup-javascript',
-    },
-  },
-  {
-    name: 'Edmonton.Py',
-    image: '/python.svg',
-    to: 'https://exchangejs.com/',
-    description: 'We hope to foster a strong, supportive, and proficient Python community in the Edmonton area. Everyone interested in any aspect of Python development is welcome to join.',
-    socials: {
-      slack: '#meetup-edmontonpy',
+      slack: '#meetup-ruby, #meetup-javascript, #meetup-edmontonpy',
     },
   },
   {
