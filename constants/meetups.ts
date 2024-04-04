@@ -1,7 +1,7 @@
 export const meetups = [
   {
     name: 'Javascript, Ruby and Python Meetup',
-    description: `A combination of the YEGRB, Exchange.js, and Edmonton.py community! A polyglot meetup that focusses on cool JS, Ruby and Python things. Both student's and working professionals welcome!`,
+    description: `A combination of the YEGRB, Exchange.js, and Edmonton.py communities! A polyglot meetup that focuses on cool JavaScript, Ruby, and Python topics. Both students and working professionals are welcome!`,
     to: `https://exchangejs.com`,
     image: '/meetups/Python-js-ruby.png',
     socials: {
