@@ -19,7 +19,7 @@ Note that all of these commands have been tested and used on Mac/unix machines, 
 $ nvm use
 
 # install dependencies
-$ npm run install
+$ npm install
 
 # serve with hot reload at localhost:3000
 $ npm run dev

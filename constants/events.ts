@@ -35,9 +35,9 @@ export const events = [
     description: 'Beta City YEG is Edmonton’s citizen driven meetup with a mandate to connect citizens with opportunities to learn about, provide feedback for, and participate in projects that improve their community through connection and technology. They meet every 4th Wednesday of the month.',
   },
   {
-    name: 'Edmonton Tech Wednesdays',
-    image: '/events/yeg-tech-wed.png',
-    to: 'https://www.eventbrite.ca/e/edmonton-tech-wednesdays-tickets-662082084337',
-    description: 'Edmonton Tech Wednesdays is a weekly event where anyone who loves tech can mingle and connect with others in the tech sector in a casual and relaxed environment. Whether you\'re a developer, marketer, entrepreneur, or simply have an interest in tech, this is the perfect opportunity to network with like-minded individuals, exchange ideas, and build meaningful relationships.',
+    name: 'NeurAlbertaTech',
+    image: '/events/nat.svg',
+    to: 'https://neuralberta.tech/',
+    description: 'NeurAlbertaTech is a nonprofit organization dedicated to fostering a cohesive and diverse neurotechnology ecosystem. Through a range of accessible educational resources, events, and digital platforms, we foster collaboration, skills development, and inclusivity within the neurotech community while supporting groundbreaking projects at every stage.',
   },
 ]
