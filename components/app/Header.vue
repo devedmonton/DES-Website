@@ -14,7 +14,7 @@ useHead({
       return ''
     }),
   },
-});
+})
 
 onClickOutside(target, () => open.value = false)
 useEventListener('scroll', () => y.value = window.scrollY)

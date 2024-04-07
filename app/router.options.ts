@@ -37,7 +37,7 @@ export default <RouterConfig>{
       nuxtApp.hooks.hookOnce('page:finish', () => {
         resolve({
           top: 0,
-          behavior: 'smooth'
+          behavior: 'smooth',
         })
       })
     })

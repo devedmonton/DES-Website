@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { NuxtLink } from '#components'
 import { twMerge } from 'tailwind-merge'
+import { NuxtLink } from '#components'
 
 withDefaults(defineProps<{
   to?: string

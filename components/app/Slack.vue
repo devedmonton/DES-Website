@@ -137,7 +137,6 @@ const selected = ref(channels[0])
                   name="i-logos-svelte-icon"
                 />
 
-
                 <Icon
                   class="absolute top-20 -right-2 w-6 h-6"
                   name="i-logos-angular-icon"
