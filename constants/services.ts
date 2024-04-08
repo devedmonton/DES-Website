@@ -32,7 +32,7 @@ export const services: Service[] = [
     `,
     link: {
       url: 'https://join.slack.com/t/devedmonton/shared_invite/zt-24bp1mmie-XdXUv1eYy4MRElmXZaoqdg',
-      text: 'Join Slack'
+      text: 'Join Slack',
     },
   },
   {
@@ -41,7 +41,7 @@ export const services: Service[] = [
     description: 'If you\'re like us you\'re probably a developer keen to start a meetup or organize an event for your favourite language or technologies. We\'ve been there, and want to help! <br><br> Whether it\'s sharing best practices, streaming and recording resources, fundraising, or just lending a friendly ear we want to share the lessons we\'ve learned and let you focus on running successful and engaging events!',
     link: {
       url: 'mailto:board@devedmonton.com?subject=I%27m%20interested%20in%20help%20organizing%20an%20Edmonton%20technology%20event',
-      text: 'Organize An Event'
+      text: 'Organize An Event',
     },
   },
   {
@@ -50,7 +50,7 @@ export const services: Service[] = [
     description: 'Whether you\'re a growing startup or an established player the Dev Edmonton Society can help you understand the tools and technologies shaping your business.<br><br>Supporting and growing the Edmonton tech community takes many shapes, from simple financial donations to direct engagement by providing speakers, venues, resources and donations of employee time. We want to help your business grow and find a community of technologists passionate about the tools you need to succeed!',
     link: {
       url: 'mailto:board@devedmonton.com?subject=Supporting%20Dev%20Edmonton%20Society',
-      text: 'Support Local Tech'
+      text: 'Support Local Tech',
     },
   },
 ]

@@ -6,7 +6,7 @@ const props = defineProps<{
   to?: string
   image?: string
   description?: string
-  link?: { url: string; text?: string }
+  link?: { url: string, text?: string }
 }>()
 
 const target = computed(() => {
@@ -16,7 +16,6 @@ const target = computed(() => {
   return undefined
 })
 </script>
-
 
 <template>
   <component
