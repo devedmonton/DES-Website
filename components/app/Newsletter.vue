@@ -21,7 +21,7 @@ async function signUp() {
     error.value = res.message
     setTimeout(() => {
       error.value = undefined
-    }, 3000);
+    }, 3000)
     return
   }
   if (res.statusCode === 200) {
@@ -29,7 +29,7 @@ async function signUp() {
     data.value = res.email
     setTimeout(() => {
       data.value = undefined
-    }, 3000);
+    }, 3000)
   }
 }
 </script>
