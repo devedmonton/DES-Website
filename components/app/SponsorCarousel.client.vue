@@ -5,7 +5,7 @@ description: This component is responsible for rendering the sponsors carousel i
 
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import 'swiper/css';
+import 'swiper/css'
 </script>
 
 <template>

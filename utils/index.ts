@@ -59,6 +59,5 @@ export function iconify(icon: string) {
     return 'i-simple-icons-x'
   }
 
-
   return `i-logos-${icon}`
 }

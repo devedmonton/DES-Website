@@ -20,7 +20,7 @@ export default defineEventHandler(async (event) => {
     })
     const res = await mailChimp.lists.addListMember(listId, {
       email_address: email,
-      status: "pending",
+      status: 'pending',
       merge_fields: {
         FNAME: name,
       },
@@ -31,7 +31,8 @@ export default defineEventHandler(async (event) => {
       message: 'Success',
       email,
     }
-  } catch (error) {
+  }
+  catch (error) {
     console.error(error)
     return {
       statusCode: 500,

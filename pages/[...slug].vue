@@ -23,7 +23,7 @@ if (page.value) {
     title,
     description,
   })
-  
+
   defineOgImage({
     component: 'AppOgImageFrame',
     icon: page.value.data?.icon ?? 'i-ph-terminal',
@@ -43,7 +43,7 @@ if (page.value) {
       <ContentRendererMarkdown :value="page" />
       <template #empty>
         <AppError
-          code="204" 
+          code="204"
           title="Document is Empty"
           message="Please add content."
           icon="i-ph-file-duotone"
@@ -52,7 +52,7 @@ if (page.value) {
     </ContentRenderer>
     <div v-else>
       <AppError
-        code="404" 
+        code="404"
         title="Page not found"
         message="The page you are looking for does not exist."
         icon="i-ph-x-circle"
