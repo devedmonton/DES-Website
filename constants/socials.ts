@@ -18,7 +18,7 @@ export const socials: NavItem[] = [
   },
   {
     name: 'X/Twitter',
-    icon:'pajamas:twitter',
+    icon: 'pajamas:twitter',
     to: 'https://twitter.com/devedmonton',
   },
   {
