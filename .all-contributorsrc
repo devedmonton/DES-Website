@@ -252,6 +252,15 @@
         "code",
         "ideas"
       ]
+    },
+    {
+      "login": "jsc215",
+      "name": "Jeff Comer",
+      "avatar_url": "https://avatars.githubusercontent.com/u/30930575?v=4",
+      "profile": "https://github.com/jsc215",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
