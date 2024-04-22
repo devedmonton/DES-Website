@@ -18,7 +18,8 @@ const sections = [
 ]
 
 const title = 'Dev Edmonton Society'
-const description = 'Fostering a stronger software development community in Edmonton. We are made up of people who believe that an impactful, diverse, and collaborative developer community enriches us all. We realize this vision by sharing knowledge and ideas, understanding the community and its needs, promoting events and initiatives, and supporting technology meetups and organizations.'
+const description
+  = 'Fostering a stronger software development community in Edmonton. We are made up of people who believe that an impactful, diverse, and collaborative developer community enriches us all. We realize this vision by sharing knowledge and ideas, understanding the community and its needs, promoting events and initiatives, and supporting technology meetups and organizations.'
 
 useServerSeoMeta({
   title,
@@ -36,17 +37,19 @@ defineOgImage({
   <main>
     <section class="relative lg:p-10 p-4 h-screen mb-20">
       <AppBackground />
-      <div class="flex flex-col gap-4 items-center h-full justify-center max-w-6xl mx-auto text-center">
-        <span class="text-lg font-medium">
-          Dev Edmonton Society
-        </span>
+      <div
+        class="flex flex-col gap-4 items-center h-full justify-center max-w-6xl mx-auto text-center"
+      >
+        <span class="text-lg font-medium"> Dev Edmonton Society </span>
         <h1 class="md:text-6xl text-5xl font-bold">
-          Fostering a stronger software <br> development community in Edmonton.
+          Fostering a stronger software <br>
+          development community in Edmonton.
         </h1>
         <p class="mt-6 max-w-4xl">
-          We are made up of people who believe that an impactful, diverse, and collaborative developer community
-          enriches us all. We realize this vision by sharing knowledge and ideas, understanding the community and its
-          needs, promoting events and initiatives, and supporting technology meetups and organizations.
+          We are made up of people who believe that an impactful, diverse, and collaborative
+          developer community enriches us all. We realize this vision by sharing knowledge and
+          ideas, understanding the community and its needs, promoting events and initiatives, and
+          supporting technology meetups and organizations.
         </p>
         <div class="flex gap-4 mt-4">
           <AppButton
@@ -55,7 +58,7 @@ defineOgImage({
             class="bg-primary px-5 py-2.5 text-white rounded-full flex gap-2 items-center hover:border-primary hover:text-primary hover:bg-transparent"
           >
             <Icon
-              class="w-5 h-5 "
+              class="w-5 h-5"
               name="i-simple-icons-slack"
             />
             About our Slack
@@ -103,21 +106,25 @@ defineOgImage({
           <div class="relative col-span-3">
             <div
               class="absolute -left-10 top-0 w-1 bottom-0"
-              style="background: linear-gradient(0deg,#36c5f0 25%,#2eb67d 50%,#ecb22e 75%,#e01e5a);"
+              style="
+                background: linear-gradient(0deg, #36c5f0 25%, #2eb67d 50%, #ecb22e 75%, #e01e5a);
+              "
             />
             <h2 class="mb-4 text-xl font-medium">
               Welcome Friend!
             </h2>
             <p class="text-start">
-              We have a Slack workspace to connect people who are involved with the Edmonton (YEG) tech scene. The
-              people here range from being developers, designers, PM's, students, hobbists and more who love to talk
-              about code. We also do events and network across Alberta.
+              We have a Slack workspace to connect people who are involved with the Edmonton (YEG)
+              tech scene. The people here range from being developers, designers, PM's, students,
+              hobbists and more who love to talk about code. We also do events and network across
+              Alberta.
               <br><br>
-              There are several channels that you can check out on the card. They range from being about a specific
-              meetup, tech news, tech help, finding new opportunities, casual chatting and more. We have 80+ other
-              channels! If there's any channels we're missing all members are free to create any they want. If they're
-              inactive for a few months, then they'll be deleted. Connect with other members of the community by joining
-              the workspace.
+              There are several channels that you can check out on the card. They range from being
+              about a specific meetup, tech news, tech help, finding new opportunities, casual
+              chatting and more. We have 80+ other channels! If there's any channels we're missing
+              all members are free to create any they want. If they're inactive for a few months,
+              then they'll be deleted. Connect with other members of the community by joining the
+              workspace.
               <br><br>
               By joining the Slack you agree to abide by our
               <NuxtLink
@@ -131,7 +138,7 @@ defineOgImage({
             <div class="mt-12">
               <AppButton
                 :to="SLACK_URL"
-                class="bg-primary hover:bg-secondary dark:hover:bg-secondary text-white px-4 py-1 rounded-lg flex items-center gap-2 w-full"
+                class="bg-primary hover:bg-secondary dark:hover:bg-secondary text-white px-4 py-1 rounded-lg flex items-center justify-center gap-2 w-full max-w-xs mx-auto"
               >
                 <Icon
                   class="w-4 h-4"
@@ -139,13 +146,15 @@ defineOgImage({
                 />
                 Join our community on Slack
               </AppButton>
-              <div class="text-xs bg-red-400/20 p-2 rounded-lg flex items-center gap-4 max-w-lg mt-4">
+
+              <div
+                class="text-xs bg-red-400/20 p-2 rounded-lg flex items-center gap-4 max-w-lg mt-4"
+              >
                 <Icon
                   class="w-4 h-4"
                   name="i-ph-info"
                 />
                 <span>
-
                   If you get an "invalid link" error our Slack invite link has expired. Please email
                   <NuxtLink
                     to="mailto:board@devedmonton.com"
