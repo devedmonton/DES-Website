@@ -14,9 +14,10 @@ p + p {
   @apply bg-gradient-to-r to-secondary from-blue-700;
 }
 
+/* We use this color just one time */
 .light {
   ::selection {
-    @apply bg-secondary;
+    background: #d4b5d4;
   }
 }
 
