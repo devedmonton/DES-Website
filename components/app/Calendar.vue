@@ -8,7 +8,8 @@ defineProps<{
 
 const onEventClick = (event: any) => {
   const selectedEvent = event
-  window.open(selectedEvent.url)
+  console.log(selectedEvent)
+  window.open(selectedEvent.eventUrl)
 }
 </script>
 
@@ -25,16 +26,16 @@ const onEventClick = (event: any) => {
       class="rounded-lg bg-white dark:bg-neutral-800 overflow-hidden shadow"
       style="height: 691px;"
       today-button
-      events-on-month-view="true"
-      twelve-hour="true"
+      small
+      :events-on-month-view="true"
+      :twelve-hour="true"
       :events="group.items"
       :start-week-on-sunday="true"
-      :disable-views="['years', 'year']"
+      :disable-views="['years', 'year', 'day']"
       :time-from="8 * 60"
       :time-to="22 * 60"
       :time-step="60"
       :on-event-click="onEventClick"
-      small
     >
       <template #arrow-prev>
         <Icon
@@ -53,16 +54,39 @@ const onEventClick = (event: any) => {
 </template>
 
 <style>
-  .vuecal__event.js-rb-py-meetup {
+  .vuecal__event.js-ruby-python-meetup {
     background-color: hsl(46, 99%, 59%);
-    /* border: 2px solid hsl(46, 99%,39%); */
-    color: #363636;
+    @apply text-black;
   }
 
-  .vuecal__event.dot-net-user-group {
+  .vuecal__event.dotnet-user-group {
     background-color: hsl(254, 67%, 50%);
-    /* border: 2px solid hsl(254, 67%, 30%); */
     @apply text-white;
+  }
+
+  .vuecal__event.edmonton-r-user-group {
+    background-color: hsl(19, 100%, 50%);
+    @apply text-white;
+  }
+
+  .vuecal__event.edmonton-women-in-tech {
+    background-color: hsl(0, 0%, 100%);
+    @apply text-black;
+  }
+
+  .vuecal__event.weekly-dev-chat {
+    background-color: hsl(178, 74%, 31%);
+    @apply text-white;
+  }
+
+  .vuecal__event.edmonton-data-science-community {
+    background-color: hsl(25, 97%, 70%);
+    @apply text-black;
+  }
+
+  .vuecal__event.yegsec {
+    background-color: hsl(0, 0%, 96%);
+    @apply text-black;
   }
 
   .vuecal__event-title {
@@ -78,7 +102,11 @@ const onEventClick = (event: any) => {
   }
 
   .vuecal__event {
-    border-radius: 0.25rem;
+    @apply rounded flex flex-col justify-center p-2;
+  }
+
+  .vuecal__event-content {
+    @apply italic text-xs;
   }
 
   .vuecal__title-bar {
@@ -90,6 +118,6 @@ const onEventClick = (event: any) => {
   }
 
   div.vuecal__cell:nth-child(7)::before {
-    border-radius: 0 0 0.5rem 0;
+    @apply rounded-ee-lg;
   }
 </style>
