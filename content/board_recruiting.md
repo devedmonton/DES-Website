@@ -37,6 +37,8 @@ Connector: ability to identify and develop relationships to support our society.
 
 Accountability: To accept responsibility for actions, decisions and policies and to transparently report back to the members of our society as well as knowing our bylaws and procedures.
 
+</br>
+
 # Responsibilities
 
 ## Board Members
