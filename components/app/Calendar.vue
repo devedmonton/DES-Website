@@ -2,7 +2,7 @@
 import VueCal from 'vue-cal'
 import 'vue-cal/dist/vuecal.css'
 
-const props = defineProps<{
+defineProps<{
   group: any
 }>()
 
@@ -22,9 +22,11 @@ const onEventClick = (event: any) => {
       {{ group.name }}
     </ProseH1>
     <vue-cal
-      class="rounded-lg bg-white dark:bg-neutral-800 overflow-hidden shadow p-6"
-      style="height: 743px;"
+      class="rounded-lg bg-white dark:bg-neutral-800 overflow-hidden shadow"
+      style="height: 691px;"
       today-button
+      events-on-month-view="true"
+      twelve-hour="true"
       :events="group.items"
       :start-week-on-sunday="true"
       :disable-views="['years', 'year']"
@@ -32,6 +34,7 @@ const onEventClick = (event: any) => {
       :time-to="22 * 60"
       :time-step="60"
       :on-event-click="onEventClick"
+      small
     >
       <template #arrow-prev>
         <Icon
@@ -63,18 +66,30 @@ const onEventClick = (event: any) => {
   }
 
   .vuecal__event-title {
-    @apply font-semibold;
+    @apply text-xs sm:text-sm font-semibold;
   }
 
   .vuecal__event-time {
-    @apply text-sm italic;
+    @apply text-[0.5rem] sm:text-xs;
   }
 
   .vuecal__event:hover {
     @apply cursor-pointer;
   }
 
+  .vuecal__event {
+    border-radius: 0.25rem;
+  }
+
+  .vuecal__title-bar {
+    @apply relative;
+  }
+
   .vuecal__today-btn {
-    @apply text-primary bg-gray-400/20 hover:bg-gray-400/25 py-1 px-3 me-4 rounded-lg dark:text-white text-black font-semibold absolute right-24;
+    @apply bg-gray-400/20 hover:bg-gray-400/25 py-1 px-3 me-4 rounded-lg dark:text-white text-black font-semibold absolute right-[-10px] top-[-39px];
+  }
+
+  div.vuecal__cell:nth-child(7)::before {
+    border-radius: 0 0 0.5rem 0;
   }
 </style>
