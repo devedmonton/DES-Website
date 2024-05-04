@@ -51,6 +51,9 @@ const onEventClick = (event: any) => {
       </template>
     </vue-cal>
   </section>
+  <section>
+    <AppEventList :group="group" />
+  </section>
 </template>
 
 <style>
