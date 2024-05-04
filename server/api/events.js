@@ -1,13 +1,13 @@
-import { google } from 'googleapis';
-import { JWT } from 'google-auth-library';
+import { google } from 'googleapis'
+import { JWT } from 'google-auth-library'
 
 /*
 Reference for folks who maybe curious.
 - The google calendar id of the user you want to follow the events.
   - Refer to here https://it.umn.edu/services-technologies/how-tos/google-calendar-find-your-google#:~:text=Click%20on%20the%20three%20vertical,will%20find%20your%20Calendar%20ID.
-- A service account 
+- A service account
   - Refer to here https://dev.to/pedrohase/create-google-calender-events-using-the-google-api-and-service-accounts-in-nodejs-22m8
-- The google calendar user needs to give the "Make Changes to Events" permissions to the service account 
+- The google calendar user needs to give the "Make Changes to Events" permissions to the service account
   - Refer to here https://dev.to/pedrohase/create-google-calender-events-using-the-google-api-and-service-accounts-in-nodejs-22m8
 */
 
@@ -25,15 +25,16 @@ const getEvents = async ({
   googleCalendarId,
   serviceAccountCredentials,
   startDate,
-  limitEvents 
+  limitEvents,
 }) => {
-  if(!startDate) {
+  if (!startDate) {
     startDate = new Date().toISOString()
-  } else {
+  }
+  else {
     startDate = new Date(startDate).toISOString()
   }
 
-  if(!limitEvents) {
+  if (!limitEvents) {
     limitEvents = 10
   }
 
@@ -45,7 +46,7 @@ const getEvents = async ({
       'https://www.googleapis.com/auth/calendar',
       'https://www.googleapis.com/auth/calendar.events',
     ],
-  });
+  })
 
   // get the calendar api using google
   const calendar = google.calendar({ version: 'v3' })
@@ -57,7 +58,7 @@ const getEvents = async ({
     maxResults: limitEvents,
     singleEvents: true,
     orderBy: 'startTime',
-  });
+  })
 
   // return the events.
   return resposnse.data.items
@@ -72,21 +73,24 @@ const getEvents = async ({
  * // GET /api/events?startDate=2024-05-01&limitEvents=25
  * // GET /api/events
  */
+// eslint-disable-next-line
 export default defineEventHandler(async (event) => {
   // get the query params
+  // eslint-disable-next-line
   const { startDate, limitEvents } = getQuery(event)
- 
+
   // get the credentials from the service account
   const { googleCalendarId, serviceAccountCredentialsJSON } = useRuntimeConfig(event).googleCalendarAPI
-  
-  let serviceAccountCredentials;
+
+  let serviceAccountCredentials
   try {
     serviceAccountCredentials = JSON.parse(serviceAccountCredentialsJSON)
-  } catch (error) {
+  }
+  catch {
     return {
       statusCode: 400,
       message: 'No Service Account Credentials Provided',
-      error: "Service Account Credentials are not provided",
+      error: 'Service Account Credentials are not provided',
     }
   }
 
@@ -104,7 +108,8 @@ export default defineEventHandler(async (event) => {
       message: 'Success',
       events,
     }
-  } catch (error) {
+  }
+  catch (error) {
     return {
       statusCode: 400,
       message: 'Bad Request',
