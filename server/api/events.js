@@ -106,7 +106,8 @@ export default defineEventHandler(async (event) => {
     // working version.
     return {
       statusCode: 200,
-      message: 'Success',
+      statusMessage: 'Success',
+      message: 'Events fetched successfully',
       events,
     }
   }
