@@ -87,11 +87,12 @@ export default defineEventHandler(async (event) => {
     serviceAccountCredentials = JSON.parse(serviceAccountCredentialsJSON)
   }
   catch {
-    return {
+    throw createError({
       statusCode: 400,
+      statusMessage: 'Bad Request',
       message: 'No Service Account Credentials Provided',
       error: 'Service Account Credentials are not provided',
-    }
+    })
   }
 
   try {
@@ -109,11 +110,11 @@ export default defineEventHandler(async (event) => {
       events,
     }
   }
-  catch (error) {
-    return {
+  catch {
+    throw createError({
       statusCode: 400,
-      message: 'Bad Request',
-      error: error.message,
-    }
+      statusMessage: 'Bad Request',
+      message: 'Invalid Request to the Calendar API',
+    })
   }
 })
