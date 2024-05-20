@@ -1,7 +1,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5f9bdcfb-7b48-46e8-a58d-dfd2b32d8ccc/deploy-status)](https://app.netlify.com/sites/dev-edmonton/deploys)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-29-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-30-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # Dev Edmonton Society
@@ -92,6 +92,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/olimpiuus"><img src="https://avatars.githubusercontent.com/u/101880197?v=4?s=100" width="100px;" alt="Yuriy Kolegin"/><br /><sub><b>Yuriy Kolegin</b></sub></a><br /><a href="https://github.com/devedmonton/DES-Website/commits?author=olimpiuus" title="Code">💻</a> <a href="#ideas-olimpiuus" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/devedmonton/DES-Website/issues?q=author%3Aolimpiuus" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/dgmouris"><img src="https://avatars.githubusercontent.com/u/8164434?v=4?s=100" width="100px;" alt="dgmouris"/><br /><sub><b>dgmouris</b></sub></a><br /><a href="#ideas-dgmouris" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/devedmonton/DES-Website/commits?author=dgmouris" title="Code">💻</a> <a href="https://github.com/devedmonton/DES-Website/commits?author=dgmouris" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
