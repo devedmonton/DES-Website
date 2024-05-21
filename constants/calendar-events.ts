@@ -36,11 +36,11 @@ class Event {
 }
 
 export const calendarEvents: Event[] = [
-  new Event('2024-05-01 12:00', '2024-05-01 17:00', 'JS Ruby Python Meetup', 'js-ruby-python-meetup', 'This is a test', 'https://www.meetup.com/edmontonunlimited/events/300218136/'),
-  new Event('2024-04-30 13:00', '2024-04-30 16:00', 'Edmonton .Net User Group', 'dotnet-user-group', '', 'https://www.meetup.com/edmontonunlimited/events/300218136/'),
-  new Event('2024-04-30 17:00', '2024-04-30 20:00', 'Edmonton Women In Tech', 'edmonton-women-in-tech', '', 'https://www.meetup.com/edmontonunlimited/events/300218136/'),
-  new Event('2024-04-29 10:00', '2024-04-29 12:00', 'YEGSec Meetup', 'yegsec', '', 'https://www.meetup.com/edmontonunlimited/events/300218136/'),
-  new Event('2024-04-29 13:00', '2024-04-29 18:00', 'Weekly Dev Chat', 'weekly-dev-chat', '', 'https://www.meetup.com/edmontonunlimited/events/300218136/'),
-  new Event('2024-05-01 18:00', '2024-05-01 20:00', 'Edmonton R User Group', 'edmonton-r-user-group', '', 'https://www.meetup.com/edmontonunlimited/events/300218136/'),
-  new Event('2024-04-28 18:00', '2024-04-28 20:00', 'Edmonton Data Science Community', 'edmonton-data-science-community', '', 'https://www.meetup.com/edmontonunlimited/events/300218136/'),
+  new Event('2024-05-20 12:00', '2024-05-20 17:00', 'JS Ruby Python Meetup', 'js-ruby-python-meetup', 'This is a test', 'https://www.meetup.com/edmontonunlimited/events/300218136/'),
+  new Event('2024-05-21 13:00', '2024-05-21 16:00', 'Edmonton .Net User Group', 'dotnet-user-group', '', 'https://www.meetup.com/edmontonunlimited/events/300218136/'),
+  new Event('2024-05-22 17:00', '2024-05-22 20:00', 'Edmonton Women In Tech', 'edmonton-women-in-tech', '', 'https://www.meetup.com/edmontonunlimited/events/300218136/'),
+  new Event('2024-05-23 10:00', '2024-05-23 12:00', 'YEGSec Meetup', 'yegsec', '', 'https://www.meetup.com/edmontonunlimited/events/300218136/'),
+  new Event('2024-05-24 13:00', '2024-05-24 18:00', 'Weekly Dev Chat', 'weekly-dev-chat', '', 'https://www.meetup.com/edmontonunlimited/events/300218136/'),
+  new Event('2024-05-23 18:00', '2024-05-23 20:00', 'Edmonton R User Group', 'edmonton-r-user-group', '', 'https://www.meetup.com/edmontonunlimited/events/300218136/'),
+  new Event('2024-05-22 13:00', '2024-05-22 15:00', 'Edmonton Data Science Community', 'edmonton-data-science-community', '', 'https://www.meetup.com/edmontonunlimited/events/300218136/'),
 ]
