@@ -270,6 +270,35 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "yaroslavhoretskyi",
+      "name": "Yaroslav Horetskyi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/52444900?v=4",
+      "profile": "https://github.com/yaroslavhoretskyi",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Danbka-Taranbka",
+      "name": "Danylo Klymiuk",
+      "avatar_url": "https://avatars.githubusercontent.com/u/114756664?v=4",
+      "profile": "https://github.com/Danbka-Taranbka",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "dgmouris",
+      "name": "dgmouris",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8164434?v=4",
+      "profile": "https://github.com/dgmouris",
+      "contributions": [
+        "ideas",
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

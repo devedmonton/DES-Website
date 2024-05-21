@@ -17,6 +17,10 @@ export default defineNuxtConfig({
       server: process.env.MAILCHIMP_SERVER ?? 'us20',
       listId: process.env.MAILCHIMP_LIST_ID,
     },
+    googleCalendarAPI: {
+      googleCalendarId: process.env.GOOGLE_CALENDAR_ID,
+      serviceAccountCredentialsJSON: process.env.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS_JSON,
+    },
   },
 
   app: {
