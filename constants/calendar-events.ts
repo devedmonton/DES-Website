@@ -35,6 +35,15 @@ class Event {
   }
 }
 
+const eventData = async () => {
+  const response = await fetch('https://devedmonton.com/api/events')
+  const data = await response.json()
+  return data
+}
+
+const data = await eventData()
+console.log(data)
+
 export const calendarEvents: Event[] = [
   new Event('2024-05-20 12:00', '2024-05-20 17:00', 'JS Ruby Python Meetup', 'js-ruby-python-meetup', 'This is a test', 'https://www.meetup.com/edmontonunlimited/events/300218136/'),
   new Event('2024-05-21 13:00', '2024-05-21 16:00', 'Edmonton .Net User Group', 'dotnet-user-group', '', 'https://www.meetup.com/edmontonunlimited/events/300218136/'),
