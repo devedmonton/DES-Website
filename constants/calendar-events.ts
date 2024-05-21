@@ -1,4 +1,4 @@
-const iconStyles = 'width:20px;height:20px;position:absolute;bottom:0;right:0;border-left: 1px outset rgba(0,0,0,0.5);border-top: 1px outset rgba(0,0,0,0.5);border-radius: 3px 0 0 0;'
+const iconStyles = 'width:20px;height:20px;position:absolute;bottom:2px;right:2px;'
 const imageKitUrl = 'https://ik.imagekit.io/des/'
 
 const meetupIcons = {
