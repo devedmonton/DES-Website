@@ -12,8 +12,6 @@ const selectedEvent = ref<any>({})
 const onEventClick = (event: any, e: any) => {
   selectedEvent.value = event
   showDialog.value = true
-  console.log(selectedEvent)
-  // window.open(selectedEvent.eventUrl)
 
   e.stopPropagation()
 }
@@ -57,6 +55,7 @@ const onEventClick = (event: any, e: any) => {
       </template>
     </vue-cal>
 
+    <!-- TODO: make this into a component -->
     <div
       v-if="showDialog"
       id="dialog"

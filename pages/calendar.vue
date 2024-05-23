@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const group = { name: 'Calendar', items: calendarEvents }
+const group = { name: 'Calendar', items: await fetchEvents() }
 
 const title = 'Calendar'
 const description = 'List of all upcoming events in Edmonton'
