@@ -38,6 +38,7 @@ export default defineNuxtConfig({
   routeRules: {
     '/bylaws': { redirect: 'https://docs.google.com/document/d/1i6oXabir-628csa2bQacHpc17Kmhec9EfkyHij9yQGM/edit' },
     '/2021-survey': { redirect: 'https://docs.google.com/forms/d/e/1FAIpQLSeUyguShgoj6TZmqTboJN8qFVjKagrn1WRFvOuqDHqyGHEWeA/viewform?usp=sf_link' },
+    '/api/events': { cors: true },
   },
 
   // custom css
