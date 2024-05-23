@@ -1,16 +1,3 @@
-// const iconStyles = 'width:20px;height:20px;position:absolute;bottom:2px;right:2px;'
-// const imageKitUrl = 'https://ik.imagekit.io/des/'
-
-// const organizerIcons = {
-//   'js-ruby-python-meetup': '/meetups/Python-js-ruby.png',
-//   'dotnet-user-group': '/meetups/dotNet_logo.png',
-//   'edmonton-r-user-group': 'r.svg',
-//   'edmonton-women-in-tech': '/meetups/yegwit.png',
-//   'weekly-dev-chat': 'weeklydevchat.svg',
-//   'edmonton-data-science-community': '/meetups/DataScience',
-//   'yegsec': '/meetups/YEGSec.png',
-// }
-
 class Event {
   start: Date
   end: Date
@@ -18,8 +5,6 @@ class Event {
   organizer: string
   content: string
   contentFull: string
-  // iconUrl: string
-  // imageTag: string
   class: string
   eventUrl: string
 
@@ -28,8 +13,6 @@ class Event {
     this.end = new Date(end)
     this.title = summary
     this.organizer = organizer
-    // this.iconUrl = `${imageKitUrl}${organizerIcons[organizer as keyof typeof organizerIcons]}`
-    // this.imageTag = `<img src="${this.iconUrl}" style="${iconStyles}">`
     this.content = content
     this.contentFull = contentFull
     this.class = this.organizer

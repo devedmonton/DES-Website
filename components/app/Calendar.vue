@@ -111,41 +111,6 @@ const onEventClick = (event: any, e: any) => {
 </template>
 
 <style>
-  .vuecal__event.js-ruby-python-meetup {
-    background-color: hsl(46, 99%, 59%);
-    @apply text-black;
-  }
-
-  .vuecal__event.dotnet-user-group {
-    background-color: hsl(254, 67%, 50%);
-    @apply text-white;
-  }
-
-  .vuecal__event.edmonton-r-user-group {
-    background-color: hsl(19, 100%, 50%);
-    @apply text-white;
-  }
-
-  .vuecal__event.edmonton-women-in-tech {
-    background-color: hsl(0, 0%, 100%);
-    @apply text-black;
-  }
-
-  .vuecal__event.weekly-dev-chat {
-    background-color: hsl(178, 74%, 31%);
-    @apply text-white;
-  }
-
-  .vuecal__event.edmonton-data-science-community {
-    background-color: hsl(25, 97%, 70%);
-    @apply text-black;
-  }
-
-  .vuecal__event.yegsec {
-    background-color: hsl(0, 0%, 96%);
-    @apply text-black;
-  }
-
   .vuecal__event-title {
     @apply text-xs sm:text-sm font-semibold;
   }
