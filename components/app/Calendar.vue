@@ -32,7 +32,6 @@ const onEventClick = (event: any, e: any) => {
     </ProseH1>
     <vue-cal
       class="rounded-lg bg-white dark:bg-neutral-800 overflow-hidden shadow"
-      style="height: 691px;"
       today-button
       small
       :events-on-month-view="true"
