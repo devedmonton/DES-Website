@@ -21,7 +21,7 @@ class Event {
 }
 
 export const fetchEvents = async () => {
-  const response = await fetch('https://devedmonton.com/api/events')
+  const response = await fetch('/api/events')
   const data = await response.json()
   return data.events.map((event: any) => {
     return new Event(event.start.dateTime, event.end.dateTime, event.summary, '', '', event.description, event.htmlLink)
