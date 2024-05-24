@@ -6,12 +6,16 @@ defineProps<{
   group: any
 }>()
 
-const showDialog = ref(false)
+const showEventDetail = ref(false)
 const selectedEvent = ref<any>({})
+
+const close = () => {
+  showEventDetail.value = false
+}
 
 const onEventClick = (event: any, e: any) => {
   selectedEvent.value = event
-  showDialog.value = true
+  showEventDetail.value = true
 
   e.stopPropagation()
 }
@@ -55,58 +59,11 @@ const onEventClick = (event: any, e: any) => {
       </template>
     </vue-cal>
 
-    <!-- TODO: make this into a component -->
-    <div
-      v-if="showDialog"
-      id="dialog"
-      class="flex items-center justify-center overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-[calc(100%-1rem)] max-h-full bg-slate-400 bg-opacity-30"
-    >
-      <div class="relative p-4 w-full max-w-2xl max-h-full">
-        <div class="relative bg-white border border-neutral-400/20 rounded-lg dark:bg-neutral-800 shadow">
-          <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-            <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              {{ selectedEvent.title }}
-            </h3>
-            <button
-              type="button"
-              class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-              @click="showDialog = false"
-            >
-              <Icon
-                class="w-6 h-6"
-                name="i-ph-x-light"
-              />
-              <span class="sr-only">Close dialog</span>
-            </button>
-          </div>
-          <div class="p-4 space-y-4">
-            <p class="text-sm text-gray-500">
-              {{ selectedEvent.start.format('DD/MM/YYYY') }}
-            </p>
-            <p
-              class="content-full"
-              v-html="selectedEvent.contentFull"
-            />
-            <div>
-              <strong>Event details:</strong>
-              <ul>
-                <li>Event starts at: {{ selectedEvent.start.formatTime() }} MT</li>
-                <li>Event ends at: {{ selectedEvent.end.formatTime() }} MT</li>
-              </ul>
-            </div>
-          </div>
-          <div class="flex items-center p-4 border-t border-gray-200 rounded-b dark:border-gray-600">
-            <button
-              type="button"
-              class="duration-300 transition-all hover:bg-gray-200/30 dark:hover:bg-transparent border border-transparent rounded-lg bg-primary text-white px-3 py-1 hover:border-primary hover:text-primary flex items-center"
-              @click="showDialog = false"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <AppEventDetail
+      :show="showEventDetail"
+      :event="selectedEvent"
+      @close="close"
+    />
   </section>
 </template>
 
@@ -124,7 +81,7 @@ const onEventClick = (event: any, e: any) => {
   }
 
   .vuecal__event {
-    @apply rounded flex flex-col justify-center p-2;
+    @apply rounded flex flex-col justify-center p-2 bg-primary text-white;
   }
 
   .vuecal__event-content {
@@ -141,9 +98,5 @@ const onEventClick = (event: any, e: any) => {
 
   div.vuecal__cell:nth-child(7)::before {
     @apply rounded-ee-lg;
-  }
-
-  #dialog .content-full a{
-    @apply hover:underline text-gray-600 dark:text-gray-400;
   }
 </style>

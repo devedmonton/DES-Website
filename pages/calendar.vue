@@ -18,6 +18,8 @@ onMounted(() => {
 
 <template>
   <main>
-    <AppCalendar :group="group" />
+    <AppCalendar
+      :group="group"
+    />
   </main>
 </template>
