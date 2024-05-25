@@ -25,7 +25,7 @@ const createEventsList = (events: any) => {
   return events.map((event: any) => new Event(event.start.dateTime, event.end.dateTime, event.summary, '', '', event.description, event.htmlLink))
 }
 
-const { pending, data } = await useLazyFetch('/api/events')
+const { pending, data } = await useFetch('/api/events')
 const events = (data as any).value.events
 
 const group = ref({ name: 'Calendar', items: createEventsList(events) })
