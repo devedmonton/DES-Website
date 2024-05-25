@@ -4,6 +4,7 @@ import 'vue-cal/dist/vuecal.css'
 
 defineProps<{
   group: any
+  pending: boolean
 }>()
 
 const showEventDetail = ref(false)
@@ -23,6 +24,7 @@ const onEventClick = (event: any, e: any) => {
 
 <template>
   <section
+    v-if="!pending"
     :id="slugify(group.name)"
     :key="group.name"
     class="max-w-7xl mx-auto lg:py-20 py-10 px-4"
@@ -63,6 +65,22 @@ const onEventClick = (event: any, e: any) => {
       :event="selectedEvent"
       @close="close"
     />
+  </section>
+  <section
+    v-if="pending"
+    class="max-w-7xl mx-auto lg:py-20 py-10 px-4"
+  >
+    <ProseH1 class="mb-8 text-center">
+      {{ group.name }}
+    </ProseH1>
+    <div class="rounded-lg bg-white dark:bg-neutral-800 overflow-hidden shadow h-[691px]">
+      <div class="flex items-center justify-center h-96">
+        <Icon
+          class="w-12 h-12 animate-spin"
+          name="i-ph-spinner"
+        />
+      </div>
+    </div>
   </section>
 </template>
 
