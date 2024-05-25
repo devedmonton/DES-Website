@@ -1,10 +1,37 @@
 <script setup lang="ts">
-const group = ref({ name: 'Calendar', items: [] })
+class Event {
+  start: Date
+  end: Date
+  title: string
+  organizer: string
+  content: string
+  contentFull: string
+  class: string
+  eventUrl: string
 
-const { pending, data: events } = await useLazyAsyncData('events', fetchEvents)
+  constructor(start: string, end: string, summary: string, organizer: string, content: string, contentFull: string, eventUrl: string) {
+    this.start = new Date(start)
+    this.end = new Date(end)
+    this.title = summary
+    this.organizer = organizer
+    this.content = content
+    this.contentFull = contentFull
+    this.class = this.organizer
+    this.eventUrl = eventUrl
+  }
+}
+
+const createEventsList = (events: any) => {
+  return events.map((event: any) => new Event(event.start.dateTime, event.end.dateTime, event.summary, '', '', event.description, event.htmlLink))
+}
+
+const { pending, data } = await useFetch('/api/events')
+const events = (data as any).value.events
+
+const group = ref({ name: 'Calendar', items: createEventsList(events) })
 
 watch(events, (newEvents) => {
-  group.value = { name: 'Calendar', items: newEvents }
+  group.value = { name: 'Calendar', items: createEventsList(newEvents) }
 })
 
 const title = 'Calendar'
@@ -24,11 +51,8 @@ defineOgImage({
 <template>
   <main>
     <AppCalendar
-      v-if="!pending"
       :group="group"
+      :pending="pending"
     />
-    <div v-if="pending">
-      Loading...
-    </div>
   </main>
 </template>
