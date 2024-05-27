@@ -22,16 +22,23 @@ class Event {
 }
 
 const createEventsList = (events: any) => {
-  return events.map((event: any) => new Event(event.start.dateTime, event.end.dateTime, event.summary, '', '', event.description, event.htmlLink))
+  return events.map((event: any) => new Event(
+    event.start.dateTime,
+    event.end.dateTime,
+    event.summary,
+    '',
+    '',
+    event.description,
+    event.htmlLink,
+  ))
 }
 
-const { pending, data } = await useLazyFetch('https://devedmonton.com/api/events')
-const events = (data as any).value.events
+let group = { name: 'Calendar', items: [] }
 
-const group = ref({ name: 'Calendar', items: createEventsList(events) })
-
-watch(events, (newEvents) => {
-  group.value = { name: 'Calendar', items: createEventsList(newEvents) }
+const { pending, data } = await useLazyFetch('https://devedmonton.com/api/events', {
+  transform: (data) => {
+    group = { name: 'Calendar', items: createEventsList((data as any).events) }
+  },
 })
 
 const title = 'Calendar'
