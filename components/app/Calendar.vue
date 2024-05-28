@@ -27,7 +27,7 @@ const onEventClick = (event: any, e: any) => {
     v-if="!pending"
     :id="slugify(group.name)"
     :key="group.name"
-    class="max-w-7xl mx-auto lg:py-20 py-10 px-4"
+    class="max-w-7xl mx-auto lg:pt-20 pt-10 px-4"
   >
     <ProseH1 class="mb-8 text-center">
       {{ group.name }}
