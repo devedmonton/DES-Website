@@ -63,6 +63,7 @@ defineOgImage({
       :group="groupCalendar"
       :pending="pending"
     />
+
     <AppSection :group="group" />
   </main>
 </template>

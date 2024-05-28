@@ -27,7 +27,7 @@ const onEventClick = (event: any, e: any) => {
     v-if="!pending"
     :id="slugify(group.name)"
     :key="group.name"
-    class="max-w-7xl mx-auto lg:pt-20 pt-10 px-4"
+    class="max-w-7xl mx-auto lg:pt-20 pt-10 px-4 relative"
   >
     <ProseH1 class="mb-8 text-center">
       {{ group.name }}
@@ -59,6 +59,45 @@ const onEventClick = (event: any, e: any) => {
         />
       </template>
     </vue-cal>
+
+    <div
+      id="calendar-list-toggle"
+      class="w-[180px] bg-gray-400/20 rounded-lg absolute top-[158px] left-[22px]"
+    >
+      <div
+        class="w-1/2 inline-flex items-center"
+      >
+        <input
+          id="calendar-toggle"
+          name="calendar-list-toggle-radio"
+          type="radio"
+          class="hidden peer"
+          checked
+        >
+        <label
+          for="calendar-toggle"
+          class="w-full text-center px-3 py-1 cursor-pointer rounded-lg peer-checked:bg-primary peer-checked:text-white"
+        >
+          Calendar
+        </label>
+      </div>
+      <div
+        class="w-1/2 inline-flex items-center"
+      >
+        <input
+          id="list-toggle"
+          name="calendar-list-toggle-radio"
+          type="radio"
+          class="hidden peer"
+        >
+        <label
+          for="list-toggle"
+          class="w-full text-center px-3 py-1 cursor-pointer rounded-lg peer-checked:bg-primary peer-checked:text-white"
+        >
+          List
+        </label>
+      </div>
+    </div>
 
     <AppEventDetail
       :show="showEventDetail"
