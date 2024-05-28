@@ -39,7 +39,7 @@ const onEventClick = (event: any, e: any) => {
       :events-on-month-view="true"
       :twelve-hour="true"
       :events="group.items"
-      :start-week-on-sunday="true"
+      :start-week-on-sunday="false"
       :disable-views="['years', 'year', 'day']"
       :time-from="8 * 60"
       :time-to="22 * 60"
