@@ -7,16 +7,12 @@ defineProps<{
   pending: boolean
 }>()
 
-const showEventDetail = ref(false)
+const showEventModal = ref(false)
 const selectedEvent = ref<any>({})
-
-const close = () => {
-  showEventDetail.value = false
-}
 
 const onEventClick = (event: any, e: any) => {
   selectedEvent.value = event
-  showEventDetail.value = true
+  showEventModal.value = true
 
   e.stopPropagation()
 }
@@ -99,11 +95,52 @@ const onEventClick = (event: any, e: any) => {
       </div>
     </div>
 
-    <AppEventDetail
-      :show="showEventDetail"
-      :event="selectedEvent"
-      @close="close"
-    />
+    <AppModal
+      :show-modal="showEventModal"
+      @close="showEventModal = false"
+    >
+      <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+        <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          {{ selectedEvent.title }}
+        </h3>
+        <button
+          type="button"
+          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+        >
+          <Icon
+            class="w-6 h-6"
+            name="i-ph-x-light"
+            @click="showEventModal = false"
+          />
+          <span class="sr-only">Close dialog</span>
+        </button>
+      </div>
+      <div class="p-4 space-y-4">
+        <p class="text-sm text-gray-500">
+          {{ selectedEvent.start.format('DD/MM/YYYY') }}
+        </p>
+        <p
+          class="content-full"
+          v-html="selectedEvent.contentFull"
+        />
+        <div>
+          <strong>Event details:</strong>
+          <ul>
+            <li>Event starts at: {{ selectedEvent.start.formatTime() }} MT</li>
+            <li>Event ends at: {{ selectedEvent.end.formatTime() }} MT</li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex items-center p-4 border-t border-gray-200 rounded-b dark:border-gray-600">
+        <button
+          type="button"
+          class="duration-300 transition-all hover:bg-gray-200/30 dark:hover:bg-transparent border border-transparent rounded-lg bg-primary text-white px-3 py-1 hover:border-primary hover:text-primary flex items-center"
+          @click="showEventModal = false"
+        >
+          Close
+        </button>
+      </div>
+    </AppModal>
   </section>
   <section
     v-if="pending"
