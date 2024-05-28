@@ -96,8 +96,7 @@ const onEventClick = (event: any, e: any) => {
     </div>
 
     <AppModal
-      :show-modal="showEventModal"
-      @close="showEventModal = false"
+      v-model="showEventModal"
     >
       <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
         <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -130,7 +129,6 @@ const onEventClick = (event: any, e: any) => {
             <li>Event ends at: {{ selectedEvent.end.formatTime() }} MT</li>
           </ul>
         </div>
-        <template #footer />
       </div>
     </AppModal>
   </section>

@@ -1,20 +1,23 @@
 <script setup lang="ts">
-defineProps<{
-  showModal: boolean
+const props = defineProps<{
+  modelValue: boolean
 }>()
 
+const modal = useVModel(props, 'modelValue')
 const modalRef = ref(null)
 
-const emit = defineEmits(['close'])
+const closeModal = () => {
+  modal.value = false
+}
 
 onClickOutside(modalRef, () => {
-  emit('close')
+  closeModal()
 })
 </script>
 
 <template>
   <div
-    v-if="showModal"
+    v-if="modal"
     id="modal"
     class="flex items-center justify-center overflow-hidden fixed top-0 left-0 z-10 w-full h-full bg-slate-400 bg-opacity-30"
     @click.stop
@@ -29,7 +32,7 @@ onClickOutside(modalRef, () => {
           <button
             type="button"
             class="duration-300 transition-all hover:bg-gray-200/30 dark:hover:bg-transparent border border-transparent rounded-lg bg-primary text-white px-3 py-1 hover:border-primary hover:text-primary flex items-center"
-            @click="emit('close')"
+            @click="closeModal"
           >
             Close
           </button>
