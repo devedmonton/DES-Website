@@ -24,6 +24,17 @@ onClickOutside(modalRef, () => {
       class="m-4 relative w-full max-w-2xl max-h-full bg-white border border-neutral-400/20 rounded-lg dark:bg-neutral-800 shadow z-50"
     >
       <slot />
+      <slot name="footer">
+        <div class="flex items-center p-4 border-t border-gray-200 rounded-b dark:border-gray-600">
+          <button
+            type="button"
+            class="duration-300 transition-all hover:bg-gray-200/30 dark:hover:bg-transparent border border-transparent rounded-lg bg-primary text-white px-3 py-1 hover:border-primary hover:text-primary flex items-center"
+            @click="emit('close')"
+          >
+            Close
+          </button>
+        </div>
+      </slot>
     </div>
   </div>
 </template>

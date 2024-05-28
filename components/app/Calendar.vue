@@ -130,15 +130,7 @@ const onEventClick = (event: any, e: any) => {
             <li>Event ends at: {{ selectedEvent.end.formatTime() }} MT</li>
           </ul>
         </div>
-      </div>
-      <div class="flex items-center p-4 border-t border-gray-200 rounded-b dark:border-gray-600">
-        <button
-          type="button"
-          class="duration-300 transition-all hover:bg-gray-200/30 dark:hover:bg-transparent border border-transparent rounded-lg bg-primary text-white px-3 py-1 hover:border-primary hover:text-primary flex items-center"
-          @click="showEventModal = false"
-        >
-          Close
-        </button>
+        <template #footer />
       </div>
     </AppModal>
   </section>
