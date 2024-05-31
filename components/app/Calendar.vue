@@ -96,6 +96,7 @@ const onEventClick = (event: any, e: any) => {
     </div>
 
     <AppModal
+      id="event-modal"
       v-model="showEventModal"
     >
       <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
@@ -120,7 +121,7 @@ const onEventClick = (event: any, e: any) => {
         </p>
         <p
           class="content-full"
-          v-html="selectedEvent.contentFull"
+          v-html="selectedEvent.description"
         />
         <div>
           <strong>Event details:</strong>
@@ -181,5 +182,9 @@ const onEventClick = (event: any, e: any) => {
 
   div.vuecal__cell:nth-child(7)::before {
     @apply rounded-ee-lg;
+  }
+
+  #event-modal .content-full a{
+    @apply hover:underline text-gray-600 dark:text-gray-400;
   }
 </style>

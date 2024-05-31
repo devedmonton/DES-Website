@@ -7,20 +7,30 @@ class Event {
   title: string
   organizer: string
   content: string
-  contentFull: string
+  description: string
   class: string
   eventUrl: string
 
-  constructor(start: string, end: string, summary: string, organizer: string, content: string, contentFull: string, eventUrl: string) {
+  constructor(start: string, end: string, summary: string, organizer: string, content: string, description: string, eventUrl: string) {
     this.start = new Date(start)
     this.end = new Date(end)
     this.title = summary
     this.organizer = organizer
     this.content = content
-    this.contentFull = contentFull
+    this.description = description ? renderMarkdown(convertUrlsToLinks(description)) : description
     this.class = this.organizer
     this.eventUrl = eventUrl
   }
+}
+
+const convertUrlsToLinks = (description: string) => {
+  const urlRegex = /(?<!["'>]|href=")\b((https?:\/\/)(([a-zA-Z0-9-]+\.)+)?[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9](\.[a-zA-Z]{2,})(\.[a-zA-Z]{2,})?(\/[^\s"'<]*)?(\?[^\s"'<]*)?(:(\d{1,5}))?\/?)(?!["'<])/gm
+
+  return description.replace(urlRegex, '<a href="$&" target="_blank">$&</a>')
+}
+
+function renderMarkdown(description: string) {
+  return description.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\*(.*?)\*/g, '<em>$1</em>')
 }
 
 const createEventsList = (events: any) => {
