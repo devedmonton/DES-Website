@@ -30,8 +30,6 @@
     "@vueuse/core": "^10.9.0",
     "@vueuse/nuxt": "^10.9.0",
     "eslint": "^9.0.0",
-    "google-auth-library": "^9.9.0",
-    "googleapis": "^136.0.0",
     "happy-dom": "^13.10.1",
     "nuxt": "^3.11.1",
     "nuxt-icon": "^0.6.10",
@@ -42,6 +40,5 @@
     "vitest": "^1.4.0",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
-  },
-  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+  }
 }
