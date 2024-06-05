@@ -56,6 +56,7 @@ const onEventClick = (event: any, e: any) => {
       </template>
     </vue-cal>
 
+    <!-- TODO: Implement the list view
     <div
       id="calendar-list-toggle"
       class="w-[180px] bg-gray-400/20 rounded-lg absolute top-[158px] left-[22px]"
@@ -93,7 +94,7 @@ const onEventClick = (event: any, e: any) => {
           List
         </label>
       </div>
-    </div>
+    </div> -->
 
     <AppModal
       id="event-modal"
@@ -165,7 +166,7 @@ const onEventClick = (event: any, e: any) => {
   }
 
   .vuecal__event {
-    @apply rounded flex flex-col justify-center p-2 bg-primary text-white;
+    @apply flex flex-col justify-center p-2 bg-primary text-white border border-gray-400/25;
   }
 
   .vuecal__event-content {
