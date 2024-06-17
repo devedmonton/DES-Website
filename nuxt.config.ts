@@ -17,6 +17,10 @@ export default defineNuxtConfig({
       server: process.env.MAILCHIMP_SERVER ?? 'us20',
       listId: process.env.MAILCHIMP_LIST_ID,
     },
+    googleCalendarAPI: {
+      googleCalendarId: process.env.GOOGLE_CALENDAR_ID,
+      serviceAccountCredentialsJSON: process.env.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS_JSON,
+    },
   },
 
   app: {
@@ -34,6 +38,7 @@ export default defineNuxtConfig({
   routeRules: {
     '/bylaws': { redirect: 'https://docs.google.com/document/d/1i6oXabir-628csa2bQacHpc17Kmhec9EfkyHij9yQGM/edit' },
     '/2021-survey': { redirect: 'https://docs.google.com/forms/d/e/1FAIpQLSeUyguShgoj6TZmqTboJN8qFVjKagrn1WRFvOuqDHqyGHEWeA/viewform?usp=sf_link' },
+    '/api/events': { cors: true },
   },
 
   // custom css

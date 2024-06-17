@@ -30,6 +30,8 @@
     "@vueuse/core": "^10.9.0",
     "@vueuse/nuxt": "^10.9.0",
     "eslint": "^9.0.0",
+    "google-auth-library": "^9.9.0",
+    "googleapis": "^136.0.0",
     "happy-dom": "^13.10.1",
     "nuxt": "^3.11.1",
     "nuxt-icon": "^0.6.10",
@@ -39,6 +41,7 @@
     "typescript": "^5.4.3",
     "vitest": "^1.4.0",
     "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.3.0",
+    "vue-cal": "^4.8.1"
   }
 }

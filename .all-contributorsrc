@@ -250,7 +250,8 @@
       "profile": "http://arashsheyda.me",
       "contributions": [
         "code",
-        "ideas"
+        "ideas",
+        "review"
       ]
     },
     {
@@ -285,6 +286,26 @@
       "name": "Danylo Klymiuk",
       "avatar_url": "https://avatars.githubusercontent.com/u/114756664?v=4",
       "profile": "https://github.com/Danbka-Taranbka",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "dgmouris",
+      "name": "dgmouris",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8164434?v=4",
+      "profile": "https://github.com/dgmouris",
+      "contributions": [
+        "ideas",
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "keifererikson",
+      "name": "Keifer Erikson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9795658?v=4",
+      "profile": "http://keifer.dev",
       "contributions": [
         "code"
       ]
