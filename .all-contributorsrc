@@ -300,6 +300,15 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "keifererikson",
+      "name": "Keifer Erikson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9795658?v=4",
+      "profile": "http://keifer.dev",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
