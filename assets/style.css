@@ -13,3 +13,11 @@ p + p {
 .nuxt-scroll-indicator {
   @apply bg-gradient-to-r to-secondary from-blue-700;
 }
+
+::selection {
+  @apply bg-secondaryWithOpacity;
+}
+
+.dark ::selection {
+  @apply bg-primaryWithOpacity;
+}
