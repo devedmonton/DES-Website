@@ -41,4 +41,10 @@ export const resources = [
     to: 'https://technologyalberta.com',
     description: 'Technology Alberta exists to nurture a dedicated community of people and organizations whose coordinated and collaborative efforts help to make Alberta\'s entrepreneurial advanced technology companies the global vendors of choice. We achieve our goal through entrepreneur led and community driven events, programs, and initiatives.',
   },
+  {
+    name: '460 Free Textbooks for Math and Science',
+    image:'/Free-Code-Camp.png',
+    to: 'https://www.freecodecamp.org/news/free-textbooks-math-science-and-more-online-pdf-for-college-and-high-school/',
+    description: 'This resources provides links to different textbook resources for math and science, ranging from Computer Science to Law. The website seperates them into 2 categories, highschool and univeristy level. There you will find 90 different free textbooks geared towards highschool classes and 370 different textbooks geared towards college classes.',
+  }
 ]
