@@ -49,13 +49,13 @@ export const resources = [
   },
   {
     name: 'Class Central',
-    image: '',
+    image: '/class-central.png',
     to: 'https://www.classcentral.com',
     description: 'Class Central guides you to a plethora of resources ranging from Anatomy/Health Sciences to Education and Teaching to Computer Science and more. It gives you free or paid resources one can choose from to aid their learning or to learn about something new.',
   },
   {
     name: 'ComIT',
-    image: '',
+    image: '/comit.png',
     to: 'https://www.comit.org',
     description: 'ComIT is an organization that helps people overcome employment barriers by connecting them with companies seeking IT professionals. There programs focus on essential technical and soft skills needed by local employers.',
   },
