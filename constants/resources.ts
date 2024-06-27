@@ -47,4 +47,16 @@ export const resources = [
     to: 'https://www.freecodecamp.org/news/free-textbooks-math-science-and-more-online-pdf-for-college-and-high-school/',
     description: 'This resources provides links to different textbook resources for math and science, ranging from Computer Science to Law. The website seperates them into 2 categories, highschool and univeristy level. There you will find 90 different free textbooks geared towards highschool classes and 370 different textbooks geared towards college classes.',
   },
+  {
+    name: 'Class Central',
+    image: '/class-central.png',
+    to: 'https://www.classcentral.com',
+    description: 'Class Central guides you to a plethora of resources ranging from Anatomy/Health Sciences to Education and Teaching to Computer Science and more. It gives you free or paid resources one can choose from to aid their learning or to learn about something new.',
+  },
+  {
+    name: 'ComIT',
+    image: '/comit.png',
+    to: 'https://www.comit.org',
+    description: 'ComIT is an organization that helps people overcome employment barriers by connecting them with companies seeking IT professionals. There programs focus on essential technical and soft skills needed by local employers.',
+  },
 ]
