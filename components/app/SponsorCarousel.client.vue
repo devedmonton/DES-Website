@@ -22,6 +22,7 @@ const modules = [Autoplay]
         delay: 7500,
         disableOnInteraction: false,
       }"
+      :loop="true"
       :modules="modules"
       :breakpoints="{
         320: {
