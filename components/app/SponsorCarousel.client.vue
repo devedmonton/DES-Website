@@ -19,7 +19,7 @@ const modules = [Autoplay]
     <Swiper
       :space-between="50"
       :autoplay="{
-        delay: 5000,
+        delay: 7500,
         disableOnInteraction: false,
       }"
       :modules="modules"
