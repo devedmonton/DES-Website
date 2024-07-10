@@ -5,7 +5,10 @@ description: This component is responsible for rendering the sponsors carousel i
 
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
+
+const modules = [Autoplay]
 </script>
 
 <template>
@@ -15,6 +18,12 @@ import 'swiper/css'
     </h2>
     <Swiper
       :space-between="50"
+      :autoplay="{
+        delay: 7500,
+        disableOnInteraction: false,
+      }"
+      :loop="true"
+      :modules="modules"
       :breakpoints="{
         320: {
           slidesPerView: 2,
