@@ -327,6 +327,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "bottbott",
+      "name": "bottbott",
+      "avatar_url": "https://avatars.githubusercontent.com/u/53452222?v=4",
+      "profile": "https://rybo.dev",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
