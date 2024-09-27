@@ -61,4 +61,10 @@ Ready to level up? See you at Leetcode Night!A combination of the YEGRB, Exchang
     to: 'https://www.yegsec.ca',
     description: 'We meet on a monthly-ish basis to discuss security, drink beer, and socialize. If you\'re into that sort of thing then you should probably join us. If you hate waiting, and who  can blame you, you\'re more than welcome to join us in Slack. Tweet @yegsec for an invite!',
   },
+  {
+    name: 'Demo Camp',
+    image: '/meetups/DemoCamp.png',
+    to: 'https://www.eventbrite.ca/o/democamp-edmonton-56126644423',
+    description: 'Started back in 2008, DemoCamp is an event that brings together developers, creatives, entrepreneurs and investors to share what they\'ve been working on and to find others in the community interested in similar topics. The rules for DemoCamp are simple: ten minutes to demo real, working products, followed by a few minutes for questions, and no slides allowed. Democamp is a community-run event by a team of volunteers.',
+  },
 ]
