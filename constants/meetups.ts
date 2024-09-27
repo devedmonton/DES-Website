@@ -1,5 +1,15 @@
 export const meetups = [
   {
+    name: 'Leetcode Night: Code, Collaborate, Conquer!',
+    description: `Join us for Leetcode Night, where coders of all levels tackle Leetcode problems together. Whether you're prepping for interviews or just want to sharpen your skills, this is the perfect chance to collaborate, share strategies, and learn new techniques. Bring your laptop, team up, and let's solve some coding challenges! Any meetups will be posted on the Edmonton Unlimited meetup.com
+Ready to level up? See you at Leetcode Night!A combination of the YEGRB, Exchange.js, and Edmonton.py communities!`,
+    to: `https://www.meetup.com/edmontonunlimited/events/`,
+    image: '/meetups/leetcode.png',
+    socials: {
+      slack: '#meetup-Leetcode Night',
+    },
+  },
+  {
     name: 'Javascript, Ruby and Python Meetup',
     description: `A combination of the YEGRB, Exchange.js, and Edmonton.py communities! A polyglot meetup that focuses on cool JavaScript, Ruby, and Python topics. Both students and working professionals are welcome!`,
     to: `https://exchangejs.com`,
