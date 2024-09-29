@@ -5,7 +5,7 @@ export const meetups = [
 Ready to level up? See you at Leetcode Night!A combination of the YEGRB, Exchange.js, and Edmonton.py communities!Join our Discord! Connect via #yegleet and #yegleetevents!`,
     to: `https://discord.gg/hDGT9F9hbp`,
     image: '/meetups/leetcode.png',
-    
+
   },
   {
     name: 'Javascript, Ruby and Python Meetup',
