@@ -48,9 +48,16 @@ export const meetups = [
     description: 'The Edmonton Data Community aims to build a safe space for folks in the data space to connect, share knowledge and grow together. Whether you want to talk about Python for Data Analytics or how to transform business requirements into data science products, this will be the place for you.',
   },
   {
+    name: 'Thane WordPress Meetup',
+    image: '/assets/images/logos/Wordpress-logo.png',
+    to: 'https://www.meetup.com/thane-wordpress-meetup',
+    description: 'We are a group of local WordPress developers, designers, and publishers who get together to share our knowledge and experience and to meet other WordPress users in the area. This WordPress Meetup is open to all who love WordPress --- join us!',
+  },
+  {
     name: 'YEGSec',
     image: '/meetups/YEGSec.png',
     to: 'https://www.yegsec.ca',
     description: 'We meet on a monthly-ish basis to discuss security, drink beer, and socialize. If you\'re into that sort of thing then you should probably join us. If you hate waiting, and who  can blame you, you\'re more than welcome to join us in Slack. Tweet @yegsec for an invite!',
   },
+
 ]
