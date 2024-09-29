@@ -25,6 +25,10 @@ Are you new to open source? Start here!
 
 # FAQ
 
+### I have an image I would like to add to the site. How do I do that?
+
+We use a third party called ImageKit that helps us grab performant images across the site. It's very fast but the downside is that only certain people are able to add images to our instance. Feel free to DM Mandy Meindersma on the DES slack to upload an image or make an issue with the image you would like uploaded. Thank you so much!
+
 ### I have some error and I do not understand what it means. WHat do I do?
 
 1. Have you checked your node versions?
