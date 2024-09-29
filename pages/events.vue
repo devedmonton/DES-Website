@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const group = { name: 'Community Events', items: events }
+const groupCalendar = { name: 'Calendar', items: [] }
 
 class Event {
   start: Date
@@ -25,7 +25,6 @@ class Event {
 
 const convertUrlsToLinks = (description: string) => {
   const urlRegex = /(?<!["'>]|href=")\b((https?:\/\/)(([a-zA-Z0-9-]+\.)+)?[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9](\.[a-zA-Z]{2,})(\.[a-zA-Z]{2,})?(\/[^\s"'<]*)?(\?[^\s"'<]*)?(:(\d{1,5}))?\/?)(?!["'<])/gm
-
   return description.replace(urlRegex, '<a href="$&" target="_blank">$&</a>')
 }
 
@@ -45,11 +44,9 @@ const createEventsList = (events: any) => {
   ))
 }
 
-let groupCalendar = { name: 'Calendar', items: [] }
-
 const { pending, data } = await useLazyFetch('https://devedmonton.com/api/events', {
   transform: (data) => {
-    groupCalendar = { name: 'Calendar', items: createEventsList((data as any).events) }
+    groupCalendar.items = createEventsList((data as any).events)
   },
 })
 
@@ -73,7 +70,5 @@ defineOgImage({
       :group="groupCalendar"
       :pending="pending"
     />
-
-    <AppSection :group="group" />
   </main>
 </template>
