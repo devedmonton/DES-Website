@@ -22,8 +22,8 @@ export const navigation: NavItem[] = [
     to: '/resources',
   },
   {
-    name: 'Contact',
-    icon: 'i-ph-phone-duotone',
-    to: '/contact',
+    name: 'Companies', // Changed from 'Contact' to 'Companies'
+    icon: 'i-ph-building', // Choose an appropriate icon for companies
+    to: '/companies', // Link to the new companies page
   },
 ]
