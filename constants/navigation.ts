@@ -22,7 +22,7 @@ export const navigation: NavItem[] = [
     to: '/resources',
   },
   {
-    name: 'Companies', 
+    name: 'Companies',
     icon: 'i-ph-building',
     to: '/companies',
   },
