@@ -6,12 +6,6 @@ export const events = [
     description: 'Google Developer Groups has an Edmonton chapter! Their vision is to foster an engaging and inclusive developer\'s community. A place where you can meet your fellow developers, career mentors, and boost your technical skills. Whether you are an advanced developer, or you just start to pivot your way in the tech industry, we welcome you to the community. They mostly focus on Google Technologies, such as Google Cloud Computing, Firebase, Flutter, Android, Machine Learning, and Earth Engine.',
   },
   {
-    name: 'Canada Learning Code',
-    image: '/events/clc.png',
-    to: 'https://www.canadalearningcode.ca/chapters/edmonton',
-    description: 'Canada Learning Code designs, delivers, and partners on technology education for people in Canada. They have workshops for kids, teens, girls, and adults. They are always looking for mentors, teachers and coordinators.',
-  },
-  {
     name: 'Rainforest Alberta',
     image: '/events/rac.png',
     to: 'https://www.rainforestab.ca/edmonton.html',
