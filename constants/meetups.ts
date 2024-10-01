@@ -2,7 +2,7 @@ export const meetups = [
   {
     name: 'Leetcode Night: Code, Collaborate, Conquer!',
     description: `Join us for Leetcode Night, where coders of all levels tackle Leetcode problems together. Whether you're prepping for interviews or just want to sharpen your skills, this is the perfect chance to collaborate, share strategies, and learn new techniques. Bring your laptop, team up, and let's solve some coding challenges! Any meetups will be posted on the Edmonton Unlimited meetup.com
-Ready to level up? See you at Leetcode Night!A combination of the YEGRB, Exchange.js, and Edmonton.py communities!Join our Discord! Connect via #yegleet and #yegleetevents!`,
+    Ready to level up? See you at Leetcode Night!A combination of the YEGRB, Exchange.js, and Edmonton.py communities!Join our Discord! Connect via #yegleet and #yegleetevents!`,
     to: `https://discord.gg/hDGT9F9hbp`,
     image: '/meetups/leetcode.png',
 
@@ -56,16 +56,15 @@ Ready to level up? See you at Leetcode Night!A combination of the YEGRB, Exchang
     description: 'The Edmonton Data Community aims to build a safe space for folks in the data space to connect, share knowledge and grow together. Whether you want to talk about Python for Data Analytics or how to transform business requirements into data science products, this will be the place for you.',
   },
   {
-    name: 'Thane WordPress Meetup',
-    image: '/assets/images/logos/Wordpress-logo.png',
-    to: 'https://www.meetup.com/thane-wordpress-meetup',
-    description: 'We are a group of local WordPress developers, designers, and publishers who get together to share our knowledge and experience and to meet other WordPress users in the area. This WordPress Meetup is open to all who love WordPress --- join us!',
-  },
-  {
     name: 'YEGSec',
     image: '/meetups/YEGSec.png',
     to: 'https://www.yegsec.ca',
     description: 'We meet on a monthly-ish basis to discuss security, drink beer, and socialize. If you\'re into that sort of thing then you should probably join us. If you hate waiting, and who  can blame you, you\'re more than welcome to join us in Slack. Tweet @yegsec for an invite!',
   },
-
+  {
+    name: 'Edmonton WordPress Meetup',
+    image: '/assets/images/logos/Wordpress-logo.png',
+    to: 'https://www.linkedin.com/groups/14490539/',
+    description: 'The Edmonton WordPress Meetup is open to anyone and everyone locally who is interested in WordPress, the leading web publishing and open-source software platform. ',
+  },
 ]
