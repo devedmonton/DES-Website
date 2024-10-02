@@ -5,8 +5,6 @@
 </template>
 
 <script setup lang="ts">
-import { companies } from '@/constants/companies' // Adjust the path as necessary
-
 // Alphabetically sort companies
 const sortedCompanies = companies.sort((a, b) => a.name.localeCompare(b.name))
 
