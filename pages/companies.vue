@@ -17,6 +17,11 @@ useServerSeoMeta({
   title,
   description,
 })
+
+defineOgImage({
+  component: 'AppOgImageFrame',
+  icon: 'i-ph-books-duotone',
+})
 </script>
 
 <style scoped>
