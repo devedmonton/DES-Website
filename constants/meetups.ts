@@ -61,4 +61,17 @@ Ready to level up? See you at Leetcode Night!A combination of the YEGRB, Exchang
     to: 'https://www.yegsec.ca',
     description: 'We meet on a monthly-ish basis to discuss security, drink beer, and socialize. If you\'re into that sort of thing then you should probably join us. If you hate waiting, and who  can blame you, you\'re more than welcome to join us in Slack. Tweet @yegsec for an invite!',
   },
+  {
+    name: 'Edmonton WordPress Meetup',
+    image: '/assets/images/logos/Wordpress-logo.png',
+    to: 'https://www.linkedin.com/groups/14490539/',
+    description: 'The Edmonton WordPress Meetup is open to anyone and everyone locally who is interested in WordPress, the leading web publishing and open-source software platform. ',
+  },
+  {
+    name: 'Bsides Edmonton',
+    image: 'events/bsides.png',
+    to: 'https://www.bsidesedmonton.org/',
+    description: 'BSides Edmonton is an annual Cyber Security Conference in the City of Edmonton.Security BSides is a community-driven Cyber Security Conference by cybersecurity community members. The goal is to expand the spectrum of conversation beyond the traditional confines of space and time. It creates opportunities for individuals to both present and participate in an intimate atmosphere that encourages collaboration.',
+  },
+
 ]
