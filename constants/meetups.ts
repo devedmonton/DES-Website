@@ -67,6 +67,7 @@ Ready to level up? See you at Leetcode Night!A combination of the YEGRB, Exchang
     to: 'https://www.bsidesedmonton.org/',
     description: 'BSides Edmonton is an annual Cyber Security Conference in the City of Edmonton.Security BSides is a community-driven Cyber Security Conference by cybersecurity community members. The goal is to expand the spectrum of conversation beyond the traditional confines of space and time. It creates opportunities for individuals to both present and participate in an intimate atmosphere that encourages collaboration.',
   },
+  {
     name: 'Demo Camp',
     image: '/events/DemoCamp.png',
     to: 'https://www.eventbrite.ca/o/democamp-edmonton-56126644423',
