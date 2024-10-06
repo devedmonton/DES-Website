@@ -67,5 +67,15 @@ Ready to level up? See you at Leetcode Night!A combination of the YEGRB, Exchang
     to: 'https://www.bsidesedmonton.org/',
     description: 'BSides Edmonton is an annual Cyber Security Conference in the City of Edmonton.Security BSides is a community-driven Cyber Security Conference by cybersecurity community members. The goal is to expand the spectrum of conversation beyond the traditional confines of space and time. It creates opportunities for individuals to both present and participate in an intimate atmosphere that encourages collaboration.',
   },
-
+    name: 'Demo Camp',
+    image: '/events/DemoCamp.png',
+    to: 'https://www.eventbrite.ca/o/democamp-edmonton-56126644423',
+    description: 'Started back in 2008, DemoCamp is an event that brings together developers, creatives, entrepreneurs and investors to share what they\'ve been working on and to find others in the community interested in similar topics. The rules for DemoCamp are simple: ten minutes to demo real, working products, followed by a few minutes for questions, and no slides allowed. Democamp is a community-run event by a team of volunteers.',
+  },
+  {
+    name: 'HackEd',
+    image: '/events/hackEd.png',
+    to: 'https://hacked.compeclub.com/',
+    description: 'One of Alberta\'s Largest Student Run Hackathons. HackED is the premiere annual 24-hour hackathon from the Computer Engineering Club of the University of Alberta.',
+  },
 ]
