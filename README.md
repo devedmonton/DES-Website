@@ -6,7 +6,7 @@
 
 # Dev Edmonton Society
 
-New home for the [devedmonton.com](devedmonton.com) website
+New home for the [devedmonton.com](https://devedmonton.com) website
 
 > Fostering a stronger software development community in Edmonton.
 
