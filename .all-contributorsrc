@@ -355,6 +355,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "psaunderualberta",
+      "name": "Paul Saunders",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44712655?v=4",
+      "profile": "https://github.com/psaunderualberta",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
