@@ -81,7 +81,7 @@ Ready to level up? See you at Leetcode Night!A combination of the YEGRB, Exchang
   },
   {
     name: 'Edmonton WordPress Meetup',
-    image: '/meetups/wordpress.png?updatedAt=1728262345205',
+    image: '/meetups/wordpress.png',
     to: 'https://www.linkedin.com/groups/14490539/',
     description: 'The Edmonton WordPress Meetup is open to anyone and everyone locally who is interested in WordPress, the leading web publishing and open-source software platform. ',
   },
