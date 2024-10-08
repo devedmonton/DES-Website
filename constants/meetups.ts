@@ -79,4 +79,10 @@ Ready to level up? See you at Leetcode Night!A combination of the YEGRB, Exchang
     to: 'https://hacked.compeclub.com/',
     description: 'One of Alberta\'s Largest Student Run Hackathons. HackED is the premiere annual 24-hour hackathon from the Computer Engineering Club of the University of Alberta.',
   },
+  {
+    name: 'Edmonton WordPress Meetup',
+    image: '/meetups/wordpress.png',
+    to: 'https://www.linkedin.com/groups/14490539/',
+    description: 'The Edmonton WordPress Meetup is open to anyone and everyone locally who is interested in WordPress, the leading web publishing and open-source software platform. ',
+  },
 ]
