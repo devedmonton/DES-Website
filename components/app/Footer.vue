@@ -38,6 +38,15 @@ const { data: navigation } = await useAsyncData('navigation:footer', () => fetch
               {{ item.title }}
             </NuxtLink>
           </li>
+          <li class="mb-4">
+            <NuxtLink
+              to="/contact"
+              exact-active-class="text-primary dark:text-secondary bg-gray-400/20"
+              class="hover:underline py-1.5 px-4 rounded-lg"
+            >
+              Contact
+            </NuxtLink>
+          </li>
         </ul>
       </div>
     </div>
