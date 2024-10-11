@@ -20,11 +20,6 @@ export const companies = [
     description: 'Dotdash Meredith is a digital media company focused on content creation and digital publishing. Developers here can work on building scalable content management platforms, optimizing user experiences, and creating tools to support digital journalism and advertising.',
   },
   {
-    name: 'Intuit',
-    to: 'https://careers.intuit.com/country/canada',
-    description: 'Intuit is a global leader in financial software, offering products like TurboTax and QuickBooks. Developers at Intuit focus on fintech innovations, building software that simplifies personal and small business finances through automation, machine learning, and cloud computing.',
-  },
-  {
     name: 'AltaML',
     to: 'https://jobs.lever.co/altaml/',
     description: 'AltaML builds machine learning solutions for businesses across industries. They focus on applying AI to real-world problems, making it an attractive place for developers and data scientists interested in practical machine learning applications.',
