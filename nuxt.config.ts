@@ -1,14 +1,60 @@
 export default defineNuxtConfig({
 
   // @nuxt/devtools
+
+  modules: [
+    '@nuxt/icon',
+    '@nuxtjs/seo',
+    '@nuxt/image',
+    '@vueuse/nuxt',
+    '@nuxt/eslint',
+    '@nuxt/content',
+    '@nuxtjs/color-mode',
+    '@nuxtjs/tailwindcss',
+    '@nuxt/test-utils/module',
+    '@vite-pwa/nuxt',
+  ],
+
+  // auto imports
+  imports: {
+    dirs: [
+      './constants',
+    ],
+  },
   devtools: {
     enabled: true,
   },
 
-  experimental: {
-    headNext: true,
-    // server components
-    componentIslands: true,
+  app: {
+    keepalive: true,
+  },
+
+  // custom css
+  css: [
+    '~/assets/style.css',
+  ],
+
+  router: {
+    options: {
+      linkExactActiveClass: '',
+      linkActiveClass: '',
+    },
+  },
+
+  // @nuxtjs/seo
+  site: {
+    url: process.env.NUXT_PUBLIC_SITE_URL ?? 'https://devedmonton.com',
+    name: 'Dev Edmonton Society',
+    strictNuxtContentPaths: true,
+  },
+
+  // @nuxtjs/color-mode
+  colorMode: {
+    hid: 'color-mode-script',
+    globalName: '__COLOR_MODE__',
+    storageKey: 'color-mode',
+    preference: 'light',
+    classSuffix: '',
   },
 
   runtimeConfig: {
@@ -23,17 +69,6 @@ export default defineNuxtConfig({
     },
   },
 
-  app: {
-    keepalive: true,
-  },
-
-  router: {
-    options: {
-      linkExactActiveClass: '',
-      linkActiveClass: '',
-    },
-  },
-
   // route redirects
   routeRules: {
     '/bylaws': { redirect: 'https://docs.google.com/document/d/1i6oXabir-628csa2bQacHpc17Kmhec9EfkyHij9yQGM/edit' },
@@ -41,30 +76,40 @@ export default defineNuxtConfig({
     '/api/events': { cors: true },
   },
 
-  // custom css
-  css: [
-    '~/assets/style.css',
-  ],
-
-  // auto imports
-  imports: {
-    dirs: [
-      './constants',
-    ],
+  experimental: {
+    headNext: true,
+    // server components
+    componentIslands: true,
   },
 
-  modules: [
-    'nuxt-icon',
-    '@nuxtjs/seo',
-    '@nuxt/image',
-    '@vueuse/nuxt',
-    '@nuxt/eslint',
-    '@nuxt/content',
-    '@nuxtjs/color-mode',
-    '@nuxtjs/tailwindcss',
-    '@nuxt/test-utils/module',
-    '@vite-pwa/nuxt',
-  ],
+  // server
+  nitro: {
+    compressPublicAssets: true,
+    prerender: {
+      crawlLinks: true,
+    },
+  },
+
+  // @nuxt/eslint
+  eslint: {
+    config: {
+      stylistic: true,
+    },
+  },
+
+  // @nuxt/image
+  image: {
+    imagekit: {
+      baseURL: 'https://ik.imagekit.io/des',
+    },
+  },
+  ogImage: {
+    compatibility: {
+      prerender: {
+        chromium: false,
+      },
+    },
+  },
 
   pwa: {
     devOptions: {
@@ -83,51 +128,6 @@ export default defineNuxtConfig({
           type: 'image/png',
         },
       ],
-    },
-  },
-
-  // @nuxtjs/seo
-  site: {
-    url: process.env.NUXT_PUBLIC_SITE_URL ?? 'https://devedmonton.com',
-    name: 'Dev Edmonton Society',
-    strictNuxtContentPaths: true,
-  },
-  ogImage: {
-    compatibility: {
-      prerender: {
-        chromium: false,
-      },
-    },
-  },
-
-  // @nuxt/image
-  image: {
-    imagekit: {
-      baseURL: 'https://ik.imagekit.io/des',
-    },
-  },
-
-  // @nuxt/eslint
-  eslint: {
-    config: {
-      stylistic: true,
-    },
-  },
-
-  // @nuxtjs/color-mode
-  colorMode: {
-    hid: 'color-mode-script',
-    globalName: '__COLOR_MODE__',
-    storageKey: 'color-mode',
-    preference: 'light',
-    classSuffix: '',
-  },
-
-  // server
-  nitro: {
-    compressPublicAssets: true,
-    prerender: {
-      crawlLinks: true,
     },
   },
 })
