@@ -26,7 +26,9 @@ if (page.value) {
 
   defineOgImage({
     component: 'AppOgImageFrame',
-    icon: page.value.data?.icon ?? 'i-ph-terminal',
+    props: {
+      icon: page.value.data?.icon ?? 'i-ph-terminal',
+    },
   })
 }
 </script>
