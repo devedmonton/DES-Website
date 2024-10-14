@@ -26,6 +26,7 @@
     "@nuxtjs/seo": "2.0.0-rc.9",
     "@nuxtjs/tailwindcss": "^6.11.4",
     "@types/mailchimp__mailchimp_marketing": "^3.0.19",
+    "@vite-pwa/nuxt": "^0.10.5",
     "@vue/test-utils": "^2.4.5",
     "@vueuse/core": "^10.9.0",
     "@vueuse/nuxt": "^10.9.0",
@@ -41,7 +42,7 @@
     "typescript": "^5.4.3",
     "vitest": "^1.4.0",
     "vue": "^3.4.21",
-    "vue-router": "^4.3.0",
-    "vue-cal": "^4.8.1"
+    "vue-cal": "^4.8.1",
+    "vue-router": "^4.3.0"
   }
 }
