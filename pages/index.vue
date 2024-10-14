@@ -29,7 +29,9 @@ useServerSeoMeta({
 
 defineOgImage({
   component: 'AppOgImageFrame',
-  icon: 'i-ph-terminal',
+  props: {
+    icon: 'i-ph-terminal',
+  },
 })
 </script>
 

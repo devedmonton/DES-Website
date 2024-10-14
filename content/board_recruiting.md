@@ -1,5 +1,8 @@
 ---
 description: Information about applying for the board which we publicize every three years when the board turns over.
+sitemap:
+  loc: /board_recruiting
+  lastmod: 2024-05-02
 ---
 
 # Board Recruiting
@@ -11,6 +14,7 @@ Open positions will advertised in the months preceding the society’s Annual Ge
 The Dev Edmonton Board consists of 7 members filling three year terms. Every year at the annual meeting elections will be held for any open positions. Dev Edmonton Society desires to build a board with diverse perspectives that reflect our community.
 
 ### Roles
+
 - President
 - Vice President
 - Secretary
