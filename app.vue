@@ -9,6 +9,7 @@ useServerSeoMeta({
 </script>
 
 <template>
+  <NuxtPwaManifest />
   <Html>
     <Body class="bg-neutral-100 dark:bg-neutral-900 dark:text-white w-screen transition-colors duration-300">
       <NuxtLoadingIndicator />

@@ -63,7 +63,9 @@ useServerSeoMeta({
 
 defineOgImage({
   component: 'AppOgImageFrame',
-  icon: 'i-ph-calendar-blank-duotone',
+  props: {
+    icon: 'i-ph-calendar-blank-duotone',
+  },
 })
 </script>
 

@@ -63,7 +63,28 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxtjs/tailwindcss',
     '@nuxt/test-utils/module',
+    '@vite-pwa/nuxt',
   ],
+
+  pwa: {
+    devOptions: {
+      enabled: false,
+    },
+    manifest: {
+      name: 'Dev Edmonton Society',
+      short_name: 'Dev Edmonton',
+      description: 'Dev Edmonton Society is a community of developers, designers, and tech enthusiasts in Edmonton, Alberta.',
+      theme_color: '#265DAD',
+      background_color: '#f5f5f5',
+      icons: [
+        {
+          src: '/apple-touch-icon.png',
+          sizes: '512x512',
+          type: 'image/png',
+        },
+      ],
+    },
+  },
 
   // @nuxtjs/seo
   site: {

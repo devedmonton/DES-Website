@@ -12,7 +12,9 @@ useServerSeoMeta({
 
 defineOgImage({
   component: 'AppOgImageFrame',
-  icon: 'i-ph-books-duotone',
+  props: {
+    icon: 'i-ph-books-duotone',
+  },
 })
 </script>
 
