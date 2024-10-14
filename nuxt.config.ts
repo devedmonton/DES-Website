@@ -1,7 +1,5 @@
 export default defineNuxtConfig({
 
-  // @nuxt/devtools
-
   modules: [
     '@nuxt/icon',
     '@nuxtjs/seo',
@@ -21,6 +19,8 @@ export default defineNuxtConfig({
       './constants',
     ],
   },
+
+  // @nuxt/devtools
   devtools: {
     enabled: true,
   },
@@ -111,6 +111,7 @@ export default defineNuxtConfig({
     },
   },
 
+  // @vite-pwa
   pwa: {
     devOptions: {
       enabled: false,
