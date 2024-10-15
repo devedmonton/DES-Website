@@ -73,10 +73,10 @@ const getEvents = async ({
  * // GET /api/events?startDate=2024-05-01&limitEvents=25
  * // GET /api/events
  */
-// eslint-disable-next-line
+
 export default defineEventHandler(async (event) => {
   // get the query params
-  // eslint-disable-next-line
+
   const { startDate, limitEvents } = getQuery(event)
 
   // get the credentials from the service account
