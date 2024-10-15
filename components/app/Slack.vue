@@ -175,7 +175,7 @@ const selected = ref(channels[0])
           >
             <Icon
               class="w-4 h-4"
-              name="i-simple-icons-slack"
+              name="i-ph-slack-logo"
             />
             Join Slack
           </AppButton>

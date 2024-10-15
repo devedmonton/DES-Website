@@ -1,9 +1,8 @@
 export const meetups = [
   {
-    name: 'Leetcode Night: Code, Collaborate, Conquer!',
-    description: `Join us for Leetcode Night, where coders of all levels tackle Leetcode problems together. Whether you're prepping for interviews or just want to sharpen your skills, this is the perfect chance to collaborate, share strategies, and learn new techniques. Bring your laptop, team up, and let's solve some coding challenges! Any meetups will be posted on the Edmonton Unlimited meetup.com
-Ready to level up? See you at Leetcode Night!A combination of the YEGRB, Exchange.js, and Edmonton.py communities!Join our Discord! Connect via #yegleet and #yegleetevents!`,
-    to: `https://discord.gg/hDGT9F9hbp`,
+    name: 'LeetNight: Code, Collaborate, Conquer!',
+    description: `LeetNight is a free, welcoming meetup designed for coders eager to enhance their problem-solving skills. Whether you’re gearing up for technical interviews or just enjoy tackling algorithm challenges, this event offers a collaborative environment to learn and grow. It’s also a fantastic way to connect with fellow developers, share insights, and build skills together. Ready to level up? See you at Leetcode Night!`,
+    to: `https://www.leetnight.com/`,
     image: '/meetups/leetcode.png',
 
   },

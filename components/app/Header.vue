@@ -30,7 +30,7 @@ useEventListener('scroll', () => y.value = window.scrollY)
       class="relative z-50 px-4 py-2 transition-all duration-300"
       :class="scrolling ? open ? 'bg-white dark:bg-neutral-900' : 'border-b border-neutral-400/20' : 'bg-primary'"
     >
-      <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+      <div class="flex flex-wrap justify-between items-center lg:grid grid-cols-[1fr_auto_1fr] mx-auto max-w-screen-2xl">
         <NuxtLink
           title="Dev Edmonton Society"
           to="/"
@@ -40,7 +40,7 @@ useEventListener('scroll', () => y.value = window.scrollY)
             class="h-20 py-2"
           />
         </NuxtLink>
-        <div class="flex items-center gap-2 lg:order-2">
+        <div class="flex items-center gap-2 lg:order-2 ml-auto">
           <AppButton
             v-for="social of socials"
             :key="social.name"
