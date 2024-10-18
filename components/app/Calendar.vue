@@ -9,7 +9,6 @@ defineProps<{
 
 const showEventModal = ref(false)
 const selectedEvent = ref<any>({})
-
 const onEventClick = (event: any, e: any) => {
   selectedEvent.value = event
   showEventModal.value = true
@@ -17,8 +16,6 @@ const onEventClick = (event: any, e: any) => {
   e.stopPropagation()
 }
 </script>
-
-
 
 <template>
   <section
@@ -56,7 +53,6 @@ const onEventClick = (event: any, e: any) => {
           name="i-ph-arrow-right"
         />
       </template>
-
     </vue-cal>
 
     <!-- TODO: Implement the list view
@@ -174,7 +170,6 @@ const onEventClick = (event: any, e: any) => {
 
   .vuecal--month-view .vuecal__cell {
     height: 125px
-    
   }
 
   .vuecal--month-view .vuecal__cell-content {
