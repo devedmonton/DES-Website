@@ -18,6 +18,8 @@ const onEventClick = (event: any, e: any) => {
 }
 </script>
 
+
+
 <template>
   <section
     v-if="!pending"
@@ -35,7 +37,7 @@ const onEventClick = (event: any, e: any) => {
       :events-on-month-view="true"
       :twelve-hour="true"
       :events="group.items"
-      :start-week-on-sunday="false"
+      :start-week-on-sunday="true"
       :disable-views="['years', 'year', 'day']"
       :time-from="8 * 60"
       :time-to="22 * 60"
@@ -54,6 +56,7 @@ const onEventClick = (event: any, e: any) => {
           name="i-ph-arrow-right"
         />
       </template>
+
     </vue-cal>
 
     <!-- TODO: Implement the list view
@@ -169,6 +172,77 @@ const onEventClick = (event: any, e: any) => {
     @apply flex flex-col justify-center p-2 bg-primary text-white border border-gray-400/25;
   }
 
+  .vuecal--month-view .vuecal__cell {
+<<<<<<< Updated upstream
+    height: 130px
+=======
+    height: 125px
+>>>>>>> Stashed changes
+    
+  }
+
+  .vuecal--month-view .vuecal__cell-content {
+    justify-content: start;
+    padding: .5rem;
+  }
+
+  .vuecal--month-view .vuecal__event {
+<<<<<<< Updated upstream
+    padding: unset;
+    text-align: left;
+=======
+    gap: 10px;
+    padding: unset;
+    text-align: left !important;
+>>>>>>> Stashed changes
+    border: unset;
+    color: #265dad;
+    background-color: unset ;
+    padding: 0.3rem;
+    border-radius: 0.2rem;
+<<<<<<< Updated upstream
+    gap: 5px;
+    flex-direction: row;
+    align-items: center;
+=======
+>>>>>>> Stashed changes
+  }
+
+  .vuecal--month-view .vuecal__event:hover{
+    background-color: #265dad;
+    color: white;
+  }
+
+  .vuecal--month-view .vuecal__event .vuecal__event-title{
+    font-weight: normal;
+    text-wrap: nowrap;
+    overflow: hidden;
+    font-weight: bold;
+<<<<<<< Updated upstream
+  }
+
+  .vuecal--month-view .vuecal__event .vuecal__event-time {
+    order: -1;
+  }
+
+  .vuecal--month-view .vuecal__event .vuecal__event-time span{
+    display: none;
+  }
+
+  .vuecal__heading .weekday-label {
+    font-weight: bold;
+  }
+  
+=======
+
+  }
+
+  .vuecal--month-view .vuecal__event .vuecal__event-time{
+    display: none;
+  }
+
+
+>>>>>>> Stashed changes
   .vuecal__event-content {
     @apply italic text-xs;
   }
