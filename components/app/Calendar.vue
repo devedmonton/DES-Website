@@ -173,11 +173,7 @@ const onEventClick = (event: any, e: any) => {
   }
 
   .vuecal--month-view .vuecal__cell {
-<<<<<<< Updated upstream
-    height: 130px
-=======
     height: 125px
->>>>>>> Stashed changes
     
   }
 
@@ -187,25 +183,16 @@ const onEventClick = (event: any, e: any) => {
   }
 
   .vuecal--month-view .vuecal__event {
-<<<<<<< Updated upstream
     padding: unset;
     text-align: left;
-=======
-    gap: 10px;
-    padding: unset;
-    text-align: left !important;
->>>>>>> Stashed changes
     border: unset;
     color: #265dad;
     background-color: unset ;
     padding: 0.3rem;
     border-radius: 0.2rem;
-<<<<<<< Updated upstream
     gap: 5px;
     flex-direction: row;
     align-items: center;
-=======
->>>>>>> Stashed changes
   }
 
   .vuecal--month-view .vuecal__event:hover{
@@ -218,7 +205,6 @@ const onEventClick = (event: any, e: any) => {
     text-wrap: nowrap;
     overflow: hidden;
     font-weight: bold;
-<<<<<<< Updated upstream
   }
 
   .vuecal--month-view .vuecal__event .vuecal__event-time {
@@ -233,16 +219,6 @@ const onEventClick = (event: any, e: any) => {
     font-weight: bold;
   }
   
-=======
-
-  }
-
-  .vuecal--month-view .vuecal__event .vuecal__event-time{
-    display: none;
-  }
-
-
->>>>>>> Stashed changes
   .vuecal__event-content {
     @apply italic text-xs;
   }
