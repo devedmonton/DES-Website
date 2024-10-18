@@ -35,8 +35,8 @@ function renderMarkdown(description: string) {
 
 const createEventsList = (events: any) => {
   return events.map((event: any) => new Event(
-    event.start.dateTime,
-    event.end.dateTime,
+    event.start.dateTime || event.start.date,
+    event.end.dateTime || event.end.date,
     event.summary,
     '',
     '',
