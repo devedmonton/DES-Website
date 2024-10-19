@@ -12,7 +12,6 @@ const selectedEvent = ref<any>({})
 const onEventClick = (event: any, e: any) => {
   selectedEvent.value = event
   showEventModal.value = true
-
   e.stopPropagation()
 }
 </script>
@@ -54,7 +53,6 @@ const onEventClick = (event: any, e: any) => {
         />
       </template>
     </vue-cal>
-
     <!-- TODO: Implement the list view
     <div
       id="calendar-list-toggle"
@@ -94,7 +92,6 @@ const onEventClick = (event: any, e: any) => {
         </label>
       </div>
     </div> -->
-
     <AppModal
       id="event-modal"
       v-model="showEventModal"
@@ -152,85 +149,93 @@ const onEventClick = (event: any, e: any) => {
 </template>
 
 <style>
-  .vuecal__event-title {
-    @apply text-xs sm:text-sm font-semibold;
-  }
+.vuecal__event-title {
+  @apply text-xs sm:text-sm font-semibold;
+}
 
-  .vuecal__event-time {
-    @apply text-[0.5rem] sm:text-xs;
-  }
+.vuecal__event-time {
+  @apply text-[0.5rem] sm:text-xs;
+}
 
-  .vuecal__event:hover {
-    @apply cursor-pointer;
-  }
+.vuecal__event:hover {
+  @apply cursor-pointer;
+}
 
-  .vuecal__event {
-    @apply flex flex-col justify-center p-2 bg-primary text-white border border-gray-400/25;
-  }
+.vuecal__event {
+  @apply flex flex-col justify-center p-2 bg-primary text-white border border-gray-400/25;
+}
 
-  .vuecal--month-view .vuecal__cell {
-    height: 125px
-  }
+.vuecal__event-content {
+  @apply italic text-xs;
+}
 
-  .vuecal--month-view .vuecal__cell-content {
-    justify-content: start;
-    padding: .5rem;
-  }
+.vuecal__title-bar {
+  @apply relative;
+}
 
-  .vuecal--month-view .vuecal__event {
-    padding: unset;
-    text-align: left;
-    border: unset;
-    color: #265dad;
-    background-color: unset ;
-    padding: 0.3rem;
-    border-radius: 0.2rem;
-    gap: 5px;
-    flex-direction: row;
-    align-items: center;
-  }
+.vuecal__today-btn {
+  @apply bg-gray-400/20 hover:bg-gray-400/25 py-1 px-3 me-4 rounded-lg dark:text-white text-black font-semibold absolute right-[-10px] top-[-39px];
+}
 
-  .vuecal--month-view .vuecal__event:hover{
-    background-color: #265dad;
-    color: white;
-  }
+.vuecal__heading .weekday-label {
+  font-weight: bold;
+}
 
-  .vuecal--month-view .vuecal__event .vuecal__event-title{
-    font-weight: normal;
-    text-wrap: nowrap;
-    overflow: hidden;
-    font-weight: bold;
-  }
+.vuecal--month-view .vuecal__cell {
+  height: 125px;
+}
 
-  .vuecal--month-view .vuecal__event .vuecal__event-time {
-    order: -1;
-  }
+.vuecal--month-view .vuecal__cell-content {
+  justify-content: start;
+  padding: .5rem;
+}
 
-  .vuecal--month-view .vuecal__event .vuecal__event-time span{
-    display: none;
-  }
+.vuecal--month-view .vuecal__event {
+  padding: unset;
+  text-align: left;
+  border: unset;
+  color: #265dad;
+  background-color: unset;
+  padding: 0.3rem;
+  border-radius: 0.2rem;
+  gap: 5px;
+  flex-direction: row;
+  align-items: center;
+}
 
-  .vuecal__heading .weekday-label {
-    font-weight: bold;
-  }
-  
-  .vuecal__event-content {
-    @apply italic text-xs;
-  }
+.dark .vuecal--month-view .vuecal__event {
+  color: white;
+}
 
-  .vuecal__title-bar {
-    @apply relative;
-  }
+.vuecal--month-view .vuecal__cell--out-of-scope .vuecal__event {
+  color: #bebaba;
+}
 
-  .vuecal__today-btn {
-    @apply bg-gray-400/20 hover:bg-gray-400/25 py-1 px-3 me-4 rounded-lg dark:text-white text-black font-semibold absolute right-[-10px] top-[-39px];
-  }
+.dark .vuecal--month-view .vuecal__cell--out-of-scope .vuecal__event {
+  color: rgb(55, 55, 55);
+}
 
-  div.vuecal__cell:nth-child(7)::before {
-    @apply rounded-ee-lg;
-  }
+.vuecal--month-view .vuecal__event:hover {
+  background-color: #265dad;
+  color: white;
+}
 
-  #event-modal .content-full a{
-    @apply hover:underline text-gray-600 dark:text-gray-400;
-  }
+.vuecal--month-view .vuecal__event .vuecal__event-title {
+  font-weight: normal;
+  text-wrap: nowrap;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.vuecal--month-view .vuecal__event .vuecal__event-time {
+  order: -1;
+}
+
+.vuecal--month-view .vuecal__event .vuecal__event-time span {
+  display: none;
+}
+
+#event-modal .content-full a {
+  @apply hover:underline text-gray-600 dark:text-gray-400;
+}
 </style>
