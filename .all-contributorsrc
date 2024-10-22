@@ -400,6 +400,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "johnjovero98",
+      "name": "John Jovero",
+      "avatar_url": "https://avatars.githubusercontent.com/u/144284522?v=4",
+      "profile": "https://github.com/johnjovero98",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
