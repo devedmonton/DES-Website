@@ -391,6 +391,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "charrde",
+      "name": "Patrick Skinner",
+      "avatar_url": "https://avatars.githubusercontent.com/u/143831014?v=4",
+      "profile": "https://www.patski.dev/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
