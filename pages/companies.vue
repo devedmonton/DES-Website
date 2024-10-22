@@ -1,8 +1,8 @@
 <script setup lang="ts">
-const group = { name: 'Community Resources', items: resources }
+const group = { name: 'Edmonton Companies', items: companies.sort((a, b) => a.name.localeCompare(b.name)) }
 
-const title = 'Resources'
-const description = 'Lists of all the resources that we know of to help the Dev Edmonton community.'
+const title = 'companies'
+const description = 'Lists of all the companies who are part of the Dev Edmonton community.'
 
 useServerSeoMeta({
   title,
