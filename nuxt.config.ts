@@ -1,5 +1,4 @@
 export default defineNuxtConfig({
-
   modules: [
     '@nuxt/icon',
     '@nuxtjs/seo',
@@ -103,6 +102,7 @@ export default defineNuxtConfig({
       baseURL: 'https://ik.imagekit.io/des',
     },
   },
+
   ogImage: {
     compatibility: {
       prerender: {
