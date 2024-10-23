@@ -1,9 +1,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5f9bdcfb-7b48-46e8-a58d-dfd2b32d8ccc/deploy-status)](https://app.netlify.com/sites/dev-edmonton/deploys)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
 [![All Contributors](https://img.shields.io/badge/all_contributors-42-orange.svg?style=flat-square)](#contributors-)
-
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # Dev Edmonton Society
