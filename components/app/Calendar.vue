@@ -39,6 +39,7 @@ const onEventClick = (event: any, e: any) => {
       :time-to="22 * 60"
       :time-step="60"
       :on-event-click="onEventClick"
+      :show-all-day-events="['short', true, false]"
     >
       <template #arrow-prev>
         <Icon
@@ -53,6 +54,7 @@ const onEventClick = (event: any, e: any) => {
         />
       </template>
     </vue-cal>
+    
     <!-- TODO: Implement the list view
     <div
       id="calendar-list-toggle"
@@ -233,6 +235,16 @@ const onEventClick = (event: any, e: any) => {
 
 .vuecal--month-view .vuecal__event .vuecal__event-time span {
   display: none;
+}
+
+.vuecal--week-view .vuecal__all-day {
+  min-height: 59px;
+  padding: unset !important;
+  @apply border-y-4;
+}
+
+.vuecal--week-view .vuecal__all-day-text {
+  width: 57.5px !important;
 }
 
 #event-modal .content-full a {

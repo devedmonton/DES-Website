@@ -10,7 +10,8 @@ class Event {
   description: string
   class: string
   eventUrl: string
-
+  allDay: boolean
+  
   constructor(start: string, end: string, summary: string, organizer: string, content: string, description: string, eventUrl: string) {
     this.start = new Date(start)
     this.end = new Date(end)
@@ -20,6 +21,7 @@ class Event {
     this.description = description ? renderMarkdown(convertUrlsToLinks(description)) : description
     this.class = this.organizer
     this.eventUrl = eventUrl
+    this.allDay = false //default
   }
 }
 
@@ -41,15 +43,26 @@ const createEventsList = (events: any) => {
     '',
     '',
     event.description,
-    event.htmlLink,
+    event.htmlLink
   ))
 }
 
 let groupCalendar = { name: 'Calendar', items: [] }
-
 const { pending } = await useLazyFetch('https://devedmonton.com/api/events', {
   transform: (data) => {
     groupCalendar = { name: 'Calendar', items: createEventsList((data as any).events) }
+
+    // check if the event is an "allDay" event
+    const eventItems = groupCalendar.items
+    eventItems.forEach(event => {
+      const START_DATE = "12:00:00 AM"
+      const END_DATE = "11:59:59 PM"
+      
+      // condition where an event is an "allDay" event fix
+      if ((event.start.toLocaleTimeString() === START_DATE) && (event.end.toLocaleTimeString() === END_DATE) ) {
+        event.allDay = true
+      }
+    });
   },
 })
 
@@ -71,11 +84,7 @@ defineOgImage({
 
 <template>
   <main>
-    <AppCalendar
-      :group="groupCalendar"
-      :pending="pending"
-    />
-
+    <AppCalendar :group="groupCalendar" :pending="pending" />
     <AppSection :group="group" />
   </main>
 </template>
