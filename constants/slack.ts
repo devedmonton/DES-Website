@@ -1,4 +1,4 @@
-export const SLACK_URL = 'https://join.slack.com/t/devedmonton/shared_invite/zt-24bp1mmie-XdXUv1eYy4MRElmXZaoqdg'
+export const SLACK_URL = 'https://forms.gle/fB9EZj7aEdTftqS98'
 
 export const channels = [
   {
