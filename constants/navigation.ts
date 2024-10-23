@@ -22,8 +22,8 @@ export const navigation: NavItem[] = [
     to: '/resources',
   },
   {
-    name: 'Contact',
-    icon: 'i-ph-phone-duotone',
-    to: '/contact',
+    name: 'Companies',
+    icon: 'i-ph-building-duotone',
+    to: '/companies',
   },
 ]

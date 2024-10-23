@@ -346,6 +346,69 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "blizet",
+      "name": "Anjali Jha",
+      "avatar_url": "https://avatars.githubusercontent.com/u/109814198?v=4",
+      "profile": "https://github.com/blizet",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "psaunderualberta",
+      "name": "Paul Saunders",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44712655?v=4",
+      "profile": "https://github.com/psaunderualberta",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "shrutiijain26",
+      "name": "shrutiijain26",
+      "avatar_url": "https://avatars.githubusercontent.com/u/162204506?v=4",
+      "profile": "https://github.com/shrutiijain26",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "LUCKYINGGG",
+      "name": "LUCKYING",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39611265?v=4",
+      "profile": "https://github.com/LUCKYINGGG",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "acenasir",
+      "name": "Ace Nasir",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5544472?v=4",
+      "profile": "http://www.acedit.ca",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "charrde",
+      "name": "Patrick Skinner",
+      "avatar_url": "https://avatars.githubusercontent.com/u/143831014?v=4",
+      "profile": "https://www.patski.dev/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "johnjovero98",
+      "name": "John Jovero",
+      "avatar_url": "https://avatars.githubusercontent.com/u/144284522?v=4",
+      "profile": "https://github.com/johnjovero98",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,

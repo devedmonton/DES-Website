@@ -9,7 +9,9 @@ useServerSeoMeta({
 
 defineOgImage({
   component: 'AppOgImageFrame',
-  icon: 'i-ph-phone-duotone',
+  props: {
+    icon: 'i-ph-phone-duotone',
+  },
 })
 </script>
 

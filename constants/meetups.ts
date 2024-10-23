@@ -1,5 +1,12 @@
 export const meetups = [
   {
+    name: 'LeetNight: Code, Collaborate, Conquer!',
+    description: `LeetNight is a free, welcoming meetup designed for coders eager to enhance their problem-solving skills. Whether you’re gearing up for technical interviews or just enjoy tackling algorithm challenges, this event offers a collaborative environment to learn and grow. It’s also a fantastic way to connect with fellow developers, share insights, and build skills together. Ready to level up? See you at Leetcode Night!`,
+    to: `https://www.leetnight.com/`,
+    image: '/meetups/leetcode.png',
+
+  },
+  {
     name: 'Javascript, Ruby and Python Meetup',
     description: `A combination of the YEGRB, Exchange.js, and Edmonton.py communities! A polyglot meetup that focuses on cool JavaScript, Ruby, and Python topics. Both students and working professionals are welcome!`,
     to: `https://exchangejs.com`,
@@ -52,5 +59,29 @@ export const meetups = [
     image: '/meetups/YEGSec.png',
     to: 'https://www.yegsec.ca',
     description: 'We meet on a monthly-ish basis to discuss security, drink beer, and socialize. If you\'re into that sort of thing then you should probably join us. If you hate waiting, and who  can blame you, you\'re more than welcome to join us in Slack. Tweet @yegsec for an invite!',
+  },
+  {
+    name: 'Bsides Edmonton',
+    image: 'events/bsides.png',
+    to: 'https://www.bsidesedmonton.org/',
+    description: 'BSides Edmonton is an annual Cyber Security Conference in the City of Edmonton.Security BSides is a community-driven Cyber Security Conference by cybersecurity community members. The goal is to expand the spectrum of conversation beyond the traditional confines of space and time. It creates opportunities for individuals to both present and participate in an intimate atmosphere that encourages collaboration.',
+  },
+  {
+    name: 'Demo Camp',
+    image: '/events/DemoCamp.png',
+    to: 'https://www.eventbrite.ca/o/democamp-edmonton-56126644423',
+    description: 'Started back in 2008, DemoCamp is an event that brings together developers, creatives, entrepreneurs and investors to share what they\'ve been working on and to find others in the community interested in similar topics. The rules for DemoCamp are simple: ten minutes to demo real, working products, followed by a few minutes for questions, and no slides allowed. Democamp is a community-run event by a team of volunteers.',
+  },
+  {
+    name: 'HackEd',
+    image: '/events/hackEd.png',
+    to: 'https://hacked.compeclub.com/',
+    description: 'One of Alberta\'s Largest Student Run Hackathons. HackED is the premiere annual 24-hour hackathon from the Computer Engineering Club of the University of Alberta.',
+  },
+  {
+    name: 'Edmonton WordPress Meetup',
+    image: '/meetups/wordpress.png',
+    to: 'https://www.linkedin.com/groups/14490539/',
+    description: 'The Edmonton WordPress Meetup is open to anyone and everyone locally who is interested in WordPress, the leading web publishing and open-source software platform. ',
   },
 ]

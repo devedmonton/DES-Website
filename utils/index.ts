@@ -56,7 +56,7 @@ export function iconify(icon: string) {
     return 'i-logos-linkedin-icon'
   }
   if (icon === 'x') {
-    return 'i-simple-icons-x'
+    return 'i-ph-x-logo'
   }
 
   return `i-logos-${icon}`

@@ -29,7 +29,9 @@ useServerSeoMeta({
 
 defineOgImage({
   component: 'AppOgImageFrame',
-  icon: 'i-ph-terminal',
+  props: {
+    icon: 'i-ph-terminal',
+  },
 })
 </script>
 
@@ -59,7 +61,7 @@ defineOgImage({
           >
             <Icon
               class="w-5 h-5"
-              name="i-simple-icons-slack"
+              name="i-ph-slack-logo"
             />
             About our Slack
           </AppButton>
@@ -142,7 +144,7 @@ defineOgImage({
               >
                 <Icon
                   class="w-4 h-4"
-                  name="i-simple-icons-slack"
+                  name="i-ph-slack-logo"
                 />
                 Join our community on Slack
               </AppButton>

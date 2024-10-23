@@ -35,8 +35,8 @@ function renderMarkdown(description: string) {
 
 const createEventsList = (events: any) => {
   return events.map((event: any) => new Event(
-    event.start.dateTime,
-    event.end.dateTime,
+    event.start.dateTime || event.start.date,
+    event.end.dateTime || event.end.date,
     event.summary,
     '',
     '',
@@ -47,7 +47,7 @@ const createEventsList = (events: any) => {
 
 let groupCalendar = { name: 'Calendar', items: [] }
 
-const { pending, data } = await useLazyFetch('https://devedmonton.com/api/events', {
+const { pending } = await useLazyFetch('https://devedmonton.com/api/events', {
   transform: (data) => {
     groupCalendar = { name: 'Calendar', items: createEventsList((data as any).events) }
   },
@@ -63,7 +63,9 @@ useServerSeoMeta({
 
 defineOgImage({
   component: 'AppOgImageFrame',
-  icon: 'i-ph-calendar-blank-duotone',
+  props: {
+    icon: 'i-ph-calendar-blank-duotone',
+  },
 })
 </script>
 

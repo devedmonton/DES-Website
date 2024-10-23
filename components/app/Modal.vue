@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { watch } from 'vue'
+
 const props = defineProps<{
   modelValue: boolean
 }>()
@@ -9,6 +11,16 @@ const modalRef = ref(null)
 const closeModal = () => {
   modal.value = false
 }
+
+watch(modal, (value) => {
+  if (!document.body) return
+  if (value) {
+    document.body.style.overflow = 'hidden'
+  }
+  else {
+    document.body.style.overflow = 'initial'
+  }
+})
 
 onClickOutside(modalRef, () => {
   closeModal()
