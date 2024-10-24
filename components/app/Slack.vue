@@ -171,7 +171,7 @@ const selected = ref(channels[0])
         <div class="absolute bottom-4">
           <AppButton
             :to="SLACK_URL"
-            :target="'_blank'"
+            target="_blank"
             class="bg-primary text-white px-4 py-1 rounded-lg flex items-center gap-2 hover:text-primary hover:border-primary"
           >
             <Icon
