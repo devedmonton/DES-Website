@@ -164,7 +164,7 @@ const onEventClick = (event: any, e: any) => {
 }
 
 .vuecal__event {
-  @apply flex flex-col justify-center p-2 bg-primary text-white border border-gray-400/25;
+  @apply flex flex-col justify-start p-2 bg-primary text-white border border-gray-400/25;
 }
 
 .vuecal__event-content {
@@ -238,16 +238,40 @@ const onEventClick = (event: any, e: any) => {
 }
 
 .vuecal--week-view {
-  height: 650px;
+  height: 800px;
 }
 
+
 .vuecal--week-view .vuecal__all-day {
-  min-height: 59px;
-  @apply border-y-4;
+  @apply border-y-2;
 }
 
 .vuecal--week-view .vuecal__all-day-text {
   width: 57.5px !important;
+}
+
+/* .vuecal--week-view .vuecal__event:not(.vuecal__event--all-day) {
+  @apply shadow-2xl rounded-lg;
+
+} */
+
+.vuecal--view-with-time .vuecal__event:not(.vuecal__event--all-day) {
+  @apply shadow-2xl rounded-lg;
+  width: 80% !important;
+  left: 15% !important;
+
+}
+
+.vuecal--view-with-time .vuecal__event:not(.vuecal__event--all-day):first-child {
+    position: absolute;
+    left: 0% !important;
+    width: 90% !important;
+}
+
+.vuecal--view-with-time .vuecal__event:not(.vuecal__event--all-day):nth-child(2){
+    position: absolute;
+    left: 10% !important;
+    width: 90% !important;
 }
 
 #event-modal .content-full a {
