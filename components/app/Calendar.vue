@@ -37,7 +37,7 @@ const onEventClick = (event: any, e: any) => {
       :disable-views="['years', 'year', 'day']"
       :time-from="8 * 60"
       :time-to="22 * 60"
-      :time-step="60"
+      :time-step="30"
       :on-event-click="onEventClick"
       :show-all-day-events="['short', true, false]"
     >
@@ -237,9 +237,12 @@ const onEventClick = (event: any, e: any) => {
   display: none;
 }
 
+.vuecal--week-view {
+  height: 650px;
+}
+
 .vuecal--week-view .vuecal__all-day {
   min-height: 59px;
-  padding: unset !important;
   @apply border-y-4;
 }
 
