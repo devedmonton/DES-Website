@@ -140,6 +140,7 @@ defineOgImage({
             <div class="mt-12">
               <AppButton
                 :to="SLACK_URL"
+                target="_blank"
                 class="bg-primary hover:bg-secondary dark:hover:bg-secondary text-white px-4 py-1 rounded-lg flex items-center justify-center gap-2 w-full max-w-xs mx-auto"
               >
                 <Icon
