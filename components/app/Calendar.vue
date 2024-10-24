@@ -190,6 +190,11 @@ const onEventClick = (event: any, e: any) => {
 .vuecal--month-view .vuecal__cell-content {
   justify-content: start;
   padding: .5rem;
+  
+}
+
+.vuecal--month-view .vuecal__cell-events {
+  overflow: auto;
 }
 
 .vuecal--month-view .vuecal__event {
