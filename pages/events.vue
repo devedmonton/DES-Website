@@ -56,7 +56,7 @@ const { pending } = await useLazyFetch('https://devedmonton.com/api/events', {
     const eventItems = groupCalendar.items
     eventItems.forEach(event => {
       const START_DATE = "12:00:00 AM"
-      const END_DATE = "11:59:00 PM"
+      const END_DATE = "11:59:59 PM"
       
       // condition where an event is an "allDay" event fix
       if ((event.start.toLocaleTimeString() === START_DATE) && (event.end.toLocaleTimeString() === END_DATE) ) {
