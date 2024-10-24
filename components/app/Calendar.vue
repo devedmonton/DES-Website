@@ -54,7 +54,7 @@ const onEventClick = (event: any, e: any) => {
         />
       </template>
     </vue-cal>
-    
+
     <!-- TODO: Implement the list view
     <div
       id="calendar-list-toggle"
@@ -167,6 +167,12 @@ const onEventClick = (event: any, e: any) => {
   @apply flex flex-col justify-start p-2 bg-primary text-white border border-gray-400/25;
 }
 
+.vuecal__event:hover {
+  background-color: white;
+  border:#265dad solid 1px;
+  color: #265dad
+}
+
 .vuecal__event-content {
   @apply italic text-xs;
 }
@@ -190,7 +196,7 @@ const onEventClick = (event: any, e: any) => {
 .vuecal--month-view .vuecal__cell-content {
   justify-content: start;
   padding: .5rem;
-  
+
 }
 
 .vuecal--month-view .vuecal__cell-events {
@@ -243,9 +249,8 @@ const onEventClick = (event: any, e: any) => {
 }
 
 .vuecal--week-view {
-  height: 800px;
+  height: 600px;
 }
-
 
 .vuecal--week-view .vuecal__all-day {
   @apply border-y-2;
