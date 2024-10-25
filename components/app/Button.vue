@@ -20,7 +20,7 @@ withDefaults(defineProps<{
     :aria-label="to ? undefined : title"
     :title="to ? title : undefined"
     :class="twMerge(
-      'duration-300 transition-all hover:bg-gray-200/30 dark:hover:bg-transparent border border-transparent hover:border-neutral-400/20 px-2 py-2 rounded-lg',
+      'duration-300 transition-all hover:bg-gray-200/30 dark:hover:bg-transparent border border-transparent hover:border-neutral-400/40 px-2 py-2 rounded-lg',
       $attrs.class,
     )"
   >

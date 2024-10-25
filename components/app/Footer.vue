@@ -11,8 +11,8 @@ const { data: navigation } = await useAsyncData('navigation:footer', () => fetch
     id="footer"
     class="container mx-auto"
   >
-    <div class="w-full max-w-screen-xl mx-auto border-t border-neutral-400/20">
-      <div class="flex md:flex-row flex-col gap-8 items-center justify-between py-4">
+    <div class="w-full max-w-screen-xl mx-auto border-t border-neutral-400/40">
+      <div class="flex md:flex-row flex-col gap-8 items-center justify-between py-8">
         <NuxtLink
           title="Dev Edmonton Society"
           to="/"
@@ -27,7 +27,6 @@ const { data: navigation } = await useAsyncData('navigation:footer', () => fetch
           <li
             v-for="item of navigation"
             :key="item.title"
-            class="mb-4"
           >
             <NuxtLink
               :title="item.title"

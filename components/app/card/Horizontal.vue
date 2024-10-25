@@ -24,7 +24,7 @@ const target = computed(() => {
     :to="to"
     :title="`${name} website`"
     :target="target"
-    class="group relative p-6 bg-white dark:bg-neutral-800 min-h-48 focus-within:ring-2 focus-within:ring-inset focus-within:ring-primary col-span-1"
+    class="group relative p-6 bg-white dark:bg-neutral-900 min-h-48 focus-within:ring-2 focus-within:ring-inset focus-within:ring-primary col-span-1"
     :class="{ 'sm:col-span-2': size === 1 }"
   >
     <div class="flex items-center mb-2 pr-6">
@@ -43,7 +43,7 @@ const target = computed(() => {
       </div>
       <span
         v-if="target"
-        class="absolute text-gray-300 pointer-events-none top-4 right-4 group-hover:text-primary group-hover:rotate-45 transition-all"
+        class="absolute text-gray-300 pointer-events-none top-4 right-4 group-hover:text-primary group-hover:rotate-45 transition-transform"
         aria-hidden="true"
       >
         <Icon
@@ -66,7 +66,7 @@ const target = computed(() => {
       <slot v-if="!description" />
       <p
         v-else
-        class="mt-2 text-sm text-gray-500"
+        class="mt-2 text-sm text-gray-500 dark:text-gray-400"
         v-html="description"
       />
     </div>

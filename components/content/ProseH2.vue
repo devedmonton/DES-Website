@@ -13,7 +13,7 @@ const generate = computed(() => props.id && headings?.anchorLinks?.h2)
 <template>
   <h2
     :id="id"
-    class="text-xl font-bold py-2 border-b border-neutral-400/20 my-4"
+    class="text-xl font-bold py-2 border-b border-neutral-400/40 my-4"
   >
     <NuxtLink
       v-if="id && generate"

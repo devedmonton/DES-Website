@@ -5,7 +5,7 @@ const selected = ref(channels[0])
 <template>
   <section class="relative">
     <div
-      class="absolute lg:-left-10 lg:-right-10 -left-4 -right-4 top-10 bottom-10 bg-gray-100 dark:bg-neutral-950 p-20 rounded-xl border border-neutral-400/20 shadow-xl"
+      class="absolute lg:-left-10 lg:-right-10 -left-4 -right-4 top-10 bottom-10 bg-gray-100 dark:bg-neutral-900 p-20 rounded-xl border border-neutral-400/40 shadow-xl"
     />
     <div
       class="relative z-10 grid grid-cols-[100px_1fr] gap-4 bg-gradient-to-t from-[#5E2362] to-[#78327D] p-4 rounded-xl h-full"
@@ -36,8 +36,8 @@ const selected = ref(channels[0])
           loading="lazy"
         />
       </div>
-      <div class="relative flex flex-col gap-4 bg-white dark:bg-neutral-900 p-8 rounded-lg">
-        <div class="border-b border-neutral-400/20 pb-2">
+      <div class="relative flex flex-col gap-4 bg-white dark:bg-black p-8 rounded-lg">
+        <div class="border-b border-neutral-400/40 pb-2">
           <span class="font-bold"># {{ selected.name }}</span>
           <span class="text-sm font-light ml-1">
             {{ selected.description }}
@@ -155,7 +155,7 @@ const selected = ref(channels[0])
             </div>
 
             <div
-              class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-neutral-900 p-4 rounded-full shadow-xl"
+              class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-black p-4 rounded-full shadow-xl"
             >
               <AppLogo
                 :scrolling="true"
@@ -171,12 +171,11 @@ const selected = ref(channels[0])
         <div class="absolute bottom-4">
           <AppButton
             :to="SLACK_URL"
-            target="_blank"
             class="bg-primary text-white px-4 py-1 rounded-lg flex items-center gap-2 hover:text-primary hover:border-primary"
           >
             <Icon
               class="w-4 h-4"
-              name="i-ph-slack-logo"
+              name="i-simple-icons-slack"
             />
             Join Slack
           </AppButton>
@@ -192,7 +191,7 @@ const selected = ref(channels[0])
 }
 
 .dark {
-  --color-bg-dark: #131313;
+  --color-bg-dark: #000;
 }
 
 .rotating {
