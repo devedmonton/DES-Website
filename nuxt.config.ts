@@ -71,6 +71,9 @@ export default defineNuxtConfig({
       googleCalendarId: process.env.GOOGLE_CALENDAR_ID,
       serviceAccountCredentialsJSON: process.env.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS_JSON,
     },
+    githubAPI: {
+      githubAppAPIKey: process.env.GITHUB_APP_KEY
+    }
   },
 
   // route redirects
