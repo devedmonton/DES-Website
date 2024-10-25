@@ -37,8 +37,9 @@ const onEventClick = (event: any, e: any) => {
       :disable-views="['years', 'year', 'day']"
       :time-from="8 * 60"
       :time-to="22 * 60"
-      :time-step="60"
+      :time-step="30"
       :on-event-click="onEventClick"
+      :show-all-day-events="['short', true, false]"
     >
       <template #arrow-prev>
         <Icon
@@ -53,6 +54,7 @@ const onEventClick = (event: any, e: any) => {
         />
       </template>
     </vue-cal>
+
     <!-- TODO: Implement the list view
     <div
       id="calendar-list-toggle"
@@ -162,7 +164,13 @@ const onEventClick = (event: any, e: any) => {
 }
 
 .vuecal__event {
-  @apply flex flex-col justify-center p-2 bg-primary text-white border border-gray-400/25;
+  @apply flex flex-col justify-start p-2 bg-primary text-white border border-gray-400/25;
+}
+
+.vuecal__event:hover {
+  background-color: white;
+  border:#265dad solid 1px;
+  color: #265dad
 }
 
 .vuecal__event-content {
@@ -188,6 +196,11 @@ const onEventClick = (event: any, e: any) => {
 .vuecal--month-view .vuecal__cell-content {
   justify-content: start;
   padding: .5rem;
+
+}
+
+.vuecal--month-view .vuecal__cell-events {
+  overflow: auto;
 }
 
 .vuecal--month-view .vuecal__event {
@@ -233,6 +246,42 @@ const onEventClick = (event: any, e: any) => {
 
 .vuecal--month-view .vuecal__event .vuecal__event-time span {
   display: none;
+}
+
+.vuecal--week-view {
+  height: 600px;
+}
+
+.vuecal--week-view .vuecal__all-day {
+  @apply border-y-2;
+}
+
+.vuecal--week-view .vuecal__all-day-text {
+  width: 57.5px !important;
+}
+
+/* .vuecal--week-view .vuecal__event:not(.vuecal__event--all-day) {
+  @apply shadow-2xl rounded-lg;
+
+} */
+
+.vuecal--view-with-time .vuecal__event:not(.vuecal__event--all-day) {
+  @apply shadow-2xl rounded-lg;
+  width: 80% !important;
+  left: 15% !important;
+
+}
+
+.vuecal--view-with-time .vuecal__event:not(.vuecal__event--all-day):first-child {
+    position: absolute;
+    left: 0% !important;
+    width: 90% !important;
+}
+
+.vuecal--view-with-time .vuecal__event:not(.vuecal__event--all-day):nth-child(2){
+    position: absolute;
+    left: 10% !important;
+    width: 90% !important;
 }
 
 #event-modal .content-full a {
