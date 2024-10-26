@@ -42,7 +42,7 @@ defineOgImage({
       <div
         class="flex flex-col gap-4 items-center h-full justify-center max-w-6xl mx-auto text-center"
       >
-        <div class="inline-flex items-center rounded-full px-3 py-1 text-sm font-medium bg-gradient-to-r from-indigo-500 to-purple-500 text-white">
+        <div class="inline-flex items-center rounded-full px-3 py-1 text-sm font-medium bg-gradient-to-r from-primary to-secondary dark:from-indigo-500 dark:to-secondary text-white">
           <span class="relative">Dev Edmonton Society</span>
         </div>
         <h1 class="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-black to-black dark:from-white dark:to-gray-500 leading-tight">
@@ -70,7 +70,7 @@ defineOgImage({
           <AppButton
             title="Learn more about what we do"
             to="/#what-we-do"
-            class="border border-neutral-800 dark:border-neutral-400/40 px-5 py-2.5 flex gap-2 items-center transform hover:scale-105 bg-black/40"
+            class="border border-neutral-800 dark:border-neutral-400/40 px-5 py-2.5 flex gap-2 items-center transform hover:scale-105 bg-white/20 hover:bg-white dark:bg-black/40"
           >
             Learn More
             <Icon
