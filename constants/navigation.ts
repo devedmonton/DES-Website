@@ -12,9 +12,9 @@ export const navigation: NavItem[] = [
     to: '/meetups',
   },
   {
-    name: 'Events',
+    name: 'Calendar',
     icon: 'i-ph-calendar-blank-duotone',
-    to: '/events',
+    to: '/calendar',
   },
   {
     name: 'Resources',

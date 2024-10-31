@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const group = { name: 'Meetups We Support', items: meetups }
+const group = { name: 'Local Meetups', items: meetups }
 
 const title = 'Meetups'
 const description = 'Lists all the meetups that are hosting events in the Dev Edmonton community.'

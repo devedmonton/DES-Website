@@ -66,8 +66,8 @@ const { pending } = await useLazyFetch('https://devedmonton.com/api/events', {
   },
 })
 
-const title = 'Events'
-const description = 'List of all the organizations that have fun tech events in Edmonton.'
+const title = 'Calendar'
+const description = 'Interactive calendar view of all the events happening in Edmonton'
 
 useServerSeoMeta({
   title,
@@ -88,6 +88,5 @@ defineOgImage({
       :group="groupCalendar"
       :pending="pending"
     />
-    <AppSection :group="group" />
   </main>
 </template>
