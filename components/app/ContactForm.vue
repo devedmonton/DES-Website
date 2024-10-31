@@ -88,7 +88,7 @@
           </div>
         </div>
       </div>
-      <div class="mt-8 border-t border-neutral-400/20 pt-5">
+      <div class="mt-8 border-t border-neutral-400/40 pt-5">
         <div class="flex justify-end">
           <span class="ml-3 inline-flex rounded-md">
             <button

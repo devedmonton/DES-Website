@@ -21,7 +21,7 @@ const target = computed(() => {
   <component
     :is="to ? NuxtLink : 'div'"
     :target="target"
-    class="flex flex-col h-full bg-white border border-neutral-400/20 rounded-lg dark:bg-neutral-800"
+    class="group flex flex-col h-full border border-neutral-400/40 rounded-lg bg-white dark:bg-neutral-900"
   >
     <NuxtImg
       v-if="image"
@@ -31,7 +31,8 @@ const target = computed(() => {
       loading="lazy"
       :provider="image.startsWith('http') ? undefined : 'imagekit'"
     />
-    <div class="flex flex-col justify-between h-full p-5">
+    <div class="relative flex flex-col justify-between h-full p-5">
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
       <div>
         <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           {{ name }}

@@ -27,7 +27,7 @@ const onEventClick = (event: any, e: any) => {
       {{ group.name }}
     </ProseH1>
     <vue-cal
-      class="rounded-lg bg-white dark:bg-neutral-800 overflow-hidden shadow"
+      class="rounded-lg bg-white dark:bg-neutral-900 overflow-hidden shadow border border-gray-400/40"
       today-button
       small
       :events-on-month-view="true"
@@ -139,13 +139,11 @@ const onEventClick = (event: any, e: any) => {
     <ProseH1 class="mb-8 text-center">
       {{ group.name }}
     </ProseH1>
-    <div class="rounded-lg bg-white dark:bg-neutral-800 overflow-hidden shadow h-[691px]">
-      <div class="flex items-center justify-center h-96">
-        <Icon
-          class="w-12 h-12 animate-spin"
-          name="i-ph-spinner"
-        />
-      </div>
+    <div class="rounded-lg bg-white dark:bg-neutral-900 overflow-hidden shadow h-[691px] flex items-center justify-center">
+      <Icon
+        class="w-12 h-12 animate-spin"
+        name="i-ph-spinner"
+      />
     </div>
   </section>
 </template>

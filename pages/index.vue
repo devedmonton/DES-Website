@@ -42,10 +42,12 @@ defineOgImage({
       <div
         class="flex flex-col gap-4 items-center h-full justify-center max-w-6xl mx-auto text-center"
       >
-        <span class="text-lg font-medium"> Dev Edmonton Society </span>
-        <h1 class="md:text-6xl text-5xl font-bold">
-          Fostering a stronger software <br>
-          development community in Edmonton.
+        <div class="inline-flex items-center rounded-full px-3 py-1 text-sm font-medium bg-gradient-to-r from-primary to-secondary dark:from-indigo-500 dark:to-secondary text-white">
+          <span class="relative">Dev Edmonton Society</span>
+        </div>
+        <h1 class="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-black to-black dark:from-white dark:to-gray-500 leading-tight">
+          Fostering a Stronger Software <br>
+          Development Community in Edmonton.
         </h1>
         <p class="mt-6 max-w-4xl">
           We are made up of people who believe that an impactful, diverse, and collaborative
@@ -57,7 +59,7 @@ defineOgImage({
           <AppButton
             title="About our Slack"
             to="/#about-our-slack"
-            class="bg-primary px-5 py-2.5 text-white rounded-full flex gap-2 items-center hover:border-primary hover:text-primary hover:bg-transparent"
+            class="bg-primary px-5 py-2.5 text-white flex gap-2 items-center transform hover:scale-105 hover:!bg-primary"
           >
             <Icon
               class="w-5 h-5"
@@ -68,7 +70,7 @@ defineOgImage({
           <AppButton
             title="Learn more about what we do"
             to="/#what-we-do"
-            class="border border-neutral-800 dark:border-neutral-400/40 hover:bg-gray-100 dark:hover:bg-neutral-950 px-5 py-2.5 rounded-full flex gap-2 items-center"
+            class="border border-neutral-800 dark:border-neutral-400/40 px-5 py-2.5 flex gap-2 items-center transform hover:scale-105 bg-white/20 hover:bg-white dark:bg-black/40"
           >
             Learn More
             <Icon
