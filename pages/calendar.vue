@@ -1,6 +1,4 @@
 <script setup lang="ts">
-const group = { name: 'Community Events', items: events }
-
 class Event {
   start: Date
   end: Date
