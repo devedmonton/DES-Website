@@ -14,18 +14,13 @@ export default defineEventHandler(async (event) => {
 
   // make the request
   try {
-    // await the collaborators endpoint.
-    const response = await fetch(CONTRIBUTORS_ENDPOINT, {
+    // await the collaborators endpoint from github using nitros fetch
+    const data = await $fetch(CONTRIBUTORS_ENDPOINT, {
       method: 'GET',
       headers: {
         Authorization: `Bearer ${githubAppAPIKey}`,
       },
     })
-    // unpack the json.
-    const data = await response.json()
-    if (!response.ok) {
-      throw Error(data)
-    }
     return {
       statusCode: 200,
       message: `Contributors fetch successfully`,
