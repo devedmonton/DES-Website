@@ -199,4 +199,9 @@ export const companies = [
     to: 'https://apps.ualberta.ca/careers/list/category/50',
     description: 'The University of Alberta is a leading research institution with a strong focus on AI, machine learning, and data science. Developers and researchers will have the opportunity to work on cutting-edge projects in collaboration with top academics and industry partners.',
   },
+  {
+    name: 'Parakeeto',
+    to: 'https://parakeeto.com/',
+    description: 'Parakeeto specializes in measuring and improving digital marketing agency profitability, through a combination of business intelligence technology and industry leading expertise and consulting.',
+  },
 ]

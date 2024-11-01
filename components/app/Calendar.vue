@@ -9,11 +9,9 @@ defineProps<{
 
 const showEventModal = ref(false)
 const selectedEvent = ref<any>({})
-
 const onEventClick = (event: any, e: any) => {
   selectedEvent.value = event
   showEventModal.value = true
-
   e.stopPropagation()
 }
 </script>
@@ -29,18 +27,19 @@ const onEventClick = (event: any, e: any) => {
       {{ group.name }}
     </ProseH1>
     <vue-cal
-      class="rounded-lg bg-white dark:bg-neutral-800 overflow-hidden shadow"
+      class="rounded-lg bg-white dark:bg-neutral-900 overflow-hidden shadow border border-gray-400/40"
       today-button
       small
       :events-on-month-view="true"
       :twelve-hour="true"
       :events="group.items"
-      :start-week-on-sunday="false"
+      :start-week-on-sunday="true"
       :disable-views="['years', 'year', 'day']"
       :time-from="8 * 60"
       :time-to="22 * 60"
-      :time-step="60"
+      :time-step="30"
       :on-event-click="onEventClick"
+      :show-all-day-events="['short', true, false]"
     >
       <template #arrow-prev>
         <Icon
@@ -95,7 +94,6 @@ const onEventClick = (event: any, e: any) => {
         </label>
       </div>
     </div> -->
-
     <AppModal
       id="event-modal"
       v-model="showEventModal"
@@ -141,51 +139,150 @@ const onEventClick = (event: any, e: any) => {
     <ProseH1 class="mb-8 text-center">
       {{ group.name }}
     </ProseH1>
-    <div class="rounded-lg bg-white dark:bg-neutral-800 overflow-hidden shadow h-[691px]">
-      <div class="flex items-center justify-center h-96">
-        <Icon
-          class="w-12 h-12 animate-spin"
-          name="i-ph-spinner"
-        />
-      </div>
+    <div class="rounded-lg bg-white dark:bg-neutral-900 overflow-hidden shadow h-[691px] flex items-center justify-center">
+      <Icon
+        class="w-12 h-12 animate-spin"
+        name="i-ph-spinner"
+      />
     </div>
   </section>
 </template>
 
 <style>
-  .vuecal__event-title {
-    @apply text-xs sm:text-sm font-semibold;
-  }
+.vuecal__event-title {
+  @apply text-xs sm:text-sm font-semibold;
+}
 
-  .vuecal__event-time {
-    @apply text-[0.5rem] sm:text-xs;
-  }
+.vuecal__event-time {
+  @apply text-[0.5rem] sm:text-xs;
+}
 
-  .vuecal__event:hover {
-    @apply cursor-pointer;
-  }
+.vuecal__event:hover {
+  @apply cursor-pointer;
+}
 
-  .vuecal__event {
-    @apply flex flex-col justify-center p-2 bg-primary text-white border border-gray-400/25;
-  }
+.vuecal__event {
+  @apply flex flex-col justify-start p-2 bg-primary text-white border border-gray-400/25;
+}
 
-  .vuecal__event-content {
-    @apply italic text-xs;
-  }
+.vuecal__event:hover {
+  background-color: white;
+  border:#265dad solid 1px;
+  color: #265dad
+}
 
-  .vuecal__title-bar {
-    @apply relative;
-  }
+.vuecal__event-content {
+  @apply italic text-xs;
+}
 
-  .vuecal__today-btn {
-    @apply bg-gray-400/20 hover:bg-gray-400/25 py-1 px-3 me-4 rounded-lg dark:text-white text-black font-semibold absolute right-[-10px] top-[-39px];
-  }
+.vuecal__title-bar {
+  @apply relative;
+}
 
-  div.vuecal__cell:nth-child(7)::before {
-    @apply rounded-ee-lg;
-  }
+.vuecal__today-btn {
+  @apply bg-gray-400/20 hover:bg-gray-400/25 py-1 px-3 me-4 rounded-lg dark:text-white text-black font-semibold absolute right-[-10px] top-[-39px];
+}
 
-  #event-modal .content-full a{
-    @apply hover:underline text-gray-600 dark:text-gray-400;
-  }
+.vuecal__heading .weekday-label {
+  font-weight: bold;
+}
+
+.vuecal--month-view .vuecal__cell {
+  height: 125px;
+}
+
+.vuecal--month-view .vuecal__cell-content {
+  justify-content: start;
+  padding: .5rem;
+
+}
+
+.vuecal--month-view .vuecal__cell-events {
+  overflow: auto;
+}
+
+.vuecal--month-view .vuecal__event {
+  padding: unset;
+  text-align: left;
+  border: unset;
+  color: #265dad;
+  background-color: unset;
+  padding: 0.3rem;
+  border-radius: 0.2rem;
+  gap: 5px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.dark .vuecal--month-view .vuecal__event {
+  color: white;
+}
+
+.vuecal--month-view .vuecal__cell--out-of-scope .vuecal__event {
+  color: #bebaba;
+}
+
+.dark .vuecal--month-view .vuecal__cell--out-of-scope .vuecal__event {
+  color: rgb(55, 55, 55);
+}
+
+.vuecal--month-view .vuecal__event:hover {
+  background-color: #265dad;
+  color: white;
+}
+
+.vuecal--month-view .vuecal__event .vuecal__event-title {
+  font-weight: normal;
+  text-wrap: nowrap;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.vuecal--month-view .vuecal__event .vuecal__event-time {
+  order: -1;
+}
+
+.vuecal--month-view .vuecal__event .vuecal__event-time span {
+  display: none;
+}
+
+.vuecal--week-view {
+  height: 600px;
+}
+
+.vuecal--week-view .vuecal__all-day {
+  @apply border-y-2;
+}
+
+.vuecal--week-view .vuecal__all-day-text {
+  width: 57.5px !important;
+}
+
+/* .vuecal--week-view .vuecal__event:not(.vuecal__event--all-day) {
+  @apply shadow-2xl rounded-lg;
+
+} */
+
+.vuecal--view-with-time .vuecal__event:not(.vuecal__event--all-day) {
+  @apply shadow-2xl rounded-lg;
+  width: 80% !important;
+  left: 15% !important;
+
+}
+
+.vuecal--view-with-time .vuecal__event:not(.vuecal__event--all-day):first-child {
+    position: absolute;
+    left: 0% !important;
+    width: 90% !important;
+}
+
+.vuecal--view-with-time .vuecal__event:not(.vuecal__event--all-day):nth-child(2){
+    position: absolute;
+    left: 10% !important;
+    width: 90% !important;
+}
+
+#event-modal .content-full a {
+  @apply hover:underline text-gray-600 dark:text-gray-400;
+}
 </style>

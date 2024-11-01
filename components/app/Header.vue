@@ -27,8 +27,8 @@ useEventListener('scroll', () => y.value = window.scrollY)
   >
     <NuxtScrollIndicator color="" />
     <nav
-      class="relative z-50 px-4 py-2 transition-all duration-300"
-      :class="scrolling ? open ? 'bg-white dark:bg-neutral-900' : 'border-b border-neutral-400/20' : 'bg-primary'"
+      class="relative z-50 px-4 py-2 duration-300"
+      :class="scrolling ? open ? 'bg-white dark:bg-neutral-900' : 'border-b border-neutral-400/40' : 'bg-primary'"
     >
       <div class="flex flex-wrap justify-between items-center lg:grid grid-cols-[1fr_auto_1fr] mx-auto max-w-screen-2xl">
         <NuxtLink
@@ -83,7 +83,7 @@ useEventListener('scroll', () => y.value = window.scrollY)
     <Transition name="slide">
       <div
         v-if="open"
-        class="lg:hidden absolute top-24 right-0 left-0 z-10 py-4 flex flex-col gap-2 transition-all border-y border-neutral-400/20"
+        class="lg:hidden absolute top-24 right-0 left-0 z-10 py-4 flex flex-col gap-2 duration-300 border-y border-neutral-400/40"
         :class="scrolling ? 'bg-white dark:bg-neutral-900' : 'bg-primary'"
       >
         <NuxtLink
@@ -103,7 +103,7 @@ useEventListener('scroll', () => y.value = window.scrollY)
             {{ menu.name }}
           </span>
         </NuxtLink>
-        <div class="flex justify-between border-t border-neutral-400/20 px-4 pt-4">
+        <div class="flex justify-between border-t border-neutral-400/40 px-4 pt-4">
           <AppButton
             v-for="social of socials"
             :key="social.name"
@@ -120,11 +120,6 @@ useEventListener('scroll', () => y.value = window.scrollY)
 </template>
 
 <style>
-.slide-enter-active,
-.slide-leave-active {
-  @apply transition-all duration-300;
-}
-
 .slide-enter-from,
 .slide-leave-to {
   opacity: 0;

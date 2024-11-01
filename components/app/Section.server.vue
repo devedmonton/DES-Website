@@ -23,7 +23,7 @@ function calcSize(index: number) {
     <ProseH1 class="mb-8 text-center">
       {{ group.name }}
     </ProseH1>
-    <div class="grid mt-4 rounded-lg divide-gray-200 sm:grid-cols-2 gap-px bg-gray-200 dark:bg-neutral-950 overflow-hidden shadow">
+    <div class="grid mt-4 rounded-lg divide-gray-200 sm:grid-cols-2 gap-px bg-gray-200 dark:bg-neutral-400/40 overflow-hidden shadow">
       <AppCardHorizontal
         v-for="item, index in group.items"
         :key="index"
@@ -34,12 +34,12 @@ function calcSize(index: number) {
         v-if="group.to"
         :to="group.to"
         title="View all"
-        class="group flex flex-col text-center justify-center capitalize text-lg font-medium hover:bg-white dark:bg-neutral-800 transition-all duration-300 hover:text-primary min-h-48"
+        class="group flex flex-col text-center justify-center capitalize text-lg font-medium hover:bg-white dark:bg-neutral-800 transition-colors duration-300 hover:text-primary min-h-48"
       >
-        <span>
+        <span class="flex items-center justify-center gap-2">
           view all {{ group.to }}
           <Icon
-            class="group-hover:translate-x-4 transition-all duration-300"
+            class="group-hover:translate-x-4 transition-transform duration-300 block"
             name="i-ph-arrow-right"
           />
         </span>
