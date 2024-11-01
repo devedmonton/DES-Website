@@ -3,10 +3,9 @@ export const groups = [
     name: 'Product Edmonton',
     to: `http://productedmonton.slack.com/`,
     image: '/meetups/slack.png',
-    description: 'We are a group dedicated to collectively increasing the skill-level and connectedness of the entire Edmonton Product Community.',
   },
   {
-    name: 'Startup Edmonton',
+    name: 'Edmonton Startup Community',
     to: `https://yegstartup.slack.com/join/shared_invite/zt-czl41ymv-IlCrO1Na2KwqV9pb37v4kQ#/shared-invite/email`,
     image: '/meetups/slack.png',
   },
@@ -49,7 +48,6 @@ export const groups = [
     name: 'UX Edmonton',
     to: 'https://www.facebook.com/groups/59071219138',
     image: '/meetups/facebook.png',
-    description: 'UX YEG is dedicated to connecting Edmontons vibrant user experience community. Our goal is to offer the opportunity for likeminded professionals to connect, share ideas and learn new skills.',
   },
   {
     name: 'YEG Women in Tech',
