@@ -26,6 +26,11 @@ export default defineNuxtConfig({
 
   app: {
     keepalive: true,
+    head: {
+      htmlAttrs: {
+        lang: 'en',
+      },
+    },
   },
 
   // custom css
