@@ -1,7 +1,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5f9bdcfb-7b48-46e8-a58d-dfd2b32d8ccc/deploy-status)](https://app.netlify.com/sites/dev-edmonton/deploys)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-42-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-43-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # Dev Edmonton Society
@@ -102,10 +102,13 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/sdhinsa11"><img src="https://avatars.githubusercontent.com/u/145224031?v=4?s=100" width="100px;" alt="Sohana Dhinsa"/><br /><sub><b>Sohana Dhinsa</b></sub></a><br /><a href="https://github.com/devedmonton/DES-Website/commits?author=sdhinsa11" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/SteveReiter"><img src="https://avatars.githubusercontent.com/u/8506743?v=4?s=100" width="100px;" alt="SteveReiter"/><br /><sub><b>SteveReiter</b></sub></a><br /><a href="https://github.com/devedmonton/DES-Website/commits?author=SteveReiter" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/tylersocholotuik"><img src="https://avatars.githubusercontent.com/u/143831033?v=4?s=100" width="100px;" alt="Tyler Socholotuik"/><br /><sub><b>Tyler Socholotuik</b></sub></a><br /><a href="https://github.com/devedmonton/DES-Website/commits?author=tylersocholotuik" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/yaroslavhoretskyi"><img src="https://avatars.githubusercontent.com/u/52444900?v=4?s=100" width="100px;" alt="Yaroslav Horetskyi"/><br /><sub><b>Yaroslav Horetskyi</b></sub></a><br /><a href="https://github.com/devedmonton/DES-Website/commits?author=yaroslavhoretskyi" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/olimpiuus"><img src="https://avatars.githubusercontent.com/u/101880197?v=4?s=100" width="100px;" alt="Yuriy Kolegin"/><br /><sub><b>Yuriy Kolegin</b></sub></a><br /><a href="https://github.com/devedmonton/DES-Website/commits?author=olimpiuus" title="Code">💻</a> <a href="#ideas-olimpiuus" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/devedmonton/DES-Website/issues?q=author%3Aolimpiuus" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://rybo.dev"><img src="https://avatars.githubusercontent.com/u/53452222?v=4?s=100" width="100px;" alt="bottbott"/><br /><sub><b>bottbott</b></sub></a><br /><a href="https://github.com/devedmonton/DES-Website/commits?author=bottbott" title="Code">💻</a> <a href="https://github.com/devedmonton/DES-Website/commits?author=bottbott" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/dgmouris"><img src="https://avatars.githubusercontent.com/u/8164434?v=4?s=100" width="100px;" alt="dgmouris"/><br /><sub><b>dgmouris</b></sub></a><br /><a href="#ideas-dgmouris" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/devedmonton/DES-Website/commits?author=dgmouris" title="Code">💻</a> <a href="https://github.com/devedmonton/DES-Website/commits?author=dgmouris" title="Documentation">📖</a></td>
+    </tr>
+    <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/shrutiijain26"><img src="https://avatars.githubusercontent.com/u/162204506?v=4?s=100" width="100px;" alt="shrutiijain26"/><br /><sub><b>shrutiijain26</b></sub></a><br /><a href="https://github.com/devedmonton/DES-Website/commits?author=shrutiijain26" title="Code">💻</a></td>
     </tr>
   </tbody>
