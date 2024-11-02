@@ -28,7 +28,7 @@ export default defineNuxtConfig({
     keepalive: true,
     head: {
       htmlAttrs: {
-        lang: 'en',
+        lang: 'en-CA',
       },
     },
   },
