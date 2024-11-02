@@ -1,14 +1,9 @@
 <script setup lang="ts">
 const sections = [
   {
-    name: 'Meetups We Support',
+    name: 'Local Meetups',
     to: 'meetups',
     items: randomize(meetups, 5),
-  },
-  {
-    name: 'Community Events',
-    to: 'events',
-    items: randomize(events, 5),
   },
   {
     name: 'Resources',

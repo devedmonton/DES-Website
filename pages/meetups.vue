@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const group = { name: 'Meetups We Support', items: meetups }
+const group = { name: 'Local Meetups', items: meetups }
 
 const links = { name: 'Groups', items: groups }
 
