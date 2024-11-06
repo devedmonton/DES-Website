@@ -8,9 +8,11 @@ const props = defineProps<{
 }>()
 
 const isMobile = useMediaQuery('(max-width: 768px)')
-// setting the default view to list for mobile devices
-const defaultView = isMobile.value ? 'list' : 'calendar'
-const selectedView = ref(defaultView)
+const calendarView = useCookie('calendarView', { default: () => 'calendar' })
+const selectedView = computed({
+  get: () => isMobile.value ? 'list' : calendarView.value,
+  set: value => calendarView.value = value,
+})
 const showEventModal = ref(false)
 const selectedEvent = ref<any>({})
 const onEventClick = (event: any, e: any) => {
@@ -50,6 +52,7 @@ const groupedEvents = computed(() => {
       {{ group.name }}
     </ProseH1>
     <div
+      v-if="!isMobile"
       id="calendar-list-toggle"
       class="w-[180px] bg-gray-400/20 rounded-lg place-self-center mb-8"
     >
@@ -137,10 +140,9 @@ const groupedEvents = computed(() => {
           <div
             v-for="(event) in events"
             :key="event.title"
-            class="border-2 border-gray-300 rounded mb-4 break-word"
+            class="border-2 border-gray-400/40 rounded mb-4 break-word"
           >
-            <div
-              class="p-4 flex justify-between items-center border-b rounded-t dark:border-gray-600">
+            <div class="p-4 flex justify-between items-center border-b rounded-t border-gray-400/40">
               <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                 {{ event.title }}
               </h3>
