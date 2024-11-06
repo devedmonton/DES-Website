@@ -7,7 +7,7 @@ const props = defineProps<{
   pending: boolean
 }>()
 
-const isMobile = useMediaQuery('(max-width: 768px)')
+const isMobile = useMediaQuery('(max-width: 700px)')
 const calendarView = useCookie('calendarView', { default: () => 'calendar' })
 const selectedView = computed({
   get: () => isMobile.value ? 'list' : calendarView.value,
@@ -23,20 +23,20 @@ const onEventClick = (event: any, e: any) => {
 
 // used to display events grouped by month in the list view
 const groupedEvents = computed(() => {
-  return props.group.items.reduce((acc: any, event: any) => {
+  return props.group.items.reduce((monthEvents: any, event: any) => {
     // creating a key to group the events by month in format "Month Year"
     const monthKey = event.start.toLocaleDateString('en-US', { year: 'numeric', month: 'long' })
 
     // check if there are already events in this month
     // if not, initialize an empty array for this month
-    if (!acc[monthKey]) {
-      acc[monthKey] = []
+    if (!monthEvents[monthKey]) {
+      monthEvents[monthKey] = []
     }
 
     // add current in the same month to the array
-    acc[monthKey].push(event)
+    monthEvents[monthKey].push(event)
 
-    return acc
+    return monthEvents
   }, {})
 })
 </script>
@@ -142,18 +142,18 @@ const groupedEvents = computed(() => {
             :key="event.title"
             class="border-2 border-gray-400/40 rounded mb-4 break-word"
           >
-            <div class="p-4 flex justify-between items-center border-b rounded-t border-gray-400/40">
-              <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <div class="p-4 sm:flex justify-between items-center border-b rounded-t border-gray-400/40">
+              <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white mb-2 sm:mb-0">
                 {{ event.title }}
               </h3>
-              <div class="flex flex-col items-end gap-1">
-                <div class="flex items-center gap-4">
+              <div class="flex sm:flex-col items-end gap-4 sm:gap-1">
+                <div class="flex items-center gap-2 sm:gap-4">
                   <Icon name="formkit:date" />
                   <p class="text-sm text-gray-500">
                     {{ event.start.format('DD/MM/YYYY') }}
                   </p>
                 </div>
-                <div class="flex items-center gap-2">
+                <div class="flex items-center gap-1 sm:gap-2">
                   <Icon name="mingcute:time-line" />
                   <p class="text-sm text-gray-500">
                     {{ event.start.formatTime() }} - {{ event.end.formatTime() }}
@@ -161,7 +161,10 @@ const groupedEvents = computed(() => {
                 </div>
               </div>
             </div>
-            <div class="p-4 event-description">
+            <div
+              class="p-4 event-description"
+              :class="{ 'max-w-md': isMobile }"
+            >
               <p
                 class="content-full"
                 v-html="event.description"
