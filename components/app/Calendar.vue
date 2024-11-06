@@ -7,7 +7,10 @@ const props = defineProps<{
   pending: boolean
 }>()
 
-const selectedView = ref('calendar')
+const isMobile = useMediaQuery('(max-width: 768px)')
+// setting the default view to list for mobile devices
+const defaultView = isMobile.value ? 'list' : 'calendar'
+const selectedView = ref(defaultView)
 const showEventModal = ref(false)
 const selectedEvent = ref<any>({})
 const onEventClick = (event: any, e: any) => {
@@ -360,5 +363,10 @@ const groupedEvents = computed(() => {
 
 .event-description a {
   @apply hover:underline text-gray-600 dark:text-gray-400;
+}
+
+p.content-full {
+  overflow: auto;
+  height: 180px;
 }
 </style>
