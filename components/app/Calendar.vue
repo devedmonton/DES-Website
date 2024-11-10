@@ -2,11 +2,17 @@
 import VueCal from 'vue-cal'
 import 'vue-cal/dist/vuecal.css'
 
-defineProps<{
+const props = defineProps<{
   group: any
   pending: boolean
 }>()
 
+const isMobile = useMediaQuery('(max-width: 700px)')
+const calendarView = useCookie('calendarView', { default: () => 'calendar' })
+const selectedView = computed({
+  get: () => isMobile.value ? 'list' : calendarView.value,
+  set: value => calendarView.value = value,
+})
 const showEventModal = ref(false)
 const selectedEvent = ref<any>({})
 const onEventClick = (event: any, e: any) => {
@@ -14,6 +20,25 @@ const onEventClick = (event: any, e: any) => {
   showEventModal.value = true
   e.stopPropagation()
 }
+
+// used to display events grouped by month in the list view
+const groupedEvents = computed(() => {
+  return props.group.items.reduce((monthEvents: any, event: any) => {
+    // creating a key to group the events by month in format "Month Year"
+    const monthKey = event.start.toLocaleDateString('en-US', { year: 'numeric', month: 'long' })
+
+    // check if there are already events in this month
+    // if not, initialize an empty array for this month
+    if (!monthEvents[monthKey]) {
+      monthEvents[monthKey] = []
+    }
+
+    // add current in the same month to the array
+    monthEvents[monthKey].push(event)
+
+    return monthEvents
+  }, {})
+})
 </script>
 
 <template>
@@ -26,7 +51,51 @@ const onEventClick = (event: any, e: any) => {
     <ProseH1 class="mb-8 text-center">
       {{ group.name }}
     </ProseH1>
+    <div
+      v-if="!isMobile"
+      id="calendar-list-toggle"
+      class="w-[180px] bg-gray-400/20 rounded-lg place-self-center mb-8"
+    >
+      <div
+        class="w-1/2 inline-flex items-center"
+      >
+        <input
+          id="calendar-toggle"
+          v-model="selectedView"
+          name="calendar-list-toggle-radio"
+          type="radio"
+          class="hidden peer"
+          checked
+          :value="'calendar'"
+        >
+        <label
+          for="calendar-toggle"
+          class="w-full text-center px-3 py-1 cursor-pointer rounded-lg peer-checked:bg-primary peer-checked:text-white"
+        >
+          Calendar
+        </label>
+      </div>
+      <div
+        class="w-1/2 inline-flex items-center"
+      >
+        <input
+          id="list-toggle"
+          v-model="selectedView"
+          name="calendar-list-toggle-radio"
+          type="radio"
+          class="hidden peer"
+          :value="'list'"
+        >
+        <label
+          for="list-toggle"
+          class="w-full text-center px-3 py-1 cursor-pointer rounded-lg peer-checked:bg-primary peer-checked:text-white"
+        >
+          List
+        </label>
+      </div>
+    </div>
     <vue-cal
+      v-if="selectedView === 'calendar'"
       class="rounded-lg bg-white dark:bg-neutral-900 overflow-hidden shadow border border-gray-400/40"
       today-button
       small
@@ -55,45 +124,56 @@ const onEventClick = (event: any, e: any) => {
       </template>
     </vue-cal>
 
-    <!-- TODO: Implement the list view
+    <!-- List View -->
     <div
-      id="calendar-list-toggle"
-      class="w-[180px] bg-gray-400/20 rounded-lg absolute top-[158px] left-[22px]"
+      v-if="selectedView === 'list'"
     >
       <div
-        class="w-1/2 inline-flex items-center"
+        v-for="(events, month) in groupedEvents"
+        :key="month"
+        class="mb-8"
       >
-        <input
-          id="calendar-toggle"
-          name="calendar-list-toggle-radio"
-          type="radio"
-          class="hidden peer"
-          checked
-        >
-        <label
-          for="calendar-toggle"
-          class="w-full text-center px-3 py-1 cursor-pointer rounded-lg peer-checked:bg-primary peer-checked:text-white"
-        >
-          Calendar
-        </label>
+        <h3 class="text-2xl text-center mb-8 font-bold tracking-tight text-gray-900 dark:text-white">
+          {{ month }}
+        </h3>
+        <div class="grid xl:grid-cols-2 gap-4">
+          <div
+            v-for="(event) in events"
+            :key="event.title"
+            class="border-2 border-gray-400/40 rounded mb-4 break-word"
+          >
+            <div class="p-4 sm:flex justify-between items-center border-b rounded-t border-gray-400/40">
+              <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white mb-2 sm:mb-0">
+                {{ event.title }}
+              </h3>
+              <div class="flex sm:flex-col items-end gap-4 sm:gap-1">
+                <div class="flex items-center gap-2 sm:gap-4">
+                  <Icon name="formkit:date" />
+                  <p class="text-sm text-gray-500">
+                    {{ event.start.format('DD/MM/YYYY') }}
+                  </p>
+                </div>
+                <div class="flex items-center gap-1 sm:gap-2">
+                  <Icon name="mingcute:time-line" />
+                  <p class="text-sm text-gray-500">
+                    {{ event.start.formatTime() }} - {{ event.end.formatTime() }}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="p-4 event-description"
+              :class="{ 'max-w-md': isMobile }"
+            >
+              <p
+                class="content-full"
+                v-html="event.description"
+              />
+            </div>
+          </div>
+        </div>
       </div>
-      <div
-        class="w-1/2 inline-flex items-center"
-      >
-        <input
-          id="list-toggle"
-          name="calendar-list-toggle-radio"
-          type="radio"
-          class="hidden peer"
-        >
-        <label
-          for="list-toggle"
-          class="w-full text-center px-3 py-1 cursor-pointer rounded-lg peer-checked:bg-primary peer-checked:text-white"
-        >
-          List
-        </label>
-      </div>
-    </div> -->
+    </div>
     <AppModal
       id="event-modal"
       v-model="showEventModal"
@@ -284,5 +364,14 @@ const onEventClick = (event: any, e: any) => {
 
 #event-modal .content-full a {
   @apply hover:underline text-gray-600 dark:text-gray-400;
+}
+
+.event-description a {
+  @apply hover:underline text-gray-600 dark:text-gray-400;
+}
+
+p.content-full {
+  overflow: auto;
+  height: 180px;
 }
 </style>
