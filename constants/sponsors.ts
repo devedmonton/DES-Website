@@ -39,7 +39,7 @@ export const sponsors: Sponsor[] = [
   {
     name: 'Shortcut',
     image: 'LogoShortcut',
-    description: 'Thanks to <a href=\'https://www.shortcut.com/\'>Shortcut</a>. The project management platform we use to help organise our team.',
+    description: 'Thanks to <a href=\'https://www.shortcut.com/\'>Shortcut</a>. The project management platform we use to help organize our team.',
     link: 'https://shortcut.com/',
     category: 'bit',
   },
