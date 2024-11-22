@@ -115,7 +115,7 @@ defineOgImage({
             <p class="text-start">
               We have a Slack workspace to connect people who are involved with the Edmonton
               tech scene. The people here range from being developers, designers, PM's, students,
-              hobbists and more who love to talk about code. We also do events and network across
+              hobbyists and more who love to talk about code. We also do events and network across
               Alberta.
               <br><br>
               There are several channels that you can check out on the card. They range from being
