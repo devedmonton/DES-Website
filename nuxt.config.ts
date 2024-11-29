@@ -72,8 +72,8 @@ export default defineNuxtConfig({
       serviceAccountCredentialsJSON: process.env.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS_JSON,
     },
     githubAPI: {
-      githubAppAPIKey: process.env.GITHUB_APP_KEY
-    }
+      githubAppAPIKey: process.env.GITHUB_APP_KEY,
+    },
   },
 
   // route redirects
