@@ -4,19 +4,19 @@ const selected = ref(channels[0])
 const circles = [
   {
     distance: '3.5cqw',
-    items: ['i-logos-c-plusplus', 'i-skill-icons-rust', 'i-logos-c'],
+    items: (['i-logos-c-plusplus', 'i-skill-icons-rust', 'i-logos-c']),
   },
   {
     distance: '7cqw',
-    items: ['i-logos-django-icon', 'i-logos-nodejs-icon', 'i-logos-nestjs', 'i-logos-laravel', 'i-logos-spring-icon', 'i-unjs-nitro'],
+    items: (['i-logos-django-icon', 'i-unjs-nitro', 'i-logos-nodejs-icon', 'i-logos-nestjs', 'i-logos-spring-icon', 'i-logos-laravel']),
   },
   {
     distance: '10.5cqw',
-    items: ['i-logos-javascript', 'i-logos-python', 'i-logos-ruby', 'i-logos-java', 'i-logos-typescript-icon', 'i-logos-swift', 'i-logos-dart', 'i-logos-php'],
+    items: (['i-logos-javascript', 'i-logos-ruby', 'i-logos-python', 'i-logos-go', 'i-logos-java', 'i-logos-typescript-icon', 'i-logos-swift', 'i-logos-dart']),
   },
   {
     distance: '14.5cqw',
-    items: ['i-logos-vue', 'i-logos-nuxt-icon', 'i-logos-react', 'i-logos-svelte-icon', 'i-logos-angular-icon', 'i-logos-vitejs', 'i-logos-ionic-icon'],
+    items: (['i-logos-vitejs', 'i-logos-vue', 'i-logos-react', 'i-logos-nuxt-icon', 'i-logos-svelte-icon', 'i-logos-nextjs-icon', 'i-logos-angular-icon', 'i-logos-ionic-icon']),
   },
 ]
 </script>
@@ -63,7 +63,7 @@ const circles = [
             </div>
             <div class="flex gap-2">
               <!-- TODO: go to contributors page -->
-              <div class="flex gap-1 items-center border border-neutral-400/40 text-neutral-400 p-1 rounded">
+              <div class="flex gap-1 items-center border border-neutral-400/40 text-neutral-400 px-2 py-1 rounded">
                 <Icon
                   class="block text-lg"
                   name="i-ph-users-duotone"
@@ -71,8 +71,8 @@ const circles = [
                 <!-- TODO: show contributors actual number, dynamically -->
                 <span class="text-xs">55</span>
               </div>
-              <AppColorMode class="border border-neutral-400/40 text-neutral-400 p-1 !text-sm rounded" />
-              <div class="border border-neutral-400/40 text-neutral-400 p-1 rounded">
+              <AppColorMode class="border border-neutral-400/40 text-neutral-400 px-2 py-1 !text-sm rounded" />
+              <div class="border border-neutral-400/40 text-neutral-400 px-2 py-1 rounded">
                 <Icon
                   class="block text-lg"
                   name="i-ph-headphones-duotone"
@@ -101,7 +101,7 @@ const circles = [
                   <Icon
                     v-for="item, idx in circle.items"
                     :key="item"
-                    class="absolute h-6 w-6 slack-orbit"
+                    class="absolute lg:text-xl md:text-sm text-xs slack-orbit"
                     :style="{
                       '--distance': circle.distance,
                       '--delay': `${(idx / circle.items.length) * -10}s`,
