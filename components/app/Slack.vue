@@ -1,5 +1,24 @@
 <script setup>
 const selected = ref(channels[0])
+
+const circles = [
+  {
+    distance: '3.5cqw',
+    items: ['i-logos-c-plusplus', 'i-skill-icons-rust', 'i-logos-c'],
+  },
+  {
+    distance: '7cqw',
+    items: ['i-logos-django-icon', 'i-logos-nodejs-icon', 'i-logos-nestjs', 'i-logos-laravel', 'i-logos-spring-icon', 'i-unjs-nitro'],
+  },
+  {
+    distance: '10.5cqw',
+    items: ['i-logos-javascript', 'i-logos-python', 'i-logos-ruby', 'i-logos-java', 'i-logos-typescript-icon', 'i-logos-swift', 'i-logos-dart', 'i-logos-php'],
+  },
+  {
+    distance: '14.5cqw',
+    items: ['i-logos-vue', 'i-logos-nuxt-icon', 'i-logos-react', 'i-logos-svelte-icon', 'i-logos-angular-icon', 'i-logos-vitejs', 'i-logos-ionic-icon'],
+  },
+]
 </script>
 
 <template>
@@ -10,7 +29,7 @@ const selected = ref(channels[0])
     <div
       class="relative z-10 grid grid-cols-[100px_1fr] gap-4 bg-gradient-to-t from-[#5E2362] to-[#78327D] p-4 rounded-xl h-full"
     >
-      <div class="flex flex-col gap-4 justify-center text-center items-center p-4">
+      <div class="flex flex-col gap-4 justify-between text-center items-center p-4">
         <Icon
           class="w-10 h-10 mb-4"
           name="i-logos-slack-icon"
@@ -36,149 +55,67 @@ const selected = ref(channels[0])
           loading="lazy"
         />
       </div>
-      <div class="relative flex flex-col gap-4 bg-white dark:bg-black p-8 rounded-lg">
-        <div class="border-b border-neutral-400/40 pb-2">
-          <span class="font-bold"># {{ selected.name }}</span>
-          <span class="text-sm font-light ml-1">
-            {{ selected.description }}
-          </span>
-        </div>
-        <div class="relative flex items-center justify-center h-full">
-          <div class="relative md:flex hidden justify-center">
-            <!-- bottom -->
+      <div class="relative flex flex-col gap-4 bg-white dark:bg-black rounded-lg justify-between">
+        <div>
+          <div class="p-4 border-b border-neutral-400/40 flex justify-between items-center">
             <div class="">
-              <div
-                class="relative h-[30rem] w-[30rem] rounded-full rotating-2 border-x border-[#FDCDCD]"
-                style="background: radial-gradient(50% 50% at 50% 50%, #FDCDCD 0%, var(--color-bg-dark) 80%, #FDCDCD15);"
-              >
+              <span class="font-bold"># {{ selected.name }}</span>
+            </div>
+            <div class="flex gap-2">
+              <!-- TODO: go to contributors page -->
+              <div class="flex gap-1 items-center border border-neutral-400/40 text-neutral-400 p-1 rounded">
                 <Icon
-                  class="absolute top-10 right-20 w-6 h-6"
-                  name="i-logos-javascript"
+                  class="block text-lg"
+                  name="i-ph-users-duotone"
                 />
-
+                <!-- TODO: show contributors actual number, dynamically -->
+                <span class="text-xs">55</span>
+              </div>
+              <AppColorMode class="border border-neutral-400/40 text-neutral-400 p-1 !text-sm rounded" />
+              <div class="border border-neutral-400/40 text-neutral-400 p-1 rounded">
                 <Icon
-                  class="absolute top-6 left-24 w-6 h-6"
-                  name="i-logos-ruby"
-                />
-
-                <Icon
-                  class="absolute bottom-10 left-20 w-6 h-6"
-                  name="i-logos-typescript-icon"
-                />
-
-                <Icon
-                  class="absolute bottom-10 right-20 w-6 h-6"
-                  name="i-logos-python"
-                />
-
-                <Icon
-                  class="absolute -bottom-2 left-56 w-6 h-6"
-                  name="i-logos-java"
-                />
-
-                <Icon
-                  class="absolute top-56 -left-3 w-6 h-6"
-                  name="i-logos-swift"
-                />
-
-                <Icon
-                  class="absolute top-56 -right-3 w-6 h-6"
-                  name="i-logos-c-plusplus"
+                  class="block text-lg"
+                  name="i-ph-headphones-duotone"
                 />
               </div>
             </div>
+          </div>
+          <div class="p-4">
+            <!-- TODO: add more content ? -->
+            {{ selected.description }}
+          </div>
+        </div>
 
-            <!-- middle -->
-            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              <div
-                class="relative h-[22rem] w-[22rem] rounded-full rotating-3 border-x border-[#37C5F0]"
-                style="background: radial-gradient(50% 50% at 50% 50%, #37C5F0 0%, var(--color-bg-dark) 85%);"
-              >
-                <Icon
-                  class="absolute bottom-10 left-10 w-6 h-6 rounded"
-                  name="i-logos-nodejs-icon-alt"
-                />
-
-                <Icon
-                  class="absolute bottom-8 right-10 w-7 h-7 rounded"
-                  name="i-logos-laravel"
-                />
-
-                <Icon
-                  class="absolute top-10 left-10 w-6 h-6 rounded"
-                  name="i-logos-django-icon"
-                />
-
-                <Icon
-                  class="absolute top-10 right-10 w-6 h-6 rounded"
-                  name="i-logos-spring-icon"
-                />
+        <div class="flex h-[250px] justify-center">
+          <div class="aspect-video w-full overflow-clip">
+            <div class="mt-[-5%] grid h-full w-full grid-cols-1 place-items-center [&>*]:[grid-area:1/1]">
+              <div class="grid h-full w-full grid-cols-1 place-items-center [&>*]:[grid-area:1/1] slack-orbit-bg">
+                <div class="border w-[7cqw] aspect-square rounded-[9999px]" />
+                <div class="border w-[14cqw] aspect-square rounded-[9999px]" />
+                <div class="border w-[21cqw] aspect-square rounded-[9999px]" />
+                <div class="border w-[29cqw] aspect-square rounded-[9999px]" />
+                <div class="border w-[36cqw] aspect-square rounded-[9999px]" />
               </div>
-            </div>
-
-            <!-- top -->
-            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              <div
-                class="relative h-[15rem] w-[15rem] rounded-full rotating border-x border-[#00DC82]"
-                style="background: radial-gradient(50% 50% at 50% 50%, #00DC82 0%, var(--color-bg-dark) 85%);"
-              >
-                <Icon
-                  class="absolute bottom-10 right-4 w-6 h-6"
-                  name="i-logos-nuxt-icon"
-                />
-
-                <Icon
-                  class="absolute -bottom-3 right-1/2 w-6 h-6"
-                  name="i-logos-vue"
-                />
-
-                <Icon
-                  class="absolute bottom-20 -left-2 w-6 h-6"
-                  name="i-logos-svelte-icon"
-                />
-
-                <Icon
-                  class="absolute top-20 -right-2 w-6 h-6"
-                  name="i-logos-angular-icon"
-                />
-
-                <Icon
-                  class="absolute -top-1.5 left-36 w-6 h-6"
-                  name="i-logos-react"
-                />
-
-                <Icon
-                  class="absolute top-10 left-2 w-6 h-6"
-                  name="i-logos-vitejs"
-                />
+              <div class="relative z-10 grid h-full w-full grid-cols-1 place-items-center">
+                <template v-for="circle in circles">
+                  <Icon
+                    v-for="item, idx in circle.items"
+                    :key="item"
+                    class="absolute h-6 w-6 slack-orbit"
+                    :style="{
+                      '--distance': circle.distance,
+                      '--delay': `${(idx / circle.items.length) * -10}s`,
+                    }"
+                    :name="item"
+                  />
+                </template>
               </div>
-            </div>
-
-            <div
-              class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-black p-4 rounded-full shadow-xl"
-            >
               <AppLogo
                 :scrolling="true"
-                class="w-14 h-14"
+                class="w-12 h-12 mb-2"
               />
             </div>
           </div>
-          <AppLogo
-            :scrolling="true"
-            class="md:hidden w-40 h-40"
-          />
-        </div>
-        <div class="absolute bottom-4">
-          <AppButton
-            :to="SLACK_URL"
-            class="bg-primary text-white px-4 py-1 rounded-lg flex items-center gap-2 hover:text-primary hover:border-primary"
-          >
-            <Icon
-              class="w-4 h-4"
-              name="i-simple-icons-slack"
-            />
-            Join Slack
-          </AppButton>
         </div>
       </div>
     </div>
@@ -186,33 +123,22 @@ const selected = ref(channels[0])
 </template>
 
 <style>
-:root {
-  --color-bg-dark: white;
+.slack-orbit-bg {
+  mask-image: radial-gradient(70% 50% at center,#000 var(--fade-start,25%),transparent 100%);
+  -webkit-mask-image: radial-gradient(70% 50% at center,#000 var(--fade-start,25%),transparent 100%);
 }
 
-.dark {
-  --color-bg-dark: #000;
+.slack-orbit {
+    animation: orbit 10s linear var(--delay, -3s) infinite;
+    animation-play-state: running;
 }
 
-.rotating {
-  animation: rotating 7s linear infinite
-}
-
-.rotating-2 {
-  animation: rotating 25s linear infinite
-}
-
-.rotating-3 {
-  animation: rotating 13s linear infinite
-}
-
-@keyframes rotating {
+@keyframes orbit {
   0% {
-    transform: rotate(0)
+    transform: rotate(0deg) translateY(var(--distance)) rotate(0deg);
   }
-
-  to {
-    transform: rotate(1turn)
+  100% {
+    transform: rotate(1turn) translateY(var(--distance)) rotate(-1turn);
   }
 }
 </style>
