@@ -90,11 +90,11 @@ const circles = [
           <div class="aspect-video w-full overflow-clip">
             <div class="mt-[-5%] grid h-full w-full grid-cols-1 place-items-center [&>*]:[grid-area:1/1]">
               <div class="grid h-full w-full grid-cols-1 place-items-center [&>*]:[grid-area:1/1] slack-orbit-bg">
-                <div class="border w-[7cqw] aspect-square rounded-[9999px]" />
-                <div class="border w-[14cqw] aspect-square rounded-[9999px]" />
-                <div class="border w-[21cqw] aspect-square rounded-[9999px]" />
-                <div class="border w-[29cqw] aspect-square rounded-[9999px]" />
-                <div class="border w-[36cqw] aspect-square rounded-[9999px]" />
+                <div class="slack-orbit-circle w-[7cqw]" />
+                <div class="slack-orbit-circle w-[14cqw]" />
+                <div class="slack-orbit-circle w-[21cqw]" />
+                <div class="slack-orbit-circle w-[29cqw]" />
+                <div class="slack-orbit-circle w-[36cqw]" />
               </div>
               <div class="relative z-10 grid h-full w-full grid-cols-1 place-items-center">
                 <template v-for="circle in circles">
@@ -140,5 +140,10 @@ const circles = [
   100% {
     transform: rotate(1turn) translateY(var(--distance)) rotate(-1turn);
   }
+}
+
+.slack-orbit-circle {
+  @apply border border-neutral-400/40 aspect-square rounded-[9999px] transition-all duration-300;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 </style>
