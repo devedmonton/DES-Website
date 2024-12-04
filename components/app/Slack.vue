@@ -4,11 +4,11 @@ const selected = ref(channels[0])
 const circles = [
   {
     distance: '3.5cqw',
-    items: (['i-logos-c-plusplus', 'i-skill-icons-rust', 'i-logos-c']),
+    items: (['i-logos-c-plusplus', 'i-skill-icons-rust', 'i-logos-c', 'i-logos-git-icon']),
   },
   {
     distance: '7cqw',
-    items: (['i-logos-django-icon', 'i-unjs-nitro', 'i-logos-nodejs-icon', 'i-logos-nestjs', 'i-logos-spring-icon', 'i-logos-laravel']),
+    items: (['i-logos-django-icon', 'i-unjs-nitro', 'i-logos-nodejs-icon', 'i-logos-nestjs', 'i-logos-spring-icon', 'i-logos-laravel', 'i-logos-dotnet']),
   },
   {
     distance: '10.5cqw',
@@ -16,7 +16,7 @@ const circles = [
   },
   {
     distance: '14.5cqw',
-    items: (['i-logos-vitejs', 'i-logos-vue', 'i-logos-react', 'i-logos-nuxt-icon', 'i-logos-svelte-icon', 'i-logos-nextjs-icon', 'i-logos-angular-icon', 'i-logos-ionic-icon']),
+    items: (['i-logos-vitejs', 'i-logos-vue', 'i-logos-react', 'i-logos-nuxt-icon', 'i-logos-svelte-icon', 'i-logos-nextjs-icon', 'i-logos-angular-icon', 'i-logos-ionic-icon', 'i-logos-tailwindcss-icon', 'i-logos-vitest', 'i-logos-playwright']),
   },
 ]
 </script>
@@ -62,6 +62,10 @@ const circles = [
               <span class="font-bold"># {{ selected.name }}</span>
             </div>
             <div class="flex gap-2">
+              <!-- only show ColorMode in client side because of hydration mismatch -->
+              <ClientOnly>
+                <AppColorMode class="border border-neutral-400/40 text-neutral-400 px-2 py-1 !text-sm rounded" />
+              </ClientOnly>
               <!-- TODO: go to contributors page -->
               <div class="flex gap-1 items-center border border-neutral-400/40 text-neutral-400 px-2 py-1 rounded">
                 <Icon
@@ -71,7 +75,6 @@ const circles = [
                 <!-- TODO: show contributors actual number, dynamically -->
                 <span class="text-xs">55</span>
               </div>
-              <AppColorMode class="border border-neutral-400/40 text-neutral-400 px-2 py-1 !text-sm rounded" />
               <div class="border border-neutral-400/40 text-neutral-400 px-2 py-1 rounded">
                 <Icon
                   class="block text-lg"
@@ -81,41 +84,36 @@ const circles = [
             </div>
           </div>
           <div class="p-4">
-            <!-- TODO: add more content ? -->
             {{ selected.description }}
           </div>
         </div>
 
-        <div class="flex h-[250px] justify-center">
-          <div class="aspect-video w-full overflow-clip">
-            <div class="mt-[-5%] grid h-full w-full grid-cols-1 place-items-center [&>*]:[grid-area:1/1]">
-              <div class="grid h-full w-full grid-cols-1 place-items-center [&>*]:[grid-area:1/1] slack-orbit-bg">
-                <div class="slack-orbit-circle w-[7cqw]" />
-                <div class="slack-orbit-circle w-[14cqw]" />
-                <div class="slack-orbit-circle w-[21cqw]" />
-                <div class="slack-orbit-circle w-[29cqw]" />
-                <div class="slack-orbit-circle w-[36cqw]" />
-              </div>
-              <div class="relative z-10 grid h-full w-full grid-cols-1 place-items-center">
-                <template v-for="circle in circles">
-                  <Icon
-                    v-for="item, idx in circle.items"
-                    :key="item"
-                    class="absolute lg:text-xl md:text-sm text-xs slack-orbit"
-                    :style="{
-                      '--distance': circle.distance,
-                      '--delay': `${(idx / circle.items.length) * -10}s`,
-                    }"
-                    :name="item"
-                  />
-                </template>
-              </div>
-              <AppLogo
-                :scrolling="true"
-                class="w-12 h-12 mb-2"
-              />
-            </div>
+        <div class="mt-[-5%] grid h-full w-full grid-cols-1 place-items-center [&>*]:[grid-area:1/1]">
+          <div class="grid h-full w-full grid-cols-1 place-items-center [&>*]:[grid-area:1/1] slack-orbit-bg">
+            <div class="slack-orbit-circle w-[7cqw]" />
+            <div class="slack-orbit-circle w-[14cqw]" />
+            <div class="slack-orbit-circle w-[21cqw]" />
+            <div class="slack-orbit-circle w-[29cqw]" />
+            <div class="slack-orbit-circle w-[36cqw]" />
           </div>
+          <div class="relative z-10 grid h-full w-full grid-cols-1 place-items-center">
+            <template v-for="circle in circles">
+              <Icon
+                v-for="item, idx in circle.items"
+                :key="item"
+                class="absolute xl:w-6 xl:h-6 lg:w-5 lg:h-5 md:w-4 md:h-4 sm:w-3 sm:h-3 w-2 h-2 slack-orbit"
+                :style="{
+                  '--distance': circle.distance,
+                  '--delay': `${(idx / circle.items.length) * -10}s`,
+                }"
+                :name="item"
+              />
+            </template>
+          </div>
+          <AppLogo
+            :scrolling="true"
+            class="xl:w-16 xl:h-16 lg:w-12 lg:h-12 md:w-10 md:h-10 sm:w-8 sm:h-8 w-5 h-5"
+          />
         </div>
       </div>
     </div>
@@ -144,6 +142,6 @@ const circles = [
 
 .slack-orbit-circle {
   @apply border border-neutral-400/40 aspect-square rounded-[9999px] transition-all duration-300;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  @apply shadow-[rgba(0,0,0,0.2)_0px_0px_10px_0px] dark:shadow-[rgba(255,255,255,0.3)_0px_0px_30px_0px];
 }
 </style>
