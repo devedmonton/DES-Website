@@ -3,7 +3,7 @@ export const SLACK_URL = 'https://forms.gle/fB9EZj7aEdTftqS98'
 export const channels = [
   {
     name: 'introductions',
-    description: 'to say Hi.',
+    description: 'to say Hello and give a little blurb about what you are interested in - both in tech and your hobbies!',
   },
   {
     name: 'opportunities',
@@ -23,6 +23,6 @@ export const channels = [
   },
   {
     name: 'random',
-    description: 'for casual conversations.',
+    description: 'for casual conversations and memes.',
   },
 ]

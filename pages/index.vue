@@ -146,25 +146,6 @@ defineOgImage({
                 />
                 Join our community on Slack
               </AppButton>
-
-              <div
-                class="text-xs bg-red-400/20 p-2 rounded-lg flex items-center gap-4 max-w-lg mt-4"
-              >
-                <Icon
-                  class="w-4 h-4"
-                  name="i-ph-info"
-                />
-                <span>
-                  If you get an "invalid link" error our Slack invite link has expired. Please email
-                  <NuxtLink
-                    to="mailto:board@devedmonton.com"
-                    class="underline"
-                  >
-                    board@devedmonton.com
-                  </NuxtLink>
-                  and let us know!
-                </span>
-              </div>
             </div>
           </div>
           <LazyAppSlack class="col-span-5" />
