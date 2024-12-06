@@ -32,11 +32,12 @@ function toggleTheme() {
 <template>
   <AppButton
     title="Color Mode"
+    class="text-xl"
     :class="`color-mode-${colorMode.preference}`"
     @click="toggleTheme"
   >
     <Icon
-      class="w-5 h-5 !block"
+      class="!block"
       :name="theme.icon"
     />
   </AppButton>
