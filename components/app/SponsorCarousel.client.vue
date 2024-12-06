@@ -57,3 +57,9 @@ const modules = [Autoplay]
     </Swiper>
   </section>
 </template>
+
+<style>
+.swiper-wrapper {
+  place-items: center;
+}
+</style>
