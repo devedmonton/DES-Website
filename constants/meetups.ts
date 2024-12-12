@@ -125,5 +125,4 @@ export const meetups = [
     to: 'https://neuralberta.tech/',
     description: 'NeurAlbertaTech is a nonprofit organization dedicated to fostering a cohesive and diverse neurotechnology ecosystem. Through a range of accessible educational resources, events, and digital platforms, we foster collaboration, skills development, and inclusivity within the neurotech community while supporting groundbreaking projects at every stage.',
   },
-  
 ]
