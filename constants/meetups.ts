@@ -1,5 +1,11 @@
 export const meetups = [
   {
+    name: 'Flutter Edmonton',
+    image: '/meetups/flutter.png',
+    to: 'https://www.meetup.com/flutter-edmonton/',
+    description: 'This group is dedicated to all things Flutter, a popular open-source UI software development kit created by Google. Whether you are a seasoned developer or just getting started, this group is the perfect place to share ideas, collaborate on projects, and learn from other enthusiasts. Join us for meetups, workshops, and networking events where we discuss the latest trends, best practices, and innovative uses of Flutter. Let\'s build beautiful apps together!',
+  },
+  {
     name: 'LeetNight: Code, Collaborate, Conquer!',
     description: `LeetNight is a free, welcoming meetup designed for coders eager to enhance their problem-solving skills. Whether you’re gearing up for technical interviews or just enjoy tackling algorithm challenges, this event offers a collaborative environment to learn and grow. It’s also a fantastic way to connect with fellow developers, share insights, and build skills together. Ready to level up? See you at Leetcode Night!`,
     to: `https://www.leetnight.com/`,
