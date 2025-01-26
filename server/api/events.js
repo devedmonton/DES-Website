@@ -21,7 +21,7 @@ Reference for folks who maybe curious.
  * @param {number} options.limitEvents - The maximum number of events to retrieve.
  * @returns {Promise<Array>} An array of events.
  */
-const getEvents = async ({
+export const getEvents = async ({
   googleCalendarId,
   serviceAccountCredentials,
   startDate,
