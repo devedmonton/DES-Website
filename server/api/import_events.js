@@ -186,7 +186,7 @@ const createAllEvents = async ({
   try {
     // Map each event to a calendar.events.insert call
     const insertCalendarPromises = newEvents.map((event) => {
-      calendar.events.insert({
+      return calendar.events.insert({
         auth: client,
         calendarId: googleCalendarId,
         resource: event,
@@ -194,8 +194,8 @@ const createAllEvents = async ({
     })
     // log the created events
     const responses = await Promise.all(insertCalendarPromises)
-    responses.forEach((response) => {
-      console.log(`Event created:`, response.data.htmlLink)
+    responses.forEach(() => {
+      console.log(`Event created Successfully!`)
     })
   }
   catch (error) {
