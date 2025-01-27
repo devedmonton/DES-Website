@@ -47,6 +47,15 @@ const fetchICALFromURL = async (url) => {
   return response.text()
 }
 
+class ImportCalendarException extends Error {
+  constructor({ message, error }) {
+    super(message) // Call the parent class constructor
+    this.message = message
+    this.error = error
+    this.timestamp = new Date() // Add custom properties if needed
+  }
+}
+
 // converts the ICAL data to google calendar events.
 const parseICALData = (icalContent) => {
   const icalData = ICAL.parse(icalContent) // Parse the ICAL content into jCal format
@@ -106,9 +115,7 @@ const getExistingEvents = async (event) => {
     serviceAccountCredentials = JSON.parse(serviceAccountCredentialsJSON)
   }
   catch {
-    throw createError({
-      statusCode: 400,
-      statusMessage: 'Bad Request',
+    throw new ImportCalendarException({
       message: 'No Service Account Credentials Provided',
       error: 'Service Account Credentials are not provided',
     })
@@ -125,15 +132,17 @@ const getExistingEvents = async (event) => {
     return events
   }
   catch {
-    throw createError({
-      statusCode: 400,
-      statusMessage: 'Bad Request',
+    throw new ImportCalendarException({
       message: 'Error Fetching Events',
       error: 'Could not fetch events',
     })
   }
 }
 
+/*
+Compares existing gmail events and imported events based on date and title.
+This only returns new events in the calendar.
+*/
 const compareAndGetNewEvents = (existingGmailEvents, importedEvents) => {
   // check if the importedEvents are in the newEvents
   const newEvents = importedEvents.filter((importedEvent) => {
@@ -194,7 +203,7 @@ const createAllEvents = async ({
   }
 }
 
-const importAndProcessExternalEvents = async (event) => {
+export const importAndProcessExternalEvents = async (event) => {
   // Step: 1 Import the events from meetup
   let importedEvents = await getAllExternalEvents()
   // Step: 2: Get all of the Events in the GMAIL Calendar
@@ -212,9 +221,7 @@ const importAndProcessExternalEvents = async (event) => {
     serviceAccountCredentials = JSON.parse(serviceAccountCredentialsJSON)
   }
   catch {
-    throw createError({
-      statusCode: 400,
-      statusMessage: 'Bad Request',
+    throw ImportCalendarException({
       message: 'No Service Account Credentials Provided',
       error: 'Service Account Credentials are not provided',
     })
@@ -227,11 +234,8 @@ const importAndProcessExternalEvents = async (event) => {
       newEvents,
     })
   }
-  catch (error) {
-    console.log(error)
-    throw createError({
-      statusCode: 400,
-      statusMessage: 'Bad Request',
+  catch {
+    throw ImportCalendarException({
       message: 'Error while creating events',
       error: 'Google calendar api error.',
     })
@@ -243,7 +247,28 @@ const importAndProcessExternalEvents = async (event) => {
 
 // this is the api.
 export default defineEventHandler(async (event) => {
-  const newEvents = await importAndProcessExternalEvents(event)
+  let newEvents
+  try {
+    newEvents = await importAndProcessExternalEvents(event)
+  }
+  catch (error) {
+    if (error instanceof ImportCalendarException) {
+      throw createError({
+        statusCode: 400,
+        statusMessage: 'Bad Request',
+        message: error.message,
+        error: error.error,
+      })
+    }
+    else {
+      throw createError({
+        statusCode: 500,
+        statusMessage: 'Internal Server Error',
+        message: 'Error while importing events',
+        error: error.message,
+      })
+    }
+  }
   return {
     statusCode: 200,
     statusMessage: 'Success',
