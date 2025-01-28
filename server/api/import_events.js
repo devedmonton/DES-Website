@@ -1,10 +1,7 @@
 import fetch from 'node-fetch'
 import ICAL from 'ical.js'
 
-import { google } from 'googleapis'
-import { JWT } from 'google-auth-library'
-
-import { getEvents } from './events'
+import { ImportCalendarException, getEvents, createAllEvents } from '../utils/calendar'
 
 /*
 A short explanation about this gargantuan file/function.
@@ -48,15 +45,6 @@ const fetchICALFromURL = async (url) => {
   return response.text()
 }
 
-class ImportCalendarException extends Error {
-  constructor({ message, error }) {
-    super(message) // Call the parent class constructor
-    this.message = message
-    this.error = error
-    this.timestamp = new Date() // Add custom properties if needed
-  }
-}
-
 // converts the ICAL data to google calendar events.
 const parseICALData = (icalContent) => {
   const icalData = ICAL.parse(icalContent) // Parse the ICAL content into jCal format
@@ -89,13 +77,21 @@ const parseICALData = (icalContent) => {
 const getAllExternalEvents = async () => {
   console.log('parsing ics')
   let allExternalEvents = []
+
   for (let url of ICAL_URLS) {
     console.log(`importing from ${url}...`)
     try {
       let icsText = await fetchICALFromURL(url)
-      let data = parseICALData(icsText)
+      let externalEvents = parseICALData(icsText)
+
+      // only get future events, because the gmail api only gets future events
+      let futureExternalEvents = externalEvents.filter((externalEvent) => {
+        let today = new Date()
+        let eventDate = new Date(externalEvent.start.dateTime)
+        return eventDate > today
+      })
       // add all of the events
-      allExternalEvents = [...data, ...allExternalEvents]
+      allExternalEvents = [...futureExternalEvents, ...allExternalEvents]
       console.log('importing successful')
       console.log('-------------------')
     }
@@ -108,19 +104,7 @@ const getAllExternalEvents = async () => {
 }
 
 // gets the existing events from the calendar here.
-const getExistingEvents = async (event) => {
-  const { googleCalendarId, serviceAccountCredentialsJSON } = useRuntimeConfig(event).googleCalendarAPI
-  let serviceAccountCredentials = {}
-  // try to parse the service account credentials or throw an error.
-  try {
-    serviceAccountCredentials = JSON.parse(serviceAccountCredentialsJSON)
-  }
-  catch {
-    throw new ImportCalendarException({
-      message: 'No Service Account Credentials Provided',
-      error: 'Service Account Credentials are not provided',
-    })
-  }
+const getExistingEvents = async ({ googleCalendarId, serviceAccountCredentials }) => {
   // try parse the events or throw an error
   try {
     console.log('Importing internal events from Devedmonton gmail calendar')
@@ -153,80 +137,28 @@ const compareAndGetNewEvents = (existingGmailEvents, importedEvents) => {
     return !existingGmailEvents.some((existingEvent) => {
       const existingDateOnly = new Date(existingEvent.start.dateTime).toISOString().split('T')[0]
       return (
-        importedEvent.summary.trim() === existingEvent.summary.trim() // summary is title for gmail
+        importedEvent.summary.toLowerCase().trim() === existingEvent.summary.toLowerCase().trim() // summary is title for gmail
         && importedEventDateOnly === existingDateOnly
       )
     })
   })
-
   return newEvents
 }
 
-/*
-  Note: there's a bit of duplication here from the "getEvents code"
-  this is a great opportunity for a refactor and a contribution but
-  in full transparency I just want to get this working.
-*/
-const createAllEvents = async ({
-  googleCalendarId,
-  serviceAccountCredentials,
-  newEvents,
-}) => {
-  // get the credentials from the service account
-  const client = new JWT({
-    email: serviceAccountCredentials.client_email,
-    key: serviceAccountCredentials.private_key,
-    scopes: [ // set the right scope
-      'https://www.googleapis.com/auth/calendar',
-      'https://www.googleapis.com/auth/calendar.events',
-    ],
-  })
-  // get the calendar api using google
-  const calendar = google.calendar({ version: 'v3' })// get the credentials from the service account
-
-  try {
-    // Map each event to a calendar.events.insert call
-    const insertCalendarPromises = newEvents.map((event) => {
-      return calendar.events.insert({
-        auth: client,
-        calendarId: googleCalendarId,
-        resource: event,
-      })
-    })
-    // log the created events
-    const responses = await Promise.all(insertCalendarPromises)
-    responses.forEach(() => {
-      console.log(`Event created Successfully!`)
-    })
-  }
-  catch (error) {
-    console.error('Error creating events:', error.message)
-  }
-}
-
-export const importAndProcessExternalEvents = async (event) => {
+export const importAndProcessExternalEvents = async ({ googleCalendarId, serviceAccountCredentials }) => {
   // Step: 1 Import the events from meetup
   let importedEvents = await getAllExternalEvents()
   // Step: 2: Get all of the Events in the GMAIL Calendar
-  const existingEvents = await getExistingEvents(event)
+  const existingEvents = await getExistingEvents({
+    googleCalendarId,
+    serviceAccountCredentials,
+  })
   // Step: 3: Identify New Events
   let newEvents = compareAndGetNewEvents(
     existingEvents,
     importedEvents,
   )
   // Step: 4: Create the new Events in gmail
-  // Step: 4.1 get the credentials from the service account
-  const { googleCalendarId, serviceAccountCredentialsJSON } = useRuntimeConfig(event).googleCalendarAPI
-  let serviceAccountCredentials
-  try {
-    serviceAccountCredentials = JSON.parse(serviceAccountCredentialsJSON)
-  }
-  catch {
-    throw ImportCalendarException({
-      message: 'No Service Account Credentials Provided',
-      error: 'Service Account Credentials are not provided',
-    })
-  }
   // Step 4.2 create all of them events.
   try {
     await createAllEvents({
@@ -248,9 +180,21 @@ export const importAndProcessExternalEvents = async (event) => {
 
 // this is the api.
 export default defineEventHandler(async (event) => {
+  // get the credentials from the service account
+  const { googleCalendarId, serviceAccountCredentialsJSON } = useRuntimeConfig(event).googleCalendarAPI
+  let serviceAccountCredentials
+  try {
+    serviceAccountCredentials = JSON.parse(serviceAccountCredentialsJSON)
+  }
+  catch {
+    throw ImportCalendarException({
+      message: 'No Service Account Credentials Provided',
+      error: 'Service Account Credentials are not provided',
+    })
+  }
   let newEvents
   try {
-    newEvents = await importAndProcessExternalEvents(event)
+    newEvents = await importAndProcessExternalEvents({ googleCalendarId, serviceAccountCredentials })
   }
   catch (error) {
     if (error instanceof ImportCalendarException) {
