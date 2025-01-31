@@ -37,6 +37,8 @@
     "google-auth-library": "^9.14.2",
     "googleapis": "^144.0.0",
     "happy-dom": "^15.7.4",
+    "ical.js": "^2.1.0",
+    "node-fetch": "^3.3.2",
     "nuxt": "^3.13.2",
     "swiper": "^11.1.4",
     "tailwind-merge": "^2.5.4",

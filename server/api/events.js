@@ -1,5 +1,4 @@
-import { google } from 'googleapis'
-import { JWT } from 'google-auth-library'
+import { getEvents } from '../utils/calendar'
 
 /*
 Reference for folks who maybe curious.
@@ -10,69 +9,6 @@ Reference for folks who maybe curious.
 - The google calendar user needs to give the "Make Changes to Events" permissions to the service account
   - Refer to here https://dev.to/pedrohase/create-google-calender-events-using-the-google-api-and-service-accounts-in-nodejs-22m8
 */
-
-/**
- * Retrieves events from Google Calendar.
- * @async
- * @param {Object} options - The options object.
- * @param {string} options.googleCalendarId - The ID of the Google Calendar should be an email.
- * @param {Object} options.serviceAccountCredentials - The service account credentials for google authentication.
- * @param {Date} options.startDate - The start date from which to retrieve events.
- * @param {number} options.limitEvents - The maximum number of events to retrieve.
- * @returns {Promise<Array>} An array of events.
- */
-const getEvents = async ({
-  googleCalendarId,
-  serviceAccountCredentials,
-  startDate,
-  limitEvents,
-}) => {
-  if (!startDate) {
-    startDate = new Date().toISOString()
-  }
-  else {
-    startDate = new Date(startDate).toISOString()
-  }
-
-  if (!limitEvents) {
-    limitEvents = 10
-  }
-
-  // get the credentials from the service account
-  const client = new JWT({
-    email: serviceAccountCredentials.client_email,
-    key: serviceAccountCredentials.private_key,
-    scopes: [ // set the right scope
-      'https://www.googleapis.com/auth/calendar',
-      'https://www.googleapis.com/auth/calendar.events',
-    ],
-  })
-
-  // get the calendar api using google
-  const calendar = google.calendar({ version: 'v3' })
-  // get the events from the calendar
-  const resposnse = await calendar.events.list({
-    auth: client,
-    calendarId: googleCalendarId,
-    timeMin: startDate,
-    maxResults: limitEvents,
-    singleEvents: true,
-    orderBy: 'startTime',
-  })
-
-  // return the events.
-  return resposnse.data.items
-}
-/**
- * API endpoint for fetching events for DES.
- * @param {Object} event - The event object.
- * @param {string} startDate - Start date of the events you want to fetch (query param).
- * @param {number} limitEvents - Limit the number of events to fetch (query param)
- * @example
- * // Example usage:
- * // GET /api/events?startDate=2024-05-01&limitEvents=25
- * // GET /api/events
- */
 
 export default defineEventHandler(async (event) => {
   // get the query params
