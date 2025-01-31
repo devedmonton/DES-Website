@@ -55,7 +55,7 @@ export const getEvents = async ({
   }
 
   if (!limitEvents) {
-    limitEvents = 10
+    limitEvents = 100
   }
 
   // get the credentials from the service account
