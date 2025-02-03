@@ -12,7 +12,7 @@ New home for the [devedmonton.com](https://devedmonton.com) website
 
 ## Questions and Discussion
 
-If you'd like to discuss anything about the website we have a channel on the DES Slack (join here) called #des-website-contributing that is welcome to anyone. Feel free ask questions, get clarification, and request/discuss features.
+If you'd like to discuss anything about the website we have a channel on the [DES Slack (join here)](https://devedmonton.com/#about-our-slack) called #des-website-contributing that is welcome to anyone. Feel free to ask questions, get clarification, and request/discuss features.
 
 ## Development Setup
 
