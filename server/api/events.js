@@ -1,4 +1,4 @@
-import { getEvents } from '../utils/calendar'
+import { getEvents } from '../serverUtilities/calendar'
 
 /*
 Reference for folks who maybe curious.
