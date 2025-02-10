@@ -1,15 +1,6 @@
 import { google } from 'googleapis'
 import { JWT } from 'google-auth-library'
 
-export class ImportCalendarException extends Error {
-  constructor({ message, error }) {
-    super(message) // Call the parent class constructor
-    this.message = message
-    this.error = error
-    this.timestamp = new Date() // Add custom properties if needed
-  }
-}
-
 /**
  * Creates an authenticated JWT client for accessing Google APIs.
  *

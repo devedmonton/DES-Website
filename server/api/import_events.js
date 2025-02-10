@@ -1,8 +1,16 @@
 import fetch from 'node-fetch'
 import ICAL from 'ical.js'
 
-import { ImportCalendarException, getEvents, createAllEvents } from '../utils/calendar'
+import { getEvents, createAllEvents } from '../utils/calendar'
 
+class ImportCalendarException extends Error {
+  constructor({ message, error }) {
+    super(message) // Call the parent class constructor
+    this.message = message
+    this.error = error
+    this.timestamp = new Date() // Add custom properties if needed
+  }
+}
 /*
 A short explanation about this gargantuan file/function.
 Essentially this just pulls some icals from the calendars in meetup in the
@@ -168,7 +176,7 @@ export const importAndProcessExternalEvents = async ({ googleCalendarId, service
     })
   }
   catch {
-    throw ImportCalendarException({
+    throw new ImportCalendarException({
       message: 'Error while creating events',
       error: 'Google calendar api error.',
     })
@@ -187,7 +195,7 @@ export default defineEventHandler(async (event) => {
     serviceAccountCredentials = JSON.parse(serviceAccountCredentialsJSON)
   }
   catch {
-    throw ImportCalendarException({
+    throw new ImportCalendarException({
       message: 'No Service Account Credentials Provided',
       error: 'Service Account Credentials are not provided',
     })
