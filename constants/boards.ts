@@ -1,20 +1,5 @@
 export const boards = [
   {
-    name: 'Mandy Meindersma',
-    pronouns: 'She/Her',
-    title: 'President',
-    image: '/BoardPictures/mandyMeindersma.jpg',
-    socials: {
-      linkedin: 'https://www.linkedin.com/in/mandy-meindersma/',
-      slack: '@Mandy Meindersma',
-    },
-    bio: `
-    <p>Mandy Meindersma is a Senior Backend Developer at <a class="text-primary font-bold" href="https://www.dotdashmeredith.com/">Dotdash Meredith</a>. She loves web development, teaching kidlets about computing science and hardware (making robots, light up costumes and IoT type of things).</p>
-    <p>She has loved getting more involved with DES through YEGWIT (Edmonton Women In Tech), CODEVID-19 (COVID-19 Hackathon) and now being able to help with organization and memberships!</p>
-    <p>Outside of tech she absolutely loves acro yoga, her cat Goose, and writing letters.</p>
-    `,
-  },
-  {
     name: 'Leslie Tshuma',
     pronouns: 'He/Him',
     title: 'Vice President',
