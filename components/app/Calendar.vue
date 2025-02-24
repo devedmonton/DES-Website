@@ -403,8 +403,7 @@ p.content-full {
 }
 
 .subscription-blurb code {
-  @apply bg-gray-200;
-  @apply p-1;
+  @apply bg-gray-200 p-1;
   color: #344866;
   overflow-wrap: anywhere;
 }
