@@ -406,5 +406,6 @@ p.content-full {
   @apply bg-gray-200;
   @apply p-1;
   color: #344866;
+  overflow-wrap: anywhere;
 }
 </style>
