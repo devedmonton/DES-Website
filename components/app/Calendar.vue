@@ -8,7 +8,7 @@ You should be able to subscribe to this calendar using [this link][] in
 most calendar applications. Here are some instructions for [Apple][] and
 [Google][] calendars.
 
-To add events to this calendar, ask on slack in \`#meetup-organizers\` to be
+To add events to this calendar, ask on slack in [#meetup-organizers][] to be
 given edit permission, and then in Google Calendar go to Calendar → Other
 Calendars → + → Subscribe → and paste
 \`devedmonton.com_18bfk742j1eba9iduh4p7u4fgs@group.calendar.google.com\`.
@@ -16,7 +16,7 @@ Calendars → + → Subscribe → and paste
 [Apple]: https://support.apple.com/en-ca/102301
 [Google]: https://support.google.com/calendar/answer/37100?hl=en&co=GENIE.Platform%3DAndroid&oco=1
 [this link]: https://calendar.google.com/calendar/ical/devedmonton.com_18bfk742j1eba9iduh4p7u4fgs%40group.calendar.google.com/public/basic.ics
-
+[#meetup-organizers]: https://devedmonton.slack.com/archives/CD8GT70CD
 `
 
 // https://antoniandre.github.io/vue-cal-v4/#date-prototypes
@@ -198,7 +198,7 @@ const groupedEvents = computed(() => {
     </div>
 
     <div class="my-8">
-      <MDC :value="subscriptionBlurb" />
+      <MDC class="subscription-blurb" :value="subscriptionBlurb" />
     </div>
 
     <AppModal
@@ -400,5 +400,11 @@ const groupedEvents = computed(() => {
 p.content-full {
   overflow: auto;
   height: 180px;
+}
+
+.subscription-blurb code {
+  @apply bg-gray-200;
+  @apply p-1;
+  color: #344866;
 }
 </style>
