@@ -2,6 +2,27 @@
 import VueCal from 'vue-cal'
 import 'vue-cal/dist/vuecal.css'
 
+const subscriptionBlurb = `
+
+You should be able to subscribe to this calendar using [this link][] in
+most calendar applications. Here are some instructions for [Apple][] and
+[Google][] calendars.
+
+To add events to this calendar, ask on slack in [#meetup-organizers][] to be
+given edit permission, and then in Google Calendar go to Calendar → Other
+Calendars → + → Subscribe → and paste
+\`devedmonton.com_18bfk742j1eba9iduh4p7u4fgs@group.calendar.google.com\`.
+
+[Apple]: https://support.apple.com/en-ca/102301
+[Google]: https://support.google.com/calendar/answer/37100?hl=en&co=GENIE.Platform%3DAndroid&oco=1
+[this link]: https://calendar.google.com/calendar/ical/devedmonton.com_18bfk742j1eba9iduh4p7u4fgs%40group.calendar.google.com/public/basic.ics
+[#meetup-organizers]: https://devedmonton.slack.com/archives/CD8GT70CD
+`
+
+// https://antoniandre.github.io/vue-cal-v4/#date-prototypes
+const DATE_FORMAT = 'MMM DD, YYYY'
+const TIME_FORMAT = '{h}:{mm} {am}'
+
 const props = defineProps<{
   group: any
   pending: boolean
@@ -99,6 +120,7 @@ const groupedEvents = computed(() => {
       class="rounded-lg bg-white dark:bg-neutral-900 overflow-hidden shadow border border-gray-400/40"
       today-button
       small
+      active-view="month"
       :events-on-month-view="true"
       :twelve-hour="true"
       :events="group.items"
@@ -150,13 +172,13 @@ const groupedEvents = computed(() => {
                 <div class="flex items-center gap-2 sm:gap-4">
                   <Icon name="formkit:date" />
                   <p class="text-sm text-gray-500">
-                    {{ event.start.format('DD/MM/YYYY') }}
+                    {{ event.start.format(DATE_FORMAT) }}
                   </p>
                 </div>
                 <div class="flex items-center gap-1 sm:gap-2">
                   <Icon name="mingcute:time-line" />
                   <p class="text-sm text-gray-500">
-                    {{ event.start.formatTime() }} - {{ event.end.formatTime() }}
+                    {{ event.start.formatTime(TIME_FORMAT) }} - {{ event.end.formatTime(TIME_FORMAT) }}
                   </p>
                 </div>
               </div>
@@ -174,6 +196,11 @@ const groupedEvents = computed(() => {
         </div>
       </div>
     </div>
+
+    <div class="my-8">
+      <MDC class="subscription-blurb" :value="subscriptionBlurb" />
+    </div>
+
     <AppModal
       id="event-modal"
       v-model="showEventModal"
@@ -196,7 +223,7 @@ const groupedEvents = computed(() => {
       </div>
       <div class="p-4 space-y-4">
         <p class="text-sm text-gray-500">
-          {{ selectedEvent.start.format('DD/MM/YYYY') }}
+          {{ selectedEvent.start.format(DATE_FORMAT) }}
         </p>
         <p
           class="content-full"
@@ -205,8 +232,8 @@ const groupedEvents = computed(() => {
         <div>
           <strong>Event details:</strong>
           <ul>
-            <li>Event starts at: {{ selectedEvent.start.formatTime() }} MT</li>
-            <li>Event ends at: {{ selectedEvent.end.formatTime() }} MT</li>
+            <li>Event starts at: {{ selectedEvent.start.formatTime(TIME_FORMAT) }}</li>
+            <li>Event ends at: {{ selectedEvent.end.formatTime(TIME_FORMAT) }}</li>
           </ul>
         </div>
       </div>
@@ -373,5 +400,11 @@ const groupedEvents = computed(() => {
 p.content-full {
   overflow: auto;
   height: 180px;
+}
+
+.subscription-blurb code {
+  @apply bg-gray-200 p-1;
+  color: #344866;
+  overflow-wrap: anywhere;
 }
 </style>
