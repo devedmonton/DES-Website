@@ -20,8 +20,15 @@ Calendars → + → Subscribe → and paste
 `
 
 // https://antoniandre.github.io/vue-cal-v4/#date-prototypes
-const DATE_FORMAT = 'MMM DD, YYYY'
 const TIME_FORMAT = '{h}:{mm} {am}'
+
+// `undefined` for the locale means to use the system one, instead of one
+// specified by the website
+const DATE_FORMATTER = new Intl.DateTimeFormat(undefined, {
+  day: 'numeric',
+  month: 'short',
+  year: 'numeric',
+})
 
 const props = defineProps<{
   group: any
@@ -172,7 +179,7 @@ const groupedEvents = computed(() => {
                 <div class="flex items-center gap-2 sm:gap-4">
                   <Icon name="formkit:date" />
                   <p class="text-sm text-gray-500">
-                    {{ event.start.format(DATE_FORMAT) }}
+                    {{ DATE_FORMATTER.format(event.start) }}
                   </p>
                 </div>
                 <div class="flex items-center gap-1 sm:gap-2">
@@ -223,7 +230,7 @@ const groupedEvents = computed(() => {
       </div>
       <div class="p-4 space-y-4">
         <p class="text-sm text-gray-500">
-          {{ selectedEvent.start.format(DATE_FORMAT) }}
+          {{ DATE_FORMATTER.format(selectedEvent.start) }}
         </p>
         <p
           class="content-full"
