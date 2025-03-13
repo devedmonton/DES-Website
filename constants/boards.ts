@@ -88,4 +88,19 @@ export const boards = [
     <p>When Justice isn’t coding you will still probably find Justice not far from the computer, gaming with friends, or taking on his passion for cooking and baking. His favorite thing to bake is mini cherry cheesecake.</p>
     `,
   },
+  {
+    name: 'Saahil Rachh',
+    pronouns: 'He/Him',
+    title: 'Member At Large',
+    image: '/BoardPictures/SaahilRachh.png',
+    socials: {
+      linkedin: 'https://www.linkedin.com/in/saahil-rachh/',
+      slack: '@Saahil Rachh',
+    },
+    bio: `
+    <p>Saahil Rachh is a Product Associate at <a class="text-primary font-bold" href="https://www.amii.ca/">Amii</a>, where he helps build the AI Career Accelerator Program (AICAP), engaging thousands of students across Canada.</p>
+    <p>Saahil has worked with startups and non-profits across North America and has helped organize events that continue to strengthen Edmonton’s tech and innovation communities.</p>
+    <p>Outside of work, you’ll find Saahil enjoying music, drumming, martial arts, and the great outdoors. Don’t hesitate to connect - he’s always on the hunt for movie recommendations!</p>
+    `,
+  },
 ]
