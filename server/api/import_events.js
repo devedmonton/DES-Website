@@ -55,11 +55,15 @@ const parseICALData = (icalContent) => {
   return events.map((event) => {
     const vevent = new ICAL.Event(event)
 
+    // this is getting the URL of the meetup link and saving it
+    // to the location value of the event.
+    // See issue 467 for why.
+    let location = vevent.component.getFirstPropertyValue('url')
     // put this in the format of a google calendar event.
     return {
       summary: vevent.summary || 'No Title',
       description: vevent.description || '',
-      location: vevent.location || '',
+      location: location || '',
       start: {
         dateTime: vevent.startDate.toJSDate().toISOString(),
         timeZone: 'UTC', // Adjust as necessary
