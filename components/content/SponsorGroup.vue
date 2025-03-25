@@ -2,7 +2,7 @@
 import type { Sponsor } from '~/types'
 
 const categorized = computed(() => {
-  const categorized = sponsors.reduce((acc, sponsor) => {
+  const categorized = sponsors.reduce((acc: any, sponsor) => {
     if (!acc[sponsor.category]) {
       acc[sponsor.category] = []
     }
