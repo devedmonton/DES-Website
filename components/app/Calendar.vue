@@ -70,50 +70,101 @@ const groupedEvents = computed(() => {
 </script>
 
 <template>
-  <section v-if="!pending" :id="slugify(group.name)" :key="group.name"
-    class="max-w-7xl mx-auto lg:pt-20 pt-10 px-4 relative">
+  <section
+    v-if="!pending"
+    :id="slugify(group.name)"
+    :key="group.name"
+    class="max-w-7xl mx-auto lg:pt-20 pt-10 px-4 relative"
+  >
     <ProseH1 class="mb-8 text-center">
       {{ group.name }}
     </ProseH1>
-    <div v-if="!isMobile" id="calendar-list-toggle" class="w-[180px] bg-gray-400/20 rounded-lg place-self-center mb-8">
+    <div
+      v-if="!isMobile"
+      id="calendar-list-toggle"
+      class="w-[180px] bg-gray-400/20 rounded-lg place-self-center mb-8"
+    >
       <div class="w-1/2 inline-flex items-center">
-        <input id="calendar-toggle" v-model="selectedView" name="calendar-list-toggle-radio" type="radio"
-          class="hidden peer" checked :value="'calendar'">
-        <label for="calendar-toggle"
-          class="w-full text-center px-3 py-1 cursor-pointer rounded-lg peer-checked:bg-primary peer-checked:text-white">
+        <input
+          id="calendar-toggle"
+          v-model="selectedView"
+          name="calendar-list-toggle-radio"
+          type="radio"
+          class="hidden peer"
+          checked
+          :value="'calendar'"
+        >
+        <label
+          for="calendar-toggle"
+          class="w-full text-center px-3 py-1 cursor-pointer rounded-lg peer-checked:bg-primary peer-checked:text-white"
+        >
           Calendar
         </label>
       </div>
       <div class="w-1/2 inline-flex items-center">
-        <input id="list-toggle" v-model="selectedView" name="calendar-list-toggle-radio" type="radio"
-          class="hidden peer" :value="'list'">
-        <label for="list-toggle"
-          class="w-full text-center px-3 py-1 cursor-pointer rounded-lg peer-checked:bg-primary peer-checked:text-white">
+        <input
+          id="list-toggle"
+          v-model="selectedView"
+          name="calendar-list-toggle-radio"
+          type="radio"
+          class="hidden peer"
+          :value="'list'"
+        >
+        <label
+          for="list-toggle"
+          class="w-full text-center px-3 py-1 cursor-pointer rounded-lg peer-checked:bg-primary peer-checked:text-white"
+        >
           List
         </label>
       </div>
     </div>
-    <vue-cal v-if="selectedView === 'calendar'"
-      class="rounded-lg bg-white dark:bg-neutral-900 overflow-hidden shadow border border-gray-400/40" today-button
-      small active-view="month" :events-on-month-view="true" :twelve-hour="true" :events="group.items"
-      :start-week-on-sunday="true" :disable-views="['years', 'year', 'day']" :time-from="8 * 60" :time-to="22 * 60"
-      :time-step="30" :on-event-click="onEventClick" :show-all-day-events="['short', true, false]">
+    <vue-cal
+      v-if="selectedView === 'calendar'"
+      class="rounded-lg bg-white dark:bg-neutral-900 overflow-hidden shadow border border-gray-400/40"
+      today-button
+      small
+      active-view="month"
+      :events-on-month-view="true"
+      :twelve-hour="true"
+      :events="group.items"
+      :start-week-on-sunday="true"
+      :disable-views="['years', 'year', 'day']"
+      :time-from="8 * 60"
+      :time-to="22 * 60"
+      :time-step="30"
+      :on-event-click="onEventClick"
+      :show-all-day-events="['short', true, false]"
+    >
       <template #arrow-prev>
-        <Icon class="w-8 h-8" name="i-ph-arrow-left" />
+        <Icon
+          class="w-8 h-8"
+          name="i-ph-arrow-left"
+        />
       </template>
       <template #arrow-next>
-        <Icon class="w-8 h-8" name="i-ph-arrow-right" />
+        <Icon
+          class="w-8 h-8"
+          name="i-ph-arrow-right"
+        />
       </template>
     </vue-cal>
 
     <!-- List View -->
     <div v-if="selectedView === 'list'">
-      <div v-for="(events, month) in groupedEvents" :key="month" class="mb-8">
+      <div
+        v-for="(events, month) in groupedEvents"
+        :key="month"
+        class="mb-8"
+      >
         <h3 class="text-2xl text-center mb-8 font-bold tracking-tight text-gray-900 dark:text-white">
           {{ month }}
         </h3>
         <div class="grid xl:grid-cols-2 gap-4">
-          <div v-for="(event) in events" :key="event.title" class="border-2 border-gray-400/40 rounded mb-4 break-word">
+          <div
+            v-for="(event) in events"
+            :key="event.title"
+            class="border-2 border-gray-400/40 rounded mb-4 break-word"
+          >
             <div class="p-4 border-b rounded-t border-gray-400/40">
               <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white mb-2">
                 {{ event.title }}
@@ -133,8 +184,14 @@ const groupedEvents = computed(() => {
                 </div>
               </div>
             </div>
-            <div class="p-4 event-description" :class="{ 'max-w-md': isMobile }">
-              <p class="content-full" v-html="event.description" />
+            <div
+              class="p-4 event-description"
+              :class="{ 'max-w-md': isMobile }"
+            >
+              <p
+                class="content-full"
+                v-html="event.description"
+              />
             </div>
           </div>
         </div>
@@ -142,17 +199,29 @@ const groupedEvents = computed(() => {
     </div>
 
     <div class="my-8">
-      <MDC class="subscription-blurb" :value="subscriptionBlurb" />
+      <MDC
+        class="subscription-blurb"
+        :value="subscriptionBlurb"
+      />
     </div>
 
-    <AppModal id="event-modal" v-model="showEventModal">
+    <AppModal
+      id="event-modal"
+      v-model="showEventModal"
+    >
       <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
         <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           {{ selectedEvent.title }}
         </h3>
-        <button type="button"
-          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white">
-          <Icon class="w-6 h-6" name="i-ph-x-light" @click="showEventModal = false" />
+        <button
+          type="button"
+          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+        >
+          <Icon
+            class="w-6 h-6"
+            name="i-ph-x-light"
+            @click="showEventModal = false"
+          />
           <span class="sr-only">Close dialog</span>
         </button>
       </div>
@@ -160,7 +229,10 @@ const groupedEvents = computed(() => {
         <p class="text-sm text-gray-500">
           {{ DATE_FORMATTER.format(selectedEvent.start) }}
         </p>
-        <p class="content-full" v-html="selectedEvent.description" />
+        <p
+          class="content-full"
+          v-html="selectedEvent.description"
+        />
         <div>
           <strong>Event details:</strong>
           <ul>
@@ -171,13 +243,20 @@ const groupedEvents = computed(() => {
       </div>
     </AppModal>
   </section>
-  <section v-if="pending" class="max-w-7xl mx-auto lg:py-20 py-10 px-4">
+  <section
+    v-if="pending"
+    class="max-w-7xl mx-auto lg:py-20 py-10 px-4"
+  >
     <ProseH1 class="mb-8 text-center">
       {{ group.name }}
     </ProseH1>
     <div
-      class="rounded-lg bg-white dark:bg-neutral-900 overflow-hidden shadow h-[691px] flex items-center justify-center">
-      <Icon class="w-12 h-12 animate-spin" name="i-ph-spinner" />
+      class="rounded-lg bg-white dark:bg-neutral-900 overflow-hidden shadow h-[691px] flex items-center justify-center"
+    >
+      <Icon
+        class="w-12 h-12 animate-spin"
+        name="i-ph-spinner"
+      />
     </div>
   </section>
 </template>
