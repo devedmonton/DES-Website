@@ -32,7 +32,7 @@ const target = computed(() => {
       :provider="image.startsWith('http') ? undefined : 'imagekit'"
     />
     <div class="relative flex flex-col justify-between h-full p-5">
-      <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg pointer-events-none" />
       <div>
         <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           {{ name }}
