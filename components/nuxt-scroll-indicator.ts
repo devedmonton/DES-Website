@@ -84,7 +84,7 @@ function useScrollIndicator(element?: string) {
       = documentElement.scrollTop - content.value || body.scrollTop
     const height
       = documentElement.scrollHeight
-      - (documentElement.clientHeight + content.value)
+        - (documentElement.clientHeight + content.value)
     if (windowScroll > 0)
       width.value = (windowScroll / height) * 100
 

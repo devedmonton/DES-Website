@@ -52,7 +52,7 @@ const { pending } = await useLazyFetch('https://devedmonton.com/api/events', {
 
     // check if the event is an "allDay" event
     const eventItems = groupCalendar.items
-    eventItems.forEach((event) => {
+    eventItems.forEach((event: Event) => {
       const START_DATE = '12:00:00 AM'
       const END_DATE = '11:59:59 PM'
 

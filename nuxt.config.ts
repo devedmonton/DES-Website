@@ -89,6 +89,8 @@ export default defineNuxtConfig({
     componentIslands: true,
   },
 
+  compatibilityDate: '2025-03-24',
+
   // server
   nitro: {
     compressPublicAssets: true,
