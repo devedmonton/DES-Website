@@ -205,7 +205,10 @@ const groupedEvents = computed(() => {
     </div>
 
     <div class="my-8">
-      <MDC class="subscription-blurb" :value="subscriptionBlurb" />
+      <MDC
+        class="subscription-blurb"
+        :value="subscriptionBlurb"
+      />
     </div>
 
     <AppModal
