@@ -186,9 +186,9 @@ const groupedEvents = computed(() => {
 
                 <!-- add event to calendar -->
                 <NuxtLink
-                  :href="event.eventUrl"
-                  target="_blank"
-                  class="font-bold text-primary hover:underline hover:text-black "
+                  :to="event.eventUrl"
+                  external
+                  class="font-bold text-primary hover:underline hover:text-black"
                 >Add to my calendar</NuxtLink>
               </div>
             </div>
@@ -252,8 +252,8 @@ const groupedEvents = computed(() => {
 
           <div>
             <NuxtLink
-              :href="selectedEvent.eventUrl"
-              target="_blank"
+              :to="selectedEvent.eventUrl"
+              external
               class="font-bold text-primary hover:underline hover:text-black "
             >Add to my calendar</NuxtLink>
           </div>
