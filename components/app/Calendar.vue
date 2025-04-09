@@ -84,9 +84,7 @@ const groupedEvents = computed(() => {
       id="calendar-list-toggle"
       class="w-[180px] bg-gray-400/20 rounded-lg place-self-center mb-8"
     >
-      <div
-        class="w-1/2 inline-flex items-center"
-      >
+      <div class="w-1/2 inline-flex items-center">
         <input
           id="calendar-toggle"
           v-model="selectedView"
@@ -103,9 +101,7 @@ const groupedEvents = computed(() => {
           Calendar
         </label>
       </div>
-      <div
-        class="w-1/2 inline-flex items-center"
-      >
+      <div class="w-1/2 inline-flex items-center">
         <input
           id="list-toggle"
           v-model="selectedView"
@@ -154,9 +150,7 @@ const groupedEvents = computed(() => {
     </vue-cal>
 
     <!-- List View -->
-    <div
-      v-if="selectedView === 'list'"
-    >
+    <div v-if="selectedView === 'list'">
       <div
         v-for="(events, month) in groupedEvents"
         :key="month"
@@ -171,18 +165,18 @@ const groupedEvents = computed(() => {
             :key="event.title"
             class="border-2 border-gray-400/40 rounded mb-4 break-word"
           >
-            <div class="p-4 sm:flex justify-between items-center border-b rounded-t border-gray-400/40">
-              <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white mb-2 sm:mb-0">
+            <div class="p-4 border-b rounded-t border-gray-400/40">
+              <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white mb-2">
                 {{ event.title }}
               </h3>
-              <div class="flex sm:flex-col items-end gap-4 sm:gap-1">
-                <div class="flex items-center gap-2 sm:gap-4">
+              <div class="flex items-center gap-4">
+                <div class="flex items-center gap-2">
                   <Icon name="formkit:date" />
                   <p class="text-sm text-gray-500">
                     {{ DATE_FORMATTER.format(event.start) }}
                   </p>
                 </div>
-                <div class="flex items-center gap-1 sm:gap-2">
+                <div class="flex items-center gap-2">
                   <Icon name="mingcute:time-line" />
                   <p class="text-sm text-gray-500">
                     {{ event.start.formatTime(TIME_FORMAT) }} - {{ event.end.formatTime(TIME_FORMAT) }}
@@ -256,7 +250,9 @@ const groupedEvents = computed(() => {
     <ProseH1 class="mb-8 text-center">
       {{ group.name }}
     </ProseH1>
-    <div class="rounded-lg bg-white dark:bg-neutral-900 overflow-hidden shadow h-[691px] flex items-center justify-center">
+    <div
+      class="rounded-lg bg-white dark:bg-neutral-900 overflow-hidden shadow h-[691px] flex items-center justify-center"
+    >
       <Icon
         class="w-12 h-12 animate-spin"
         name="i-ph-spinner"
@@ -284,7 +280,7 @@ const groupedEvents = computed(() => {
 
 .vuecal__event:hover {
   background-color: white;
-  border:#265dad solid 1px;
+  border: #265dad solid 1px;
   color: #265dad
 }
 
@@ -388,15 +384,15 @@ const groupedEvents = computed(() => {
 }
 
 .vuecal--view-with-time .vuecal__event:not(.vuecal__event--all-day):first-child {
-    position: absolute;
-    left: 0% !important;
-    width: 90% !important;
+  position: absolute;
+  left: 0% !important;
+  width: 90% !important;
 }
 
-.vuecal--view-with-time .vuecal__event:not(.vuecal__event--all-day):nth-child(2){
-    position: absolute;
-    left: 10% !important;
-    width: 90% !important;
+.vuecal--view-with-time .vuecal__event:not(.vuecal__event--all-day):nth-child(2) {
+  position: absolute;
+  left: 10% !important;
+  width: 90% !important;
 }
 
 #event-modal .content-full a {
