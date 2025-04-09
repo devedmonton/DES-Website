@@ -411,7 +411,6 @@
       ]
     },
     {
-
       "login": "tylersocholotuik",
       "name": "Tyler Socholotuik",
       "avatar_url": "https://avatars.githubusercontent.com/u/143831033?v=4",
@@ -425,6 +424,15 @@
       "name": "Atremblay9",
       "avatar_url": "https://avatars.githubusercontent.com/u/143830886?v=4",
       "profile": "https://github.com/Atremblay9",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "muhammeddilaver",
+      "name": "Muhammed Dilaver",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12779119?v=4",
+      "profile": "https://dilaver.ca",
       "contributions": [
         "code"
       ]
