@@ -25,23 +25,23 @@ export const groups = [
     image: '/meetups/slack.png',
   },
   {
-    name: 'Edmonton Data science',
-    to: 'https://discord.gg/uVuTx8G3',
+    name: 'Edmonton Data Science',
+    to: 'https://discord.gg/9N43nuhA5h',
     image: '/meetups/discord.png',
   },
   {
-    name: 'Alberta programmers',
-    to: 'https://discord.gg/XEjjP7KY',
+    name: 'Alberta Programmers',
+    to: 'https://discord.gg/VhdAEUw94q',
     image: '/meetups/discord.png',
   },
   {
     name: 'Alberta Game Developers',
-    to: 'https://discord.gg/7ZqjBCH4',
+    to: 'https://discord.gg/NJcUFwRb8n',
     image: '/meetups/discord.png',
   },
   {
-    name: 'Junior Developer',
-    to: 'https://discord.gg/qK9ydrA2SC',
+    name: 'YEG Junior Developers',
+    to: 'https://discord.gg/dQcXbGzMSd',
     image: '/meetups/discord.png',
   },
   {
