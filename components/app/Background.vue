@@ -2,7 +2,7 @@
 <script setup lang="ts">
 import { inject } from 'vue'
 
-const animationsEnabled = inject('animationsEnabled')
+const animationsEnabled = inject('animationsEnabled', ref(true))
 
 const points = useState(() => new Array(16).fill(0).map(() => [Math.random(), Math.random()]))
 

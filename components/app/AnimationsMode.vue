@@ -102,10 +102,9 @@ onMounted(() => {
 </template>
 
 <style>
-/* Disabling all animations class */
-.no-animations * {
+/* Disabling all animations class except orbit class that will be paused inherently*/
+.no-animations *:not(.allow-animation) {
   animation: none !important;
   transition: none !important;
-
 }
 </style>
