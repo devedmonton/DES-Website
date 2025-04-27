@@ -1,8 +1,9 @@
 <script lang="ts" setup>
-import { ref, computed, onMounted } from 'vue'
+import { inject, computed, onMounted } from 'vue'
 
 // Reactive state
-const animationsEnabled = ref(true)
+const animationsEnabled = inject('animationsEnabled', ref(true))
+
 const animationCookie = ref('')
 
 //  Icons for play/pause toggle
@@ -105,5 +106,6 @@ onMounted(() => {
 .no-animations * {
   animation: none !important;
   transition: none !important;
+
 }
 </style>
