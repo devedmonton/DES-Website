@@ -4,7 +4,6 @@ import { onClickOutside, useEventListener } from '@vueuse/core'
 const y = ref(0)
 const target = ref()
 const open = ref(false)
-const animationsEnabled = ref(true) 
 
 const scrolling = computed(() => y.value > 3)
 
@@ -19,8 +18,6 @@ useHead({
 
 onClickOutside(target, () => open.value = false)
 useEventListener('scroll', () => y.value = window.scrollY)
-
-
 </script>
 
 <template>
@@ -34,15 +31,19 @@ useEventListener('scroll', () => y.value = window.scrollY)
       :class="scrolling ? open ? 'bg-white dark:bg-neutral-900' : 'border-b border-neutral-400/40' : 'bg-primary'"
     >
       <div class="flex flex-wrap justify-between items-center lg:grid grid-cols-[1fr_auto_1fr] mx-auto max-w-screen-2xl">
-        
         <!-- Logo -->
-        <NuxtLink title="Dev Edmonton Society" to="/">
-          <AppLogo :scrolling="scrolling" class="h-20 py-2" />
+        <NuxtLink
+          title="Dev Edmonton Society"
+          to="/"
+        >
+          <AppLogo
+            :scrolling="scrolling"
+            class="h-20 py-2"
+          />
         </NuxtLink>
 
         <!-- Right side buttons -->
         <div class="flex items-center gap-2 lg:order-2 ml-auto">
-
           <!-- Social Buttons -->
           <AppButton
             v-for="social of socials"
@@ -58,9 +59,8 @@ useEventListener('scroll', () => y.value = window.scrollY)
           <!-- Color Mode Button -->
           <AppColorMode :class="scrolling ? 'text-neutral-700 dark:text-neutral-300 hover:text-black' : 'text-white'" />
 
-          <!-- Animation Toggle Button -->         
-          <AppAnimationsMode :class="scrolling ? 'text-neutral-700 dark:text-neutral-300 hover:text-black' : 'text-white'"  />
-
+          <!-- Animation Toggle Button -->
+          <AppAnimationsMode :class="scrolling ? 'text-neutral-700 dark:text-neutral-300 hover:text-black' : 'text-white'" />
 
           <!-- Hamburger Menu Button (for small screen) -->
           <AppButton
@@ -84,11 +84,13 @@ useEventListener('scroll', () => y.value = window.scrollY)
             :class="scrolling ? 'text-neutral-800 dark:text-neutral-300' : '!text-white'"
             :prefetch="false"
           >
-            <Icon v-if="menu.icon" :name="menu.icon" />
+            <Icon
+              v-if="menu.icon"
+              :name="menu.icon"
+            />
             {{ menu.name }}
           </NuxtLink>
         </div>
-
       </div>
     </nav>
 
@@ -109,7 +111,10 @@ useEventListener('scroll', () => y.value = window.scrollY)
           @click="open = false"
         >
           <span class="flex items-center gap-2">
-            <Icon v-if="menu.icon" :name="menu.icon" />
+            <Icon
+              v-if="menu.icon"
+              :name="menu.icon"
+            />
             {{ menu.name }}
           </span>
         </NuxtLink>
