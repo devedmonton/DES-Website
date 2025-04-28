@@ -1,10 +1,4 @@
 <script setup lang="ts">
-import { provide, ref } from 'vue'
-
-const animationsEnabled = ref(true)
-
-provide('animationsEnabled', animationsEnabled)
-
 useServerSeoMeta({
   title: 'Dev Edmonton Society',
   titleTemplate: '%s | Dev Edmonton Society',
@@ -22,6 +16,7 @@ useServerSeoMeta({
       <AppHeader />
       <NuxtPage />
       <AppFooter />
+      <AppAnimationsMode class="fixed bottom-4 right-4 z-50" />
     </Body>
   </Html>
 </template>

@@ -1,8 +1,6 @@
 <!-- Credits to UnJS/@pi0 https://github.com/unjs/undocs/blob/main/app/components/LandingBackground.vue -->
 <script setup lang="ts">
-import { inject } from 'vue'
-
-const animationsEnabled = inject('animationsEnabled', ref(true))
+const { hasAnimation } = useAnimation()
 
 const points = useState(() => new Array(16).fill(0).map(() => [Math.random(), Math.random()]))
 
@@ -33,7 +31,7 @@ onMounted(() => {
   >
     <div
       class="aspect-[1.7] h-full w-full bg-gradient-to-r from-secondary via-primary to-white/10 opacity-75 dark:opacity-50"
-      :style="animationsEnabled ? { 'clip-path': `polygon(${poly})` } : {}"
+      :style="hasAnimation ? { 'clip-path': `polygon(${poly})` } : {}"
     />
   </div>
 </template>

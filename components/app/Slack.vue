@@ -1,7 +1,7 @@
 <script setup>
-import { inject } from 'vue'
+import { ref } from 'vue'
 
-const animationsEnabled = inject('animationsEnabled', ref(true))
+const { hasAnimation } = useAnimation()
 
 const selected = ref(channels[0])
 
@@ -114,7 +114,7 @@ const circles = [
                   '--orbit-distance': circle.distance,
                   '--orbit-speed': `${circle.speed}s`,
                   '--orbit-delay': `${(idx / circle.items.length) * -circle.speed}s`,
-                  'animation-play-state': animationsEnabled ? 'running' : 'paused',
+                  'animation-play-state': hasAnimation?'running':'paused',
                 }"
                 :name="item"
               />

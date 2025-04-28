@@ -59,9 +59,6 @@ useEventListener('scroll', () => y.value = window.scrollY)
           <!-- Color Mode Button -->
           <AppColorMode :class="scrolling ? 'text-neutral-700 dark:text-neutral-300 hover:text-black' : 'text-white'" />
 
-          <!-- Animation Toggle Button -->
-          <AppAnimationsMode :class="scrolling ? 'text-neutral-700 dark:text-neutral-300 hover:text-black' : 'text-white'" />
-
           <!-- Hamburger Menu Button (for small screen) -->
           <AppButton
             :icon="open ? 'i-ph-x' : 'i-ph-list'"
