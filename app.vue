@@ -16,7 +16,7 @@ useServerSeoMeta({
       <AppHeader />
       <NuxtPage />
       <AppFooter />
-      <AppAnimationsMode class="fixed bottom-4 right-4 z-50" />
+      <AppAnimationsMode class="fixed bottom-4 right-1 z-50" />
     </Body>
   </Html>
 </template>
