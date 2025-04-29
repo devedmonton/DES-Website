@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 
-const { hasAnimation } = useAnimation()
+const { hasAnimation } = useA11y()
 
 const selected = ref(channels[0])
 

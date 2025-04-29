@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 
-const { hasAnimation, toggleAnimation } = useAnimation()
+const { hasAnimation, toggleAnimation } = useA11y()
 
 // set the styles on the body class reactively
 useHead({

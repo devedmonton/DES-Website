@@ -1,5 +1,7 @@
 
-export default function useAnimation() {
+export default function useA11y() {
+
+  //"hasAnimation" cookie that persists for 1 year
   const hasAnimation = useCookie<boolean>('hasAnimation', {
     default: () => true,
     watch: true,
@@ -8,7 +10,6 @@ export default function useAnimation() {
 
   function toggleAnimation() {
     hasAnimation.value = !hasAnimation.value
-    console.log('Animation enabled:', hasAnimation.value)
   }
 
   return {
