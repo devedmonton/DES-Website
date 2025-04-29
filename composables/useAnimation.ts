@@ -1,4 +1,3 @@
-import { useCookie } from '#imports'
 
 export default function useAnimation() {
   const hasAnimation = useCookie<boolean>('hasAnimation', {
