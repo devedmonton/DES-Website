@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-
 const { hasAnimation, toggleAnimation } = useA11y()
 
 // set the styles on the body class reactively
@@ -19,7 +18,7 @@ useHead({
     <Icon
       :key="hasAnimation"
       class="!block"
-      :name="hasAnimation ? 'line-md:pause-to-play-filled-transition' : 'line-md:play-filled-to-pause-transition'"
+      :name="hasAnimation ? 'line-md:play-filled-to-pause-transition':'line-md:pause-to-play-filled-transition' "
     />
   </AppButton>
 </template>

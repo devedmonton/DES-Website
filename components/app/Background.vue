@@ -1,6 +1,5 @@
 <!-- Credits to UnJS/@pi0 https://github.com/unjs/undocs/blob/main/app/components/LandingBackground.vue -->
 <script setup lang="ts">
-
 const { hasAnimation } = useA11y()
 
 const points = useState(() => new Array(16).fill(0).map(() => [Math.random(), Math.random()]))
