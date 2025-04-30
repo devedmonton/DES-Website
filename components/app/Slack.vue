@@ -1,4 +1,8 @@
 <script setup>
+import { ref } from 'vue'
+
+const { hasAnimation } = useA11y()
+
 const selected = ref(channels[0])
 
 const circles = [
@@ -105,11 +109,12 @@ const circles = [
               <Icon
                 v-for="item, idx in circle.items"
                 :key="item"
-                class="absolute xl:w-6 xl:h-6 lg:w-5 lg:h-5 md:w-4 md:h-4 sm:w-3 sm:h-3 w-2 h-2 slack-orbit"
+                class="allow-animation absolute xl:w-6 xl:h-6 lg:w-5 lg:h-5 md:w-4 md:h-4 sm:w-3 sm:h-3 w-2 h-2 slack-orbit"
                 :style="{
                   '--orbit-distance': circle.distance,
                   '--orbit-speed': `${circle.speed}s`,
                   '--orbit-delay': `${(idx / circle.items.length) * -circle.speed}s`,
+                  'animation-play-state': hasAnimation?'running':'paused',
                 }"
                 :name="item"
               />

@@ -31,6 +31,7 @@ useEventListener('scroll', () => y.value = window.scrollY)
       :class="scrolling ? open ? 'bg-white dark:bg-neutral-900' : 'border-b border-neutral-400/40' : 'bg-primary'"
     >
       <div class="flex flex-wrap justify-between items-center lg:grid grid-cols-[1fr_auto_1fr] mx-auto max-w-screen-2xl">
+        <!-- Logo -->
         <NuxtLink
           title="Dev Edmonton Society"
           to="/"
@@ -40,7 +41,10 @@ useEventListener('scroll', () => y.value = window.scrollY)
             class="h-20 py-2"
           />
         </NuxtLink>
+
+        <!-- Right side buttons -->
         <div class="flex items-center gap-2 lg:order-2 ml-auto">
+          <!-- Social Buttons -->
           <AppButton
             v-for="social of socials"
             :key="social.name"
@@ -51,7 +55,11 @@ useEventListener('scroll', () => y.value = window.scrollY)
             class="lg:block hidden"
             :class="scrolling ? 'text-neutral-700 dark:text-neutral-300 hover:text-black' : 'text-white'"
           />
+
+          <!-- Color Mode Button -->
           <AppColorMode :class="scrolling ? 'text-neutral-700 dark:text-neutral-300 hover:text-black' : 'text-white'" />
+
+          <!-- Hamburger Menu Button (for small screen) -->
           <AppButton
             :icon="open ? 'i-ph-x' : 'i-ph-list'"
             title="Menu"
@@ -60,6 +68,8 @@ useEventListener('scroll', () => y.value = window.scrollY)
             @click="open = !open"
           />
         </div>
+
+        <!-- Navigation Links -->
         <div class="lg:flex hidden flex-col mt-4 font-medium lg:flex-row lg:space-x-2 lg:mt-0">
           <NuxtLink
             v-for="menu of navigation"
@@ -80,6 +90,8 @@ useEventListener('scroll', () => y.value = window.scrollY)
         </div>
       </div>
     </nav>
+
+    <!-- Mobile Menu -->
     <Transition name="slide">
       <div
         v-if="open"
@@ -103,6 +115,7 @@ useEventListener('scroll', () => y.value = window.scrollY)
             {{ menu.name }}
           </span>
         </NuxtLink>
+
         <div class="flex justify-between border-t border-neutral-400/40 px-4 pt-4">
           <AppButton
             v-for="social of socials"
@@ -120,6 +133,7 @@ useEventListener('scroll', () => y.value = window.scrollY)
 </template>
 
 <style>
+/* Slide animation for mobile nav */
 .slide-enter-from,
 .slide-leave-to {
   opacity: 0;

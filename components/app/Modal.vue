@@ -43,7 +43,7 @@ onClickOutside(modalRef, () => {
         <div class="flex items-center p-4 border-t border-gray-200 rounded-b dark:border-gray-600">
           <AppButton
             type="button"
-            class="bg-primary text-white"
+            class="bg-primary text-white hover:text-black"
             @click="closeModal"
           >
             Close
