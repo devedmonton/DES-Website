@@ -159,6 +159,8 @@ const groupedEvents = computed(() => {
         <h3 class="text-2xl text-center mb-8 font-bold tracking-tight text-gray-900 dark:text-white">
           {{ month }}
         </h3>
+
+
         <div class="grid xl:grid-cols-2 gap-4">
           <div
             v-for="(event) in events"
@@ -169,20 +171,44 @@ const groupedEvents = computed(() => {
               <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white mb-2">
                 {{ event.title }}
               </h3>
-              <div class="flex items-center gap-4">
-                <div class="flex items-center gap-2">
-                  <Icon name="formkit:date" />
-                  <p class="text-sm text-gray-500">
-                    {{ DATE_FORMATTER.format(event.start) }}
-                  </p>
-                </div>
-                <div class="flex items-center gap-2">
-                  <Icon name="mingcute:time-line" />
-                  <p class="text-sm text-gray-500">
-                    {{ event.start.formatTime(TIME_FORMAT) }} - {{ event.end.formatTime(TIME_FORMAT) }}
-                  </p>
-                </div>
+
+              <div class="p-4 sm:flex justify-between items-center border-b rounded-t border-gray-400/40">
+             
+                <div class="flex flex-col gap-1">
+                  <div class="flex items-center gap-2 sm:gap-4">
+
+              
+            
+                        <Icon name="formkit:date" />
+                        <p class="text-sm text-gray-500">
+                          {{ DATE_FORMATTER.format(event.start) }}
+                        </p>
+                      </div>
+                      <div class="flex items-center gap-2">
+                        <Icon name="mingcute:time-line" />
+                        <p class="text-sm text-gray-500">
+                          {{ event.start.formatTime(TIME_FORMAT) }} - {{ event.end.formatTime(TIME_FORMAT) }}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="ml-auto">
+                      <a
+                      :href="event.eventUrl"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >
+                      <AppButton
+                        type="button"
+                        class="bg-primary text-white hover:text-black"
+                        >
+                        Add to Calendar 
+                      </AppButton>
+                      </a>
+                    </div>
+            
               </div>
+
             </div>
             <div
               class="p-4 event-description"
@@ -233,12 +259,30 @@ const groupedEvents = computed(() => {
           class="content-full"
           v-html="selectedEvent.description"
         />
-        <div>
-          <strong>Event details:</strong>
-          <ul>
-            <li>Event starts at: {{ selectedEvent.start.formatTime(TIME_FORMAT) }}</li>
-            <li>Event ends at: {{ selectedEvent.end.formatTime(TIME_FORMAT) }}</li>
-          </ul>
+         <div class="flex  justify-between">
+          <div>
+            <strong>Event details:</strong>
+            <ul>
+              <li>Event starts at: {{ selectedEvent.start.formatTime(TIME_FORMAT) }}</li>
+              <li>Event ends at: {{ selectedEvent.end.formatTime(TIME_FORMAT) }}</li>
+            </ul>
+          </div>
+
+          <div>
+            <a
+             :href="selectedEvent.eventUrl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >
+                <AppButton
+                  type="button"
+                  class="bg-primary text-white hover:text-black"
+                 
+                >
+                  Add to Calendar
+                </AppButton>
+           </a>
+          </div>
         </div>
       </div>
     </AppModal>
