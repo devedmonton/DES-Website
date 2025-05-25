@@ -159,8 +159,6 @@ const groupedEvents = computed(() => {
         <h3 class="text-2xl text-center mb-8 font-bold tracking-tight text-gray-900 dark:text-white">
           {{ month }}
         </h3>
-
-
         <div class="grid xl:grid-cols-2 gap-4">
           <div
             v-for="(event) in events"
@@ -173,42 +171,34 @@ const groupedEvents = computed(() => {
               </h3>
 
               <div class="p-4 sm:flex justify-between items-center border-b rounded-t border-gray-400/40">
-             
                 <div class="flex flex-col gap-1">
                   <div class="flex items-center gap-2 sm:gap-4">
+                    <Icon name="formkit:date" />
+                    <p class="text-sm text-gray-500">
+                      {{ DATE_FORMATTER.format(event.start) }}
+                    </p>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <Icon name="mingcute:time-line" />
+                    <p class="text-sm text-gray-500">
+                      {{ event.start.formatTime(TIME_FORMAT) }} - {{ event.end.formatTime(TIME_FORMAT) }}
+                    </p>
+                  </div>
+                </div>
 
-              
-            
-                        <Icon name="formkit:date" />
-                        <p class="text-sm text-gray-500">
-                          {{ DATE_FORMATTER.format(event.start) }}
-                        </p>
-                      </div>
-                      <div class="flex items-center gap-2">
-                        <Icon name="mingcute:time-line" />
-                        <p class="text-sm text-gray-500">
-                          {{ event.start.formatTime(TIME_FORMAT) }} - {{ event.end.formatTime(TIME_FORMAT) }}
-                        </p>
-                      </div>
-                    </div>
-
-                    <div class="ml-auto">
-                      <a
-                      :href="event.eventUrl"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >
-                      <AppButton
-                        type="button"
-                        class="bg-primary text-white hover:text-black"
-                        >
-                        Add to Calendar 
-                      </AppButton>
-                      </a>
-                    </div>
-            
+                <div class="ml-auto">
+                  <NuxtLink
+                    :to="event.eventUrl"
+                  >
+                    <AppButton
+                      type="button"
+                      class="bg-primary text-white hover:text-black"
+                    >
+                      Add to Calendar
+                    </AppButton>
+                  </NuxtLink>
+                </div>
               </div>
-
             </div>
             <div
               class="p-4 event-description"
@@ -259,7 +249,7 @@ const groupedEvents = computed(() => {
           class="content-full"
           v-html="selectedEvent.description"
         />
-         <div class="flex  justify-between">
+        <div class="flex  justify-between">
           <div>
             <strong>Event details:</strong>
             <ul>
@@ -269,19 +259,16 @@ const groupedEvents = computed(() => {
           </div>
 
           <div>
-            <a
-             :href="selectedEvent.eventUrl"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >
-                <AppButton
-                  type="button"
-                  class="bg-primary text-white hover:text-black"
-                 
-                >
-                  Add to Calendar
-                </AppButton>
-           </a>
+            <NuxtLink
+              :to="selectedEvent.eventUrl"
+            >
+              <AppButton
+                type="button"
+                class="bg-primary text-white hover:text-black"
+              >
+                Add to Calendar
+              </AppButton>
+            </NuxtLink>
           </div>
         </div>
       </div>
