@@ -185,7 +185,7 @@ const groupedEvents = computed(() => {
                     </p>
                   </div>
                 </div>
-
+                <!-- added the the link, used the nuxtlink instread of a tag -->
                 <div class="ml-auto">
                   <NuxtLink
                     :to="event.eventUrl"
@@ -257,7 +257,7 @@ const groupedEvents = computed(() => {
               <li>Event ends at: {{ selectedEvent.end.formatTime(TIME_FORMAT) }}</li>
             </ul>
           </div>
-
+          <!-- added the the link, used the nuxtlink instread of a tag -->
           <div>
             <NuxtLink
               :to="selectedEvent.eventUrl"
