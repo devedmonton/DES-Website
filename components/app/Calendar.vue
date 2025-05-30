@@ -185,13 +185,12 @@ const groupedEvents = computed(() => {
                     </p>
                   </div>
                 </div>
-                <!-- added the the link, used the nuxtlink instread of a tag -->
+                <!-- added the the link, used the nuxtlink instead of a tag -->
                 <div class="ml-auto">
                   <NuxtLink
                     :to="event.eventUrl"
                   >
                     <AppButton
-                      type="button"
                       class="bg-primary text-white hover:text-black"
                     >
                       Add to Calendar
@@ -249,7 +248,7 @@ const groupedEvents = computed(() => {
           class="content-full"
           v-html="selectedEvent.description"
         />
-        <div class="flex  justify-between">
+        <div class="flex justify-between">
           <div>
             <strong>Event details:</strong>
             <ul>
@@ -257,13 +256,12 @@ const groupedEvents = computed(() => {
               <li>Event ends at: {{ selectedEvent.end.formatTime(TIME_FORMAT) }}</li>
             </ul>
           </div>
-          <!-- added the the link, used the nuxtlink instread of a tag -->
+          <!-- added the the link, used the nuxtlink instead of a tag -->
           <div>
             <NuxtLink
               :to="selectedEvent.eventUrl"
             >
               <AppButton
-                type="button"
                 class="bg-primary text-white hover:text-black"
               >
                 Add to Calendar
