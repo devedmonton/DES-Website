@@ -256,7 +256,6 @@ const groupedEvents = computed(() => {
               <li>Event ends at: {{ selectedEvent.end.formatTime(TIME_FORMAT) }}</li>
             </ul>
           </div>
-          <!-- added the the link, used the nuxtlink instead of a tag -->
           <div>
             <NuxtLink
               :to="selectedEvent.eventUrl"
