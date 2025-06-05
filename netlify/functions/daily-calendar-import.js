@@ -12,7 +12,7 @@ exports.handler = async function () {
 
   try {
     const response = await fetch(IMPORT_ENDPOINT, {
-      method: 'GET', // or 'GET', depending on the API
+      method: 'GET',
     })
 
     const data = await response.json()
