@@ -33,3 +33,9 @@ exports.handler = async function () {
     }
   }
 }
+
+// this should fix the schedule to be daily
+// run at 0 0 * * *
+export const config = {
+  schedule: '@daily',
+}
