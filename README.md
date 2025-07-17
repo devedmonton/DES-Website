@@ -45,6 +45,24 @@ $ npm run pr-checks
 
 For detailed explanation on how things work, check out [Nuxt docs](https://nuxt.com).
 
+## Import Calendar Events Function local testing.
+
+1. You'll need the netlify cli install globally if you don't have it already.
+```bash
+$ npm install -g netlify-cli
+```
+2. In one terminal, run the netlify dev server.
+```bash
+$ netlify dev
+```
+3. In another terminal, run the import script.
+```bash
+$ npm run daily-calendar-import
+```
+Notes:
+- cron job in `netlify/scheduled-functions.json`
+- function located at `netlify/functions/daily-calendar-import.js` (all it does is hit the import api endpoint)
+
 # Resources
 
 Icons sourced from [Iconify](https://iconify.design/icon-sets/ph/)
