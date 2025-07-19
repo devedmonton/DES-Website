@@ -15,13 +15,15 @@
     "test:run": "vitest run",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "pr-checks": "npm run lint && npm run test:run"
+    "pr-checks": "npm run lint && npm run test:run",
+    "daily-calendar-import": "netlify functions:invoke daily-calendar-import"
   },
   "devDependencies": {
     "@iconify-json/line-md": "^1.2.7",
     "@iconify-json/logos": "^1.2.4",
     "@iconify-json/ph": "^1.2.2",
     "@mailchimp/mailchimp_marketing": "^3.0.80",
+    "@netlify/functions": "^4.1.2",
     "@nuxt/content": "^2.13.4",
     "@nuxt/eslint": "^1.2.0",
     "@nuxt/icon": "^1.11.0",
