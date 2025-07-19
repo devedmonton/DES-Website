@@ -185,7 +185,6 @@ const groupedEvents = computed(() => {
                     </p>
                   </div>
                 </div>
-                <!-- added the the link, used the nuxtlink instead of a tag -->
                 <div class="ml-auto">
                   <NuxtLink
                     :to="event.eventUrl"
