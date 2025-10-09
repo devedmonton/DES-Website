@@ -39,4 +39,3 @@ exports.handler = async function () {
 exports.config = {
   schedule: '@daily',
 }
-
