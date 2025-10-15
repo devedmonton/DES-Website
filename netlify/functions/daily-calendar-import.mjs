@@ -1,13 +1,8 @@
 /*
 To those who are curious: https://docs.netlify.com/functions/scheduled-functions/
-
-This is a scheduled import that just hits the import events api daily.
-
-The cron job is at `netlify/scheduled-functions.json`
-
-The task should run every day at 6am "0 6 * * *" UTC which is 11pm MST.
+This is a scheduled function that hits the import events api daily.
 */
-exports.handler = async function () {
+export default async function () {
   const IMPORT_ENDPOINT = 'https://devedmonton.com/api/import_events'
 
   try {
@@ -36,6 +31,6 @@ exports.handler = async function () {
 
 // this should fix the schedule to be daily
 // run at 0 0 * * *
-exports.config = {
+export const config = {
   schedule: '@daily',
 }
