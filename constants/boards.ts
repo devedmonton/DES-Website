@@ -1,36 +1,5 @@
 export const boards = [
   {
-    name: 'Leslie Tshuma',
-    pronouns: 'He/Him',
-    title: 'Vice President',
-    image: '/BoardPictures/LeslieTshuma.jpg',
-    socials: {
-      linkedin: 'https://www.linkedin.com/in/leslietshuma/',
-      slack: '@Leslie Tshuma',
-    },
-    bio: `
-    <p>Leslie is a Mobility Services Analyst II at <a class="text-primary font-bold" href="https://www.albertahealthservices.ca/">Alberta Health Services</a>. He is passionate about community and loves welcoming folks to the Dev Edmonton Society Slack.</p>
-    <p>He has a fascination for DevOps and has a couple of HP Servers in his home lab. He also runs a new-ish YouTube channel.</p>
-    <p>In his personal time, he enjoys outdoor activities such as walking, hiking, cycling, and going on day trips and excursions with his family. Music plays a significant role in his life, both in singing and listening.</p>
-    `,
-  },
-  {
-    name: 'Patricia Borlongan',
-    pronouns: 'She/Her',
-    title: 'Secretary',
-    image: '/BoardPictures/patriciaBorlongan.jpg',
-    socials: {
-      linkedin: 'https://www.linkedin.com/in/pborlongan/',
-      twitter: 'https://twitter.com/patacat_',
-      slack: '@Pat',
-    },
-    bio: `
-    <p>Patricia Borlongan is a front-end developer at <a class="text-primary font-bold" href="https://www.goodmorning.com/">Goodmorning.com</a>. Her passion for human-centered design drives her to create user-friendly digital products.</p>
-    <p>Thanks to DES, she learned about Canada Learning Code back in 2019, which she still volunteers for with a particular focus on empowering women in tech. Patricia's blend of tech prowess and creative flair makes her a valuable asset both professionally and in her community involvement.</p>
-    <p>When not working on anything tech related, she does digital illustration, watches the Edmonton Oilers, or trying out a new restaurant in Edmonton!</p>
-    `,
-  },
-  {
     name: 'Abram Hindle',
     pronouns: 'He/Him',
     title: 'Member At Large',
@@ -58,20 +27,6 @@ export const boards = [
     <p>Jeremy Nickurak is a Senior Project Manager and Site Reliability Expert for <a class="text-primary font-bold" href="https://www.dotdashmeredith.com">Dotdash Meredith</a> focused on making the process of stuff going bad go better.</p>
     <p>Jeremy loves staying connected virtually and in person with the growing Edmonton development and technology space, meeting new folks, and telling stories of years of technology going well and poorly.</p>
     <p>nJeremy is passionate about git, python, and outside of tech, loves playing the ukulele.</p>
-    `,
-  },
-  {
-    name: 'Salma Ibrahim',
-    pronouns: 'She/Her',
-    title: 'Member At Large',
-    image: '/BoardPictures/salmaIbrahim.jpg',
-    socials: {
-      linkedin: 'https://www.linkedin.com/in/salma-ibrahim-a1275817a/',
-      slack: '@Salma Ibrahim',
-    },
-    bio: `
-    <p>Salma Ibrahim is an aspiring junior software developer. She got her start in coding with <a class="text-primary font-bold" href="https://www.lighthouselabs.ca/">Lighthouse Labs</a> in the Full Stack Web Development Bootcamp in May of 2022. There she wrote here first lines of code and has loved learning ever since. Salma has recently gotten in involved with DES when she was looking for a way to connect to the developing community in Edmonton!</p>
-    <p>When she isn’t coding, Salma works at a non-profit called <a class="text-primary font-bold" href="https://bgcbigs.ca/">BGCBigs</a> at a local club enjoying time with the kiddos. Salma also likes watching films, baking, and most of all reading. Her favs include the Ember in the Ashes Quartet, The Book Thief, books by Ruta Sepetys, and her childhood favourite, Lemony Snicket</p>
     `,
   },
   {
