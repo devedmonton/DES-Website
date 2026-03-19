@@ -10,7 +10,7 @@ export const meetups = [
     image: '/meetups/flutter.png',
     to: 'https://www.meetup.com/flutter-edmonton/',
     description:
-      "This group is dedicated to all things Flutter, a popular open-source UI software development kit created by Google. Whether you are a seasoned developer or just getting started, this group is the perfect place to share ideas, collaborate on projects, and learn from other enthusiasts. Join us for meetups, workshops, and networking events where we discuss the latest trends, best practices, and innovative uses of Flutter. Let's build beautiful apps together!",
+      'This group is dedicated to all things Flutter, a popular open-source UI software development kit created by Google. Whether you are a seasoned developer or just getting started, this group is the perfect place to share ideas, collaborate on projects, and learn from other enthusiasts. Join us for meetups, workshops, and networking events where we discuss the latest trends, best practices, and innovative uses of Flutter. Let\'s build beautiful apps together!',
   },
   {
     name: 'LeetNight: Code, Collaborate, Conquer!',
@@ -76,7 +76,7 @@ export const meetups = [
     image: '/meetups/YEGSec.png',
     to: 'https://www.yegsec.ca',
     description:
-      "We meet on a monthly-ish basis to discuss security, drink beer, and socialize. If you're into that sort of thing then you should probably join us. If you hate waiting, and who  can blame you, you're more than welcome to join us in Slack. Tweet @yegsec for an invite!",
+      'We meet on a monthly-ish basis to discuss security, drink beer, and socialize. If you\'re into that sort of thing then you should probably join us. If you hate waiting, and who  can blame you, you\'re more than welcome to join us in Slack. Tweet @yegsec for an invite!',
   },
   {
     name: 'Bsides Edmonton',
@@ -90,14 +90,14 @@ export const meetups = [
     image: '/events/DemoCamp.png',
     to: 'https://www.eventbrite.ca/o/democamp-edmonton-56126644423',
     description:
-      "Started back in 2008, DemoCamp is an event that brings together developers, creatives, entrepreneurs and investors to share what they've been working on and to find others in the community interested in similar topics. The rules for DemoCamp are simple: ten minutes to demo real, working products, followed by a few minutes for questions, and no slides allowed. Democamp is a community-run event by a team of volunteers.",
+      'Started back in 2008, DemoCamp is an event that brings together developers, creatives, entrepreneurs and investors to share what they\'ve been working on and to find others in the community interested in similar topics. The rules for DemoCamp are simple: ten minutes to demo real, working products, followed by a few minutes for questions, and no slides allowed. Democamp is a community-run event by a team of volunteers.',
   },
   {
     name: 'HackEd',
     image: '/events/hackEd.png',
     to: 'https://hacked.compeclub.com/',
     description:
-      "One of Alberta's Largest Student Run Hackathons. HackED is the premiere annual 24-hour hackathon from the Computer Engineering Club of the University of Alberta.",
+      'One of Alberta\'s Largest Student Run Hackathons. HackED is the premiere annual 24-hour hackathon from the Computer Engineering Club of the University of Alberta.',
   },
   {
     name: 'Edmonton WordPress Meetup',
@@ -111,14 +111,14 @@ export const meetups = [
     image: '/events/gdgLogo.png',
     to: 'https://gdg.community.dev/gdg-cloud-edmonton',
     description:
-      "Google Developer Groups has an Edmonton chapter! Their vision is to foster an engaging and inclusive developer's community. A place where you can meet your fellow developers, career mentors, and boost your technical skills. Whether you are an advanced developer, or you just start to pivot your way in the tech industry, we welcome you to the community. They mostly focus on Google Technologies, such as Google Cloud Computing, Firebase, Flutter, Android, Machine Learning, and Earth Engine.",
+      'Google Developer Groups has an Edmonton chapter! Their vision is to foster an engaging and inclusive developer\'s community. A place where you can meet your fellow developers, career mentors, and boost your technical skills. Whether you are an advanced developer, or you just start to pivot your way in the tech industry, we welcome you to the community. They mostly focus on Google Technologies, such as Google Cloud Computing, Firebase, Flutter, Android, Machine Learning, and Earth Engine.',
   },
   {
     name: 'Rainforest Alberta',
     image: '/events/rac.png',
     to: 'https://www.rainforestab.ca/edmonton.html',
     description:
-      "Rainforest Alberta is an informal organization working towards improving Alberta's innovation ecosystem. They want Albertans to invent, prosper and move their ideas forward. Community members can join by signin a provided by them Social Contract. Their engagement with the Edmonton entrepreneurial community is through 3 different types of events: Weekly, Monthly & Annual Summits.",
+      'Rainforest Alberta is an informal organization working towards improving Alberta\'s innovation ecosystem. They want Albertans to invent, prosper and move their ideas forward. Community members can join by signin a provided by them Social Contract. Their engagement with the Edmonton entrepreneurial community is through 3 different types of events: Weekly, Monthly & Annual Summits.',
   },
   {
     name: 'Edmonton Linux Users Group',
@@ -148,4 +148,4 @@ export const meetups = [
     description:
       'NeurAlbertaTech is a nonprofit organization dedicated to fostering a cohesive and diverse neurotechnology ecosystem. Through a range of accessible educational resources, events, and digital platforms, we foster collaboration, skills development, and inclusivity within the neurotech community while supporting groundbreaking projects at every stage.',
   },
-];
+]
