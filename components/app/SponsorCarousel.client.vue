@@ -12,7 +12,7 @@ const modules = [Autoplay]
 </script>
 
 <template>
-  <section class="lg:-mt-24 max-w-7xl mx-auto">
+  <section class="mt-12 md:mt-6 max-w-7xl mx-auto">
     <h2 class="text-center">
       Our Sponsors and Partners
     </h2>
