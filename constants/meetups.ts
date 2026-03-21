@@ -3,7 +3,7 @@ export const meetups = [
     name: 'Student Speakers Series',
     description:
       'Meetup where career professionals share their experiences and give advice to students in general. This meetup has a variety of topics, come meet awesome people.',
-    to: 'https:/www.nait.ca/nait/home',
+    to: 'https://www.nait.ca/nait/home',
   },
   {
     name: 'Flutter Edmonton',
