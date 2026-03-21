@@ -6,7 +6,7 @@ useServerSeoMeta({
     'Dev Edmonton Society is a community of developers, designers, and tech enthusiasts in Edmonton, Alberta.',
   author: 'Dev Edmonton Society',
   themeColor: '#265DAD',
-});
+})
 </script>
 
 <template>
