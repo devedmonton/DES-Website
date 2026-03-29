@@ -66,8 +66,8 @@ export const companies = [
   },
   {
     name: 'Cybera',
-    to: 'https://cybera.io/careers/',
-    description: 'Cybera is a cybersecurity-focused company offering cloud-based network and security services. Developers here work on critical security solutions, such as secure networking and data protection, making it an attractive opportunity for those with an interest in cybersecurity.',
+    to: 'https://cybera.ca/careers/',
+    description: 'Cybera is a non-profit organization that provides advanced network infrastructure and digital services to support research, education, and innovation in Alberta. Developers here work on high-performance networking, cloud services, and data infrastructure, making it a great opportunity for those interested in large-scale systems and public sector technology.',
   },
   {
     name: 'Onlea',
@@ -76,7 +76,7 @@ export const companies = [
   },
   {
     name: 'Levven',
-    to: 'https://levven.com/job-openings/',
+    to: 'https://levven.com/jobs',
     description: 'Levven designs smart home technology, focusing on wireless control systems for residential and commercial spaces. Developers here will work on IoT devices, wireless communications, and cloud platforms that connect homes and buildings.',
   },
   {
@@ -123,11 +123,6 @@ export const companies = [
     name: 'Haemonetics',
     to: 'https://www.haemonetics.com/careers',
     description: 'Haemonetics is a global healthcare company focused on blood and plasma management technologies. Developers at Haemonetics work on medical software that integrates with their hardware products, improving efficiency in blood collection and transfusion processes.',
-  },
-  {
-    name: 'coParenter',
-    to: 'https://coparenter.com/',
-    description: 'coParenter offers tools for co-parents to communicate, manage, and resolve family disputes. Developers will focus on mobile and web apps that incorporate AI, chat, and secure document sharing for families navigating co-parenting challenges.',
   },
   {
     name: 'LawDepot',
@@ -186,7 +181,7 @@ export const companies = [
   },
   {
     name: 'Computronix',
-    to: 'https://www.computronix.com/',
+    to: 'https://www.computronix.com/careers/',
     description: 'Computronix offers enterprise software solutions for government organizations, focusing on digital transformation and workflow automation. Developers here will work on large-scale systems, including cloud solutions, workflow automation, and case management platforms.',
   },
   {
@@ -201,7 +196,7 @@ export const companies = [
   },
   {
     name: 'Parakeeto',
-    to: 'https://parakeeto.com/',
+    to: 'https://parakeeto.breezy.hr/',
     description: 'Parakeeto specializes in measuring and improving digital marketing agency profitability, through a combination of business intelligence technology and industry leading expertise and consulting.',
   },
 ]
