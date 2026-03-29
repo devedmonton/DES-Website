@@ -15,9 +15,9 @@ export const companies = [
     description: 'Resolver specializes in risk management software, providing solutions to help organizations manage risk, security, and compliance. They are known for building data-driven tools, making them a solid fit for engineers who enjoy working on security, analytics, and risk management systems.',
   },
   {
-    name: 'Dotdash Meredith',
-    to: 'https://www.dotdashmeredith.com/careers',
-    description: 'Dotdash Meredith is a digital media company focused on content creation and digital publishing. Developers here can work on building scalable content management platforms, optimizing user experiences, and creating tools to support digital journalism and advertising.',
+    name: 'People Inc. (previously Dotdash Meredith)',
+    to: 'https://www.people.inc/careers',
+    description: 'People Inc. is a digital media company focused on content creation and publishing. Developers here work on scalable content platforms, optimizing user experiences, and building tools to support digital media and advertising.',
   },
   {
     name: 'AltaML',
