@@ -3,6 +3,8 @@ const group = { name: 'Local Meetups', items: meetups }
 
 const links = { name: 'Groups', items: groups }
 
+const otherCityGroup = { name: 'Groups Like Us In Other Cities', items: otherCityGroups }
+
 const title = 'Meetups'
 const description = 'Lists all the meetups that are hosting events in the Dev Edmonton community.'
 
@@ -23,5 +25,6 @@ defineOgImage({
   <main>
     <AppSection :group="group" />
     <AppSection :group="links" />
+    <AppSection :group="otherCityGroup" />
   </main>
 </template>
