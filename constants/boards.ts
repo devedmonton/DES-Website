@@ -32,15 +32,15 @@ export const boards = [
   {
     name: 'Justice Hemming',
     pronouns: 'He/Him',
-    title: 'Treasurer',
+    title: 'President & Acting Treasurer',
     image: '/BoardPictures/justiceHemming.jpg',
     socials: {
       linkedin: 'https://www.linkedin.com/in/justice-hemming-ab459559/',
       slack: '@Justice Hemming',
     },
     bio: `
-    <p>Justice Hemming is a Junior Web Developer, who completed his Web Design and Development degree at NAIT in 2023. He has been active in the community by running events for the Junior Devs group, and looks to continue to help build a community that everyone feels welcome in by getting involved with DES.</p>
-    <p>When Justice isn’t coding you will still probably find Justice not far from the computer, gaming with friends, or taking on his passion for cooking and baking. His favorite thing to bake is mini cherry cheesecake.</p>
+    <p>Justice Hemming is a web developer and NAIT Digital Media & IT (Web Design & Development) graduate (2023). He is an active member of the Dev Edmonton Society community, helping organize events, build partnerships, and support initiatives that make tech more accessible and welcoming for everyone.</p>
+    <p>Outside of tech, Justice enjoys gaming with friends and exploring his passion for cooking and baking—especially making mini cherry cheesecakes.</p>
     `,
   },
   {
