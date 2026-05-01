@@ -49,6 +49,13 @@ const onEventClick = (event: any, e: any) => {
   e.stopPropagation()
 }
 
+// True when the currently-selected event has already ended; used to hide the
+// "Add to Calendar" button in the modal for past events.
+const isSelectedEventPast = computed(() => {
+  const end = selectedEvent.value?.end
+  return end instanceof Date && end < new Date()
+})
+
 // Group a list of events into a {monthKey: events[]} object, preserving the
 // order events arrive in (callers pre-sort).
 const groupByMonth = (events: any[]) => events.reduce((monthEvents: any, event: any) => {
@@ -221,6 +228,7 @@ const eventSections = computed(() => [
             v-for="(event) in events"
             :key="event.title"
             class="border-2 border-gray-400/40 rounded mb-4 break-word"
+            :class="{ 'opacity-60': section.title === 'Past' }"
           >
             <div class="p-4 border-b rounded-t border-gray-400/40">
               <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white mb-2">
@@ -242,7 +250,10 @@ const eventSections = computed(() => [
                     </p>
                   </div>
                 </div>
-                <div class="ml-auto">
+                <div
+                  v-if="section.title !== 'Past'"
+                  class="ml-auto"
+                >
                   <NuxtLink
                     :to="event.eventUrl"
                   >
@@ -338,7 +349,7 @@ const eventSections = computed(() => [
               <li>Event ends at: {{ selectedEvent.end.formatTime(TIME_FORMAT) }}</li>
             </ul>
           </div>
-          <div>
+          <div v-if="!isSelectedEventPast">
             <NuxtLink
               :to="selectedEvent.eventUrl"
             >
@@ -447,6 +458,24 @@ const eventSections = computed(() => [
 
 .dark .vuecal--month-view .vuecal__cell--out-of-scope .vuecal__event {
   color: rgb(55, 55, 55);
+}
+
+/* Past events: faded so visitors can see at a glance which events have already
+   happened. Hover restores full opacity so the title stays readable. */
+.vuecal__event.past {
+  opacity: 0.5;
+}
+
+.vuecal__event.past:hover {
+  opacity: 1;
+}
+
+.vuecal--month-view .vuecal__event.past {
+  color: #9ca3af;
+}
+
+.dark .vuecal--month-view .vuecal__event.past {
+  color: #6b7280;
 }
 
 .vuecal--month-view .vuecal__event:hover {

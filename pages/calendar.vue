@@ -17,7 +17,9 @@ class Event {
     this.organizer = organizer
     this.content = content
     this.description = description ? renderMarkdown(convertUrlsToLinks(description)) : description
-    this.class = this.organizer
+    // vue-cal applies this string as a CSS class on the event element. Mark
+    // past events so they can be greyed out in the calendar view.
+    this.class = this.end < new Date() ? 'past' : this.organizer
     this.eventUrl = eventUrl
     this.allDay = false // default
   }
