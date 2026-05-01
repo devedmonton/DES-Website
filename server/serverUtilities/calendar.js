@@ -96,14 +96,25 @@ export const getEvents = async ({
   return allItems
 }
 /**
- * Creates new events in the Google Calendar.
+ * Creates or updates events in the Google Calendar.
+ *
+ * Uses `events.import` rather than `events.insert` so the supplied iCalUID is
+ * honored. This gives us two benefits:
+ *  - Events get a stable identifier matching the source feed's UID, so future
+ *    cron runs can dedup correctly.
+ *  - If an event with the same iCalUID already exists, it is updated in
+ *    place — so renames or time changes in the upstream feed propagate
+ *    instead of creating duplicates.
+ *
+ * Events without an iCalUID fall through to events.insert (legacy path).
+ *
  * @async
  * @param {Object} options - The options object.
  * @param {string} options.googleCalendarId - The ID of the Google Calendar should be an email.
  * @param {Object} options.serviceAccountCredentials - The service account credentials for google authentication.
- * @param {Array<Object>} newEvents - The new events to be created.
- * @throws {ImportCalendarException} - Thrown if there is an error while creating events in the Google Calendar.
- * @returns {Promise<void>} - Resolves when all are created.
+ * @param {Array<Object>} options.newEvents - The events to be created or updated.
+ * @throws {ImportCalendarException} - Thrown if there is an error while writing to the calendar.
+ * @returns {Promise<void>} - Resolves when all writes complete.
  */
 export const createAllEvents = async ({
   googleCalendarId,
@@ -117,18 +128,26 @@ export const createAllEvents = async ({
   const calendar = google.calendar({ version: 'v3' })
 
   try {
-    // Map each event to a calendar.events.insert call
-    const insertCalendarPromises = newEvents.map((event) => {
+    const writePromises = newEvents.map((event) => {
+      // events.import requires iCalUID and dedups by it. Use it whenever the
+      // source feed gave us one; fall back to insert for any legacy event
+      // without a UID (e.g. manually created entries).
+      if (event.iCalUID) {
+        return calendar.events.import({
+          auth: client,
+          calendarId: googleCalendarId,
+          resource: event,
+        })
+      }
       return calendar.events.insert({
         auth: client,
         calendarId: googleCalendarId,
         resource: event,
       })
     })
-    // log the created events
-    const responses = await Promise.all(insertCalendarPromises)
+    const responses = await Promise.all(writePromises)
     responses.forEach(() => {
-      console.log(`Event created Successfully!`)
+      console.log(`Event written Successfully!`)
     })
   }
   catch (error) {
