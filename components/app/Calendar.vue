@@ -60,25 +60,60 @@ const groupByMonth = (events: any[]) => events.reduce((monthEvents: any, event: 
   return monthEvents
 }, {})
 
-// Split events into two sections so visitors don't land on years-old events.
-// Upcoming = events still ongoing or in the future, sorted soonest-first.
-// Past     = events that ended before now, sorted most-recent-first.
-const eventSections = computed(() => {
+// Split events into Upcoming (chronological) and Past (reverse chronological).
+const upcomingEvents = computed<any[]>(() => {
   const now = new Date()
-
-  const upcoming = props.group.items
+  return props.group.items
     .filter((e: any) => e.end >= now)
     .sort((a: any, b: any) => a.start.getTime() - b.start.getTime())
+})
 
-  const past = props.group.items
+const pastEvents = computed<any[]>(() => {
+  const now = new Date()
+  return props.group.items
     .filter((e: any) => e.end < now)
     .sort((a: any, b: any) => b.start.getTime() - a.start.getTime())
-
-  return [
-    { title: 'Upcoming', months: groupByMonth(upcoming) },
-    { title: 'Past', months: groupByMonth(past) },
-  ]
 })
+
+// Pagination — both sections paginate independently with their own page state.
+const PAGE_SIZE = 12
+
+const usePagination = (source: ComputedRef<any[]>) => {
+  const page = ref(1)
+  const totalPages = computed(() => Math.max(1, Math.ceil(source.value.length / PAGE_SIZE)))
+  // Clamp the current page if the underlying data shrinks (e.g. on refetch).
+  watch(totalPages, (total) => {
+    if (page.value > total) page.value = total
+  })
+  const items = computed(() => {
+    const start = (page.value - 1) * PAGE_SIZE
+    return source.value.slice(start, start + PAGE_SIZE)
+  })
+  const setPage = (next: number) => {
+    page.value = Math.max(1, Math.min(totalPages.value, next))
+  }
+  return { page, totalPages, items, setPage }
+}
+
+const upcomingPagination = usePagination(upcomingEvents)
+const pastPagination = usePagination(pastEvents)
+
+const eventSections = computed(() => [
+  {
+    title: 'Upcoming',
+    months: groupByMonth(upcomingPagination.items.value),
+    page: upcomingPagination.page.value,
+    totalPages: upcomingPagination.totalPages.value,
+    setPage: upcomingPagination.setPage,
+  },
+  {
+    title: 'Past',
+    months: groupByMonth(pastPagination.items.value),
+    page: pastPagination.page.value,
+    totalPages: pastPagination.totalPages.value,
+    setPage: pastPagination.setPage,
+  },
+])
 </script>
 
 <template>
@@ -232,6 +267,31 @@ const eventSections = computed(() => {
           </div>
         </div>
       </div>
+      <nav
+        v-if="section.totalPages > 1"
+        :aria-label="`${section.title} events pagination`"
+        class="flex items-center justify-center gap-4 mb-8"
+      >
+        <button
+          type="button"
+          class="px-4 py-2 rounded-lg bg-gray-400/20 hover:bg-gray-400/30 disabled:opacity-40 disabled:cursor-not-allowed font-semibold"
+          :disabled="section.page === 1"
+          @click="section.setPage(section.page - 1)"
+        >
+          Previous
+        </button>
+        <span class="text-sm text-gray-600 dark:text-gray-300 tabular-nums">
+          Page {{ section.page }} of {{ section.totalPages }}
+        </span>
+        <button
+          type="button"
+          class="px-4 py-2 rounded-lg bg-gray-400/20 hover:bg-gray-400/30 disabled:opacity-40 disabled:cursor-not-allowed font-semibold"
+          :disabled="section.page === section.totalPages"
+          @click="section.setPage(section.page + 1)"
+        >
+          Next
+        </button>
+      </nav>
       </template>
     </div>
 
