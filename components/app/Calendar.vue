@@ -223,99 +223,99 @@ const eventSections = computed(() => [
           <h3 class="text-2xl text-center mb-8 font-bold tracking-tight text-gray-900 dark:text-white">
             {{ month }}
           </h3>
-        <div class="grid xl:grid-cols-2 gap-4">
-          <div
-            v-for="(event) in events"
-            :key="event.title"
-            class="border-2 border-gray-400/40 rounded mb-4 break-word"
-            :class="{ 'opacity-60': section.title === 'Past' }"
-          >
-            <div class="p-4 border-b rounded-t border-gray-400/40">
-              <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white mb-2">
-                {{ event.title }}
-              </h3>
+          <div class="grid xl:grid-cols-2 gap-4">
+            <div
+              v-for="(event) in events"
+              :key="event.title"
+              class="border-2 border-gray-400/40 rounded mb-4 break-word"
+              :class="{ 'opacity-60': section.title === 'Past' }"
+            >
+              <div class="p-4 border-b rounded-t border-gray-400/40">
+                <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white mb-2">
+                  {{ event.title }}
+                </h3>
 
-              <div class="p-4 sm:flex justify-between items-center border-b rounded-t border-gray-400/40">
-                <div class="flex flex-col gap-1">
-                  <div class="flex items-center gap-2 sm:gap-4">
-                    <Icon name="formkit:date" />
-                    <p class="text-sm text-gray-500">
-                      {{ DATE_FORMATTER.format(event.start) }}
-                    </p>
+                <div class="p-4 sm:flex justify-between items-center border-b rounded-t border-gray-400/40">
+                  <div class="flex flex-col gap-1">
+                    <div class="flex items-center gap-2 sm:gap-4">
+                      <Icon name="formkit:date" />
+                      <p class="text-sm text-gray-500">
+                        {{ DATE_FORMATTER.format(event.start) }}
+                      </p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <Icon name="mingcute:time-line" />
+                      <p class="text-sm text-gray-500">
+                        {{ event.start.formatTime(TIME_FORMAT) }} - {{ event.end.formatTime(TIME_FORMAT) }}
+                      </p>
+                    </div>
                   </div>
-                  <div class="flex items-center gap-2">
-                    <Icon name="mingcute:time-line" />
-                    <p class="text-sm text-gray-500">
-                      {{ event.start.formatTime(TIME_FORMAT) }} - {{ event.end.formatTime(TIME_FORMAT) }}
-                    </p>
+                  <div
+                    v-if="event.sourceUrl || section.title !== 'Past'"
+                    class="ml-auto flex flex-col gap-2"
+                  >
+                    <NuxtLink
+                      v-if="event.sourceUrl"
+                      :to="event.sourceUrl"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <AppButton
+                        class="bg-primary text-white hover:text-black w-full"
+                      >
+                        Go to Event
+                      </AppButton>
+                    </NuxtLink>
+                    <NuxtLink
+                      v-if="section.title !== 'Past'"
+                      :to="event.eventUrl"
+                    >
+                      <AppButton
+                        class="bg-primary text-white hover:text-black w-full"
+                      >
+                        Add to Calendar
+                      </AppButton>
+                    </NuxtLink>
                   </div>
-                </div>
-                <div
-                  v-if="event.sourceUrl || section.title !== 'Past'"
-                  class="ml-auto flex flex-col gap-2"
-                >
-                  <NuxtLink
-                    v-if="event.sourceUrl"
-                    :to="event.sourceUrl"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <AppButton
-                      class="bg-primary text-white hover:text-black w-full"
-                    >
-                      Go to Event
-                    </AppButton>
-                  </NuxtLink>
-                  <NuxtLink
-                    v-if="section.title !== 'Past'"
-                    :to="event.eventUrl"
-                  >
-                    <AppButton
-                      class="bg-primary text-white hover:text-black w-full"
-                    >
-                      Add to Calendar
-                    </AppButton>
-                  </NuxtLink>
                 </div>
               </div>
-            </div>
-            <div
-              class="p-4 event-description"
-              :class="{ 'max-w-md': isMobile }"
-            >
-              <p
-                class="content-full"
-                v-html="event.description"
-              />
+              <div
+                class="p-4 event-description"
+                :class="{ 'max-w-md': isMobile }"
+              >
+                <p
+                  class="content-full"
+                  v-html="event.description"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <nav
-        v-if="section.totalPages > 1"
-        :aria-label="`${section.title} events pagination`"
-        class="flex items-center justify-center gap-4 mb-8"
-      >
-        <button
-          type="button"
-          class="px-4 py-2 rounded-lg bg-gray-400/20 hover:bg-gray-400/30 disabled:opacity-40 disabled:cursor-not-allowed font-semibold"
-          :disabled="section.page === 1"
-          @click="section.setPage(section.page - 1)"
+        <nav
+          v-if="section.totalPages > 1"
+          :aria-label="`${section.title} events pagination`"
+          class="flex items-center justify-center gap-4 mb-8"
         >
-          Previous
-        </button>
-        <span class="text-sm text-gray-600 dark:text-gray-300 tabular-nums">
-          Page {{ section.page }} of {{ section.totalPages }}
-        </span>
-        <button
-          type="button"
-          class="px-4 py-2 rounded-lg bg-gray-400/20 hover:bg-gray-400/30 disabled:opacity-40 disabled:cursor-not-allowed font-semibold"
-          :disabled="section.page === section.totalPages"
-          @click="section.setPage(section.page + 1)"
-        >
-          Next
-        </button>
-      </nav>
+          <button
+            type="button"
+            class="px-4 py-2 rounded-lg bg-gray-400/20 hover:bg-gray-400/30 disabled:opacity-40 disabled:cursor-not-allowed font-semibold"
+            :disabled="section.page === 1"
+            @click="section.setPage(section.page - 1)"
+          >
+            Previous
+          </button>
+          <span class="text-sm text-gray-600 dark:text-gray-300 tabular-nums">
+            Page {{ section.page }} of {{ section.totalPages }}
+          </span>
+          <button
+            type="button"
+            class="px-4 py-2 rounded-lg bg-gray-400/20 hover:bg-gray-400/30 disabled:opacity-40 disabled:cursor-not-allowed font-semibold"
+            :disabled="section.page === section.totalPages"
+            @click="section.setPage(section.page + 1)"
+          >
+            Next
+          </button>
+        </nav>
       </template>
     </div>
 
