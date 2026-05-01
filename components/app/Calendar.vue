@@ -49,23 +49,35 @@ const onEventClick = (event: any, e: any) => {
   e.stopPropagation()
 }
 
-// used to display events grouped by month in the list view
-const groupedEvents = computed(() => {
-  return props.group.items.reduce((monthEvents: any, event: any) => {
-    // creating a key to group the events by month in format "Month Year"
-    const monthKey = event.start.toLocaleDateString('en-US', { year: 'numeric', month: 'long' })
+// Group a list of events into a {monthKey: events[]} object, preserving the
+// order events arrive in (callers pre-sort).
+const groupByMonth = (events: any[]) => events.reduce((monthEvents: any, event: any) => {
+  const monthKey = event.start.toLocaleDateString('en-US', { year: 'numeric', month: 'long' })
+  if (!monthEvents[monthKey]) {
+    monthEvents[monthKey] = []
+  }
+  monthEvents[monthKey].push(event)
+  return monthEvents
+}, {})
 
-    // check if there are already events in this month
-    // if not, initialize an empty array for this month
-    if (!monthEvents[monthKey]) {
-      monthEvents[monthKey] = []
-    }
+// Split events into two sections so visitors don't land on years-old events.
+// Upcoming = events still ongoing or in the future, sorted soonest-first.
+// Past     = events that ended before now, sorted most-recent-first.
+const eventSections = computed(() => {
+  const now = new Date()
 
-    // add current in the same month to the array
-    monthEvents[monthKey].push(event)
+  const upcoming = props.group.items
+    .filter((e: any) => e.end >= now)
+    .sort((a: any, b: any) => a.start.getTime() - b.start.getTime())
 
-    return monthEvents
-  }, {})
+  const past = props.group.items
+    .filter((e: any) => e.end < now)
+    .sort((a: any, b: any) => b.start.getTime() - a.start.getTime())
+
+  return [
+    { title: 'Upcoming', months: groupByMonth(upcoming) },
+    { title: 'Past', months: groupByMonth(past) },
+  ]
 })
 </script>
 
@@ -151,14 +163,24 @@ const groupedEvents = computed(() => {
 
     <!-- List View -->
     <div v-if="selectedView === 'list'">
-      <div
-        v-for="(events, month) in groupedEvents"
-        :key="month"
-        class="mb-8"
+      <template
+        v-for="section in eventSections"
+        :key="section.title"
       >
-        <h3 class="text-2xl text-center mb-8 font-bold tracking-tight text-gray-900 dark:text-white">
-          {{ month }}
-        </h3>
+        <h2
+          v-if="Object.keys(section.months).length"
+          class="text-3xl text-center mb-8 font-bold tracking-tight text-gray-900 dark:text-white"
+        >
+          {{ section.title }}
+        </h2>
+        <div
+          v-for="(events, month) in section.months"
+          :key="month"
+          class="mb-8"
+        >
+          <h3 class="text-2xl text-center mb-8 font-bold tracking-tight text-gray-900 dark:text-white">
+            {{ month }}
+          </h3>
         <div class="grid xl:grid-cols-2 gap-4">
           <div
             v-for="(event) in events"
@@ -210,6 +232,7 @@ const groupedEvents = computed(() => {
           </div>
         </div>
       </div>
+      </template>
     </div>
 
     <div class="my-8">

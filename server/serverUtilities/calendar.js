@@ -33,12 +33,18 @@ const createAuthClient = (serviceAccountCredentials) => {
 
 /**
  * Retrieves events from Google Calendar.
+ *
+ * When `startDate` is omitted, no `timeMin` filter is applied and ALL events
+ * (past and future) are returned. When `limitEvents` is omitted, pagination is
+ * used to fetch every page until exhausted; otherwise the call is capped to
+ * `limitEvents` results in a single page.
+ *
  * @async
  * @param {Object} options - The options object.
  * @param {string} options.googleCalendarId - The ID of the Google Calendar should be an email.
  * @param {Object} options.serviceAccountCredentials - The service account credentials for google authentication.
- * @param {Date} options.startDate - The start date from which to retrieve events.
- * @param {number} options.limitEvents - The maximum number of events to retrieve.
+ * @param {Date|string} [options.startDate] - Optional lower bound; if omitted, past events are also returned.
+ * @param {number} [options.limitEvents] - Optional cap; if omitted, all events are fetched via pagination.
  * @returns {Promise<Array>} An array of events.
  */
 export const getEvents = async ({
@@ -47,34 +53,47 @@ export const getEvents = async ({
   startDate,
   limitEvents,
 }) => {
-  if (!startDate) {
-    startDate = new Date().toISOString()
-  }
-  else {
-    startDate = new Date(startDate).toISOString()
-  }
+  // Only set timeMin when an explicit startDate is provided. Without it, the
+  // Calendar API returns all events (past + future).
+  const timeMin = startDate ? new Date(startDate).toISOString() : undefined
 
-  if (!limitEvents) {
-    limitEvents = 100
-  }
+  // When the caller doesn't cap results, paginate through every page so the
+  // full history is returned. Google's per-page hard limit is 2500.
+  const shouldPaginate = !limitEvents
+  const pageSize = limitEvents ?? 2500
 
   // get the credentials from the service account
   const client = createAuthClient(serviceAccountCredentials)
 
   // get the calendar api using google
   const calendar = google.calendar({ version: 'v3' })
-  // get the events from the calendar
-  const resposnse = await calendar.events.list({
+
+  const baseParams = {
     auth: client,
     calendarId: googleCalendarId,
-    timeMin: startDate,
-    maxResults: limitEvents,
+    maxResults: pageSize,
     singleEvents: true,
     orderBy: 'startTime',
-  })
+    ...(timeMin ? { timeMin } : {}),
+  }
 
-  // return the events.
-  return resposnse.data.items
+  const allItems = []
+  let pageToken
+
+  do {
+    const response = await calendar.events.list({
+      ...baseParams,
+      ...(pageToken ? { pageToken } : {}),
+    })
+
+    if (response.data.items) {
+      allItems.push(...response.data.items)
+    }
+
+    pageToken = shouldPaginate ? response.data.nextPageToken : undefined
+  } while (pageToken)
+
+  return allItems
 }
 /**
  * Creates new events in the Google Calendar.
@@ -94,8 +113,8 @@ export const createAllEvents = async ({
   // get the credentials from the service account
   const client = createAuthClient(serviceAccountCredentials)
 
-  // // get the calendar api using google
-  const calendar = google.calendar({ version: 'v3' })// get the credentials from the service account
+  // get the calendar api using google
+  const calendar = google.calendar({ version: 'v3' })
 
   try {
     // Map each event to a calendar.events.insert call

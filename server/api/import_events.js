@@ -106,6 +106,9 @@ const getAllExternalEvents = async () => {
 }
 
 // gets the existing events from the calendar here.
+// Only future events are needed for dedup, since getAllExternalEvents() filters
+// imported events to future-only as well. Anchoring startDate to today keeps
+// this fast even though getEvents() now returns all events when unfiltered.
 const getExistingEvents = async ({ googleCalendarId, serviceAccountCredentials }) => {
   // try parse the events or throw an error
   try {
@@ -113,6 +116,7 @@ const getExistingEvents = async ({ googleCalendarId, serviceAccountCredentials }
     const events = await getEvents({
       googleCalendarId,
       serviceAccountCredentials,
+      startDate: new Date().toISOString(),
       limitEvents: 100,
     })
     // return the events

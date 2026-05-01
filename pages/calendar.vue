@@ -46,7 +46,7 @@ const createEventsList = (events: any) => {
 }
 
 let groupCalendar = { name: 'Calendar', items: [] }
-const { pending } = await useLazyFetch('https://devedmonton.com/api/events', {
+const { pending } = await useLazyFetch('/api/events', {
   transform: (data) => {
     groupCalendar = { name: 'Calendar', items: createEventsList((data as any).events) }
 
