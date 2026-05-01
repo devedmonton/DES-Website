@@ -47,6 +47,11 @@ const fetchICALFromURL = async (url) => {
   return response.text()
 }
 
+// Marker used to embed the source event URL into descriptions in a way that
+// is human-readable in calendar clients and trivially parseable on the website.
+// Keep this string stable — pages/calendar.vue greps for it.
+const EVENT_LINK_PREFIX = 'Event link:'
+
 // converts the ICAL data to google calendar events.
 const parseICALData = (icalContent) => {
   const icalData = ICAL.parse(icalContent) // Parse the ICAL content into jCal format
@@ -57,6 +62,20 @@ const parseICALData = (icalContent) => {
   return events.map((event) => {
     const vevent = new ICAL.Event(event)
 
+    // Some feeds (notably Lu.ma and parts of Meetup) put the canonical event
+    // URL only in the iCal URL property, not in the description body. Pull it
+    // out and append it to the description so subscribers viewing the calendar
+    // in their phone calendar app can click through, and the website can show
+    // a "Go to Event" button without scraping for it.
+    const sourceUrl = vevent.component.getFirstPropertyValue('url')
+    let description = vevent.description || ''
+    if (sourceUrl && !description.includes(sourceUrl)) {
+      const trimmed = description.trim()
+      description = trimmed
+        + (trimmed ? '\n\n' : '')
+        + `${EVENT_LINK_PREFIX} ${sourceUrl}`
+    }
+
     // put this in the format of a google calendar event.
     return {
       // The feed's UID is stable across renames/edits, so we use it as the
@@ -64,7 +83,7 @@ const parseICALData = (icalContent) => {
       // existing Google Calendar event instead of creating a duplicate.
       iCalUID: vevent.uid || undefined,
       summary: vevent.summary || 'No Title',
-      description: vevent.description || '',
+      description,
       location: vevent.location || '',
       start: {
         dateTime: vevent.startDate.toJSDate().toISOString(),

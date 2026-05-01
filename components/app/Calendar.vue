@@ -251,14 +251,27 @@ const eventSections = computed(() => [
                   </div>
                 </div>
                 <div
-                  v-if="section.title !== 'Past'"
-                  class="ml-auto"
+                  v-if="event.sourceUrl || section.title !== 'Past'"
+                  class="ml-auto flex flex-col gap-2"
                 >
                   <NuxtLink
+                    v-if="event.sourceUrl"
+                    :to="event.sourceUrl"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <AppButton
+                      class="bg-primary text-white hover:text-black w-full"
+                    >
+                      Go to Event
+                    </AppButton>
+                  </NuxtLink>
+                  <NuxtLink
+                    v-if="section.title !== 'Past'"
                     :to="event.eventUrl"
                   >
                     <AppButton
-                      class="bg-primary text-white hover:text-black"
+                      class="bg-primary text-white hover:text-black w-full"
                     >
                       Add to Calendar
                     </AppButton>
@@ -349,12 +362,28 @@ const eventSections = computed(() => [
               <li>Event ends at: {{ selectedEvent.end.formatTime(TIME_FORMAT) }}</li>
             </ul>
           </div>
-          <div v-if="!isSelectedEventPast">
+          <div
+            v-if="selectedEvent.sourceUrl || !isSelectedEventPast"
+            class="flex flex-col gap-2"
+          >
             <NuxtLink
+              v-if="selectedEvent.sourceUrl"
+              :to="selectedEvent.sourceUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <AppButton
+                class="bg-primary text-white hover:text-black w-full"
+              >
+                Go to Event
+              </AppButton>
+            </NuxtLink>
+            <NuxtLink
+              v-if="!isSelectedEventPast"
               :to="selectedEvent.eventUrl"
             >
               <AppButton
-                class="bg-primary text-white hover:text-black"
+                class="bg-primary text-white hover:text-black w-full"
               >
                 Add to Calendar
               </AppButton>
