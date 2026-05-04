@@ -47,6 +47,11 @@ const fetchICALFromURL = async (url) => {
   return response.text()
 }
 
+// Marker used to embed the source event URL into descriptions in a way that
+// is human-readable in calendar clients and trivially parseable on the website.
+// Keep this string stable — pages/calendar.vue greps for it.
+const EVENT_LINK_PREFIX = 'Event link:'
+
 // converts the ICAL data to google calendar events.
 const parseICALData = (icalContent) => {
   const icalData = ICAL.parse(icalContent) // Parse the ICAL content into jCal format
@@ -57,10 +62,28 @@ const parseICALData = (icalContent) => {
   return events.map((event) => {
     const vevent = new ICAL.Event(event)
 
+    // Some feeds (notably Lu.ma and parts of Meetup) put the canonical event
+    // URL only in the iCal URL property, not in the description body. Pull it
+    // out and append it to the description so subscribers viewing the calendar
+    // in their phone calendar app can click through, and the website can show
+    // a "Go to Event" button without scraping for it.
+    const sourceUrl = vevent.component.getFirstPropertyValue('url')
+    let description = vevent.description || ''
+    if (sourceUrl && !description.includes(sourceUrl)) {
+      const trimmed = description.trim()
+      description = trimmed
+        + (trimmed ? '\n\n' : '')
+        + `${EVENT_LINK_PREFIX} ${sourceUrl}`
+    }
+
     // put this in the format of a google calendar event.
     return {
+      // The feed's UID is stable across renames/edits, so we use it as the
+      // iCalUID when importing. This is what lets a renamed event update the
+      // existing Google Calendar event instead of creating a duplicate.
+      iCalUID: vevent.uid || undefined,
       summary: vevent.summary || 'No Title',
-      description: vevent.description || '',
+      description,
       location: vevent.location || '',
       start: {
         dateTime: vevent.startDate.toJSDate().toISOString(),
@@ -106,6 +129,9 @@ const getAllExternalEvents = async () => {
 }
 
 // gets the existing events from the calendar here.
+// Only future events are needed for dedup, since getAllExternalEvents() filters
+// imported events to future-only as well. Anchoring startDate to today keeps
+// this fast even though getEvents() now returns all events when unfiltered.
 const getExistingEvents = async ({ googleCalendarId, serviceAccountCredentials }) => {
   // try parse the events or throw an error
   try {
@@ -113,6 +139,7 @@ const getExistingEvents = async ({ googleCalendarId, serviceAccountCredentials }
     const events = await getEvents({
       googleCalendarId,
       serviceAccountCredentials,
+      startDate: new Date().toISOString(),
       limitEvents: 100,
     })
     // return the events
@@ -127,24 +154,48 @@ const getExistingEvents = async ({ googleCalendarId, serviceAccountCredentials }
 }
 
 /*
-Compares existing gmail events and imported events based on date and title.
-This only returns new events in the calendar.
+Returns the imported events that need to be sent to Google Calendar — either
+because they're brand new, or because they exist but have been renamed in the
+source feed.
+
+Matching strategy (in order):
+  1. iCalUID — the stable feed-side identifier. Survives renames and time
+     changes, so this is the canonical identity check.
+  2. (title + date) — fallback for legacy events that were imported before we
+     started persisting iCalUID. Without this, the first run after this fix
+     would duplicate every existing event.
+
+When iCalUID matches but the title differs, the event is treated as a rename:
+it's passed through so events.import can update the existing record server-side
+rather than skipping it (which would leave the old title in place).
 */
+const titleDateKey = (event) => {
+  const dateOnly = new Date(event.start.dateTime).toISOString().split('T')[0]
+  return `${event.summary.toLowerCase().trim()}|${dateOnly}`
+}
+
 const compareAndGetNewEvents = (existingGmailEvents, importedEvents) => {
-  // check if the importedEvents are in the newEvents
-  const newEvents = importedEvents.filter((importedEvent) => {
-    // check if the event is already in there
-    // check with the title and the start date (I'm assuming there won't be two the same)
-    const importedEventDateOnly = new Date(importedEvent.start.dateTime).toISOString().split('T')[0]
-    return !existingGmailEvents.some((existingEvent) => {
-      const existingDateOnly = new Date(existingEvent.start.dateTime).toISOString().split('T')[0]
-      return (
-        importedEvent.summary.toLowerCase().trim() === existingEvent.summary.toLowerCase().trim() // summary is title for gmail
-        && importedEventDateOnly === existingDateOnly
-      )
-    })
+  // Pre-build lookup indexes so this is O(n+m) instead of O(n*m).
+  const existingByUid = new Map()
+  const existingByTitleDate = new Map()
+  for (const existing of existingGmailEvents) {
+    if (existing.iCalUID) existingByUid.set(existing.iCalUID, existing)
+    existingByTitleDate.set(titleDateKey(existing), existing)
+  }
+
+  return importedEvents.filter((imported) => {
+    // 1. Stable UID match — handles renames going forward.
+    if (imported.iCalUID && existingByUid.has(imported.iCalUID)) {
+      const existing = existingByUid.get(imported.iCalUID)
+      // Same UID + same title -> nothing changed, skip the API call.
+      // Same UID + different title -> source rename; pass through so
+      // events.import can update the existing record.
+      return existing.summary.toLowerCase().trim() !== imported.summary.toLowerCase().trim()
+    }
+    // 2. Legacy fallback — events imported before we tracked iCalUID.
+    if (existingByTitleDate.has(titleDateKey(imported))) return false
+    return true
   })
-  return newEvents
 }
 
 export const importAndProcessExternalEvents = async ({ googleCalendarId, serviceAccountCredentials }) => {

@@ -49,24 +49,78 @@ const onEventClick = (event: any, e: any) => {
   e.stopPropagation()
 }
 
-// used to display events grouped by month in the list view
-const groupedEvents = computed(() => {
-  return props.group.items.reduce((monthEvents: any, event: any) => {
-    // creating a key to group the events by month in format "Month Year"
-    const monthKey = event.start.toLocaleDateString('en-US', { year: 'numeric', month: 'long' })
-
-    // check if there are already events in this month
-    // if not, initialize an empty array for this month
-    if (!monthEvents[monthKey]) {
-      monthEvents[monthKey] = []
-    }
-
-    // add current in the same month to the array
-    monthEvents[monthKey].push(event)
-
-    return monthEvents
-  }, {})
+// True when the currently-selected event has already ended; used to hide the
+// "Add to Calendar" button in the modal for past events.
+const isSelectedEventPast = computed(() => {
+  const end = selectedEvent.value?.end
+  return end instanceof Date && end < new Date()
 })
+
+// Group a list of events into a {monthKey: events[]} object, preserving the
+// order events arrive in (callers pre-sort).
+const groupByMonth = (events: any[]) => events.reduce((monthEvents: any, event: any) => {
+  const monthKey = event.start.toLocaleDateString('en-US', { year: 'numeric', month: 'long' })
+  if (!monthEvents[monthKey]) {
+    monthEvents[monthKey] = []
+  }
+  monthEvents[monthKey].push(event)
+  return monthEvents
+}, {})
+
+// Split events into Upcoming (chronological) and Past (reverse chronological).
+const upcomingEvents = computed<any[]>(() => {
+  const now = new Date()
+  return props.group.items
+    .filter((e: any) => e.end >= now)
+    .sort((a: any, b: any) => a.start.getTime() - b.start.getTime())
+})
+
+const pastEvents = computed<any[]>(() => {
+  const now = new Date()
+  return props.group.items
+    .filter((e: any) => e.end < now)
+    .sort((a: any, b: any) => b.start.getTime() - a.start.getTime())
+})
+
+// Pagination — both sections paginate independently with their own page state.
+const PAGE_SIZE = 12
+
+const usePagination = (source: ComputedRef<any[]>) => {
+  const page = ref(1)
+  const totalPages = computed(() => Math.max(1, Math.ceil(source.value.length / PAGE_SIZE)))
+  // Clamp the current page if the underlying data shrinks (e.g. on refetch).
+  watch(totalPages, (total) => {
+    if (page.value > total) page.value = total
+  })
+  const items = computed(() => {
+    const start = (page.value - 1) * PAGE_SIZE
+    return source.value.slice(start, start + PAGE_SIZE)
+  })
+  const setPage = (next: number) => {
+    page.value = Math.max(1, Math.min(totalPages.value, next))
+  }
+  return { page, totalPages, items, setPage }
+}
+
+const upcomingPagination = usePagination(upcomingEvents)
+const pastPagination = usePagination(pastEvents)
+
+const eventSections = computed(() => [
+  {
+    title: 'Upcoming',
+    months: groupByMonth(upcomingPagination.items.value),
+    page: upcomingPagination.page.value,
+    totalPages: upcomingPagination.totalPages.value,
+    setPage: upcomingPagination.setPage,
+  },
+  {
+    title: 'Past',
+    months: groupByMonth(pastPagination.items.value),
+    page: pastPagination.page.value,
+    totalPages: pastPagination.totalPages.value,
+    setPage: pastPagination.setPage,
+  },
+])
 </script>
 
 <template>
@@ -151,65 +205,118 @@ const groupedEvents = computed(() => {
 
     <!-- List View -->
     <div v-if="selectedView === 'list'">
-      <div
-        v-for="(events, month) in groupedEvents"
-        :key="month"
-        class="mb-8"
+      <template
+        v-for="section in eventSections"
+        :key="section.title"
       >
-        <h3 class="text-2xl text-center mb-8 font-bold tracking-tight text-gray-900 dark:text-white">
-          {{ month }}
-        </h3>
-        <div class="grid xl:grid-cols-2 gap-4">
-          <div
-            v-for="(event) in events"
-            :key="event.title"
-            class="border-2 border-gray-400/40 rounded mb-4 break-word"
-          >
-            <div class="p-4 border-b rounded-t border-gray-400/40">
-              <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white mb-2">
-                {{ event.title }}
-              </h3>
+        <h2
+          v-if="Object.keys(section.months).length"
+          class="text-3xl text-center mb-8 font-bold tracking-tight text-gray-900 dark:text-white"
+        >
+          {{ section.title }}
+        </h2>
+        <div
+          v-for="(events, month) in section.months"
+          :key="month"
+          class="mb-8"
+        >
+          <h3 class="text-2xl text-center mb-8 font-bold tracking-tight text-gray-900 dark:text-white">
+            {{ month }}
+          </h3>
+          <div class="grid xl:grid-cols-2 gap-4">
+            <div
+              v-for="(event) in events"
+              :key="event.title"
+              class="border-2 border-gray-400/40 rounded mb-4 break-word"
+              :class="{ 'opacity-60': section.title === 'Past' }"
+            >
+              <div class="p-4 border-b rounded-t border-gray-400/40">
+                <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white mb-2">
+                  {{ event.title }}
+                </h3>
 
-              <div class="p-4 sm:flex justify-between items-center border-b rounded-t border-gray-400/40">
-                <div class="flex flex-col gap-1">
-                  <div class="flex items-center gap-2 sm:gap-4">
-                    <Icon name="formkit:date" />
-                    <p class="text-sm text-gray-500">
-                      {{ DATE_FORMATTER.format(event.start) }}
-                    </p>
+                <div class="p-4 sm:flex justify-between items-center border-b rounded-t border-gray-400/40">
+                  <div class="flex flex-col gap-1">
+                    <div class="flex items-center gap-2 sm:gap-4">
+                      <Icon name="formkit:date" />
+                      <p class="text-sm text-gray-500">
+                        {{ DATE_FORMATTER.format(event.start) }}
+                      </p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <Icon name="mingcute:time-line" />
+                      <p class="text-sm text-gray-500">
+                        {{ event.start.formatTime(TIME_FORMAT) }} - {{ event.end.formatTime(TIME_FORMAT) }}
+                      </p>
+                    </div>
                   </div>
-                  <div class="flex items-center gap-2">
-                    <Icon name="mingcute:time-line" />
-                    <p class="text-sm text-gray-500">
-                      {{ event.start.formatTime(TIME_FORMAT) }} - {{ event.end.formatTime(TIME_FORMAT) }}
-                    </p>
-                  </div>
-                </div>
-                <div class="ml-auto">
-                  <NuxtLink
-                    :to="event.eventUrl"
+                  <div
+                    v-if="event.sourceUrl || section.title !== 'Past'"
+                    class="ml-auto flex flex-col gap-2"
                   >
-                    <AppButton
-                      class="bg-primary text-white hover:text-black"
+                    <NuxtLink
+                      v-if="event.sourceUrl"
+                      :to="event.sourceUrl"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      Add to Calendar
-                    </AppButton>
-                  </NuxtLink>
+                      <AppButton
+                        class="bg-primary text-white hover:text-black w-full"
+                      >
+                        Go to Event
+                      </AppButton>
+                    </NuxtLink>
+                    <NuxtLink
+                      v-if="section.title !== 'Past'"
+                      :to="event.eventUrl"
+                    >
+                      <AppButton
+                        class="bg-primary text-white hover:text-black w-full"
+                      >
+                        Add to Calendar
+                      </AppButton>
+                    </NuxtLink>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div
-              class="p-4 event-description"
-              :class="{ 'max-w-md': isMobile }"
-            >
-              <p
-                class="content-full"
-                v-html="event.description"
-              />
+              <div
+                class="p-4 event-description"
+                :class="{ 'max-w-md': isMobile }"
+              >
+                <p
+                  class="content-full"
+                  v-html="event.description"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+        <nav
+          v-if="section.totalPages > 1"
+          :aria-label="`${section.title} events pagination`"
+          class="flex items-center justify-center gap-4 mb-8"
+        >
+          <button
+            type="button"
+            class="px-4 py-2 rounded-lg bg-gray-400/20 hover:bg-gray-400/30 disabled:opacity-40 disabled:cursor-not-allowed font-semibold"
+            :disabled="section.page === 1"
+            @click="section.setPage(section.page - 1)"
+          >
+            Previous
+          </button>
+          <span class="text-sm text-gray-600 dark:text-gray-300 tabular-nums">
+            Page {{ section.page }} of {{ section.totalPages }}
+          </span>
+          <button
+            type="button"
+            class="px-4 py-2 rounded-lg bg-gray-400/20 hover:bg-gray-400/30 disabled:opacity-40 disabled:cursor-not-allowed font-semibold"
+            :disabled="section.page === section.totalPages"
+            @click="section.setPage(section.page + 1)"
+          >
+            Next
+          </button>
+        </nav>
+      </template>
     </div>
 
     <div class="my-8">
@@ -255,12 +362,28 @@ const groupedEvents = computed(() => {
               <li>Event ends at: {{ selectedEvent.end.formatTime(TIME_FORMAT) }}</li>
             </ul>
           </div>
-          <div>
+          <div
+            v-if="selectedEvent.sourceUrl || !isSelectedEventPast"
+            class="flex flex-col gap-2"
+          >
             <NuxtLink
+              v-if="selectedEvent.sourceUrl"
+              :to="selectedEvent.sourceUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <AppButton
+                class="bg-primary text-white hover:text-black w-full"
+              >
+                Go to Event
+              </AppButton>
+            </NuxtLink>
+            <NuxtLink
+              v-if="!isSelectedEventPast"
               :to="selectedEvent.eventUrl"
             >
               <AppButton
-                class="bg-primary text-white hover:text-black"
+                class="bg-primary text-white hover:text-black w-full"
               >
                 Add to Calendar
               </AppButton>
@@ -364,6 +487,24 @@ const groupedEvents = computed(() => {
 
 .dark .vuecal--month-view .vuecal__cell--out-of-scope .vuecal__event {
   color: rgb(55, 55, 55);
+}
+
+/* Past events: faded so visitors can see at a glance which events have already
+   happened. Hover restores full opacity so the title stays readable. */
+.vuecal__event.past {
+  opacity: 0.5;
+}
+
+.vuecal__event.past:hover {
+  opacity: 1;
+}
+
+.vuecal--month-view .vuecal__event.past {
+  color: #9ca3af;
+}
+
+.dark .vuecal--month-view .vuecal__event.past {
+  color: #6b7280;
 }
 
 .vuecal--month-view .vuecal__event:hover {
