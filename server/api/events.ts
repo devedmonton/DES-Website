@@ -28,15 +28,15 @@ export default defineEventHandler(async (event) => {
       statusMessage: 'Bad Request',
       message: 'No Service Account Credentials Provided',
       error: 'Service Account Credentials are not provided',
-    })
+    } as any)
   }
 
   try {
     const events = await getEvents({
       googleCalendarId,
       serviceAccountCredentials,
-      startDate,
-      limitEvents,
+      startDate: startDate as any,
+      limitEvents: limitEvents as any,
     })
 
     // working version.
