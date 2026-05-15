@@ -1,5 +1,6 @@
 import fetch from 'node-fetch'
 import ICAL from 'ical.js'
+import type { calendar_v3 } from 'googleapis'
 
 import { ImportCalendarException, getEvents, createAllEvents } from '../serverUtilities/calendar'
 
@@ -8,20 +9,7 @@ type ServiceAccountCredentials = {
   private_key: string
 }
 
-type CalendarEvent = {
-  iCalUID?: string
-  summary: string
-  description: string
-  location: string
-  start: {
-    dateTime: string
-    timeZone?: string
-  }
-  end: {
-    dateTime: string
-    timeZone?: string
-  }
-}
+type CalendarEvent = calendar_v3.Schema$Event
 
 type CalendarOptions = {
   googleCalendarId: string
@@ -76,6 +64,10 @@ const fetchICALFromURL = async (url: string) => {
 // is human-readable in calendar clients and trivially parseable on the website.
 // Keep this string stable — pages/calendar.vue greps for it.
 const EVENT_LINK_PREFIX = 'Event link:'
+
+const eventStartDateTime = (event: CalendarEvent) => event.start?.dateTime || event.start?.date || ''
+
+const eventSummary = (event: CalendarEvent) => event.summary || ''
 
 // converts the ICAL data to google calendar events.
 const parseICALData = (icalContent: string): CalendarEvent[] => {
@@ -137,7 +129,7 @@ const getAllExternalEvents = async () => {
       // only get future events, because the gmail api only gets future events
       const futureExternalEvents = externalEvents.filter((externalEvent) => {
         const today = new Date()
-        const eventDate = new Date(externalEvent.start.dateTime)
+        const eventDate = new Date(eventStartDateTime(externalEvent))
         return eventDate > today
       })
       // add all of the events
@@ -195,14 +187,15 @@ it's passed through so events.import can update the existing record server-side
 rather than skipping it (which would leave the old title in place).
 */
 const titleDateKey = (event: CalendarEvent) => {
-  const dateOnly = new Date(event.start.dateTime).toISOString().split('T')[0]
-  return `${event.summary.toLowerCase().trim()}|${dateOnly}`
+  const startDateTime = eventStartDateTime(event)
+  const dateOnly = startDateTime ? new Date(startDateTime).toISOString().split('T')[0] : ''
+  return `${eventSummary(event).toLowerCase().trim()}|${dateOnly}`
 }
 
 const compareAndGetNewEvents = (existingGmailEvents: CalendarEvent[], importedEvents: CalendarEvent[]) => {
   // Pre-build lookup indexes so this is O(n+m) instead of O(n*m).
-  const existingByUid = new Map()
-  const existingByTitleDate = new Map()
+  const existingByUid = new Map<string, CalendarEvent>()
+  const existingByTitleDate = new Map<string, CalendarEvent>()
   for (const existing of existingGmailEvents) {
     if (existing.iCalUID) existingByUid.set(existing.iCalUID, existing)
     existingByTitleDate.set(titleDateKey(existing), existing)
@@ -215,7 +208,9 @@ const compareAndGetNewEvents = (existingGmailEvents: CalendarEvent[], importedEv
       // Same UID + same title -> nothing changed, skip the API call.
       // Same UID + different title -> source rename; pass through so
       // events.import can update the existing record.
-      return existing.summary.toLowerCase().trim() !== imported.summary.toLowerCase().trim()
+      return existing
+        ? eventSummary(existing).toLowerCase().trim() !== eventSummary(imported).toLowerCase().trim()
+        : true
     }
     // 2. Legacy fallback — events imported before we tracked iCalUID.
     if (existingByTitleDate.has(titleDateKey(imported))) return false
@@ -280,16 +275,20 @@ export default defineEventHandler(async (event) => {
         statusCode: 400,
         statusMessage: 'Bad Request',
         message: error.message,
-        error: error.error,
-      } as any)
+        data: {
+          error: error.error,
+        },
+      })
     }
     else {
       throw createError({
         statusCode: 500,
         statusMessage: 'Internal Server Error',
         message: 'Error while importing events',
-        error: error instanceof Error ? error.message : String(error),
-      } as any)
+        data: {
+          error: error instanceof Error ? error.message : String(error),
+        },
+      })
     }
   }
   return {

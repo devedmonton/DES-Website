@@ -13,7 +13,9 @@ Reference for folks who maybe curious.
 export default defineEventHandler(async (event) => {
   // get the query params
 
-  const { startDate, limitEvents } = getQuery(event)
+  const query = getQuery(event)
+  const startDate = typeof query.startDate === 'string' ? query.startDate : undefined
+  const limitEvents = typeof query.limitEvents === 'string' ? Number(query.limitEvents) : undefined
 
   // get the credentials from the service account
   const { googleCalendarId, serviceAccountCredentialsJSON } = useRuntimeConfig(event).googleCalendarAPI
@@ -27,16 +29,18 @@ export default defineEventHandler(async (event) => {
       statusCode: 400,
       statusMessage: 'Bad Request',
       message: 'No Service Account Credentials Provided',
-      error: 'Service Account Credentials are not provided',
-    } as any)
+      data: {
+        error: 'Service Account Credentials are not provided',
+      },
+    })
   }
 
   try {
     const events = await getEvents({
       googleCalendarId,
       serviceAccountCredentials,
-      startDate: startDate as any,
-      limitEvents: limitEvents as any,
+      startDate,
+      limitEvents,
     })
 
     // working version.
