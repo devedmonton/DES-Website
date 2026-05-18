@@ -1,7 +1,20 @@
 import fetch from 'node-fetch'
 import ICAL from 'ical.js'
+import type { calendar_v3 } from 'googleapis'
 
 import { ImportCalendarException, getEvents, createAllEvents } from '../serverUtilities/calendar'
+
+type ServiceAccountCredentials = {
+  client_email: string
+  private_key: string
+}
+
+type CalendarEvent = calendar_v3.Schema$Event
+
+type CalendarOptions = {
+  googleCalendarId: string
+  serviceAccountCredentials: ServiceAccountCredentials
+}
 
 /*
 A short explanation about this gargantuan file/function.
@@ -35,7 +48,7 @@ const ICAL_URLS = [
 ]
 
 // gets the ICAL from the urls above.
-const fetchICALFromURL = async (url) => {
+const fetchICALFromURL = async (url: string) => {
   const response = await fetch(url, {
     headers: {
       'User-Agent': 'Mozilla/5.0 (Node.js Fetch)',
@@ -52,8 +65,12 @@ const fetchICALFromURL = async (url) => {
 // Keep this string stable — pages/calendar.vue greps for it.
 const EVENT_LINK_PREFIX = 'Event link:'
 
+const eventStartDateTime = (event: CalendarEvent) => event.start?.dateTime || event.start?.date || ''
+
+const eventSummary = (event: CalendarEvent) => event.summary || ''
+
 // converts the ICAL data to google calendar events.
-const parseICALData = (icalContent) => {
+const parseICALData = (icalContent: string): CalendarEvent[] => {
   const icalData = ICAL.parse(icalContent) // Parse the ICAL content into jCal format
   const component = new ICAL.Component(icalData) // Create an ICAL.Component
   const events = component.getAllSubcomponents('vevent') // Get all VEVENT components
@@ -69,7 +86,7 @@ const parseICALData = (icalContent) => {
     // a "Go to Event" button without scraping for it.
     const sourceUrl = vevent.component.getFirstPropertyValue('url')
     let description = vevent.description || ''
-    if (sourceUrl && !description.includes(sourceUrl)) {
+    if (typeof sourceUrl === 'string' && !description.includes(sourceUrl)) {
       const trimmed = description.trim()
       description = trimmed
         + (trimmed ? '\n\n' : '')
@@ -101,18 +118,18 @@ const parseICALData = (icalContent) => {
 // into one large list.
 const getAllExternalEvents = async () => {
   console.log('parsing ics')
-  let allExternalEvents = []
+  let allExternalEvents: CalendarEvent[] = []
 
-  for (let url of ICAL_URLS) {
+  for (const url of ICAL_URLS) {
     console.log(`importing from ${url}...`)
     try {
-      let icsText = await fetchICALFromURL(url)
-      let externalEvents = parseICALData(icsText)
+      const icsText = await fetchICALFromURL(url)
+      const externalEvents = parseICALData(icsText)
 
       // only get future events, because the gmail api only gets future events
-      let futureExternalEvents = externalEvents.filter((externalEvent) => {
-        let today = new Date()
-        let eventDate = new Date(externalEvent.start.dateTime)
+      const futureExternalEvents = externalEvents.filter((externalEvent) => {
+        const today = new Date()
+        const eventDate = new Date(eventStartDateTime(externalEvent))
         return eventDate > today
       })
       // add all of the events
@@ -132,7 +149,7 @@ const getAllExternalEvents = async () => {
 // Only future events are needed for dedup, since getAllExternalEvents() filters
 // imported events to future-only as well. Anchoring startDate to today keeps
 // this fast even though getEvents() now returns all events when unfiltered.
-const getExistingEvents = async ({ googleCalendarId, serviceAccountCredentials }) => {
+const getExistingEvents = async ({ googleCalendarId, serviceAccountCredentials }: CalendarOptions) => {
   // try parse the events or throw an error
   try {
     console.log('Importing internal events from Devedmonton gmail calendar')
@@ -169,15 +186,16 @@ When iCalUID matches but the title differs, the event is treated as a rename:
 it's passed through so events.import can update the existing record server-side
 rather than skipping it (which would leave the old title in place).
 */
-const titleDateKey = (event) => {
-  const dateOnly = new Date(event.start.dateTime).toISOString().split('T')[0]
-  return `${event.summary.toLowerCase().trim()}|${dateOnly}`
+const titleDateKey = (event: CalendarEvent) => {
+  const startDateTime = eventStartDateTime(event)
+  const dateOnly = startDateTime ? new Date(startDateTime).toISOString().split('T')[0] : ''
+  return `${eventSummary(event).toLowerCase().trim()}|${dateOnly}`
 }
 
-const compareAndGetNewEvents = (existingGmailEvents, importedEvents) => {
+const compareAndGetNewEvents = (existingGmailEvents: CalendarEvent[], importedEvents: CalendarEvent[]) => {
   // Pre-build lookup indexes so this is O(n+m) instead of O(n*m).
-  const existingByUid = new Map()
-  const existingByTitleDate = new Map()
+  const existingByUid = new Map<string, CalendarEvent>()
+  const existingByTitleDate = new Map<string, CalendarEvent>()
   for (const existing of existingGmailEvents) {
     if (existing.iCalUID) existingByUid.set(existing.iCalUID, existing)
     existingByTitleDate.set(titleDateKey(existing), existing)
@@ -190,7 +208,9 @@ const compareAndGetNewEvents = (existingGmailEvents, importedEvents) => {
       // Same UID + same title -> nothing changed, skip the API call.
       // Same UID + different title -> source rename; pass through so
       // events.import can update the existing record.
-      return existing.summary.toLowerCase().trim() !== imported.summary.toLowerCase().trim()
+      return existing
+        ? eventSummary(existing).toLowerCase().trim() !== eventSummary(imported).toLowerCase().trim()
+        : true
     }
     // 2. Legacy fallback — events imported before we tracked iCalUID.
     if (existingByTitleDate.has(titleDateKey(imported))) return false
@@ -198,16 +218,16 @@ const compareAndGetNewEvents = (existingGmailEvents, importedEvents) => {
   })
 }
 
-export const importAndProcessExternalEvents = async ({ googleCalendarId, serviceAccountCredentials }) => {
+export const importAndProcessExternalEvents = async ({ googleCalendarId, serviceAccountCredentials }: CalendarOptions) => {
   // Step: 1 Import the events from meetup
-  let importedEvents = await getAllExternalEvents()
+  const importedEvents = await getAllExternalEvents()
   // Step: 2: Get all of the Events in the GMAIL Calendar
   const existingEvents = await getExistingEvents({
     googleCalendarId,
     serviceAccountCredentials,
   })
   // Step: 3: Identify New Events
-  let newEvents = compareAndGetNewEvents(
+  const newEvents = compareAndGetNewEvents(
     existingEvents,
     importedEvents,
   )
@@ -255,7 +275,9 @@ export default defineEventHandler(async (event) => {
         statusCode: 400,
         statusMessage: 'Bad Request',
         message: error.message,
-        error: error.error,
+        data: {
+          error: error.error,
+        },
       })
     }
     else {
@@ -263,7 +285,9 @@ export default defineEventHandler(async (event) => {
         statusCode: 500,
         statusMessage: 'Internal Server Error',
         message: 'Error while importing events',
-        error: error.message,
+        data: {
+          error: error instanceof Error ? error.message : String(error),
+        },
       })
     }
   }
