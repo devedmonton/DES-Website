@@ -157,7 +157,6 @@ const getExistingEvents = async ({ googleCalendarId, serviceAccountCredentials }
       googleCalendarId,
       serviceAccountCredentials,
       startDate: new Date().toISOString(),
-      limitEvents: 100,
     })
     // return the events
     return events
