@@ -40,24 +40,59 @@ function renderMarkdown(description: string) {
 }
 
 // Pulls the canonical event URL out of the description. The cron import (see
-// server/api/import_events.js) appends "Event link: <url>" when the source
+// server/api/import_events.ts) appends "Event link: <url>" when the source
 // VEVENT has a URL property. For legacy events that pre-date that marker, fall
-// back to the first meetup.com or lu.ma URL we can find in the body.
+// back to a meetup.com / lu.ma / elug.ca URL we can find in the body.
+//
+// Preference order: an event-shaped URL (one that points at a specific event,
+// not a group landing page) always wins. Some feeds put the group URL into
+// the iCal URL property; without this preference we would wire "Go to Event"
+// at a group page, which is misleading.
 //
 // The character class deliberately stops at HTML/quote/markdown-delimiter
-// chars. Real Meetup and Lu.ma URLs use only [a-zA-Z0-9_\-./?=&%~+#:], so it's
-// safe to bail out at brackets, parens, and asterisks — those are virtually
-// always prose/markdown wrapping the URL (e.g. `(<url>)`, `**<url>**`,
-// `[label](<url>)`, `<a href="<url>">`).
+// chars. Real Meetup and Lu.ma URLs use only [a-zA-Z0-9_\-./?=&%~+#:], so
+// it is safe to bail out at brackets, parens, and asterisks. Those are
+// virtually always prose/markdown wrapping the URL (e.g. `(<url>)`,
+// `**<url>**`, `[label](<url>)`, `<a href="<url>">`).
 function extractSourceUrl(description: string): string | undefined {
   if (!description) return undefined
   const urlChars = `[^\\s<>"'()\\[\\]{}*]+`
+
+  // Pass 1: explicit "Event link:" marker, validated as an event URL. The
+  // importer sets this from the iCal URL property; rejecting non-event-shaped
+  // values defends against feeds that put a group URL there by mistake.
   const marked = description.match(new RegExp(`Event link:\\s*(https?://${urlChars})`, 'i'))
-  if (marked) return cleanUrl(marked[1])
-  const fallback = description.match(
-    new RegExp(`https?://(?:www\\.|api\\.|api2\\.)?(?:meetup\\.com|lu\\.ma|luma\\.com)/${urlChars}`, 'i'),
+  if (marked && looksLikeEventUrl(marked[1])) return cleanUrl(marked[1])
+
+  // Pass 2: scan the body for any event-shaped URL on a known platform.
+  // Catches legacy events that pre-date the "Event link:" marker.
+  const eventShaped = description.match(
+    new RegExp(
+      `https?://(?:www\\.|api\\.|api2\\.)?(?:meetup\\.com/[^/]+/events/\\d+|lu\\.ma/[a-z0-9-]+|luma\\.com/event/${urlChars}|elug\\.ca/(?:events?|meetings?)/${urlChars})/?`,
+      'i',
+    ),
   )
-  return fallback ? cleanUrl(fallback[0]) : undefined
+  if (eventShaped) return cleanUrl(eventShaped[0])
+
+  // Pass 3: honor the "Event link:" marker even if it does not look
+  // event-shaped. The importer set it for a reason, so this is better than
+  // returning nothing. If the only URL we have is a group page, the next
+  // pass will surface that as a last resort.
+  if (marked) return cleanUrl(marked[1])
+
+  return undefined
+}
+
+// True when the URL points at a specific event rather than a group landing
+// page. The meetup.com check requires a /events/<numeric-id> segment; Lu.ma
+// event URLs sit at the domain root (lu.ma/<slug>); luma.com uses /event/;
+// elug.ca uses /events/ or /meetings/.
+function looksLikeEventUrl(url: string): boolean {
+  if (/meetup\.com\/[^/]+\/events\/\d+/i.test(url)) return true
+  if (/(?:www\.)?lu\.ma\/[a-z0-9-]+/i.test(url)) return true
+  if (/luma\.com\/event\//i.test(url)) return true
+  if (/elug\.ca\/(?:events?|meetings?)\//i.test(url)) return true
+  return false
 }
 
 // Strip trailing punctuation that's almost never part of a URL (e.g. a trailing
