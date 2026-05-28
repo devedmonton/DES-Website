@@ -47,11 +47,24 @@ const ICAL_URLS = [
   'https://www.meetup.com/edmonton-wordpress-meetup-group/events/ical/', // wordpress meetup
 ]
 
+// AI Tinkerers Edmonton doesn't publish an iCal feed (their /events.ics returns
+// 500, listing pages don't paginate, no <link rel="alternate"> is advertised),
+// but every event detail page embeds a JSON-LD Event schema with ISO 8601
+// dates, location, and a stable @id. We discover event URLs via their sitemap
+// and parse the structured data out of each page.
+const AITINKERERS_SITEMAPS = [
+  'https://edmonton.aitinkerers.org/sitemaps/1.xml',
+  // 2.xml-5.xml currently contain only technology/topic pages, not events.
+  // Expand this list if event URLs start landing there.
+]
+const AITINKERERS_EVENT_URL_PREFIX = 'https://edmonton.aitinkerers.org/p/'
+const USER_AGENT = 'DevEdmonton Calendar Import'
+
 // gets the ICAL from the urls above.
 const fetchICALFromURL = async (url: string) => {
   const response = await fetch(url, {
     headers: {
-      'User-Agent': 'Mozilla/5.0 (Node.js Fetch)',
+      'User-Agent': USER_AGENT,
     },
   })
   if (!response.ok) {
@@ -114,41 +127,199 @@ const parseICALData = (icalContent: string): CalendarEvent[] => {
   })
 }
 
-// gets all of the external events from all ICAL sources and combines
-// into one large list.
+// --- AI Tinkerers scrape -----------------------------------------------------
+// No iCal feed; we discover events via the sitemap and read JSON-LD Event
+// blocks off each event detail page. Output shape matches parseICALData so the
+// rest of the pipeline (dedup and events.import) works unchanged.
+
+type JsonLdNode = {
+  '@type'?: string | string[]
+  '@id'?: string
+  '@graph'?: JsonLdNode[]
+  'name'?: string
+  'description'?: string
+  'startDate'?: string
+  'endDate'?: string
+  'location'?: string | {
+    name?: string
+    address?: { streetAddress?: string }
+  }
+}
+
+// Fetch every sitemap and collect event-detail URLs (/p/<slug>).
+const fetchAitinkerersEventUrls = async (): Promise<string[]> => {
+  const urls = new Set<string>()
+  for (const sitemap of AITINKERERS_SITEMAPS) {
+    const response = await fetch(sitemap, { headers: { 'User-Agent': USER_AGENT } })
+    if (!response.ok) {
+      throw new Error(`Failed to fetch sitemap ${sitemap}: ${response.statusText}`)
+    }
+    const xml = await response.text()
+    const locMatches = xml.match(/<loc>([^<]+)<\/loc>/g) || []
+    for (const match of locMatches) {
+      const url = match.replace(/<\/?loc>/g, '')
+      if (url.startsWith(AITINKERERS_EVENT_URL_PREFIX)) {
+        urls.add(url)
+      }
+    }
+  }
+  return [...urls]
+}
+
+const isEventNode = (node: JsonLdNode): boolean => {
+  const t = node['@type']
+  return t === 'Event' || (Array.isArray(t) && t.includes('Event'))
+}
+
+// Walk a parsed JSON-LD blob (may be a single node, an array, or an @graph)
+// and return the first Event node found.
+const findEventNode = (data: unknown): JsonLdNode | null => {
+  if (!data || typeof data !== 'object') return null
+  if (Array.isArray(data)) {
+    for (const item of data) {
+      const found = findEventNode(item)
+      if (found) return found
+    }
+    return null
+  }
+  const node = data as JsonLdNode
+  if (isEventNode(node)) return node
+  if (node['@graph']) return findEventNode(node['@graph'])
+  return null
+}
+
+const extractJsonLdEvent = (html: string): JsonLdNode | null => {
+  const blocks = html.match(/<script[^>]*application\/ld\+json[^>]*>([\s\S]*?)<\/script>/gi) || []
+  for (const raw of blocks) {
+    const json = raw.replace(/<script[^>]*>/, '').replace(/<\/script>/, '').trim()
+    let data: unknown
+    try {
+      data = JSON.parse(json)
+    }
+    catch {
+      continue
+    }
+    const event = findEventNode(data)
+    if (event) return event
+  }
+  return null
+}
+
+const fetchAitinkerersEvent = async (url: string): Promise<CalendarEvent | null> => {
+  const response = await fetch(url, { headers: { 'User-Agent': USER_AGENT } })
+  if (!response.ok) return null
+  const html = await response.text()
+  const event = extractJsonLdEvent(html)
+  if (!event || !event.startDate || !event.endDate || !event.name) return null
+
+  const location = typeof event.location === 'string'
+    ? event.location
+    : event.location?.name || event.location?.address?.streetAddress || ''
+
+  // Prefer the JSON-LD @id as the source URL — it's the canonical identifier
+  // for the event and what we want the website's "Go to Event" button to point
+  // at. Falls back to the page URL if no @id was provided.
+  const sourceUrl = event['@id'] || url
+
+  const description = (event.description || '').trim()
+  const descriptionWithLink = description
+    + (description ? '\n\n' : '')
+    + `${EVENT_LINK_PREFIX} ${sourceUrl}`
+
+  return {
+    // @id is stable across renames — same role as iCal UID for our dedup.
+    iCalUID: sourceUrl,
+    summary: event.name,
+    description: descriptionWithLink,
+    location,
+    start: { dateTime: event.startDate, timeZone: 'America/Edmonton' },
+    end: { dateTime: event.endDate, timeZone: 'America/Edmonton' },
+  }
+}
+
+// Per-event fetch failures are tolerated (one broken page doesn't break the
+// whole import); a sitemap fetch failure throws and is caught by the caller.
+const getAllAitinkerersEvents = async (): Promise<CalendarEvent[]> => {
+  const urls = await fetchAitinkerersEventUrls()
+  const results = await Promise.allSettled(urls.map(fetchAitinkerersEvent))
+  const events: CalendarEvent[] = []
+  for (const result of results) {
+    if (result.status === 'fulfilled' && result.value) {
+      events.push(result.value)
+    }
+    else if (result.status === 'rejected') {
+      console.log('  AI Tinkerers event fetch failed:', result.reason)
+    }
+  }
+  return events
+}
+
+// --- External event sources --------------------------------------------------
+// Each source produces CalendarEvent[]. By default the future-only filter is
+// applied (iCal feeds from Meetup/Lu.ma only surface upcoming events anyway,
+// so this is a no-op for them in practice and a safety net otherwise). Sources
+// whose upstream intentionally publishes historical events can opt in by
+// setting `includePast: true`.
+
+type EventSource = {
+  name: string
+  fetch: () => Promise<CalendarEvent[]>
+  includePast?: boolean
+}
+
+const SOURCES: EventSource[] = [
+  ...ICAL_URLS.map((url): EventSource => ({
+    name: url,
+    fetch: async () => parseICALData(await fetchICALFromURL(url)),
+  })),
+  {
+    name: 'AI Tinkerers Edmonton',
+    fetch: getAllAitinkerersEvents,
+    includePast: true,
+  },
+]
+
+const isFutureEvent = (event: CalendarEvent) =>
+  new Date(eventStartDateTime(event)) > new Date()
+
+// Iterates every source, applying its future-only filter unless the source has
+// opted in to past events. Per-source try/catch ensures one bad upstream
+// doesn't break the whole import.
 const getAllExternalEvents = async () => {
-  console.log('parsing ics')
+  console.log('parsing external sources')
   let allExternalEvents: CalendarEvent[] = []
 
-  for (const url of ICAL_URLS) {
-    console.log(`importing from ${url}...`)
+  for (const source of SOURCES) {
+    console.log(`importing from ${source.name}...`)
     try {
-      const icsText = await fetchICALFromURL(url)
-      const externalEvents = parseICALData(icsText)
-
-      // only get future events, because the gmail api only gets future events
-      const futureExternalEvents = externalEvents.filter((externalEvent) => {
-        const today = new Date()
-        const eventDate = new Date(eventStartDateTime(externalEvent))
-        return eventDate > today
-      })
-      // add all of the events
-      allExternalEvents = [...futureExternalEvents, ...allExternalEvents]
-      console.log('importing successful')
+      const events = await source.fetch()
+      const filtered = source.includePast ? events : events.filter(isFutureEvent)
+      const range = source.includePast ? 'past + future' : 'future-only'
+      allExternalEvents = [...filtered, ...allExternalEvents]
+      console.log(`importing successful (${filtered.length} events ${range})`)
       console.log('-------------------')
     }
     catch (error) {
-      console.log(`error while importing ${url}... skipping...`)
+      console.log(`error while importing ${source.name}... skipping...`)
       console.log(error)
     }
   }
+
   return allExternalEvents
 }
 
 // gets the existing events from the calendar here.
-// Only future events are needed for dedup, since getAllExternalEvents() filters
-// imported events to future-only as well. Anchoring startDate to today keeps
-// this fast even though getEvents() now returns all events when unfiltered.
+//
+// Anchored to today rather than fetching all history because the iCal sources
+// (Meetup, Lu.ma) only ever surface upcoming events, so the dedup index only
+// needs upcoming events to be accurate for those sources.
+//
+// Known limitation: AI Tinkerers events include past entries (its sitemap
+// surfaces every event ever published). Past AI Tinkerers events will appear
+// "new" to compareAndGetNewEvents on every cron run and re-pass through
+// events.import. events.import dedups server-side by iCalUID, so no duplicates
+// are created — just a small amount of wasted API quota each day. Worth
+// revisiting if/when other past-inclusive sources are added.
 const getExistingEvents = async ({ googleCalendarId, serviceAccountCredentials }: CalendarOptions) => {
   // try parse the events or throw an error
   try {
