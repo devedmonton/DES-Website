@@ -27,7 +27,7 @@ export const companies = [
   {
     name: 'A & H Solutions',
     to: 'https://www.aandhsolutions.com/en/career/',
-    description: 'A & H Solutions is an Edmonton-based software development and AI automation company helping businesses build custom web, mobile, and workflow automation solutions.',
+    description: 'A & H Solutions is an Edmonton-based software development and AI automation company helping businesses build custom web, mobile, and AI based workflow automation solutions.',
   },
   {
     name: 'Lantern Studios (previously DevFacto)',
