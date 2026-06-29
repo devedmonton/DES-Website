@@ -25,6 +25,11 @@ export const companies = [
     description: 'AltaML builds machine learning solutions for businesses across industries. They focus on applying AI to real-world problems, making it an attractive place for developers and data scientists interested in practical machine learning applications.',
   },
   {
+    name: 'A & H Solutions',
+    to: 'https://www.aandhsolutions.com/en/career/',
+    description: 'A & H Solutions is an Edmonton-based software development and AI automation company helping businesses build custom web, mobile, and AI based workflow automation solutions.',
+  },
+  {
     name: 'Lantern Studios (previously DevFacto)',
     to: 'https://lanternstudios.com/careers/',
     description: 'Lantern Studios offers custom software development and digital solutions, with a focus on delivering intuitive and efficient applications. Developers here work on a variety of software projects, ranging from mobile apps to enterprise systems.',
