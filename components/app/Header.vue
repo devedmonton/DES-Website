@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onClickOutside, useEventListener } from '@vueuse/core'
+import { onClickOutside, onKeyStroke, useEventListener } from '@vueuse/core'
 
 const y = ref(0)
 const target = ref()
@@ -17,6 +17,9 @@ useHead({
 })
 
 onClickOutside(target, () => open.value = false)
+onKeyStroke('Escape', () => {
+  if (open.value) open.value = false
+})
 useEventListener('scroll', () => y.value = window.scrollY)
 </script>
 
@@ -95,6 +98,7 @@ useEventListener('scroll', () => y.value = window.scrollY)
     <Transition name="slide">
       <div
         v-if="open"
+        id="mobile-menu"
         class="lg:hidden absolute top-24 right-0 left-0 z-10 py-4 flex flex-col gap-2 duration-300 border-y border-neutral-400/40"
         :class="scrolling ? 'bg-white dark:bg-neutral-900' : 'bg-primary'"
       >
