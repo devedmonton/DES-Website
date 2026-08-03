@@ -26,8 +26,8 @@ async function signUp() {
   }
   if (res.statusCode !== 200) {
     error.value = res.message
-    setTimeout(() => { 
-      error.value = undefined 
+    setTimeout(() => {
+      error.value = undefined
     }, 3000)
     return
   }
