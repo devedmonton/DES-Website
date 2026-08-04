@@ -17,19 +17,19 @@ async function signUp() {
     method: 'POST',
     body: form,
   })
-  if (res.statusCode === 200) {
-    disabled.value = true
-    data.value = res.email
-    setTimeout(() => {
-      data.value = undefined
-    }, 3000)
-  }
   if (res.statusCode !== 200) {
     error.value = res.message
     setTimeout(() => {
       error.value = undefined
     }, 3000)
     return
+  }
+  if (res.statusCode === 200) {
+    disabled.value = true
+    data.value = res.email
+    setTimeout(() => {
+      data.value = undefined
+    }, 3000)
   }
 }
 </script>
