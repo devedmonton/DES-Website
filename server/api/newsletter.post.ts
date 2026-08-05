@@ -6,8 +6,8 @@ export default defineEventHandler(async (event) => {
   // input validations
   if (!name || !email) {
     return {
-      statusCode: 500,
-      message: 'Invalid input.',
+      statusCode: 400,
+      message: 'Bad request.',
     }
   }
 

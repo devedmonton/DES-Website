@@ -17,7 +17,7 @@ async function signUp() {
     method: 'POST',
     body: form,
   })
-  if (res.statusCode === 500) {
+  if (res.statusCode !== 200) {
     error.value = res.message
     setTimeout(() => {
       error.value = undefined
