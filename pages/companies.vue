@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const group = { name: 'Edmonton Companies', items: companies.sort((a, b) => a.name.localeCompare(b.name)) }
 
-const title = 'companies'
+const title = 'Companies'
 const description = 'Lists of all the companies who are part of the Dev Edmonton community.'
 
 useServerSeoMeta({
