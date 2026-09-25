@@ -141,4 +141,9 @@ export default defineNuxtConfig({
       ],
     },
   },
+
+  // @nuxtjs/robots (bundled with @nuxtjs/seo), sitemap entry is added automatically
+  robots: {
+    disallow: ['/api/'],
+  },
 })
