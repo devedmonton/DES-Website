@@ -59,7 +59,7 @@ const target = computed(() => {
           :key="key"
           class="flex items-center gap-2 text-sm"
         >
-          <Icon :name="iconify(key)" />
+          <Icon :name="iconify(String(key))" />
           <span>{{ value }}</span>
         </div>
       </template>
