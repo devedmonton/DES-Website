@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onClickOutside, useEventListener } from '@vueuse/core'
+import { onClickOutside, onKeyStroke, useEventListener } from '@vueuse/core'
 
 const y = ref(0)
 const target = ref()
@@ -17,6 +17,7 @@ useHead({
 })
 
 onClickOutside(target, () => open.value = false)
+onKeyStroke('Escape', () => open.value = false)
 useEventListener('scroll', () => y.value = window.scrollY)
 </script>
 
