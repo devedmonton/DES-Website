@@ -1,8 +1,6 @@
 <script setup lang="ts">
 const { data: navigation } = await useAsyncData('navigation:footer', () => fetchContentNavigation({
-  where: {
-    footer: true,
-  },
+  where: [{ footer: true }],
 }))
 </script>
 

@@ -19,6 +19,7 @@ useServerSeoMeta({
       <AppHeader />
       <NuxtPage />
       <AppFooter />
+      <AppScrollToTop />
     </Body>
   </Html>
 </template>

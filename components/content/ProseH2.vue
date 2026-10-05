@@ -7,7 +7,7 @@ const props = defineProps<{
 }>()
 
 const { headings } = useRuntimeConfig().public.mdc
-const generate = computed(() => props.id && headings?.anchorLinks?.h2)
+const generate = computed(() => props.id && typeof headings?.anchorLinks === 'object' && headings.anchorLinks.h2)
 </script>
 
 <template>
