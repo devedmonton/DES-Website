@@ -18,7 +18,7 @@ defineProps({
   <NuxtLink
     :href="href"
     :target="target"
-    :class="twMerge('text-primary font-bold hover:underline', $attrs.class)"
+    :class="twMerge('text-primary font-bold hover:underline', $attrs.class as string)"
   >
     <slot />
   </NuxtLink>

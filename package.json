@@ -15,7 +15,7 @@
     "test:run": "vitest run",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "pr-checks": "npm run lint && npm run test:run",
+    "pr-checks": "npm run lint && npm run typecheck && npm run test:run",
     "daily-calendar-import": "netlify functions:invoke daily-calendar-import"
   },
   "devDependencies": {
@@ -51,6 +51,7 @@
     "vitest": "^3.0.9",
     "vue": "^3.5.13",
     "vue-cal": "^4.10.2",
-    "vue-router": "^4.5.0"
+    "vue-router": "^4.5.0",
+    "vue-tsc": "^2.2.12"
   }
 }
