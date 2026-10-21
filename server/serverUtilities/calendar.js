@@ -1,4 +1,4 @@
-import { google } from 'googleapis'
+import { calendar as googleCalendar } from '@googleapis/calendar'
 import { JWT } from 'google-auth-library'
 
 export class ImportCalendarException extends Error {
@@ -66,7 +66,7 @@ export const getEvents = async ({
   const client = createAuthClient(serviceAccountCredentials)
 
   // get the calendar api using google
-  const calendar = google.calendar({ version: 'v3' })
+  const calendar = googleCalendar({ version: 'v3' })
 
   const baseParams = {
     auth: client,
@@ -125,7 +125,7 @@ export const createAllEvents = async ({
   const client = createAuthClient(serviceAccountCredentials)
 
   // get the calendar api using google
-  const calendar = google.calendar({ version: 'v3' })
+  const calendar = googleCalendar({ version: 'v3' })
 
   try {
     const writePromises = newEvents.map((event) => {
