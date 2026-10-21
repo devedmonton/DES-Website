@@ -1,6 +1,6 @@
 import fetch from 'node-fetch'
 import ICAL from 'ical.js'
-import type { calendar_v3 } from 'googleapis'
+import type { calendar_v3 } from '@googleapis/calendar'
 
 import { ImportCalendarException, getEvents, createAllEvents } from '../serverUtilities/calendar'
 
