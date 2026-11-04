@@ -4,6 +4,9 @@
   "private": true,
   "description": "Fostering a stronger software development community in Edmonton.",
   "author": "Dev Edmonton Society",
+  "engines": {
+    "node": ">=22.19.0"
+  },
   "scripts": {
     "dev": "nuxt dev",
     "build": "npm run pr-checks && nuxt build",
@@ -19,6 +22,7 @@
     "daily-calendar-import": "netlify functions:invoke daily-calendar-import"
   },
   "devDependencies": {
+    "@googleapis/calendar": "^9.8.0",
     "@iconify-json/line-md": "^1.2.7",
     "@iconify-json/logos": "^1.2.4",
     "@iconify-json/ph": "^1.2.2",
@@ -39,7 +43,6 @@
     "@vueuse/nuxt": "^13.0.0",
     "eslint": "^9.23.0",
     "google-auth-library": "^9.15.1",
-    "googleapis": "^144.0.0",
     "happy-dom": "^15.11.7",
     "ical.js": "^2.1.0",
     "node-fetch": "^3.3.2",
