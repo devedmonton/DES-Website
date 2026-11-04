@@ -4,6 +4,9 @@
   "private": true,
   "description": "Fostering a stronger software development community in Edmonton.",
   "author": "Dev Edmonton Society",
+  "engines": {
+    "node": ">=22.19.0"
+  },
   "scripts": {
     "dev": "nuxt dev",
     "build": "npm run pr-checks && nuxt build",
