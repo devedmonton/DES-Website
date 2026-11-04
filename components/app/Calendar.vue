@@ -574,6 +574,7 @@ const eventSections = computed(() => [
 p.content-full {
   overflow: auto;
   height: 180px;
+  word-wrap: anywhere;
 }
 
 .subscription-blurb code {
