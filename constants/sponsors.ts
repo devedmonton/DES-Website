@@ -43,4 +43,11 @@ export const sponsors: Sponsor[] = [
     link: 'https://shortcut.com/',
     category: 'bit',
   },
+  {
+    name: 'Fabled Solutions',
+    image: 'LogoFabledSolutions',
+    description: 'Thanks to <a href=\'https://fabledsolutions.com/\'>Fabled Solutions</a> for supporting ongoing operations and helping us support local tech meetups across Edmonton.',
+    link: 'https://fabledsolutions.com/',
+    category: 'terabyte',
+  },
 ]
